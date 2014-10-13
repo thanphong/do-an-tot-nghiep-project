@@ -1,0 +1,945 @@
+2014-10-04 13:36:38 Error: [MissingControllerException] Controller class DoanController could not be found.
+Exception Attributes: array (
+  'class' => 'DoanController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/doan/
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-04 13:39:13 Error: [MissingControllerException] Controller class DoanController could not be found.
+Exception Attributes: array (
+  'class' => 'DoanController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/doan/
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-04 13:40:17 Error: [MissingControllerException] Controller class DoanController could not be found.
+Exception Attributes: array (
+  'class' => 'DoanController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/doan/user/
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-04 13:40:27 Error: [MissingControllerException] Controller class DoanController could not be found.
+Exception Attributes: array (
+  'class' => 'DoanController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/doan/users/
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-04 13:40:58 Error: [MissingControllerException] Controller class DoanController could not be found.
+Exception Attributes: array (
+  'class' => 'DoanController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/doan/
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-04 13:47:15 Error: [MissingControllerException] Controller class DoanController could not be found.
+Exception Attributes: array (
+  'class' => 'DoanController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/doan/
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-04 13:47:17 Error: [MissingControllerException] Controller class DoanController could not be found.
+Exception Attributes: array (
+  'class' => 'DoanController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/doan/
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-04 13:47:54 Error: [MissingControllerException] Controller class DoanController could not be found.
+Exception Attributes: array (
+  'class' => 'DoanController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/doan/
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-04 13:50:21 Error: [MissingControllerException] Controller class DoanController could not be found.
+Exception Attributes: array (
+  'class' => 'DoanController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/doan/
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-04 13:50:27 Error: [MissingControllerException] Controller class DoanController could not be found.
+Exception Attributes: array (
+  'class' => 'DoanController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/doan/users
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-04 13:51:57 Error: [MissingControllerException] Controller class DoanController could not be found.
+Exception Attributes: array (
+  'class' => 'DoanController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/doan/
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-04 13:53:06 Error: [MissingControllerException] Controller class DoanController could not be found.
+Exception Attributes: array (
+  'class' => 'DoanController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/doan/
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-04 13:53:06 Error: [MissingControllerException] Controller class DoanController could not be found.
+Exception Attributes: array (
+  'class' => 'DoanController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/doan/
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-04 14:21:23 Error: Fatal Error (1): Class 'Security' not found in [C:\xampp\htdocs\DoAn\app\Controller\UsersController.php, line 6]
+2014-10-04 14:21:23 Error: [FatalErrorException] Class 'Security' not found
+Request URL: /DoAn/
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Class 'Security...', 'C:\xampp\htdocs...', 6)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Security...', 'C:\xampp\htdocs...', 6, Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Class 'Security...', 'C:\xampp\htdocs...', 6, Array)
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-04 14:23:06 Error: [MissingControllerException] Controller class GiangvienController could not be found.
+Exception Attributes: array (
+  'class' => 'GiangvienController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/giangvien
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-04 14:23:23 Error: [MissingControllerException] Controller class GiangvienController could not be found.
+Exception Attributes: array (
+  'class' => 'GiangvienController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/giangvien
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-04 14:23:27 Error: [MissingActionException] Action GiangViensController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'GiangViensController',
+  'action' => 'index',
+)
+Request URL: /DoAn/giangviens
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiangViensController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-04 14:27:23 Error: [MissingActionException] Action GiangViensController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'GiangViensController',
+  'action' => 'index',
+)
+Request URL: /DoAn/giangviens
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiangViensController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-04 14:35:01 Error: [MissingViewException] View file "C:\xampp\htdocs\DoAn\app\View\GiangViens\persit.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\DoAn\\app\\View\\GiangViens\\persit.ctp',
+)
+Request URL: /DoAn/giangviens/persit
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiangViensController), Object(CakeRequest))
+#4 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-10-04 15:42:19 Error: [MissingActionException] Action GiangViensController::templates() could not be found.
+Exception Attributes: array (
+  'controller' => 'GiangViensController',
+  'action' => 'templates',
+)
+Request URL: /DoAn/giangviens/templates
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiangViensController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-05 11:10:33 Error: [MissingControllerException] Controller class UploadsController could not be found.
+Exception Attributes: array (
+  'class' => 'UploadsController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/Uploads/upload
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-05 11:11:04 Error: Fatal Error (1): Call to a member function save() on a non-object in [C:\xampp\htdocs\DoAn\app\Controller\GiangViensController.php, line 13]
+2014-10-05 11:11:04 Error: [FatalErrorException] Call to a member function save() on a non-object
+Request URL: /DoAn/Giangviens/persit
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 13)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 13, Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 13, Array)
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-06 17:37:27 Error: Fatal Error (1): Call to a member function save() on a non-object in [C:\xampp\htdocs\DoAn\app\Controller\GiangViensController.php, line 13]
+2014-10-06 17:37:27 Error: [FatalErrorException] Call to a member function save() on a non-object
+Request URL: /DoAn/Giangviens/persit
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 13)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 13, Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 13, Array)
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-06 17:52:16 Error: [MissingControllerException] Controller class KhóaController could not be found.
+Exception Attributes: array (
+  'class' => 'KhóaController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/kh%C3%B3a
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-06 17:52:27 Error: [MissingActionException] Action KhoasController::persit() could not be found.
+Exception Attributes: array (
+  'controller' => 'KhoasController',
+  'action' => 'persit',
+)
+Request URL: /DoAn/khoas/persit
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(KhoasController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-07 06:27:14 Error: [MissingActionException] Action GiaoVusController::themMoiKhoas() could not be found.
+Exception Attributes: array (
+  'controller' => 'GiaoVusController',
+  'action' => 'themMoiKhoas',
+)
+Request URL: /DoAn/GiaoVus/themMoiKhoas
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-07 06:27:48 Error: [MissingViewException] View file "C:\xampp\htdocs\DoAn\app\View\GiaoVus\them_moi_khoas.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\DoAn\\app\\View\\GiaoVus\\them_moi_khoas.ctp',
+)
+Request URL: /DoAn/GiaoVus/themMoiKhoas
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#4 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-10-07 06:30:07 Error: Fatal Error (4): syntax error, unexpected '<' in [C:\xampp\htdocs\DoAn\app\View\GiaoVus\them_moi_khoas.ctp, line 7]
+2014-10-07 06:30:07 Error: [FatalErrorException] syntax error, unexpected '<'
+Request URL: /DoAn/GiaoVus/themMoiKhoas
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 7)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 7, Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 7, Array)
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-07 06:30:28 Error: Fatal Error (1): Class 'HtmlHelper' not found in [C:\xampp\htdocs\DoAn\app\View\Helper\UserHelper.php, line 2]
+2014-10-07 06:30:28 Error: [FatalErrorException] Class 'HtmlHelper' not found
+Request URL: /DoAn/GiaoVus/themMoiKhoas
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Class 'HtmlHelp...', 'C:\xampp\htdocs...', 2)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'HtmlHelp...', 'C:\xampp\htdocs...', 2, Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Class 'HtmlHelp...', 'C:\xampp\htdocs...', 2, Array)
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-07 06:31:35 Error: Fatal Error (1): Class 'HtmlHelper' not found in [C:\xampp\htdocs\DoAn\app\View\Helper\UserHelper.php, line 3]
+2014-10-07 06:31:35 Error: [FatalErrorException] Class 'HtmlHelper' not found
+Request URL: /DoAn/GiaoVus/themMoiKhoas
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Class 'HtmlHelp...', 'C:\xampp\htdocs...', 3)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'HtmlHelp...', 'C:\xampp\htdocs...', 3, Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Class 'HtmlHelp...', 'C:\xampp\htdocs...', 3, Array)
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-07 06:31:38 Error: Fatal Error (1): Class 'HtmlHelper' not found in [C:\xampp\htdocs\DoAn\app\View\Helper\UserHelper.php, line 3]
+2014-10-07 06:31:38 Error: [FatalErrorException] Class 'HtmlHelper' not found
+Request URL: /DoAn/GiaoVus/themMoiKhoas
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Class 'HtmlHelp...', 'C:\xampp\htdocs...', 3)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'HtmlHelp...', 'C:\xampp\htdocs...', 3, Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Class 'HtmlHelp...', 'C:\xampp\htdocs...', 3, Array)
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-07 06:32:22 Error: Fatal Error (1): Class 'HtmlHelper' not found in [C:\xampp\htdocs\DoAn\app\View\Helper\UserHelper.php, line 3]
+2014-10-07 06:32:22 Error: [FatalErrorException] Class 'HtmlHelper' not found
+Request URL: /DoAn/GiaoVus/themMoiKhoas
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Class 'HtmlHelp...', 'C:\xampp\htdocs...', 3)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'HtmlHelp...', 'C:\xampp\htdocs...', 3, Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Class 'HtmlHelp...', 'C:\xampp\htdocs...', 3, Array)
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-07 06:33:17 Error: Fatal Error (1): Class 'HtmlHelper' not found in [C:\xampp\htdocs\DoAn\app\View\Helper\UserHelper.php, line 3]
+2014-10-07 06:33:17 Error: [FatalErrorException] Class 'HtmlHelper' not found
+Request URL: /DoAn/GiaoVus/themMoiKhoas
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Class 'HtmlHelp...', 'C:\xampp\htdocs...', 3)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'HtmlHelp...', 'C:\xampp\htdocs...', 3, Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Class 'HtmlHelp...', 'C:\xampp\htdocs...', 3, Array)
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-07 06:33:19 Error: Fatal Error (1): Class 'HtmlHelper' not found in [C:\xampp\htdocs\DoAn\app\View\Helper\UserHelper.php, line 3]
+2014-10-07 06:33:19 Error: [FatalErrorException] Class 'HtmlHelper' not found
+Request URL: /DoAn/GiaoVus/themMoiKhoas
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Class 'HtmlHelp...', 'C:\xampp\htdocs...', 3)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'HtmlHelp...', 'C:\xampp\htdocs...', 3, Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Class 'HtmlHelp...', 'C:\xampp\htdocs...', 3, Array)
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-07 06:33:20 Error: Fatal Error (1): Class 'HtmlHelper' not found in [C:\xampp\htdocs\DoAn\app\View\Helper\UserHelper.php, line 3]
+2014-10-07 06:33:20 Error: [FatalErrorException] Class 'HtmlHelper' not found
+Request URL: /DoAn/GiaoVus/themMoiKhoas
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Class 'HtmlHelp...', 'C:\xampp\htdocs...', 3)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'HtmlHelp...', 'C:\xampp\htdocs...', 3, Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Class 'HtmlHelp...', 'C:\xampp\htdocs...', 3, Array)
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-07 06:33:20 Error: Fatal Error (1): Class 'HtmlHelper' not found in [C:\xampp\htdocs\DoAn\app\View\Helper\UserHelper.php, line 3]
+2014-10-07 06:33:20 Error: [FatalErrorException] Class 'HtmlHelper' not found
+Request URL: /DoAn/GiaoVus/themMoiKhoas
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Class 'HtmlHelp...', 'C:\xampp\htdocs...', 3)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'HtmlHelp...', 'C:\xampp\htdocs...', 3, Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Class 'HtmlHelp...', 'C:\xampp\htdocs...', 3, Array)
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-07 06:33:20 Error: Fatal Error (1): Class 'HtmlHelper' not found in [C:\xampp\htdocs\DoAn\app\View\Helper\UserHelper.php, line 3]
+2014-10-07 06:33:20 Error: [FatalErrorException] Class 'HtmlHelper' not found
+Request URL: /DoAn/GiaoVus/themMoiKhoas
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Class 'HtmlHelp...', 'C:\xampp\htdocs...', 3)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'HtmlHelp...', 'C:\xampp\htdocs...', 3, Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Class 'HtmlHelp...', 'C:\xampp\htdocs...', 3, Array)
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-07 06:33:20 Error: Fatal Error (1): Class 'HtmlHelper' not found in [C:\xampp\htdocs\DoAn\app\View\Helper\UserHelper.php, line 3]
+2014-10-07 06:33:20 Error: [FatalErrorException] Class 'HtmlHelper' not found
+Request URL: /DoAn/GiaoVus/themMoiKhoas
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Class 'HtmlHelp...', 'C:\xampp\htdocs...', 3)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'HtmlHelp...', 'C:\xampp\htdocs...', 3, Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Class 'HtmlHelp...', 'C:\xampp\htdocs...', 3, Array)
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-07 06:36:10 Error: [MissingControllerException] Controller class DoanController could not be found.
+Exception Attributes: array (
+  'class' => 'DoanController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/doan/khoas
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-07 06:38:12 Error: [MissingControllerException] Controller class DoanController could not be found.
+Exception Attributes: array (
+  'class' => 'DoanController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/doan/GiaoVus/themMoiKhoas
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-07 06:38:40 Error: [MissingActionException] Action GiaoVusController::GiaoVus() could not be found.
+Exception Attributes: array (
+  'controller' => 'GiaoVusController',
+  'action' => 'GiaoVus',
+)
+Request URL: /DoAn/GiaoVus/GiaoVus/themMoiKhoas
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-07 06:39:30 Error: [MissingActionException] Action GiaoVusController::doan() could not be found.
+Exception Attributes: array (
+  'controller' => 'GiaoVusController',
+  'action' => 'doan',
+)
+Request URL: /DoAn/GiaoVus/doan/GiaoVus/themMoiKhoas
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-07 06:48:01 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'id' doesn't have a default value
+Request URL: /DoAn/GiaoVus/themMoiKhoas
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('INSERT INTO `do...', Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1012): DboSource->execute('INSERT INTO `do...')
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(1854): DboSource->create(Object(Khoa), Array, Array)
+#4 C:\xampp\htdocs\DoAn\app\Controller\GiaoVusController.php(10): Model->save(Array)
+#5 [internal function]: GiaoVusController->themMoiKhoas()
+#6 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GiaoVusController), Array)
+#7 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#9 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-10-07 08:53:08 Error: [MissingActionException] Action GiaoVusController::khoas() could not be found.
+Exception Attributes: array (
+  'controller' => 'GiaoVusController',
+  'action' => 'khoas',
+)
+Request URL: /DoAn/GiaoVus/khoas
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-07 08:54:57 Error: [MissingActionException] Action GiaoVusController::giangVien() could not be found.
+Exception Attributes: array (
+  'controller' => 'GiaoVusController',
+  'action' => 'giangVien',
+)
+Request URL: /DoAn/GiaoVus/giangVien
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-07 08:55:38 Error: [MissingActionException] Action GiaoVusController::giangVien() could not be found.
+Exception Attributes: array (
+  'controller' => 'GiaoVusController',
+  'action' => 'giangVien',
+)
+Request URL: /DoAn/GiaoVus/giangVien
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-07 08:55:42 Error: [MissingActionException] Action GiaoVusController::giangVien() could not be found.
+Exception Attributes: array (
+  'controller' => 'GiaoVusController',
+  'action' => 'giangVien',
+)
+Request URL: /DoAn/GiaoVus/giangVien
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-07 08:56:03 Error: [MissingActionException] Action GiaoVusController::giangVien() could not be found.
+Exception Attributes: array (
+  'controller' => 'GiaoVusController',
+  'action' => 'giangVien',
+)
+Request URL: /DoAn/GiaoVus/giangVien
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-07 08:56:07 Error: [MissingActionException] Action GiaoVusController::quanlykhoa() could not be found.
+Exception Attributes: array (
+  'controller' => 'GiaoVusController',
+  'action' => 'quanlykhoa',
+)
+Request URL: /DoAn/GiaoVus/quanlykhoa
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-07 08:57:10 Error: [MissingViewException] View file "C:\xampp\htdocs\DoAn\app\View\GiaoVus\quanlykhoa.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\DoAn\\app\\View\\GiaoVus\\quanlykhoa.ctp',
+)
+Request URL: /DoAn/GiaoVus/quanlykhoa
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#4 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-10-07 08:57:37 Error: [MissingActionException] Action GiaoVusController::quanlygiangVien() could not be found.
+Exception Attributes: array (
+  'controller' => 'GiaoVusController',
+  'action' => 'quanlygiangVien',
+)
+Request URL: /DoAn/GiaoVus/quanlygiangVien
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-07 08:57:42 Error: [MissingActionException] Action GiaoVusController::quanlygiangVien() could not be found.
+Exception Attributes: array (
+  'controller' => 'GiaoVusController',
+  'action' => 'quanlygiangVien',
+)
+Request URL: /DoAn/GiaoVus/quanlygiangVien
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-07 08:57:45 Error: [MissingActionException] Action GiaoVusController::quanlyGiangVien() could not be found.
+Exception Attributes: array (
+  'controller' => 'GiaoVusController',
+  'action' => 'quanlyGiangVien',
+)
+Request URL: /DoAn/GiaoVus/quanlyGiangVien
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-07 08:58:12 Error: [MissingActionException] Action GiaoVusController::quanlyGiangVien() could not be found.
+Exception Attributes: array (
+  'controller' => 'GiaoVusController',
+  'action' => 'quanlyGiangVien',
+)
+Request URL: /DoAn/GiaoVus/quanlyGiangVien
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-07 08:59:05 Error: [MissingActionException] Action GiaoVusController::quanlyKhoa() could not be found.
+Exception Attributes: array (
+  'controller' => 'GiaoVusController',
+  'action' => 'quanlyKhoa',
+)
+Request URL: /DoAn/GiaoVus/quanlyKhoa
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-07 09:02:08 Error: [MissingViewException] View file "C:\xampp\htdocs\DoAn\app\View\GiaoVus\quanly_khoa.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\DoAn\\app\\View\\GiaoVus\\quanly_khoa.ctp',
+)
+Request URL: /DoAn/GiaoVus/quanlyKhoa
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#4 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-10-07 09:56:05 Error: [MissingTableException] Table giang_viens for model GiangVien was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'giang_viens',
+  'class' => 'GiangVien',
+  'ds' => 'default',
+)
+Request URL: /DoAn/GiaoVus/themMoiKhoas
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(3551): Model->setSource('giang_viens')
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(1369): Model->getDataSource()
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(2495): Model->schema()
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1732): DboSource->fields(Object(GiangVien), 'GiangVien', '')
+#4 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1233): DboSource->generateAssociationQuery(Object(Khoa), Object(GiangVien), 'hasMany', 'GiangVien', Array, Array, true)
+#5 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1137): DboSource->queryAssociation(Object(Khoa), Object(GiangVien), 'hasMany', 'GiangVien', Array, Array, true, Array, 0, Array)
+#6 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Khoa), Array)
+#7 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#8 C:\xampp\htdocs\DoAn\app\Controller\GiaoVusController.php(21): Model->find('all')
+#9 [internal function]: GiaoVusController->themMoiKhoas()
+#10 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GiaoVusController), Array)
+#11 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#13 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-10-07 09:56:24 Error: [MissingTableException] Table giang_viens for model GiangVien was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'giang_viens',
+  'class' => 'GiangVien',
+  'ds' => 'default',
+)
+Request URL: /DoAn/GiaoVus/themMoiKhoas
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(3551): Model->setSource('giang_viens')
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(1369): Model->getDataSource()
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(2495): Model->schema()
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1732): DboSource->fields(Object(GiangVien), 'GiangVien', '')
+#4 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1233): DboSource->generateAssociationQuery(Object(Khoa), Object(GiangVien), 'hasMany', 'GiangVien', Array, Array, true)
+#5 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1137): DboSource->queryAssociation(Object(Khoa), Object(GiangVien), 'hasMany', 'GiangVien', Array, Array, true, Array, 0, Array)
+#6 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Khoa), Array)
+#7 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#8 C:\xampp\htdocs\DoAn\app\Controller\GiaoVusController.php(21): Model->find('all')
+#9 [internal function]: GiaoVusController->themMoiKhoas()
+#10 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GiaoVusController), Array)
+#11 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#13 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-10-07 09:57:50 Error: [MissingTableException] Table giang_viens for model GiangVien was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'giang_viens',
+  'class' => 'GiangVien',
+  'ds' => 'default',
+)
+Request URL: /DoAn/GiaoVus/themMoiKhoas
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(3551): Model->setSource('giang_viens')
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(1369): Model->getDataSource()
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(2495): Model->schema()
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1732): DboSource->fields(Object(GiangVien), 'GiangVien', '')
+#4 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1233): DboSource->generateAssociationQuery(Object(Khoa), Object(GiangVien), 'hasMany', 'GiangVien', Array, Array, true)
+#5 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1137): DboSource->queryAssociation(Object(Khoa), Object(GiangVien), 'hasMany', 'GiangVien', Array, Array, true, Array, 0, Array)
+#6 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Khoa), Array)
+#7 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#8 C:\xampp\htdocs\DoAn\app\Controller\GiaoVusController.php(21): Model->find('all')
+#9 [internal function]: GiaoVusController->themMoiKhoas()
+#10 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GiaoVusController), Array)
+#11 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#13 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-10-07 11:49:19 Error: [MissingControllerException] Controller class RecipesController could not be found.
+Exception Attributes: array (
+  'class' => 'RecipesController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/recipes/delete/6
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-07 11:50:08 Error: [MissingActionException] Action GiaoVusController::xemKhoas() could not be found.
+Exception Attributes: array (
+  'controller' => 'GiaoVusController',
+  'action' => 'xemKhoas',
+)
+Request URL: /DoAn/Giaovus/xemKhoas/6
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-07 11:53:21 Error: [MissingViewException] View file "C:\xampp\htdocs\DoAn\app\View\GiaoVus\xem_khoas.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\DoAn\\app\\View\\GiaoVus\\xem_khoas.ctp',
+)
+Request URL: /DoAn/Giaovus/xemKhoas/6
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#4 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-10-07 12:02:44 Error: [MissingActionException] Action GiaoVusController::suaKhoa() could not be found.
+Exception Attributes: array (
+  'controller' => 'GiaoVusController',
+  'action' => 'suaKhoa',
+)
+Request URL: /DoAn/Giaovus/suaKhoa/1
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-07 14:40:18 Error: [MissingControllerException] Controller class DoanController could not be found.
+Exception Attributes: array (
+  'class' => 'DoanController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/doan/giaovus/suaKhoa/1
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-07 15:35:29 Error: [MissingActionException] Action GiaoVusController::xoaKhoa() could not be found.
+Exception Attributes: array (
+  'controller' => 'GiaoVusController',
+  'action' => 'xoaKhoa',
+)
+Request URL: /DoAn/Giaovus/xoaKhoa/1
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-07 15:41:55 Error: [MissingViewException] View file "C:\xampp\htdocs\DoAn\app\View\GiaoVus\quanly_giang_vien.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\DoAn\\app\\View\\GiaoVus\\quanly_giang_vien.ctp',
+)
+Request URL: /DoAn/GiaoVus/quanlyGiangVien
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#4 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-10-07 15:46:55 Error: [MissingActionException] Action GiangViensController::themGiangvien() could not be found.
+Exception Attributes: array (
+  'controller' => 'GiangViensController',
+  'action' => 'themGiangvien',
+)
+Request URL: /DoAn/giangviens/themGiangvien
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiangViensController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-07 15:56:21 Error: [MissingActionException] Action GiangViensController::themGiangvien() could not be found.
+Exception Attributes: array (
+  'controller' => 'GiangViensController',
+  'action' => 'themGiangvien',
+)
+Request URL: /DoAn/giangviens/themGiangvien
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiangViensController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-09 05:47:54 Error: [MissingControllerException] Controller class GiaovuController could not be found.
+Exception Attributes: array (
+  'class' => 'GiaovuController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/giaovu
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-09 05:47:59 Error: [MissingActionException] Action GiaoVusController::quanlyHocphan() could not be found.
+Exception Attributes: array (
+  'controller' => 'GiaoVusController',
+  'action' => 'quanlyHocphan',
+)
+Request URL: /DoAn/GiaoVus/quanlyHocphan
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-09 06:20:38 Error: [MissingViewException] View file "C:\xampp\htdocs\DoAn\app\View\GiaoVus\quanly_hocphan.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\DoAn\\app\\View\\GiaoVus\\quanly_hocphan.ctp',
+)
+Request URL: /DoAn/GiaoVus/quanlyHocphan
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#4 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-10-09 06:22:48 Error: [MissingActionException] Action GiaoVusController::themMoiHocphan() could not be found.
+Exception Attributes: array (
+  'controller' => 'GiaoVusController',
+  'action' => 'themMoiHocphan',
+)
+Request URL: /DoAn/GiaoVus/themMoiHocphan
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-09 17:23:55 Error: [MissingViewException] View file "C:\xampp\htdocs\DoAn\app\View\GiaoVus\them_moi_hocphan.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\DoAn\\app\\View\\GiaoVus\\them_moi_hocphan.ctp',
+)
+Request URL: /DoAn/GiaoVus/themMoiHocphan
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#4 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-10-09 17:44:19 Error: [MissingActionException] Action GiaoVusController::themHocphan() could not be found.
+Exception Attributes: array (
+  'controller' => 'GiaoVusController',
+  'action' => 'themHocphan',
+)
+Request URL: /DoAn/giaovus/themHocphan
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-09 17:55:35 Error: [MissingTableException] Table lop_hoc_phans for model LopHocPhan was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'lop_hoc_phans',
+  'class' => 'LopHocPhan',
+  'ds' => 'default',
+)
+Request URL: /DoAn/giaovus/themMoiHocphan
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(3551): Model->setSource('lop_hoc_phans')
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(1369): Model->getDataSource()
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(2495): Model->schema()
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1732): DboSource->fields(Object(LopHocPhan), 'LopHocPhan', '')
+#4 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1233): DboSource->generateAssociationQuery(Object(Hocphan), Object(LopHocPhan), 'hasMany', 'LopHocPhan', Array, Array, true)
+#5 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1137): DboSource->queryAssociation(Object(Hocphan), Object(LopHocPhan), 'hasMany', 'LopHocPhan', Array, Array, true, Array, 0, Array)
+#6 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Hocphan), Array)
+#7 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#8 C:\xampp\htdocs\DoAn\app\Controller\GiaoVusController.php(69): Model->find('all')
+#9 [internal function]: GiaoVusController->themMoiHocphan()
+#10 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GiaoVusController), Array)
+#11 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#13 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-10-09 17:56:09 Error: [MissingTableException] Table lop_hoc_phans for model LopHocPhan was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'lop_hoc_phans',
+  'class' => 'LopHocPhan',
+  'ds' => 'default',
+)
+Request URL: /DoAn/GiaoVus/themMoiHocphan
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(3551): Model->setSource('lop_hoc_phans')
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(1369): Model->getDataSource()
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(2495): Model->schema()
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1732): DboSource->fields(Object(LopHocPhan), 'LopHocPhan', '')
+#4 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1233): DboSource->generateAssociationQuery(Object(Hocphan), Object(LopHocPhan), 'hasMany', 'LopHocPhan', Array, Array, true)
+#5 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1137): DboSource->queryAssociation(Object(Hocphan), Object(LopHocPhan), 'hasMany', 'LopHocPhan', Array, Array, true, Array, 0, Array)
+#6 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Hocphan), Array)
+#7 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#8 C:\xampp\htdocs\DoAn\app\Controller\GiaoVusController.php(69): Model->find('all')
+#9 [internal function]: GiaoVusController->themMoiHocphan()
+#10 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GiaoVusController), Array)
+#11 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#13 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-10-09 17:56:41 Error: [MissingTableException] Table lop_hoc_phans for model LopHocPhan was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'lop_hoc_phans',
+  'class' => 'LopHocPhan',
+  'ds' => 'default',
+)
+Request URL: /DoAn/GiaoVus/themMoiHocphan
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(3551): Model->setSource('lop_hoc_phans')
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(1369): Model->getDataSource()
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(2495): Model->schema()
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1732): DboSource->fields(Object(LopHocPhan), 'LopHocPhan', '')
+#4 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1233): DboSource->generateAssociationQuery(Object(Hocphan), Object(LopHocPhan), 'hasMany', 'LopHocPhan', Array, Array, true)
+#5 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1137): DboSource->queryAssociation(Object(Hocphan), Object(LopHocPhan), 'hasMany', 'LopHocPhan', Array, Array, true, Array, 0, Array)
+#6 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Hocphan), Array)
+#7 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#8 C:\xampp\htdocs\DoAn\app\Controller\GiaoVusController.php(69): Model->find('all')
+#9 [internal function]: GiaoVusController->themMoiHocphan()
+#10 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GiaoVusController), Array)
+#11 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#13 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-10-09 18:11:23 Error: [MissingActionException] Action GiaoVusController::suaHocphan() could not be found.
+Exception Attributes: array (
+  'controller' => 'GiaoVusController',
+  'action' => 'suaHocphan',
+)
+Request URL: /DoAn/Giaovus/suaHocphan/1
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-09 18:46:54 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Khoa.id' in 'where clause'
+Request URL: /DoAn/giaovus/suaHocphan/1
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('UPDATE `doan`.`...', Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\Database\Mysql.php(414): DboSource->execute('UPDATE `doan`.`...')
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(2585): Mysql->update(Object(Hocphan), Array, NULL, Array)
+#4 C:\xampp\htdocs\DoAn\app\Controller\GiaoVusController.php(74): Model->updateAll(Array, Array)
+#5 [internal function]: GiaoVusController->suaHocphan('1')
+#6 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GiaoVusController), Array)
+#7 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#9 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-10-09 18:47:32 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Hocphan.tenKhoa' in 'field list'
+Request URL: /DoAn/giaovus/suaHocphan/1
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('UPDATE `doan`.`...', Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\Database\Mysql.php(414): DboSource->execute('UPDATE `doan`.`...')
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(2585): Mysql->update(Object(Hocphan), Array, NULL, Array)
+#4 C:\xampp\htdocs\DoAn\app\Controller\GiaoVusController.php(74): Model->updateAll(Array, Array)
+#5 [internal function]: GiaoVusController->suaHocphan('1')
+#6 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GiaoVusController), Array)
+#7 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#9 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-10-09 18:49:47 Error: [MissingActionException] Action GiaoVusController::xoaHocphan() could not be found.
+Exception Attributes: array (
+  'controller' => 'GiaoVusController',
+  'action' => 'xoaHocphan',
+)
+Request URL: /DoAn/Giaovus/xoaHocphan/1
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-09 18:55:46 Error: [MissingViewException] View file "C:\xampp\htdocs\DoAn\app\View\GiaoVus\sua_hocphan.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\DoAn\\app\\View\\GiaoVus\\sua_hocphan.ctp',
+)
+Request URL: /DoAn/giaovus/suaHocphan/2
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#4 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-10-09 18:57:21 Error: [MissingActionException] Action GiaoVusController::xemHocphan() could not be found.
+Exception Attributes: array (
+  'controller' => 'GiaoVusController',
+  'action' => 'xemHocphan',
+)
+Request URL: /DoAn/Giaovus/xemHocphan/2
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
