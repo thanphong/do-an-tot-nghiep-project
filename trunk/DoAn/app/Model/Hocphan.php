@@ -9,6 +9,16 @@ class Hocphan extends AppModel{
 					'order' => '',
 					'limit' => '',
 					'dependent'=> true
-			));
+			)
+			,
+			'Giangvienhocphan' => array(
+					'className' => 'Giangvienhocphan',
+					'foreignKey' => 'maHocphan',
+					'conditions' => '',
+					'order' => '',
+					'limit' => '',
+					'dependent'=> true
+			)
+	);
 }
 ?>

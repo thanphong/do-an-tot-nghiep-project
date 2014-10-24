@@ -1,0 +1,74 @@
+.input-container {
+	position: relative;
+	z-index: 2;
+}
+
+input[type="text"] {
+	background-color: #FFFBFB;
+	border: 1px solid #BBBBBB;
+	margin: 2px;
+	padding: 5px;
+	width: 167px;
+}
+
+.beatpicker-inputnode {
+	background-position: right center;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+.beatpicker-clearButton {
+	background-color: #D36161;
+	border: medium none;
+	color: #FFFFFF;
+	cursor: pointer;
+	font: bold 14px arial, serif;
+	margin: 3px;
+	padding: 4px;
+	width: 72px;
+	display: none;
+}
+
+fieldset.group {
+	margin: 0;
+	padding: 0;
+	margin-bottom: 1.25em;
+	padding: .125em;
+}
+
+fieldset.group legend {
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+	margin-left: 20px;
+	font-size: 100%;
+	color: black;
+}
+
+ul.checkbox {
+	margin: 0;
+	padding: 0;
+	margin-left: 20px;
+	list-style: none;
+}
+
+ul.checkbox li input {
+	margin-right: .25em;
+}
+
+ul.checkbox li {
+	border: 1px transparent solid;
+	display: inline-block;
+	width: 12em;
+}
+
+ul.checkbox li label {
+	margin-left:;
+}
+
+ul.checkbox li:hover,ul.checkbox li.focus {
+	
+	background-color: #60c6ff;
+	/*border: 1px gray solid;*/
+	width: 12em;
+}
