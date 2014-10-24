@@ -31,5 +31,7 @@ App::uses('Controller', 'Controller');
  * @link		http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
 */
 class AppController extends Controller {
-	var $helpers = array("Form","Html","Common","User","Js","Session","Paginator");
+	var $helpers = array("Form","Html","Common","User","Giangvien","Js","Session","Paginator");
+	var $layout = null;
+	//var $components = array('Auth');
 }

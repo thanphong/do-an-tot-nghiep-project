@@ -1,13 +1,20 @@
 <?php
 class GiaoVusController extends AppController{
 	var $name="GiaoVus";
-	public $uses = array('Khoa','Giangvien','Hocphan');
+	var $layout = "giaovu";
+	public $uses = array('Khoa','Giangvien','Hocphan','Hocky','Khuvuc','Loaithietbi','Lophocphan','Phong','Quyen','Thietbi','Thongbao');
 	function index(){
 
 	}
+	//quản lý giảng viên
 	public function quanlyGiangVien() {
-
+		$listquyen=$this->Quyen->find("all",array('recursive'=>-1));
+		$this->set("listquyen",$listquyen);	
+		$listKhoa=$this->Khoa->find("all",array('recursive'=>-1));
+		$this->set("listKhoa",$listKhoa);
 	}
+	
+	//
 	public function quanlyKhoa() {
 
 	}
@@ -54,6 +61,7 @@ class GiaoVusController extends AppController{
 		//$this->render('themMoiKhoas');
 	}
 	public function themGiangvien() {
+		
 		if($this->request->is('post')){
 			$this->Giangvien->save($this->request->data);
 		}
@@ -69,9 +77,7 @@ class GiaoVusController extends AppController{
 			$this->set("data",$this->Hocphan->find("all",array('recursive'=>-1)));
 	}
 	public function suaHocphan($id) {
-		
 		if($this->request->is("post")){
-			
 			$this->Hocphan->updateAll(array('Hocphan.tenhocphan' =>"'".$this->request->data('tenhocphan')."'",'Hocphan.trangthai'=>$this->request->data('trangthai'),
 					'Hocphan.mota'=>"'".$this->request->data('mota')."'"),array('Hocphan.id' => $id));
 			$this->redirect(array('controller' => 'giaovus', 'action' => 'themMoiHocphan'));
@@ -90,6 +96,32 @@ class GiaoVusController extends AppController{
 	public function xemHocphan() {
 		
 	}
+	//quản lý phòng
+	public function quanlyphong() {
+		$listthietbi=$this->Thietbi->find("all",array('recursive'=>-1));
+		$this->set("listthietbi",$listthietbi);
+		$listKhuvuc=$this->Khuvuc->find("all",array('recursive'=>-1));
+		$this->set("listKhuvuc",$listKhuvuc);
+	}
+	//
+	//quản lý thiết bị
+	public function quanlyThietbi() {
+		$listLoaiThietbi=$this->Loaithietbi->find("all",array('recursive'=>-1));
+		$this->set("listLoaiThietbi",$listLoaiThietbi);
+	}
+	//quản lý lớp học phần
+	public function quanlyLophocphan() {
+		$listKhoa=$this->Khoa->find("all",array('recursive'=>-1));
+		$this->set("listKhoa",$listKhoa);
+	}
+	//
+	//quản lý thông báo
+	public function quanlyThongbao() {
+		
+	}
+	//
+	
+	
 }
 
 ?>
