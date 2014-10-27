@@ -4,7 +4,7 @@
 </head>
 <body>
 <?php
-echo "aaaa";
+echo $this->Session->flash('auth');
 ?>
 <?php echo $this->Html->link('Khoa',array('controller' => 'GiaoVus','action' => 'quanlyKhoa','full_base' => true),array('class'=>'title'));
 echo $this->Html->link('Giảng Viên',array('controller' => 'GiaoVus','action' => 'quanlyGiangVien','full_base' => true),array('class'=>'title'));

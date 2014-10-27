@@ -1,4 +1,4 @@
 <?php
-	echo $this->User->listnews($listnew);
-	echo $this->User->tinlienquan($tinlienquan);
+	 echo $this->Session->flash(); 
+	echo "aaaa--vvvvvvv";
 ?>

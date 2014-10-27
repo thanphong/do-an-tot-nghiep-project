@@ -44,6 +44,16 @@ class Giangvien extends AppModel{
 			)
 			
 	);
+	var $hasOne = array(
+			'User' => array(
+					'className' => 'User',
+					'foreignKey' => 'maGiangvien',
+					'conditions' => '',
+					'order' => '',
+					'limit' => '',
+					'dependent'=> true
+			)
+			);
 	function index(){
 
 	}

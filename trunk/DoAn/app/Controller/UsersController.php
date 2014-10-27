@@ -1,31 +1,45 @@
 <?php
-class UsersController extends AppController{
-	var $layout = "usertemplate";
-	public $uses = array('Thongbao');
-	var $name="Users";
-	
-	function beforeFilter(){
-// 		parent::beforeFilter();
-// 		Security::setHash("md5");
-// 		$this->Auth->userModel = 'Giangvien';
-// 		$this->Auth->authorize = 'controller';
-// 		$this->Auth->fields = array('username' => 'maGiangvien', 'password' => 'MatKhau');
-// 		$this->Auth->loginAction = array('controller'=>'users','action'=>'index'); //action se chuyen toi sau khi access trang we
-// 		$this->Auth->loginRedirect = array('controller'=>'giaovus','action'=>'index');//action se chuyen den sau khi logi
-// 		$this->Auth->logoutRedirect=array('admin' =>false,'controller'=>'users','action'=>'index');
-// 		$this->Auth->loginError = 'Failed to login';//thong bao dang nhap bi lo
-// 		$this->Auth->authError = 'Access denied'; //thong bao truy cap khong dung khu vuc
-// 		$this->Auth->allow(array('index'));
-	}
-	function index(){
-		$listnew=$this->Thongbao->find('all',array('limit' => 10,'page' => 1));
-		$this->set("listnew",$listnew);
-		//tin lien quan
-		$tinlienquan=$this->Thongbao->find('all',array('limit' => 10,'page' => 11));
-		$this->set("tinlienquan",$tinlienquan);
-	}
+
+class UsersController extends AppController {
+	var $layout = "user";
+	public $uses = array('Quyengiangvien');
+    public function beforeFilter() {
+       parent::beforeFilter();
+       $this->Auth->allow(array('index','login','logout'));
+       $this->isGiangvien();
+       $this->isGiaovu();
+    }
 	public function login() {
-	
+		
+		// if we get the post information, try to authenticate
+		if ($this->request->is('post')) {
+			if ($this->Auth->login()) {
+				//$this->Auth->user('Quyengiangvien')=
+				$user=$this->Quyengiangvien->find("list",array('conditions' => array('Quyengiangvien.magiangvien' => $this->Auth->user('id')),'fields' => array('Quyengiangvien.maquyen'),'recursive'=>-1));
+				$this->Session->write("roles",$user);
+				$this->Session->setFlash(__('Welcome, '. $this->Auth->user('Giangvien.ten')));
+				$this->redirect($this->Auth->redirectUrl());
+			}
+		} 
+		
+		//if already logged-in, redirect
+		if($this->Session->check('Auth.User')){
+			$this->redirect(array('controller'=>'Giangviens','action' => 'index'));
+		}
+		$this->redirect($this->Auth->redirect());
 	}
+
+	public function logout() {
+		$this->Session->destroy();
+		$this->redirect($this->Auth->logout());
+	}
+
+    public function index() {
+    	//print_r($this->User->find('first', array('conditions' => array('User.id' => 45))));
+    	//print_r($this->Auth->user());
+    	//print_r($this->Session->read('roles'));
+    }
+
 }
+
 ?>
