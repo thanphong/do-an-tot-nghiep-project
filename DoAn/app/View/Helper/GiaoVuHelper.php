@@ -52,10 +52,10 @@ class GiaoVuHelper extends HtmlHelper{
 		$quyens=array();
 		$khoa=array();
 		$ngaysinh;
-		$action="/DoAn/giangviens/themGiangvien";
+		$action="/DoAn/giaovus/themGiangvien";
 		$selected="";
 		if(isset($giangvien)){
-			$action="/DoAn/giangviens/capnhapGiangvien/".$giangvien['id'];
+			$action="/DoAn/giaovus/capnhapGiangvien/".$giangvien['id'];
 			$name=$giangvien['ten'];
 			$diachi=$giangvien['diachi'];
 			$hocvi=$giangvien['hocvi'];
@@ -86,9 +86,11 @@ class GiaoVuHelper extends HtmlHelper{
 			$register.="<option value='".$i."' ".$selected.">".$this->Gioitinhs[$i]."</option>";
 		}
 		$register.="</select></td></tr>";
-		
+		$register.="<tr><td><label for='register_uername'>Ngày sinh</label></td>";
+		$register.="<td><input type='text' name='ngaySinh' data-beatpicker='true' data-beatpicker-id='myDatePicker'></td>";
 		$register.="<tr><td><label for='register_uername'>Học hàm</label></td>";
 		$register.="<td><select name='hocham' id=''>";
+		$register.="<option value='' disabled selected>Chọn học hàm</option>";
 		$selected="";
 		foreach($this->Hochams as $x=>$x_value){
 			if($hocham==$x){
@@ -114,10 +116,10 @@ class GiaoVuHelper extends HtmlHelper{
 		$register.="<tr><td><label for='register_uername'>Quyền</label></td><td><fieldset class='group'> <legend>Chọn quyền</legend><ul class='checkbox'>";
 		foreach ($listquyen  as $item){
 			$check="";
-			if(in_array($item['id'],$quyens)){
+			if(in_array($item['Quyen']['id'],$quyens)){
 				$check="checked";
 			}
-			$register.="<li><input type='checkbox' name='roles' value='".$item['id']."' ".$check."><label for='cb".$item['id']."'>".$item['maquyen']."</label></li>";
+			$register.="<li><input type='checkbox' name='roles[]' value='".$item['Quyen']['id']."' ".$check."><label for='cb".$item['Quyen']['id']."'>".$item['Quyen']['maquyen']."</label></li>";
 		}
 		$register.="</ul></fieldset></td></tr>";
 		$register.="<tr><td><label for='register_uername'>Khoa</label></td><td><fieldset class='group'> <legend>Chọn khoa</legend><ul class='checkbox'>";
@@ -126,11 +128,9 @@ class GiaoVuHelper extends HtmlHelper{
 			if (in_array($item['Khoa']['id'], $khoa)) {
 				$cheked="checked";
 			}
-			$register.="<li><input type='checkbox' name='khoas' value='".$item['Khoa']['id']."' ".$cheked."><label for='cb".$item['id']."'>".$item['Khoa']['maKhoa']."</label></li>" ;
+			$register.="<li><input type='checkbox' name='khoas[]' value='".$item['Khoa']['id']."' ".$cheked."><label for='cb".$item['Khoa']['id']."'>".$item['Khoa']['tenKhoa']."</label></li>" ;
 		}
 		$register.="</ul></fieldset></td></tr>";
-		$register.="<tr><td><label for='register_uername'>Ngày sinh</label></td>";
-		$register.="<td><input type='text' data-beatpicker='true' data-beatpicker-id='myDatePicker'></td>";
 		$register.="</table>";
 		$register.="<div class='left clear cachbtleft cachbt'>
 				<input class='button2 sizebutton2' id='btnUsermn' type='submit' value='Lưu' name='ok'/>

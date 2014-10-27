@@ -29,13 +29,12 @@ class CommonHelper extends HtmlHelper{
 		$menu.="<li>".$this->link("quản lý",array('controller' => 'users','action' => 'index','full_base' => true))."</li>";
 		$menu.="<li>".$this->link("Tài liệu biểu mẫu",array('controller' => 'users','action' => 'index','full_base' => true))."</li></ul></li>";
 		$menu.="<li id='login' style='float:right'><a href='#'>Đăng nhập</a></li>";
-		$menu.=$this->login()."</ul>";
+		//$menu.=$this->login()."</ul>";
 		return $menu;
 	}
 	function login(){
 		$login = "<div class='login' style='display:none'>";
 		$login.="<div class='title'><h1>Login</h1><a href='#' class='close'></a></div>";
-	
 		$login.="<form method='post' action='/luatvnam/users/login'>";
 		$login.="<p><input type='text' id='username' name='username' value='' placeholder='Username'></p>";
 		$login.="<input type='password' id='password' name='password' value='' placeholder='Password'></p>";

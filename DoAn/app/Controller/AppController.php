@@ -31,7 +31,52 @@ App::uses('Controller', 'Controller');
  * @link		http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
 */
 class AppController extends Controller {
-	var $helpers = array("Form","Html","Common","User","Giangvien","Js","Session","Paginator");
+	var $helpers = array("Form","Html","Common","User","Userform","Giangvien","Js","Paginator","Session");
 	var $layout = null;
-	//var $components = array('Auth');
+	var $components = array('Session','Auth' => array(
+		'loginAction'=>array('controller' => 'Users', 'action' => 'login'),
+        'loginRedirect' => array('controller' => 'Giangviens', 'action' => 'index'),
+        'logoutRedirect' => array('controller' => 'Users', 'action' => 'index'),
+        'authError' => 'You must be logged in to view this page.',
+        'loginError' => 'Invalid Username or Password entered, please try again.',
+		'authenticate' => array( 'Form' => array('userModel' => 'User',
+      	'fields' => array('username' => 'maGiangvien', 'password' => 'matKhau')))));
+	var $roles=null;
+	// only allow the login controllers only
+	public function beforeFilter() {
+		$this->Auth->actionPath = 'controllers/';
+		$this->Auth->authorize = 'controller';
+	}
+	
+	public function isAuthorized($user) {
+		// Here is where we should verify the role and give access based on role
+		return true;
+	}
+	//
+	public function isGiaovu(){
+		$roles=$this->Session->read('roles');
+		try {
+			if(is_array($roles)&&in_array(2,$roles)){
+				$this->layout="giaovu";
+				return true;
+			}
+		} catch (Exception $e) {
+			return false;
+		}
+		
+		
+	}
+	public function isGiangvien(){
+		$roles=$this->Session->read('roles');
+		try {
+			if(is_array($roles)&&in_array(3,$roles)){
+				$this->layout="giangvien";
+				return true;
+			}
+		} catch (Exception $e) {
+			return false;
+		}
+		return false;
+	}
+	
 }

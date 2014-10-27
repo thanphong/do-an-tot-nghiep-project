@@ -5521,3 +5521,2306 @@ Request URL: /DoAn/img/images/logovn.pgn
 Stack Trace:
 #0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2014-10-24 05:07:17 Error: [MissingActionException] Action GiangViensController::themGiangvien() could not be found.
+Exception Attributes: array (
+  'controller' => 'GiangViensController',
+  'action' => 'themGiangvien',
+)
+Request URL: /DoAn/giangviens/themGiangvien
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiangViensController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-24 05:09:08 Error: [MissingActionException] Action GiangViensController::themGiangvien() could not be found.
+Exception Attributes: array (
+  'controller' => 'GiangViensController',
+  'action' => 'themGiangvien',
+)
+Request URL: /DoAn/giangviens/themGiangvien
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiangViensController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-24 05:09:56 Error: [MissingActionException] Action GiangViensController::themGiangvien() could not be found.
+Exception Attributes: array (
+  'controller' => 'GiangViensController',
+  'action' => 'themGiangvien',
+)
+Request URL: /DoAn/giangviens/themGiangvien
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiangViensController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-24 05:10:34 Error: Fatal Error (64): Cannot redeclare GiaoVusController::themGiangvien() in [C:\xampp\htdocs\DoAn\app\Controller\GiaoVusController.php, line 66]
+2014-10-24 05:10:34 Error: [FatalErrorException] Cannot redeclare GiaoVusController::themGiangvien()
+Request URL: /DoAn/GiaoVus/quanlyGiangVien
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', 'C:\xampp\htdocs...', 66)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', 'C:\xampp\htdocs...', 66, Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', 'C:\xampp\htdocs...', 66, Array)
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-24 05:11:08 Error: [MissingActionException] Action GiaoVusController::icon.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'GiaoVusController',
+  'action' => 'icon.png',
+)
+Request URL: /DoAn/giaovus/icon.png
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-24 05:11:55 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-24 05:12:54 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-24 05:13:02 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-24 05:19:38 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-24 05:20:10 Error: [MissingViewException] View file "C:\xampp\htdocs\DoAn\app\View\Users\login.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\DoAn\\app\\View\\Users\\login.ctp',
+)
+Request URL: /DoAn/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-10-24 05:30:40 Error: Fatal Error (1): Call to a member function flash() on a non-object in [C:\xampp\htdocs\DoAn\app\View\Helper\UserformHelper.php, line 6]
+2014-10-24 05:30:40 Error: [FatalErrorException] Call to a member function flash() on a non-object
+Request URL: /DoAn/
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 6)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 6, Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 6, Array)
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-24 05:31:25 Error: Fatal Error (1): Call to a member function input() on a non-object in [C:\xampp\htdocs\DoAn\app\View\Helper\UserformHelper.php, line 8]
+2014-10-24 05:31:25 Error: [FatalErrorException] Call to a member function input() on a non-object
+Request URL: /DoAn/
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 8)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 8, Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 8, Array)
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-24 05:37:20 Error: [MissingActionException] Action GiangViensController::login() could not be found.
+Exception Attributes: array (
+  'controller' => 'GiangViensController',
+  'action' => 'login',
+)
+Request URL: /DoAn/giangviens/login
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiangViensController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-24 05:43:02 Error: Fatal Error (1): Call to a member function allow() on a non-object in [C:\xampp\htdocs\DoAn\app\Controller\UsersController.php, line 9]
+2014-10-24 05:43:02 Error: [FatalErrorException] Call to a member function allow() on a non-object
+Request URL: /DoAn/
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 9)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 9, Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 9, Array)
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-24 05:43:51 Error: Fatal Error (1): Call to a member function allow() on a non-object in [C:\xampp\htdocs\DoAn\app\Controller\UsersController.php, line 10]
+2014-10-24 05:43:51 Error: [FatalErrorException] Call to a member function allow() on a non-object
+Request URL: /DoAn/
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 10)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 10, Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 10, Array)
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-24 05:45:03 Error: [MissingControllerException] Controller class GiangvienController could not be found.
+Exception Attributes: array (
+  'class' => 'GiangvienController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/Giangvien
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-24 05:59:19 Error: [MissingActionException] Action UsersController::login() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'login',
+)
+Request URL: /DoAn/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-24 05:59:27 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-24 05:59:32 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-24 05:59:34 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-24 05:59:35 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-24 05:59:41 Error: [MissingActionException] Action UsersController::login() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'login',
+)
+Request URL: /DoAn/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-24 06:18:24 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-24 06:18:26 Error: [MissingActionException] Action UsersController::login() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'login',
+)
+Request URL: /DoAn/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-24 06:19:10 Error: [MissingActionException] Action UsersController::login() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'login',
+)
+Request URL: /DoAn/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-24 06:19:13 Error: [MissingActionException] Action UsersController::login() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'login',
+)
+Request URL: /DoAn/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-24 06:20:02 Error: [MissingActionException] Action UsersController::login() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'login',
+)
+Request URL: /DoAn/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-24 06:25:13 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-24 06:25:50 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-24 06:55:50 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Giangvien.Khoa' in 'field list'
+Request URL: /DoAn/giaovus/themGiangvien
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT `Giangvi...', Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT `Giangvi...', Array, Array)
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1418): DboSource->fetchAll('SELECT `Giangvi...', false)
+#4 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1254): DboSource->_fetchHasMany(Object(Khoa), 'SELECT `Giangvi...', Array)
+#5 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1137): DboSource->queryAssociation(Object(Khoa), Object(Giangvien), 'hasMany', 'Giangvien', Array, Array, true, Array, 0, Array)
+#6 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Khoa), Array)
+#7 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(2919): Model->_readDataSource('first', Array)
+#8 C:\xampp\htdocs\DoAn\app\Controller\GiaoVusController.php(26): Model->find('first', Array)
+#9 C:\xampp\htdocs\DoAn\app\Controller\GiaoVusController.php(20): GiaoVusController->taoMagiangvien(Array)
+#10 [internal function]: GiaoVusController->themGiangvien()
+#11 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GiaoVusController), Array)
+#12 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#13 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#14 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2014-10-24 08:34:42 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Giangvien.Khoa' in 'field list'
+Request URL: /DoAn/giaovus/themGiangvien
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT `Giangvi...', Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT `Giangvi...', Array, Array)
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1418): DboSource->fetchAll('SELECT `Giangvi...', false)
+#4 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1254): DboSource->_fetchHasMany(Object(Khoa), 'SELECT `Giangvi...', Array)
+#5 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1137): DboSource->queryAssociation(Object(Khoa), Object(Giangvien), 'hasMany', 'Giangvien', Array, Array, true, Array, 0, Array)
+#6 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Khoa), Array)
+#7 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(2919): Model->_readDataSource('first', Array)
+#8 C:\xampp\htdocs\DoAn\app\Controller\GiaoVusController.php(26): Model->find('first', Array)
+#9 C:\xampp\htdocs\DoAn\app\Controller\GiaoVusController.php(20): GiaoVusController->taoMagiangvien(Array)
+#10 [internal function]: GiaoVusController->themGiangvien()
+#11 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GiaoVusController), Array)
+#12 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#13 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#14 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2014-10-24 08:35:11 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Giangvien.Khoa' in 'field list'
+Request URL: /DoAn/giaovus/themGiangvien
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT `Giangvi...', Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT `Giangvi...', Array, Array)
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1418): DboSource->fetchAll('SELECT `Giangvi...', false)
+#4 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1254): DboSource->_fetchHasMany(Object(Khoa), 'SELECT `Giangvi...', Array)
+#5 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1137): DboSource->queryAssociation(Object(Khoa), Object(Giangvien), 'hasMany', 'Giangvien', Array, Array, true, Array, 0, Array)
+#6 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Khoa), Array)
+#7 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(2919): Model->_readDataSource('first', Array)
+#8 C:\xampp\htdocs\DoAn\app\Controller\GiaoVusController.php(26): Model->find('first', Array)
+#9 C:\xampp\htdocs\DoAn\app\Controller\GiaoVusController.php(20): GiaoVusController->taoMagiangvien(Array)
+#10 [internal function]: GiaoVusController->themGiangvien()
+#11 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GiaoVusController), Array)
+#12 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#13 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#14 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2014-10-24 08:40:03 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Giangvien.Khoa' in 'field list'
+Request URL: /DoAn/giaovus/themGiangvien
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT `Giangvi...', Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT `Giangvi...', Array, Array)
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1418): DboSource->fetchAll('SELECT `Giangvi...', false)
+#4 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1254): DboSource->_fetchHasMany(Object(Khoa), 'SELECT `Giangvi...', Array)
+#5 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1137): DboSource->queryAssociation(Object(Khoa), Object(Giangvien), 'hasMany', 'Giangvien', Array, Array, true, Array, 0, Array)
+#6 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Khoa), Array)
+#7 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(2919): Model->_readDataSource('first', Array)
+#8 C:\xampp\htdocs\DoAn\app\Controller\GiaoVusController.php(26): Model->find('first', Array)
+#9 C:\xampp\htdocs\DoAn\app\Controller\GiaoVusController.php(20): GiaoVusController->taoMagiangvien(Array)
+#10 [internal function]: GiaoVusController->themGiangvien()
+#11 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GiaoVusController), Array)
+#12 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#13 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#14 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2014-10-24 08:40:57 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Giangvien.Khoa' in 'field list'
+Request URL: /DoAn/giaovus/themGiangvien
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT `Giangvi...', Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT `Giangvi...', Array, Array)
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1418): DboSource->fetchAll('SELECT `Giangvi...', false)
+#4 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1254): DboSource->_fetchHasMany(Object(Khoa), 'SELECT `Giangvi...', Array)
+#5 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1137): DboSource->queryAssociation(Object(Khoa), Object(Giangvien), 'hasMany', 'Giangvien', Array, Array, true, Array, 0, Array)
+#6 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Khoa), Array)
+#7 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(2919): Model->_readDataSource('first', Array)
+#8 C:\xampp\htdocs\DoAn\app\Controller\GiaoVusController.php(26): Model->find('first', Array)
+#9 C:\xampp\htdocs\DoAn\app\Controller\GiaoVusController.php(20): GiaoVusController->taoMagiangvien(Array)
+#10 [internal function]: GiaoVusController->themGiangvien()
+#11 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GiaoVusController), Array)
+#12 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#13 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#14 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2014-10-24 08:41:43 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Giangvien.Khoa' in 'field list'
+Request URL: /DoAn/giaovus/themGiangvien
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT `Giangvi...', Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT `Giangvi...', Array, Array)
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1418): DboSource->fetchAll('SELECT `Giangvi...', false)
+#4 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1254): DboSource->_fetchHasMany(Object(Khoa), 'SELECT `Giangvi...', Array)
+#5 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1137): DboSource->queryAssociation(Object(Khoa), Object(Giangvien), 'hasMany', 'Giangvien', Array, Array, true, Array, 0, Array)
+#6 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Khoa), Array)
+#7 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(2919): Model->_readDataSource('first', Array)
+#8 C:\xampp\htdocs\DoAn\app\Controller\GiaoVusController.php(27): Model->find('first', Array)
+#9 C:\xampp\htdocs\DoAn\app\Controller\GiaoVusController.php(20): GiaoVusController->taoMagiangvien(Array)
+#10 [internal function]: GiaoVusController->themGiangvien()
+#11 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GiaoVusController), Array)
+#12 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#13 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#14 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2014-10-24 08:43:29 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Giangvien.Khoa' in 'field list'
+Request URL: /DoAn/giaovus/themGiangvien
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT `Giangvi...', Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT `Giangvi...', Array, Array)
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1418): DboSource->fetchAll('SELECT `Giangvi...', false)
+#4 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1254): DboSource->_fetchHasMany(Object(Khoa), 'SELECT `Giangvi...', Array)
+#5 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1137): DboSource->queryAssociation(Object(Khoa), Object(Giangvien), 'hasMany', 'Giangvien', Array, Array, true, Array, 0, Array)
+#6 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Khoa), Array)
+#7 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(2919): Model->_readDataSource('first', Array)
+#8 C:\xampp\htdocs\DoAn\app\Controller\GiaoVusController.php(27): Model->find('first', Array)
+#9 C:\xampp\htdocs\DoAn\app\Controller\GiaoVusController.php(20): GiaoVusController->taoMagiangvien(Array)
+#10 [internal function]: GiaoVusController->themGiangvien()
+#11 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GiaoVusController), Array)
+#12 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#13 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#14 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2014-10-24 08:43:57 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Giangvien.Khoa' in 'field list'
+Request URL: /DoAn/giaovus/themGiangvien
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT `Giangvi...', Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT `Giangvi...', Array, Array)
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1418): DboSource->fetchAll('SELECT `Giangvi...', false)
+#4 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1254): DboSource->_fetchHasMany(Object(Khoa), 'SELECT `Giangvi...', Array)
+#5 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1137): DboSource->queryAssociation(Object(Khoa), Object(Giangvien), 'hasMany', 'Giangvien', Array, Array, true, Array, 0, Array)
+#6 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Khoa), Array)
+#7 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(2919): Model->_readDataSource('first', Array)
+#8 C:\xampp\htdocs\DoAn\app\Controller\GiaoVusController.php(27): Model->find('first', Array)
+#9 C:\xampp\htdocs\DoAn\app\Controller\GiaoVusController.php(20): GiaoVusController->taoMagiangvien(Array)
+#10 [internal function]: GiaoVusController->themGiangvien()
+#11 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GiaoVusController), Array)
+#12 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#13 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#14 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2014-10-24 08:44:08 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Giangvien.Khoa' in 'field list'
+Request URL: /DoAn/giaovus/themGiangvien
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT `Giangvi...', Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT `Giangvi...', Array, Array)
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1418): DboSource->fetchAll('SELECT `Giangvi...', false)
+#4 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1254): DboSource->_fetchHasMany(Object(Khoa), 'SELECT `Giangvi...', Array)
+#5 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1137): DboSource->queryAssociation(Object(Khoa), Object(Giangvien), 'hasMany', 'Giangvien', Array, Array, true, Array, 0, Array)
+#6 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Khoa), Array)
+#7 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(2919): Model->_readDataSource('first', Array)
+#8 C:\xampp\htdocs\DoAn\app\Controller\GiaoVusController.php(27): Model->find('first')
+#9 C:\xampp\htdocs\DoAn\app\Controller\GiaoVusController.php(20): GiaoVusController->taoMagiangvien(Array)
+#10 [internal function]: GiaoVusController->themGiangvien()
+#11 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GiaoVusController), Array)
+#12 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#13 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#14 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2014-10-24 08:44:27 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-24 08:45:11 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Giangvien.Khoa' in 'field list'
+Request URL: /DoAn/giaovus/themGiangvien
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT `Giangvi...', Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT `Giangvi...', Array, Array)
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1418): DboSource->fetchAll('SELECT `Giangvi...', false)
+#4 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1254): DboSource->_fetchHasMany(Object(Khoa), 'SELECT `Giangvi...', Array)
+#5 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1137): DboSource->queryAssociation(Object(Khoa), Object(Giangvien), 'hasMany', 'Giangvien', Array, Array, true, Array, 0, Array)
+#6 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Khoa), Array)
+#7 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(2919): Model->_readDataSource('first', Array)
+#8 C:\xampp\htdocs\DoAn\app\Controller\GiaoVusController.php(27): Model->find('first')
+#9 C:\xampp\htdocs\DoAn\app\Controller\GiaoVusController.php(20): GiaoVusController->taoMagiangvien(Array)
+#10 [internal function]: GiaoVusController->themGiangvien()
+#11 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GiaoVusController), Array)
+#12 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#13 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#14 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2014-10-24 09:05:20 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-24 09:06:04 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-24 09:10:20 Error: [MissingActionException] Action UsersController::login() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'login',
+)
+Request URL: /DoAn/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-24 09:11:48 Error: Fatal Error (1): Class 'Security' not found in [C:\xampp\htdocs\DoAn\app\Controller\GiaoVusController.php, line 23]
+2014-10-24 09:11:48 Error: [FatalErrorException] Class 'Security' not found
+Request URL: /DoAn/giaovus/themGiangvien
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Class 'Security...', 'C:\xampp\htdocs...', 23)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Security...', 'C:\xampp\htdocs...', 23, Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Class 'Security...', 'C:\xampp\htdocs...', 23, Array)
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-24 09:12:12 Error: [MissingActionException] Action UsersController::login() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'login',
+)
+Request URL: /DoAn/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-24 09:16:02 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-24 09:22:36 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Giangvien.maGiangviens' in 'order clause'
+Request URL: /DoAn/giaovus/themGiangvien
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT `Giangvi...', Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT `Giangvi...', Array, Array)
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Giangvi...', false)
+#4 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Giangvien), Array)
+#5 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(2919): Model->_readDataSource('first', Array)
+#6 C:\xampp\htdocs\DoAn\app\Controller\GiaoVusController.php(38): Model->find('first', Array)
+#7 C:\xampp\htdocs\DoAn\app\Controller\GiaoVusController.php(24): GiaoVusController->taoMagiangvien(Array)
+#8 [internal function]: GiaoVusController->themGiangvien()
+#9 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GiaoVusController), Array)
+#10 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#12 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-10-24 09:30:45 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-24 09:31:19 Error: [MissingActionException] Action UsersController::login() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'login',
+)
+Request URL: /DoAn/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-24 09:36:44 Error: [MissingActionException] Action UsersController::login() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'login',
+)
+Request URL: /DoAn/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-24 09:38:56 Error: [MissingActionException] Action UsersController::login() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'login',
+)
+Request URL: /DoAn/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-24 09:39:01 Error: [MissingActionException] Action UsersController::login() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'login',
+)
+Request URL: /DoAn/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-24 09:42:38 Error: [MissingActionException] Action UsersController::login() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'login',
+)
+Request URL: /DoAn/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-24 09:47:02 Error: [MissingActionException] Action UsersController::login() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'login',
+)
+Request URL: /DoAn/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-24 09:49:35 Error: [MissingActionException] Action UsersController::login() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'login',
+)
+Request URL: /DoAn/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-24 09:53:32 Error: [MissingActionException] Action UsersController::logout() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'logout',
+)
+Request URL: /DoAn/users/logout
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-25 04:03:43 Error: [MissingViewException] View file "C:\xampp\htdocs\DoAn\app\View\Users\login.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\DoAn\\app\\View\\Users\\login.ctp',
+)
+Request URL: /DoAn/Users/login
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-10-25 04:04:02 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-25 04:04:14 Error: [MissingActionException] Action GiangViensController::login() could not be found.
+Exception Attributes: array (
+  'controller' => 'GiangViensController',
+  'action' => 'login',
+)
+Request URL: /DoAn/giangviens/login
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiangViensController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-25 04:07:17 Error: [MissingViewException] View file "C:\xampp\htdocs\DoAn\app\View\Users\login.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\DoAn\\app\\View\\Users\\login.ctp',
+)
+Request URL: /DoAn/Users/login
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-10-25 04:11:35 Error: [MissingActionException] Action UsersController::icon.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'icon.png',
+)
+Request URL: /DoAn/Users/icon.png
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-25 05:05:28 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-25 05:15:16 Error: Fatal Error (1): Call to a member function read() on a non-object in [C:\xampp\htdocs\DoAn\app\Controller\UsersController.php, line 21]
+2014-10-25 05:15:16 Error: [FatalErrorException] Call to a member function read() on a non-object
+Request URL: /DoAn/Users/login
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 21)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 21, Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 21, Array)
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-25 05:30:43 Error: Fatal Error (1): Call to a member function read() on a non-object in [C:\xampp\htdocs\DoAn\app\Controller\UsersController.php, line 21]
+2014-10-25 05:30:43 Error: [FatalErrorException] Call to a member function read() on a non-object
+Request URL: /DoAn/Users/login
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 21)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 21, Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 21, Array)
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-25 05:31:10 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-25 05:49:11 Error: [MissingActionException] Action UsersController::icon.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'icon.png',
+)
+Request URL: /DoAn/users/icon.png
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-25 05:49:52 Error: [MissingViewException] View file "C:\xampp\htdocs\DoAn\app\View\Users\login.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\DoAn\\app\\View\\Users\\login.ctp',
+)
+Request URL: /DoAn/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-10-25 05:49:55 Error: [MissingViewException] View file "C:\xampp\htdocs\DoAn\app\View\Users\login.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\DoAn\\app\\View\\Users\\login.ctp',
+)
+Request URL: /DoAn/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-10-25 05:50:26 Error: [MissingViewException] View file "C:\xampp\htdocs\DoAn\app\View\Users\login.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\DoAn\\app\\View\\Users\\login.ctp',
+)
+Request URL: /DoAn/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-10-25 09:09:08 Error: [CakeException] $controller does not implement an isAuthorized() method.
+Request URL: /DoAn/users/logout
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Component\Auth\BaseAuthorize.php(72): ControllerAuthorize->controller(Object(UsersController))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Component\AuthComponent.php(501): BaseAuthorize->__construct(Object(ComponentCollection), Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Component\AuthComponent.php(463): AuthComponent->constructAuthorize()
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Component\AuthComponent.php(309): AuthComponent->isAuthorized(Array)
+#4 [internal function]: AuthComponent->startup(Object(UsersController))
+#5 C:\xampp\htdocs\DoAn\lib\Cake\Utility\ObjectCollection.php(128): call_user_func_array(Array, Array)
+#6 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#7 C:\xampp\htdocs\DoAn\lib\Cake\Event\CakeEventManager.php(242): call_user_func(Array, Object(CakeEvent))
+#8 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(675): CakeEventManager->dispatch(Object(CakeEvent))
+#9 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(187): Controller->startupProcess()
+#10 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#11 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-10-25 09:11:26 Error: [MissingViewException] View file "C:\xampp\htdocs\DoAn\app\View\Users\logout.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\DoAn\\app\\View\\Users\\logout.ctp',
+)
+Request URL: /DoAn/users/logout
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-10-25 09:13:57 Error: [MissingActionException] Action UsersController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'index',
+)
+Request URL: /DoAn/
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-25 09:28:26 Error: [MissingViewException] View file "C:\xampp\htdocs\DoAn\app\View\Users\logout.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\DoAn\\app\\View\\Users\\logout.ctp',
+)
+Request URL: /DoAn/users/logout
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-10-25 09:31:52 Error: Fatal Error (1): Call to undefined method SessionComponent::flash() in [C:\xampp\htdocs\DoAn\app\Controller\UsersController.php, line 19]
+2014-10-25 09:31:52 Error: [FatalErrorException] Call to undefined method SessionComponent::flash()
+Request URL: /DoAn/users
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\xampp\htdocs...', 19)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\xampp\htdocs...', 19, Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\xampp\htdocs...', 19, Array)
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-25 09:33:51 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\xampp\htdocs\DoAn\app\View\Users\login.ctp, line 10]
+2014-10-25 09:33:51 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /DoAn/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 10)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 10, Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 10, Array)
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-25 09:34:02 Error: [MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => false,
+)
+Request URL: /DoAn/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\View\HelperCollection.php(63): HelperCollection->load('Auth')
+#1 C:\xampp\htdocs\DoAn\lib\Cake\View\View.php(837): HelperCollection->__isset('Auth')
+#2 C:\xampp\htdocs\DoAn\app\View\Users\login.ctp(7): View->__get('Auth')
+#3 C:\xampp\htdocs\DoAn\lib\Cake\View\View.php(948): include('C:\xampp\htdocs...')
+#4 C:\xampp\htdocs\DoAn\lib\Cake\View\View.php(910): View->_evaluate('C:\xampp\htdocs...', Array)
+#5 C:\xampp\htdocs\DoAn\lib\Cake\View\View.php(471): View->_render('C:\xampp\htdocs...')
+#6 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#7 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#8 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#9 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-10-25 09:34:17 Error: Fatal Error (1): Call to undefined method View::loggedIn() in [C:\xampp\htdocs\DoAn\app\View\Users\login.ctp, line 7]
+2014-10-25 09:34:17 Error: [FatalErrorException] Call to undefined method View::loggedIn()
+Request URL: /DoAn/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\xampp\htdocs...', 7)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\xampp\htdocs...', 7, Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\xampp\htdocs...', 7, Array)
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-25 10:25:00 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-25 10:25:03 Error: [MissingActionException] Action GiaoVusController::icon.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'GiaoVusController',
+  'action' => 'icon.png',
+)
+Request URL: /DoAn/GiaoVus/icon.png
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-25 10:25:39 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.maGiangvien' in 'on clause'
+Request URL: /DoAn/giaovus/themGiangvien
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT `Giangvi...', Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT `Giangvi...', Array, Array)
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Giangvi...', false)
+#4 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Giangvien), Array)
+#5 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(2919): Model->_readDataSource('first', Array)
+#6 C:\xampp\htdocs\DoAn\app\Controller\GiaoVusController.php(41): Model->find('first', Array)
+#7 C:\xampp\htdocs\DoAn\app\Controller\GiaoVusController.php(25): GiaoVusController->taoMagiangvien(Array)
+#8 [internal function]: GiaoVusController->themGiangvien()
+#9 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GiaoVusController), Array)
+#10 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#12 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-10-25 10:26:19 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.maGiangvien' in 'on clause'
+Request URL: /DoAn/giaovus/themGiangvien
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT `Giangvi...', Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT `Giangvi...', Array, Array)
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Giangvi...', false)
+#4 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Giangvien), Array)
+#5 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(2919): Model->_readDataSource('first', Array)
+#6 C:\xampp\htdocs\DoAn\app\Controller\GiaoVusController.php(41): Model->find('first', Array)
+#7 C:\xampp\htdocs\DoAn\app\Controller\GiaoVusController.php(25): GiaoVusController->taoMagiangvien(Array)
+#8 [internal function]: GiaoVusController->themGiangvien()
+#9 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GiaoVusController), Array)
+#10 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#12 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-10-25 10:26:28 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.maGiangvien' in 'on clause'
+Request URL: /DoAn/giaovus/themGiangvien
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT `Giangvi...', Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT `Giangvi...', Array, Array)
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Giangvi...', false)
+#4 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Giangvien), Array)
+#5 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(2919): Model->_readDataSource('first', Array)
+#6 C:\xampp\htdocs\DoAn\app\Controller\GiaoVusController.php(41): Model->find('first', Array)
+#7 C:\xampp\htdocs\DoAn\app\Controller\GiaoVusController.php(25): GiaoVusController->taoMagiangvien(Array)
+#8 [internal function]: GiaoVusController->themGiangvien()
+#9 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GiaoVusController), Array)
+#10 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#12 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-10-25 10:29:50 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-25 10:29:51 Error: [MissingActionException] Action GiaoVusController::icon.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'GiaoVusController',
+  'action' => 'icon.png',
+)
+Request URL: /DoAn/giaovus/icon.png
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-25 10:31:08 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-25 10:31:41 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-25 10:34:15 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-25 10:44:04 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-25 11:05:28 Error: Fatal Error (4): syntax error, unexpected '?>', expecting function (T_FUNCTION) in [C:\xampp\htdocs\DoAn\app\Controller\UsersController.php, line 46]
+2014-10-25 11:05:28 Error: [FatalErrorException] syntax error, unexpected '?>', expecting function (T_FUNCTION)
+Request URL: /DoAn/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 46)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 46, Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 46, Array)
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-25 11:33:16 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-25 12:43:55 Error: [MissingViewException] View file "C:\xampp\htdocs\DoAn\app\View\Users\add.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\DoAn\\app\\View\\Users\\add.ctp',
+)
+Request URL: /DoAn/users/add
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-10-25 12:48:56 Error: [MissingPluginException] Plugin DebugKit could not be found.
+Exception Attributes: array (
+  'plugin' => 'DebugKit',
+)
+Request URL: /DoAn/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(227): CakePlugin::path('DebugKit')
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(549): App::path('Controller/Comp...', 'DebugKit')
+#2 [internal function]: App::load('ToolbarComponen...')
+#3 [internal function]: spl_autoload_call('ToolbarComponen...')
+#4 C:\xampp\htdocs\DoAn\lib\Cake\Controller\ComponentCollection.php(110): class_exists('ToolbarComponen...')
+#5 C:\xampp\htdocs\DoAn\lib\Cake\Controller\ComponentCollection.php(53): ComponentCollection->load('DebugKit.Toolba...', Array)
+#6 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(643): ComponentCollection->init(Object(UsersController))
+#7 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(186): Controller->constructClasses()
+#8 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#9 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-10-25 12:53:17 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-25 13:25:09 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-25 13:25:11 Error: [MissingActionException] Action GiaoVusController::icon.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'GiaoVusController',
+  'action' => 'icon.png',
+)
+Request URL: /DoAn/GiaoVus/icon.png
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-25 13:25:35 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-25 13:25:36 Error: [MissingActionException] Action GiaoVusController::icon.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'GiaoVusController',
+  'action' => 'icon.png',
+)
+Request URL: /DoAn/giaovus/icon.png
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-25 13:30:51 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-25 13:31:13 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-25 13:32:28 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-25 13:35:57 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-25 13:38:01 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-25 13:43:35 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-25 13:47:47 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-25 14:03:25 Error: Fatal Error (1): Call to undefined function render() in [C:\xampp\htdocs\DoAn\app\Controller\GiaoVusController.php, line 36]
+2014-10-25 14:03:25 Error: [FatalErrorException] Call to undefined function render()
+Request URL: /DoAn/giaovus/themGiangvien
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\xampp\htdocs...', 36)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\xampp\htdocs...', 36, Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\xampp\htdocs...', 36, Array)
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-25 14:03:40 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-25 14:11:10 Error: [PDOException] SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect datetime value: 'CURRENT_TIMESTAMP' for column 'ngayTao' at row 1
+Request URL: /DoAn/giaovus/themGiangvien
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('INSERT INTO `do...', Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1012): DboSource->execute('INSERT INTO `do...')
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(1854): DboSource->create(Object(User), Array, Array)
+#4 C:\xampp\htdocs\DoAn\app\Controller\GiaoVusController.php(34): Model->save(Array)
+#5 [internal function]: GiaoVusController->themGiangvien()
+#6 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GiaoVusController), Array)
+#7 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#9 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-10-25 14:12:19 Error: [PDOException] SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect datetime value: 'CURRENT_TIMESTAMP' for column 'ngaycapnhap' at row 1
+Request URL: /DoAn/giaovus/themGiangvien
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('INSERT INTO `do...', Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1012): DboSource->execute('INSERT INTO `do...')
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(1854): DboSource->create(Object(User), Array, Array)
+#4 C:\xampp\htdocs\DoAn\app\Controller\GiaoVusController.php(34): Model->save(Array)
+#5 [internal function]: GiaoVusController->themGiangvien()
+#6 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GiaoVusController), Array)
+#7 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#9 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-10-25 14:12:58 Error: [PDOException] SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect datetime value: 'CURRENT_TIMESTAMP' for column 'ngayTao' at row 1
+Request URL: /DoAn/giaovus/themGiangvien
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('INSERT INTO `do...', Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1012): DboSource->execute('INSERT INTO `do...')
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(1854): DboSource->create(Object(User), Array, Array)
+#4 C:\xampp\htdocs\DoAn\app\Controller\GiaoVusController.php(34): Model->save(Array)
+#5 [internal function]: GiaoVusController->themGiangvien()
+#6 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GiaoVusController), Array)
+#7 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#9 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-10-25 14:13:02 Error: [PDOException] SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect datetime value: 'CURRENT_TIMESTAMP' for column 'ngayTao' at row 1
+Request URL: /DoAn/giaovus/themGiangvien
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('INSERT INTO `do...', Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1012): DboSource->execute('INSERT INTO `do...')
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(1854): DboSource->create(Object(User), Array, Array)
+#4 C:\xampp\htdocs\DoAn\app\Controller\GiaoVusController.php(34): Model->save(Array)
+#5 [internal function]: GiaoVusController->themGiangvien()
+#6 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GiaoVusController), Array)
+#7 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#9 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-10-25 15:22:58 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-25 15:27:52 Error: Fatal Error (1): Call to a member function flash() on a non-object in [C:\xampp\htdocs\DoAn\app\View\Helper\UserformHelper.php, line 5]
+2014-10-25 15:27:52 Error: [FatalErrorException] Call to a member function flash() on a non-object
+Request URL: /DoAn/users
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 5)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 5, Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 5, Array)
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-25 15:31:04 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-25 15:31:21 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-25 15:31:21 Error: [MissingActionException] Action UsersController::icon.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'icon.png',
+)
+Request URL: /DoAn/users/icon.png
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-25 15:31:46 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-25 15:37:14 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-25 17:43:18 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-25 17:50:19 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-25 18:01:32 Error: [MissingActionException] Action UsersController::abc() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'abc',
+)
+Request URL: /DoAn/users/abc
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-25 18:01:44 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-25 18:34:21 Error: [MissingActionException] Action GiangViensController::login() could not be found.
+Exception Attributes: array (
+  'controller' => 'GiangViensController',
+  'action' => 'login',
+)
+Request URL: /DoAn/Giangviens/login
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiangViensController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-25 18:36:08 Error: [MissingControllerException] Controller class GianviensController could not be found.
+Exception Attributes: array (
+  'class' => 'GianviensController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/gianviens
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-25 18:36:43 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-25 18:44:59 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-25 18:51:11 Error: [MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => false,
+)
+Request URL: /DoAn/giangviens
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\View\HelperCollection.php(63): HelperCollection->load('Auth')
+#1 C:\xampp\htdocs\DoAn\lib\Cake\View\View.php(837): HelperCollection->__isset('Auth')
+#2 C:\xampp\htdocs\DoAn\app\View\Layouts\giangvien.ctp(27): View->__get('Auth')
+#3 C:\xampp\htdocs\DoAn\lib\Cake\View\View.php(948): include('C:\xampp\htdocs...')
+#4 C:\xampp\htdocs\DoAn\lib\Cake\View\View.php(910): View->_evaluate('C:\xampp\htdocs...', Array)
+#5 C:\xampp\htdocs\DoAn\lib\Cake\View\View.php(542): View->_render('C:\xampp\htdocs...')
+#6 C:\xampp\htdocs\DoAn\lib\Cake\View\View.php(479): View->renderLayout('', 'giangvien')
+#7 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#8 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#9 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiangViensController), Object(CakeRequest))
+#10 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2014-10-26 07:42:45 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-26 07:42:48 Error: [MissingActionException] Action GiaoVusController::icon.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'GiaoVusController',
+  'action' => 'icon.png',
+)
+Request URL: /DoAn/GiaoVus/icon.png
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-26 07:43:20 Error: Fatal Error (1): Call to a member function save() on a non-object in [C:\xampp\htdocs\DoAn\app\Controller\GiaoVusController.php, line 40]
+2014-10-26 07:43:20 Error: [FatalErrorException] Call to a member function save() on a non-object
+Request URL: /DoAn/giaovus/themGiangvien
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 40)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 40, Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 40, Array)
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-26 07:44:47 Error: [MissingActionException] Action GiaoVusController::icon.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'GiaoVusController',
+  'action' => 'icon.png',
+)
+Request URL: /DoAn/giaovus/icon.png
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-26 07:47:15 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-26 07:50:59 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-26 07:51:42 Error: [MissingActionException] Action UsersController::icon.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'icon.png',
+)
+Request URL: /DoAn/Users/icon.png
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-26 07:51:51 Error: [MissingActionException] Action UsersController::icon.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'icon.png',
+)
+Request URL: /DoAn/users/icon.png
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-26 07:56:32 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-26 07:56:59 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-26 08:04:02 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-26 08:04:12 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-26 08:07:34 Error: [MissingActionException] Action UsersController::aaa() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'aaa',
+)
+Request URL: /DoAn/Users/aaa
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-26 08:07:59 Error: [MissingActionException] Action UsersController::aaa() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'aaa',
+)
+Request URL: /DoAn/Users/aaa
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-26 08:08:07 Error: [MissingActionException] Action UsersController::aaa() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'aaa',
+)
+Request URL: /DoAn/Users/aaa
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-26 08:08:10 Error: [MissingActionException] Action UsersController::aaa() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'aaa',
+)
+Request URL: /DoAn/Users/aaa
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-26 08:08:34 Error: [MissingActionException] Action UsersController::aaa() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'aaa',
+)
+Request URL: /DoAn/Users/aaa
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-26 11:34:33 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-26 11:34:33 Error: [MissingActionException] Action UsersController::icon.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'icon.png',
+)
+Request URL: /DoAn/users/icon.png
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-26 11:35:22 Error: [MissingActionException] Action UsersController::aaa() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'aaa',
+)
+Request URL: /DoAn/Users/aaa
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-26 11:51:32 Error: [MissingActionException] Action UsersController::aaa() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'aaa',
+)
+Request URL: /DoAn/Users/aaa
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-26 11:51:32 Error: [MissingActionException] Action UsersController::aaa() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'aaa',
+)
+Request URL: /DoAn/Users/aaa
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-26 11:53:30 Error: [MissingActionException] Action UsersController::aaa() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'aaa',
+)
+Request URL: /DoAn/Users/aaa
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-26 11:53:58 Error: [MissingActionException] Action UsersController::aaa() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'aaa',
+)
+Request URL: /DoAn/Users/aaa
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-26 12:03:39 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-26 12:22:39 Error: [MissingActionException] Action UsersController::icon.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'icon.png',
+)
+Request URL: /DoAn/Users/icon.png
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-26 12:46:41 Error: [MissingActionException] Action UsersController::Users() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'Users',
+)
+Request URL: /DoAn/users/Users/index
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-26 12:47:14 Error: [MissingActionException] Action UsersController::Users() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'Users',
+)
+Request URL: /DoAn/users/Users/index
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-26 12:47:16 Error: [MissingActionException] Action UsersController::Users() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'Users',
+)
+Request URL: /DoAn/users/Users
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-26 13:00:17 Error: [MissingViewException] View file "C:\xampp\htdocs\DoAn\app\View\Giangviens.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\DoAn\\app\\View\\Giangviens.ctp',
+)
+Request URL: /DoAn/Users/login
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\View\View.php(468): View->_getViewFileName('/Giangviens')
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(954): View->render('/Giangviens', NULL)
+#2 C:\xampp\htdocs\DoAn\app\Controller\UsersController.php(17): Controller->render('/Giangviens')
+#3 [internal function]: UsersController->login()
+#4 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#5 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#7 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-10-26 13:03:17 Error: [MissingViewException] View file "C:\xampp\htdocs\DoAn\app\View\Giangviens.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\DoAn\\app\\View\\Giangviens.ctp',
+)
+Request URL: /DoAn/Users/login
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\View\View.php(468): View->_getViewFileName('/Giangviens')
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(954): View->render('/Giangviens', NULL)
+#2 C:\xampp\htdocs\DoAn\app\Controller\UsersController.php(17): Controller->render('/Giangviens')
+#3 [internal function]: UsersController->login()
+#4 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#5 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#7 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-10-26 13:05:37 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-26 13:12:06 Error: Fatal Error (4): syntax error, unexpected 'echo' (T_ECHO) in [C:\xampp\htdocs\DoAn\app\View\Users\index.ctp, line 2]
+2014-10-26 13:12:06 Error: [FatalErrorException] syntax error, unexpected 'echo' (T_ECHO)
+Request URL: /DoAn/users
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 2)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 2, Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 2, Array)
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-26 13:19:46 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW) in [C:\xampp\htdocs\DoAn\app\View\Layouts\user.ctp, line 32]
+2014-10-26 13:19:46 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW)
+Request URL: /DoAn/users/
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 32)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 32, Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 32, Array)
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-26 13:21:02 Error: [MissingViewException] View file "C:\xampp\htdocs\DoAn\app\View\Giangviens.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\DoAn\\app\\View\\Giangviens.ctp',
+)
+Request URL: /DoAn/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\View\View.php(468): View->_getViewFileName('/Giangviens')
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(954): View->render('/Giangviens', NULL)
+#2 C:\xampp\htdocs\DoAn\app\Controller\UsersController.php(16): Controller->render('/Giangviens')
+#3 [internal function]: UsersController->login()
+#4 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#5 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#7 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-10-26 17:25:05 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-26 18:08:08 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-26 18:09:29 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-26 18:09:47 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-26 18:11:46 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-26 18:12:13 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-26 18:13:15 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-26 18:14:35 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-26 18:16:14 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-26 18:16:38 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-26 18:18:47 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'findId' at line 1
+Request URL: /DoAn/Users
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('findId', Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('findId', Array, Array)
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(609): DboSource->fetchAll('findId', Array, Array)
+#4 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(808): DboSource->query('findId', Array, Object(User))
+#5 C:\xampp\htdocs\DoAn\app\Controller\UsersController.php(33): Model->__call('findId', Array)
+#6 C:\xampp\htdocs\DoAn\app\Controller\UsersController.php(33): User->findId(45)
+#7 [internal function]: UsersController->index()
+#8 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#9 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#11 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-10-26 18:20:52 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in where clause is ambiguous
+Request URL: /DoAn/Users
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT `User`.`...', Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(2947): DboSource->read(Object(User), Array)
+#5 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(2919): Model->_readDataSource('first', Array)
+#6 C:\xampp\htdocs\DoAn\app\Controller\UsersController.php(33): Model->find('first', Array)
+#7 [internal function]: UsersController->index()
+#8 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#9 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#11 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-10-27 05:39:19 Error: Fatal Error (64): Can't use method return value in write context in [C:\xampp\htdocs\DoAn\app\Controller\UsersController.php, line 14]
+2014-10-27 05:39:19 Error: [FatalErrorException] Can't use method return value in write context
+Request URL: /DoAn/
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(64, 'Can't use metho...', 'C:\xampp\htdocs...', 14)
+#1 [internal function]: ErrorHandler::handleError(64, 'Can't use metho...', 'C:\xampp\htdocs...', 14, Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 64, 'Can't use metho...', 'C:\xampp\htdocs...', 14, Array)
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-27 05:40:43 Error: Fatal Error (64): Can't use method return value in write context in [C:\xampp\htdocs\DoAn\app\Controller\UsersController.php, line 14]
+2014-10-27 05:40:43 Error: [FatalErrorException] Can't use method return value in write context
+Request URL: /DoAn/
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(64, 'Can't use metho...', 'C:\xampp\htdocs...', 14)
+#1 [internal function]: ErrorHandler::handleError(64, 'Can't use metho...', 'C:\xampp\htdocs...', 14, Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 64, 'Can't use metho...', 'C:\xampp\htdocs...', 14, Array)
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-27 05:40:57 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-27 05:44:59 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-27 05:45:10 Error: [MissingViewException] View file "C:\xampp\htdocs\DoAn\app\View\Giangviens.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\DoAn\\app\\View\\Giangviens.ctp',
+)
+Request URL: /DoAn/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\View\View.php(468): View->_getViewFileName('/Giangviens')
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(954): View->render('/Giangviens', NULL)
+#2 C:\xampp\htdocs\DoAn\app\Controller\UsersController.php(17): Controller->render('/Giangviens')
+#3 [internal function]: UsersController->login()
+#4 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#5 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#7 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-10-27 05:45:28 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-27 05:51:59 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-27 05:51:59 Error: [MissingActionException] Action UsersController::icon.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'icon.png',
+)
+Request URL: /DoAn/users/icon.png
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-10-27 05:52:16 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\xampp\htdocs\DoAn\app\Controller\UsersController.php, line 15]
+2014-10-27 05:52:16 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /DoAn/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 15)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 15, Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 15, Array)
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-10-27 05:52:56 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'fields' in 'where clause'
+Request URL: /DoAn/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT `Quyengi...', Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT `Quyengi...', Array, Array)
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Quyengi...', false)
+#4 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Quyengiangvien), Array)
+#5 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\DoAn\app\Controller\UsersController.php(16): Model->find('all', Array)
+#7 [internal function]: UsersController->login()
+#8 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#9 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#11 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-10-27 05:55:14 Error: [MissingViewException] View file "C:\xampp\htdocs\DoAn\app\View\Giangviens.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\DoAn\\app\\View\\Giangviens.ctp',
+)
+Request URL: /DoAn/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\View\View.php(468): View->_getViewFileName('/Giangviens')
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(954): View->render('/Giangviens', NULL)
+#2 C:\xampp\htdocs\DoAn\app\Controller\UsersController.php(20): Controller->render('/Giangviens')
+#3 [internal function]: UsersController->login()
+#4 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#5 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#7 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-10-27 05:55:56 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-27 05:56:19 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Quyengiangvien.magiangviens' in 'where clause'
+Request URL: /DoAn/users/
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT `Quyengi...', Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT `Quyengi...', Array, Array)
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Quyengi...', false)
+#4 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Quyengiangvien), Array)
+#5 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\DoAn\app\Controller\UsersController.php(40): Model->find('all', Array)
+#7 [internal function]: UsersController->index()
+#8 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#9 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#11 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-10-27 05:56:49 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Quyengiangvien.magiangviens' in 'where clause'
+Request URL: /DoAn/users/
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(458): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(424): DboSource->_execute('SELECT `Quyengi...', Array)
+#2 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT `Quyengi...', Array, Array)
+#3 C:\xampp\htdocs\DoAn\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Quyengi...', false)
+#4 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Quyengiangvien), Array)
+#5 C:\xampp\htdocs\DoAn\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\DoAn\app\Controller\UsersController.php(40): Model->find('all', Array)
+#7 [internal function]: UsersController->index()
+#8 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#9 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#11 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-10-27 05:59:22 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-27 06:00:11 Error: [MissingViewException] View file "C:\xampp\htdocs\DoAn\app\View\Giangviens.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\DoAn\\app\\View\\Giangviens.ctp',
+)
+Request URL: /DoAn/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\View\View.php(468): View->_getViewFileName('/Giangviens')
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(954): View->render('/Giangviens', NULL)
+#2 C:\xampp\htdocs\DoAn\app\Controller\UsersController.php(20): Controller->render('/Giangviens')
+#3 [internal function]: UsersController->login()
+#4 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#5 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#7 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-10-27 08:59:49 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-27 09:45:03 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-27 09:45:15 Error: [MissingViewException] View file "C:\xampp\htdocs\DoAn\app\View\Giangviens.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\DoAn\\app\\View\\Giangviens.ctp',
+)
+Request URL: /DoAn/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\View\View.php(468): View->_getViewFileName('/Giangviens')
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(954): View->render('/Giangviens', NULL)
+#2 C:\xampp\htdocs\DoAn\app\Controller\UsersController.php(20): Controller->render('/Giangviens')
+#3 [internal function]: UsersController->login()
+#4 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#5 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#7 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-10-27 09:46:10 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-27 09:46:55 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-27 09:47:12 Error: [MissingViewException] View file "C:\xampp\htdocs\DoAn\app\View\Giangviens.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\DoAn\\app\\View\\Giangviens.ctp',
+)
+Request URL: /DoAn/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\View\View.php(468): View->_getViewFileName('/Giangviens')
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(954): View->render('/Giangviens', NULL)
+#2 C:\xampp\htdocs\DoAn\app\Controller\UsersController.php(20): Controller->render('/Giangviens')
+#3 [internal function]: UsersController->login()
+#4 C:\xampp\htdocs\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#5 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#7 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-10-27 09:47:16 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-27 09:48:48 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-27 10:00:00 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-27 10:02:53 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-27 10:03:03 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/User
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-27 10:03:23 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/User
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-27 10:03:25 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/User
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-27 10:03:28 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-27 10:03:31 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-27 10:03:38 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-27 10:03:55 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-27 10:04:14 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-27 10:04:49 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-10-27 10:04:53 Error: [MissingActionException] Action GiaoVusController::icon.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'GiaoVusController',
+  'action' => 'icon.png',
+)
+Request URL: /DoAn/GiaoVus/icon.png
+Stack Trace:
+#0 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#2 C:\xampp\htdocs\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}

@@ -2,18 +2,68 @@
 class GiaoVusController extends AppController{
 	var $name="GiaoVus";
 	var $layout = "giaovu";
-	public $uses = array('Khoa','Giangvien','Hocphan','Hocky','Khuvuc','Loaithietbi','Lophocphan','Phong','Quyen','Thietbi','Thongbao');
+	public $uses = array('Khoa','Giangvien','Hocphan','Hocky','Khuvuc','Loaithietbi','Lophocphan','Phong','Quyen','Thietbi','Thongbao','User','Quyengiangvien');
+	function beforeFilter(){
+		parent::beforeFilter();
+		$this->Auth->allow('quanlyGiangVien','themGiangvien','index');
+		if(!$this->isGiaovu()){
+			if(!$this->isGiangvien())
+				$this->redirect(array( 'controller'=>'Users','action' => 'index'));
+			else
+				$this->redirect(array( 'controller'=>'Giangviens','action' => 'index'));
+		}
+	}
 	function index(){
 
 	}
 	//quản lý giảng viên
 	public function quanlyGiangVien() {
 		$listquyen=$this->Quyen->find("all",array('recursive'=>-1));
-		$this->set("listquyen",$listquyen);	
+		$this->set("listquyen",$listquyen);
 		$listKhoa=$this->Khoa->find("all",array('recursive'=>-1));
 		$this->set("listKhoa",$listKhoa);
 	}
-	
+	public function themGiangvien() {
+		if($this->request->is('post')){
+			$user=array();
+			$roles=$this->request->data["roles"];
+			$khoas=$this->request->data("khoas");
+			$magiangvien=$this->taoMagiangvien($this->request->data);
+			$user['User']['maGiangvien']=$magiangvien;
+			$this->request->data["maGiangvien"]=$magiangvien;
+			$ngaysinh=split("-",$this->request->data("ngaySinh"));
+			$mk=$ngaysinh[2]."".$ngaysinh[1]."".($ngaysinh[0]%100);
+			$user['User']['matKhau'] =$mk;
+			$this->Giangvien->save($this->request->data);
+			$gv=$this->Giangvien->find('first',array('conditions' => array('Giangvien.maGiangvien' => $magiangvien),'recursive'=>-1));
+			$user['User']['id']=$gv['Giangvien']['id'];
+			$this->User->create();
+			$this->User->save($user);
+			foreach ($roles as $item){
+				$gvRole=array();
+				$gvRole['Quyengiangvien']['magiangvien']=$gv['Giangvien']['id'];
+				$gvRole['Quyengiangvien']['maquyen']=$item;
+				$this->Quyengiangvien->create();
+				$this->Quyengiangvien->save($gvRole);
+			}
+		}
+		$this->render('quanlyGiangVien');
+		//$this->redirect(array( 'action' => 'quanlyGiangVien'));
+	}
+	public function taoMagiangvien($giangvien){
+		$khoa=$giangvien['khoas'][0];
+
+		$khoas=$this->Khoa->find("first",array('conditions' => array('Khoa.id' => $khoa),'recursive'=>-1));
+		$arr=$this->Giangvien->find("first",array('conditions' => array('Giangvien.maGiangvien like ' =>'%'. $khoas['Khoa']['maKhoa'].'%'),'order'=>array('Giangvien.maGiangvien'=>'DESC')));
+		if(isset($arr) && $arr!=null){
+			$magiangvien=split($khoas['Khoa']['maKhoa'],$arr['Giangvien']['maGiangvien']);
+			if($magiangvien[1]+1<10){
+				return $khoas['Khoa']['maKhoa'].'0'.($magiangvien[1]+1);
+			}
+			return $khoas['Khoa']['maKhoa'].($magiangvien[1]+1);
+		}
+		return $khoas['Khoa']['maKhoa']."01";
+	}
 	//
 	public function quanlyKhoa() {
 
@@ -60,21 +110,16 @@ class GiaoVusController extends AppController{
 		$this->redirect(array('action' => 'themMoiKhoas'));
 		//$this->render('themMoiKhoas');
 	}
-	public function themGiangvien() {
-		
-		if($this->request->is('post')){
-			$this->Giangvien->save($this->request->data);
-		}
-	}
+
 	//học phần
 	public function quanlyHocphan() {
-	
+
 	}
 	public function themMoiHocphan() {
 		if($this->request->is('post')){
-				$this->Hocphan->saveAll($this->request->data);
+			$this->Hocphan->saveAll($this->request->data);
 		}
-			$this->set("data",$this->Hocphan->find("all",array('recursive'=>-1)));
+		$this->set("data",$this->Hocphan->find("all",array('recursive'=>-1)));
 	}
 	public function suaHocphan($id) {
 		if($this->request->is("post")){
@@ -87,14 +132,14 @@ class GiaoVusController extends AppController{
 			$this->set("hocphan",$hocphan);
 			$this->set("data",$this->Hocphan->find("all",array('recursive'=>-1)));
 			$this->render('themMoiHocphan');
-		}	
+		}
 	}
 	public function xoaHocphan($id) {
 		$this->Hocphan->deleteAll(array('Hocphan.id'=>$id));
 		$this->redirect(array('controller' => 'giaovus', 'action' => 'themMoiHocphan'));
 	}
 	public function xemHocphan() {
-		
+
 	}
 	//quản lý phòng
 	public function quanlyphong() {
@@ -117,11 +162,11 @@ class GiaoVusController extends AppController{
 	//
 	//quản lý thông báo
 	public function quanlyThongbao() {
-		
+
 	}
 	//
-	
-	
+
+
 }
 
 ?>

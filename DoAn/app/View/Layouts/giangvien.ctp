@@ -24,7 +24,7 @@
 				echo $data['header'];
 			?>
     		<div id="menu">
-    			<div id='menu-nav'> <?php echo $this->Giangvien->create_menu($this->Session->read("Username")); ?> </div>
+    			<div id='menu-nav'> <?php echo $this->Giangvien->create_menu($this->Session->read('Auth.User.Giangvien.ten')); ?> </div>
     		</div>
 		</div>
 		<div class="cach"></div>
