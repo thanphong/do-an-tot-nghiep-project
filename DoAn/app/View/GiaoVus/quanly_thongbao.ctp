@@ -4,4 +4,5 @@ echo $this->Common->script("ckeditor/ckeditor.js");
 echo $this->Common->script("ckeditor/adapters/jquery.js");
 echo $this->Common->script("/js/news.js");
 echo $this->giaovu->form_thongbao();
+echo $this->giaovu->listThongbao($listThongbao);
 ?>

@@ -23,7 +23,7 @@ class CommonHelper extends HtmlHelper{
 	
 		$menu="<ul class='nav'><li class='highlight'>".$this->link('Thông báo',array('controller' => 'users','action' => 'index','full_base' => true))."</li>";
 		$menu.="<li class=''>".$this->link('Lớp học phần',array('controller' => 'users','action' => '','full_base' => true))."</li>";
-		$menu.="<li class=''>".$this->link('Phòng học',array('controller' => 'users','action' => 'index','full_base' => true))."</li>";
+		$menu.="<li class=''>".$this->link('Phòng học',array('controller' => 'users','action' => 'xemPhonghoc','full_base' => true))."</li>";
 		$menu.="<li class=''>".$this->link('Trợ giúp',array('controller' => 'users','action' => 'index','full_base' => true));
 		$menu.="<ul><li>".$this->link("Cá nhân",array('controller' => 'users','action' => 'formConsulting','full_base' => true))."</li>";
 		$menu.="<li>".$this->link("quản lý",array('controller' => 'users','action' => 'index','full_base' => true))."</li>";
@@ -41,6 +41,28 @@ class CommonHelper extends HtmlHelper{
 		$login.="<p id='btnLogin' class='submit'><input type='submit' name='ok' value='Login'></p>";
 		$login.="</form></div>";
 		return $login;
+	}
+	//phan trang
+	public function pagination($controller,$action,$page,$pagebgin,$pageend,$numberrecord){
+			
+		$pagin="";
+		if($page!=1){
+			$pagin.=$this->link('Trước',array('controller' => $controller,'action' => $action,'full_base' => true,($page>1?$page-1:1),$pageend),array('class'=>'button' ));
+		}
+		if($pagebgin>1)
+			$pagin.="...";
+		for($i=$pagebgin;$i<=$pageend;$i++){
+			$class="";
+			if($page==$i){
+				$class="curent";
+			}
+			$pagin.=$this->link($i,array('controller' => $controller,'action' => $action,'full_base' => true,$i,$pageend),array('class'=>$class));
+		}
+		if($pageend<$numberrecord)
+			$pagin.= "...";
+		if($page!=$pageend)
+			$pagin.=$this->link('Sau',array('controller' => $controller,'action' =>  $action,'full_base' => true,($page<$numberrecord?$page+1:$numberrecord),$pageend),array('class'=>'button' ));
+		return $pagin;
 	}
 }
 ?>

@@ -42,6 +42,9 @@ class AppController extends Controller {
 		'authenticate' => array( 'Form' => array('userModel' => 'User',
       	'fields' => array('username' => 'maGiangvien', 'password' => 'matKhau')))));
 	var $roles=null;
+	var $numberpage=5;
+	var $numberRecord=5;
+	var $numberpageStep=3;
 	// only allow the login controllers only
 	public function beforeFilter() {
 		$this->Auth->actionPath = 'controllers/';
@@ -77,6 +80,20 @@ class AppController extends Controller {
 			return false;
 		}
 		return false;
+	}
+	//
+	public function pagination($page,$numberrecord,$end){
+		$numberrecord=($numberrecord/$this->numberRecord>0?($numberrecord%$this->numberRecord>0? (int)($numberrecord/$this->numberRecord)+1:(int)($numberrecord/$this->numberRecord)):1);
+		$end=($end<$numberrecord?$end:$numberrecord);
+		$pageend=$page+$this->numberpageStep;
+		$pageend=($pageend<=$end?($page-$this->numberpageStep>($end-$this->numberpage)?$end:($page-$this->numberpageStep>1?$end-$this->numberpageStep+1:$this->numberpage)):($pageend<$numberrecord?$pageend:$numberrecord));
+		$pagebgin=$pageend-$this->numberpage+1;
+		$pagebgin=($pagebgin>1?$pagebgin:1);
+		$this->set("pageend",$pageend);
+		$this->set("pagebgin",$pagebgin);
+		$this->set("page",$page);
+		$this->set("numberrecord",$numberrecord);
+	
 	}
 	
 }

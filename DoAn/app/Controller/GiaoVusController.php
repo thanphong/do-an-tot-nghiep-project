@@ -14,14 +14,16 @@ class GiaoVusController extends AppController{
 		}
 	}
 	function index(){
-
+		$this->redirect(array( 'controller'=>'Users','action' => 'index'));
 	}
 	//quản lý giảng viên
-	public function quanlyGiangVien() {
+	public function quanlyGiangVien($page=null,$end=null) {
 		$listquyen=$this->Quyen->find("all",array('recursive'=>-1));
 		$this->set("listquyen",$listquyen);
 		$listKhoa=$this->Khoa->find("all",array('recursive'=>-1));
 		$this->set("listKhoa",$listKhoa);
+		
+		$this->populateGiangvien($page,$end);
 	}
 	public function themGiangvien() {
 		if($this->request->is('post')){
@@ -64,9 +66,18 @@ class GiaoVusController extends AppController{
 		}
 		return $khoas['Khoa']['maKhoa']."01";
 	}
+	public function populateGiangvien($page=null,$end=null){
+	
+		$page=(($page==null || !isset($page))?1:$page);
+		$end=(($end==null)||!isset($end)?$this->numberpage:$end);
+		$numberrecord=$this->Giangvien->find('count');
+		$this->set("danhsachGv",$this->Giangvien->find("all",array('limit' => $this->numberRecord, 'offset'=>($page-1)*$this->numberRecord,'recursive'=>-1)));
+		$this->pagination($page, $numberrecord,$end);
+	}
 	//
 	public function quanlyKhoa() {
-
+		$data=$this->Khoa->find('all',array('recursive'=>-1));
+		$this->set("data",$data);
 	}
 
 	public function themMoiKhoas() {
@@ -75,8 +86,8 @@ class GiaoVusController extends AppController{
 			$this->request->data['maKhoa']=$makhoa;
 			$this->Khoa->save($this->request->data);
 		}
-		$data=$this->Khoa->find('all',array('recursive'=>-1));
-		$this->set("data",$data);
+		$this->redirect(array( 'action' => 'quanlyKhoa'));
+		
 	}
 	public function TaoMaKhoa($tenkhoa){
 		$name=$pieces = explode(" ", $tenkhoa);
@@ -98,7 +109,6 @@ class GiaoVusController extends AppController{
 			$khoa=$this->Khoa->find('first', array('conditions' => array('Khoa.id' => $id)));
 			$this->set("khoa",$khoa);
 		}
-
 		$data=$this->Khoa->find('all',array('recursive'=>-1));
 		$this->set("data",$data);
 		$this->render('themMoiKhoas');
@@ -113,7 +123,7 @@ class GiaoVusController extends AppController{
 
 	//học phần
 	public function quanlyHocphan() {
-
+		$this->set("listKhoa",$this->Khoa->find('all',array('recursive'=>-1)));
 	}
 	public function themMoiHocphan() {
 		if($this->request->is('post')){
@@ -162,10 +172,21 @@ class GiaoVusController extends AppController{
 	//
 	//quản lý thông báo
 	public function quanlyThongbao() {
-
+		$id=$this->Auth->user("id");
+		$listhongbao=$this->Thongbao->find("all",array('conditions' => array('Thongbao.nguoidang' => $id),'order'=>array('Thongbao.ngaydang'=>'ASC')));
+		$this->set("listThongbao",$listhongbao);
+		
+	}
+	public function themThongbao(){
+		if($this->request->is("POST")){
+			$id=$this->Auth->user("id");
+			$this->request->data['ngaydang']=date('y/m/d h:i:s',time());
+			$this->request->data['ngayCapnhap']=date('y/m/d h:i:s',time());
+			$this->request->data['nguoidang']=$id;
+		}
+		$this->render("quanlyThongbao");
 	}
 	//
-
 
 }
 
