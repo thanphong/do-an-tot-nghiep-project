@@ -8,6 +8,9 @@ class GiangViensController extends AppController{
 		if(!$this->isGiangvien()&&!$this->isGiaovu()){
 			$this->redirect(array("controller"=>"Users",'action'=>'index'));
 		}
+		if($this->isGiaovu()){
+			$layout="giaovu";
+		}
 	}
 	function index(){
 		
