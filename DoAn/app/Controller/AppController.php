@@ -35,7 +35,7 @@ class AppController extends Controller {
 	var $layout = null;
 	var $components = array('Session','Auth' => array(
 		'loginAction'=>array('controller' => 'Users', 'action' => 'login'),
-        'loginRedirect' => array('controller' => 'Giangviens', 'action' => 'index'),
+        'loginRedirect' => array('controller' => 'Users', 'action' => 'index'),
         'logoutRedirect' => array('controller' => 'Users', 'action' => 'index'),
         'authError' => 'You must be logged in to view this page.',
         'loginError' => 'Invalid Username or Password entered, please try again.',

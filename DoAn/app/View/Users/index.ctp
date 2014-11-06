@@ -1,4 +1,4 @@
 <?php
 	 
-	echo "aaaa--vvvvvvv";
+	echo $this->User->listnews($news);
 ?>
