@@ -13,7 +13,7 @@ class GiangvienHelper extends HtmlHelper{
 		$menu.="<li>".$this->link("Tài liệu biểu mẫu",array('controller' => 'users','action' => 'index','full_base' => true))."</li></ul></li>";
 		$menu.="<li style='float:right'>".$this->link('Thoát',array('controller' => 'users','action' => 'logout','full_base' => true))."</li>";
 		$menu.="<li style='float:right'>".$this->link('Cá nhân',array('controller' => 'users','action' => 'profile','full_base' => true,$username))."</li>";
-		$menu.="<span class='titlelog'>Xin chào: ".$username." </span>";
+		$menu.="<span class='titlelog'>Xin chào: ".$username." <b class='line'>|</b></span>";
 		$menu.="</ul>";
 		return $menu;
 	}
