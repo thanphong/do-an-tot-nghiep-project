@@ -2,7 +2,7 @@
 
 class UsersController extends AppController {
 	var $layout = "user";
-	public $uses = array('Quyengiangvien','Khuvuc','Phong','Hocki','Lichgiangday');
+	public $uses = array('Quyengiangvien','Khuvuc','Phong','Hocki','Lichgiangday','Tuanhoc','Lophocphan','Giangvien','Thongbao');
 	public function beforeFilter() {
 		parent::beforeFilter();
 		$this->Auth->allow(array('index','login','logout','xemPhonghoc','danhsachphong'));
@@ -33,6 +33,8 @@ class UsersController extends AppController {
 	}
 
 	public function index() {
+		$news=$this->Thongbao->find("all",array( 'order' => array('Thongbao.ngaydang DESC'),'limit' => 10));
+		$this->set("news",$news);
 		//print_r($this->User->find('first', array('conditions' => array('User.id' => 45))));
 		//print_r($this->Auth->user());
 		//print_r(AuthComponent::password("123"));
@@ -52,7 +54,7 @@ class UsersController extends AppController {
 		$thu=0;
 		switch ($stamp){
 			case "Sunday":
-				$thu=1;
+				$thu=8;
 				break;
 			case "Monday":
 				$thu=2;
@@ -70,23 +72,26 @@ class UsersController extends AppController {
 				$thu=6;
 				break;
 			case "Saturday":
-				$thu=5;
+				$thu=7;
 				break;
 			default:
 				$thu=-1;
 		}
 		$hocky=$this->Hocki->find("first",array('order'=>array('Hocki.kethuc'=>'DESC'),'recursive'=>-1));
-		
-		
+		$tuans=$this->Tuanhoc->find("first",array('conditions'=> array('Tuanhoc.ngaybatdau <='=>$ngay,'Tuanhoc.ngaykethuc >= '=>$ngay),'recursive'=>-1));
+		$tuan=$tuans['Tuanhoc']['id'];
 		for($i=0; $i<count($listphong);$i++){
 			$lichday=array();
-			$listlich=$this->Lichgiangday->find("all",array('conditions' => array('Lichgiangday.mahocky' =>$hocky['Hocki']['id'],'Lichgiangday.ngaybatdau <= '=>$ngay,'Lichgiangday.ngayketthuc >= '=>$ngay,'Lichgiangday.thu'=>$thu,'Lichgiangday.maphong'=>$listphong[$i]['Phong']['id']),'recursive'=>-1));
-			$tutiet=rand (1 , 12 );
-			$dentiet=rand ($tutiet , 12 );
-			if($dentiet-$tutiet<5 && $dentiet-$tutiet>1)
-				array_push($lichday,array("tutiet"=>$tutiet,"dentiet"=>$dentiet));
+			$listlich=$this->Lichgiangday->find("all",array('conditions' => array('Lichgiangday.mahocky' =>$hocky['Hocki']['id'],'Lichgiangday.tuanbatdau <= '=>$tuan,'Lichgiangday.tuanketthuc >= '=>$tuan,'Lichgiangday.thu'=>$thu,'Lichgiangday.maphong'=>$listphong[$i]['Phong']['id']),'recursive'=>-1));
+			
+// 			$tutiet=rand (1 , 12 );
+// 			$dentiet=rand ($tutiet , 12 );
+// 			if($dentiet-$tutiet<5 && $dentiet-$tutiet>1)
+// 				array_push($lichday,array("tutiet"=>$tutiet,"dentiet"=>$dentiet));
 			foreach ($listlich as $item){
-				array_push($lichday,array("tutiet"=>$item['Lichgiangday']['tutiet'],"dentiet"=>$item['Lichgiangday']['dentiet']));
+				$gv=$this->Giangvien->find('first',array('conditions' =>array('Giangvien.id'=>$item['Lichgiangday']['magiangvien']),'recursive'=>-1));
+				$lhp=$this->Lophocphan->find('first',array('conditions' =>array('Lophocphan.id'=>$item['Lophocphan']['malophocphan']),'recursive'=>-1));
+				array_push($lichday,array("tutiet"=>$item['Lichgiangday']['tutiet'],"dentiet"=>$item['Lichgiangday']['dentiet'],"LopHp"=>$lhp['Lophocphan']['tenLopHocPhan'],"giangvien"=>$gv["Giangvien"]['ten']));
 			}
 			$listphong[$i]['lichday']=$lichday;
 		}	

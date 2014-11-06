@@ -79,6 +79,8 @@ $(document)
 														td1.colSpan = dentiet
 																- tutiet + 1;
 														td1.className = "busy";
+														td1.appendChild(document
+																.createTextNode(lichday[j].LopHp+"-"+lichday[j].giangvien));
 														i = dentiet;
 													}
 												}
