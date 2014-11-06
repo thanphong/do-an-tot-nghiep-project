@@ -5,7 +5,7 @@
  */
 class CommonHelper extends HtmlHelper{
 	function general(){
-		$footer="<span>Bản quyền (C) 2013 thuộc Hồ Ngọc Duy</span></br><span>Trường Đại học Bách Khoa - Đại học Đà Nẵng</span></br>";
+		$footer="<span>Bản quyền (C) 2014 thuộc Hồ Ngọc Duy</span></br><span>Trường Đại học Bách Khoa - Đại học Đà Nẵng</span></br>";
 		$footer.="<span>Email:Thanphong.dct@gmail.com </span></br><span>Điện thoại: 01649568431</span>";
 		$header="<div id='logo'>".
 				$this->image("images/logoBK.png", array('alt' => 'Đại học bách khoa','style' => 'margin:10px 0 0 10px'))
