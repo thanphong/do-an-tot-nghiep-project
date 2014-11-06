@@ -322,6 +322,24 @@ class GiaoVuHelper extends HtmlHelper{
 				</div></form></div>";
 		return $register;
 	}
+	function listDanhsachThietbi($data){
+		$register="<p>Không tìm thấy danh sách</p>";
+		if(isset($data)&&count($data)>0){
+			$register="<table class='list'><thead><tr><th>STT</th><th>Mã thiết bị</th><th>Tên thiết bị</th><th>Trạng thái</th></tr></thead>";
+			$i=1;
+			foreach ($data as $item){
+				$register.="<tr><td>".$i."</td><td>".$item['Thietbi']['mathietbi']."</td><td class='tdcolname'>".$item['Thietbi']['tenThietbi']."</td><td>".$item['Thietbi']['loaiThietbi']."</td>";
+				$register.="<td>".$item['Thietbi']['trangThai']."</td>";
+				$register.="<td>".$this->link('',array('controller' => 'Giaovus', 'action' => 'xemThietbi', $item['Thietbi']['id']),array('class'=>'icview','title'=>'xem'));
+				$register.=$this->link('',array('controller' => 'Giaovus', 'action' => 'suaThietbi', $item['Thietbi']['id']),array('class'=>'icedit','title'=>'sửa'));
+				$register.=$this->link('',array('controller' => 'Giaovus', 'action' => 'xoaThietbi', $item['Thietbi']['id']),array('class'=>'icdelete','title'=>'xóa'));
+				$register.="</td></tr>";
+				$i++;
+			}
+			$register.="</table>";
+		}
+		return $register;
+	}
 	//
 	
 	//quản lý lớp học phần
