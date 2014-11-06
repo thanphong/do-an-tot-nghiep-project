@@ -3,14 +3,12 @@
 	z-index: 2;
 }
 
-input[type="text"] {
-	background-color: #FFFBFB;
+input[type="text"],textarea {
 	border: 1px solid #BBBBBB;
-	margin: 2px;
 	padding: 5px;
-	width: 167px;
+	width: 450px;
 }
-
+select{width: 460px}
 .beatpicker-inputnode {
 	background-position: right center;
 	background-repeat: no-repeat;
@@ -29,14 +27,16 @@ input[type="text"] {
 	display: none;
 }
 
-fieldset.group {
+fieldset.group1 ,fieldset.group {
 	margin: 0;
 	padding: 0;
 	margin-bottom: 1.25em;
 	padding: .125em;
+	float:left;border:1px solid #ddd;
+	width:720px
 }
 
-fieldset.group legend {
+fieldset.group1 legend,fieldset.group legend {
 	margin: 0;
 	padding: 0;
 	font-weight: bold;
@@ -45,30 +45,31 @@ fieldset.group legend {
 	color: black;
 }
 
-ul.checkbox {
+ul.checkbox1, ul.checkbox {
 	margin: 0;
 	padding: 0;
-	margin-left: 20px;
+	margin: 0 0 10px 10px;
 	list-style: none;
+	float:left;
 }
 
-ul.checkbox li input {
+ul.checkbox1 li input, ul.checkbox li input {
+	float:left;
 	margin-right: .25em;
 }
 
-ul.checkbox li {
+ul.checkbox1 li, ul.checkbox li {
 	border: 1px transparent solid;
 	display: inline-block;
-	width: 12em;
+	float:left;
 }
-
-ul.checkbox li label {
+ ul.checkbox li label{width:320px}
+ul.checkbox1 li label, ul.checkbox li label {
 	margin-left:;
 }
 
-ul.checkbox li:hover,ul.checkbox li.focus {
+ul.checkbox1 li:hover,ul.checkbox1 li.focus, ul.checkbox li:hover,ul.checkbox li.focus {
 	
-	background-color: #60c6ff;
+	background-color: #bfe9ff;
 	/*border: 1px gray solid;*/
-	width: 12em;
 }

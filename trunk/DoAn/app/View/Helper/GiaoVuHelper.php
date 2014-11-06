@@ -17,7 +17,7 @@ class GiaoVuHelper extends HtmlHelper{
 		$menu.="<li>".$this->link("Quản lý thiết bị",array('controller' => 'Giaovus','action' => 'index','full_base' => true))."</li></ul></li>";
 		$menu.="<li style='float:right'>".$this->link('Thoát',array('controller' => 'users','action' => 'logout','full_base' => true))."</li>";
 		$menu.="<li style='float:right'>".$this->link('Cá nhân',array('controller' => 'users','action' => 'profile','full_base' => true,$username))."</li>";
-		$menu.="<span class='titlelog'>Xin chào: ".$username." </span>";
+		$menu.="<span class='titlelog'>Xin chào: ".$username."<b class='line'>|</b></span>";
 		$menu.="</ul>";
 		return $menu;
 	}
@@ -30,7 +30,7 @@ class GiaoVuHelper extends HtmlHelper{
 			$mota=$data['Khoa']['mota'];
 			$action="/DoAn/giaovus/suaKhoa/".$data['Khoa']['id'];
 		}	
-		$register="<form action='".$action."' method='POST' id='registration_form' name='Khoa'><table>";
+		$register="<form action='".$action."' method='POST' id='registration_form' name='Khoa' class='contentmain'><table>";
 		$register.="<tr><td><label for='register_name'>Tên Khoa</label></td>";
 		$register.="<td><input type='text' name='tenKhoa' value='".$name."' id='register_name' /><td></tr>";
 		$register.="<tr><td><label for='register_uername'>Mô tả</label></td>";
@@ -46,13 +46,13 @@ class GiaoVuHelper extends HtmlHelper{
 	function danhSachKhoa($data=null){
 		$register="<p>Không tìm thấy danh sách</p>";
 		if(isset($data)&&count($data)>0){
-			$register="<Table><tr><Td>STT</td><td>Mã Khoa</td><td>Tên khoa</td><td>Mô tả</td><td>Tác vụ</td></tr>";
+			$register="<table class='list'><tr><thead><th>STT</th><th>Mã Khoa</th><th>Tên khoa</th><th>Mô tả</th><th>Tác vụ</th></thead></tr>";
 			$i=1;
 			foreach ($data as $item){
 				$register.="<tr><td>".$i."</td><td>".$item['Khoa']['maKhoa']."</td><td>".$item['Khoa']['tenKhoa']."</td><td>".$item['Khoa']['mota']."</td>";
-				$register.="<td>".$this->link('Xem',array('controller' => 'Giaovus', 'action' => 'xemKhoas', $item['Khoa']['id']));
-				$register.=$this->link('Sửa',array('controller' => 'Giaovus', 'action' => 'suaKhoa', $item['Khoa']['id']));
-				$register.=$this->link('Xóa',array('controller' => 'Giaovus', 'action' => 'xoaKhoa', $item['Khoa']['id']));
+				$register.="<td>".$this->link('',array('controller' => 'Giaovus', 'action' => 'xemKhoas', $item['Khoa']['id']),array('class'=>'icview','title'=>'xem'));
+				$register.=$this->link('',array('controller' => 'Giaovus', 'action' => 'suaKhoa', $item['Khoa']['id']),array('class'=>'icedit','title'=>'sửa'));
+				$register.=$this->link('',array('controller' => 'Giaovus', 'action' => 'xoaKhoa', $item['Khoa']['id']),array('class'=>'icdelete','title'=>'xóa'));
 				$register.="</td></tr>";
 			}
 			$register.="</table>";
@@ -91,7 +91,7 @@ class GiaoVuHelper extends HtmlHelper{
 			$monday=$giangvien['giangvienhocphans'];
 		}
 		$register="";
-		$register.="<form action='".$action."' method='POST' id='registration_form' name='Giangvien'><table>";
+		$register.="<form action='".$action."' method='POST' id='registration_form' name='Giangvien' class='contentmain'><table>";
 		$register.="<tr><td><label for='register_name'>Tên giảng viên</label></td>";
 		$register.="<td><input type='text' name='ten' value='".$name."' id='register_name' /><td></tr>";
 		$register.="<tr><td><label for='register_name'>Địa chỉ</label></td>";
@@ -136,7 +136,7 @@ class GiaoVuHelper extends HtmlHelper{
 		$register.="<td><input type='text' name='chuyennganh' value='".$chuyennganh."' id='chuyennganh' /><td></tr>";
 		$register.="<tr><td><label for='register_name'>Môn dạy</label></td>";
 		$register.="<td><input type='text' name='monday' value='' id='monday' /><td></tr>";
-		$register.="<tr><td><label for='register_uername'>Quyền</label></td><td><fieldset class='group'> <legend>Chọn quyền</legend><ul class='checkbox'>";
+		$register.="<tr><td><label for='register_uername'>Quyền</label></td><td><fieldset class='group'> <legend>Chọn quyền</legend><ul class='checkbox1'>";
 		foreach ($listquyen  as $item){
 			$check="";
 			if(in_array($item['Quyen']['id'],$quyens)){
@@ -165,14 +165,14 @@ class GiaoVuHelper extends HtmlHelper{
 	function listDanhsachGiangvien($data){
 		$register="<p>Không tìm thấy danh sách</p>";
 		if(isset($data)&&count($data)>0){
-			$register="<Table><tr><Td>STT</td><td>Mã giảng viên</td><td>Tên giảng viên</td><td>Địa chỉ</td><td>Số điện thoại</td><td>Tác vụ</td></tr>";
+			$register="<table class='list'><thead><tr><th>STT</th><th>Mã giảng viên</th><th>Tên giảng viên</th><th>Địa chỉ</th><th>Số điện thoại</th><th>Tác vụ</th></tr></thead>";
 			$i=1;
 			foreach ($data as $item){
-				$register.="<tr><td>".$i."</td><td>".$item['Giangvien']['maGiangvien']."</td><td>".$item['Giangvien']['ten']."</td><td>".$item['Giangvien']['diachi']."</td>";
+				$register.="<tr><td>".$i."</td><td>".$item['Giangvien']['maGiangvien']."</td><td class='tdcolname'>".$item['Giangvien']['ten']."</td><td>".$item['Giangvien']['diachi']."</td>";
 				$register.="<td>".$item['Giangvien']['sodienthoai']."</td>";
-				$register.="<td>".$this->link('Xem',array('controller' => 'Giaovus', 'action' => 'xemGiangvien', $item['Giangvien']['id']));
-				$register.=$this->link('Sửa',array('controller' => 'Giaovus', 'action' => 'suaGiangvien', $item['Giangvien']['id']));
-				$register.=$this->link('Xóa',array('controller' => 'Giaovus', 'action' => 'xoaGiangvien', $item['Giangvien']['id']));
+				$register.="<td>".$this->link('',array('controller' => 'Giaovus', 'action' => 'xemGiangvien', $item['Giangvien']['id']),array('class'=>'icview','title'=>'xem'));
+				$register.=$this->link('',array('controller' => 'Giaovus', 'action' => 'suaGiangvien', $item['Giangvien']['id']),array('class'=>'icedit','title'=>'sửa'));
+				$register.=$this->link('',array('controller' => 'Giaovus', 'action' => 'xoaGiangvien', $item['Giangvien']['id']),array('class'=>'icdelete','title'=>'xóa'));
 				$register.="</td></tr>";
 				$i++;
 			}
@@ -191,7 +191,7 @@ class GiaoVuHelper extends HtmlHelper{
 			$mota=$data['Hocphan']['mota'];
 			$action="/DoAn/giaovus/CapnhapHocphan/".$data['Hocphan']['id'];
 		}
-		$register="<form action='".$action."' method='POST' id='registration_form' name='Hocphan'><table>";
+		$register="<form action='".$action."' method='POST' id='registration_form' name='Hocphan' class='contentmain'><table>";
 		$register.="<tr><td><label for='register_name'>Khoa</label></td>";
 		$register.="<td><select name='' id=''>";
 		foreach ($listKhoa as $item){
@@ -224,7 +224,7 @@ class GiaoVuHelper extends HtmlHelper{
 	function danhsachHocPhan($data=null){
 		$register="<p>Không tìm thấy danh sách</p>";
 		if(isset($data)&&count($data)>0){
-			$register="<Table><tr><Td>STT</td><td>Mã học phần</td><td>Tên học phần</td><td>Trạng thái</td><td>Mô tả</td><td>Tác vụ</td></tr>";
+			$register="<table class='list'><thead><tr><th>STT</th><th>Mã học phần</th><th>Tên học phần</th><th>Trạng thái</th><th>Mô tả</th><th>Tác vụ</th></tr></thead>";
 			$i=1;
 			foreach ($data as $item){
 				$register.="<tr><td>".$i."</td><td>".$item['Hocphan']['maHocPhan']."</td><td>".$item['Hocphan']['tenhocphan']."</td><td>".$item['Hocphan']['trangthai']."</td><td>".$item['Hocphan']['mota']."</td>";
@@ -336,7 +336,7 @@ class GiaoVuHelper extends HtmlHelper{
 		$name="";
 		$mota="";
 		$noidung="";
-		$register="<form action='".$action."' method='POST' id='registration_form' name='Thongbao'><table>";
+		$register="<form action='".$action."' method='POST' id='registration_form' name='Thongbao' class='contentmain'><table>";
 		$register.="<tr><td><label for='register_name'>Tiêu đề</label></td>";
 		$register.="<td><input type='text' name='tieude' value='".$name."' id='register_name' /><td></tr>";
 		$register.="<tr><td><label for='register_uername'>Nội dung</label></td>";
@@ -359,9 +359,9 @@ class GiaoVuHelper extends HtmlHelper{
 			$i=1;
 			foreach ($data as $item){
 				$register.="<tr><td>".$i."</td><td>".$item['Thongbao']['tieude']."</td><td></td><td>".$item['Thongbao']['ngaydang']."</td>";
-				$register.="<td>".$this->link('Xem',array('controller' => 'Giaovus', 'action' => 'xemThongbao', $item['Thongbao']['id']));
-				$register.=$this->link('Sửa',array('controller' => 'Giaovus', 'action' => 'suaThongbao', $item['Thongbao']['id']));
-				$register.=$this->link('Xóa',array('controller' => 'Giaovus', 'action' => 'xoaThongbao', $item['Thongbao']['id']));
+				$register.="<td>".$this->link('',array('controller' => 'Giaovus', 'action' => 'xemThongbao', $item['Thongbao']['id']),array('class'=>'icview','title'=>'xem'));
+				$register.=$this->link('',array('controller' => 'Giaovus', 'action' => 'suaThongbao', $item['Thongbao']['id']),array('class'=>'icedit','title'=>'sửa'));
+				$register.=$this->link('',array('controller' => 'Giaovus', 'action' => 'xoaThongbao', $item['Thongbao']['id']),array('class'=>'icdelete','title'=>'xóa'));
 				$register.="</td></tr>";
 				$i++;
 			}
