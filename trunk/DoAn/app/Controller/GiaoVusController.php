@@ -80,11 +80,18 @@ class GiaoVusController extends AppController{
 		$this->set("data",$gvien);
 	}
 	//Khoa
-	public function quanlyKhoa() {
+	public function quanlyKhoa($page=null,$end=null){
 		$data=$this->Khoa->find('all',array('recursive'=>-1));
 		$this->set("data",$data);
+		$this->populateKhoa($page,$end);
 	}
-
+	public function populateKhoa($page=null,$end=null){	
+		$page=(($page==null || !isset($page))?1:$page);
+		$end=(($end==null)||!isset($end)?$this->numberpage:$end);
+		$numberrecord=$this->Khoa->find('count');
+		$this->set("data",$this->Khoa->find("all",array('limit' => $this->numberRecord, 'offset'=>($page-1)*$this->numberRecord,'recursive'=>-1)));
+		$this->pagination($page, $numberrecord,$end);
+	}
 	public function themMoiKhoas() {
 		if($this->request->is('post')){
 			$makhoa=$this->TaoMaKhoa($this->request->data['tenKhoa']);
@@ -106,7 +113,7 @@ class GiaoVusController extends AppController{
 		$khoa=$this->Khoa->find('first', array('conditions' => array('Khoa.id' => $id),'recursive'=>-1));
 		$this->set("data",$khoa);
 	}
-	public function suaKhoa($id) {
+	public function suaKhoa($id,$page=null,$end=null) {
 		if($this->request->is('post')){
 			$this->Khoa->updateAll(array('Khoa.tenKhoa' =>"'".$this->request->data('tenKhoa')."'",
 					'Khoa.mota'=>"'".$this->request->data('mota')."'"),array('Khoa.id' => $id));
@@ -116,6 +123,7 @@ class GiaoVusController extends AppController{
 		}
 		$data=$this->Khoa->find('all',array('recursive'=>-1));
 		$this->set("data",$data);
+		$this->populateKhoa($page,$end);
 		$this->render('themMoiKhoas');
 	}
 	public function xoaKhoa($id) {
@@ -157,11 +165,23 @@ class GiaoVusController extends AppController{
 
 	}
 	//quản lý phòng
-	public function quanlyphong() {
+	public function quanlyphong($page=null,$end=null) {
 		$listthietbi=$this->Thietbi->find("all",array('recursive'=>-1));
 		$this->set("listthietbi",$listthietbi);
 		$listKhuvuc=$this->Khuvuc->find("all",array('recursive'=>-1));
 		$this->set("listKhuvuc",$listKhuvuc);
+		$this->populatePhong($page,$end);
+	}
+	public function populatePhong($page=null,$end=null){	
+		$page=(($page==null || !isset($page))?1:$page);
+		$end=(($end==null)||!isset($end)?$this->numberpage:$end);
+		$numberrecord=$this->Phong->find('count');
+		$this->set("data",$this->Phong->find("all",array('limit' => $this->numberRecord, 'offset'=>($page-1)*$this->numberRecord,'recursive'=>-1)));
+		$this->pagination($page, $numberrecord,$end);
+	}
+	public function xemPhonghoc($id) {
+		$phong=$this->Phong->find('first', array('conditions' => array('Phong.id' => $id),'recursive'=>-1));
+		$this->set("data",$phong);
 	}
 	//
 	//quản lý thiết bị

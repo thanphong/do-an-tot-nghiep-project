@@ -10,7 +10,6 @@
 	<span><b>Học vị:</b> <?php echo $data['Giangvien']['hocvi'];?></span>
 	<span><b>Khoa:</b> <?php ?></span>
 	<span><b>Chuyên ngành:</b> <?php echo $data['Giangvien']['chuyennganh'];?></span>
-
 	<span><b>Địa chỉ:</b> <?php echo $data['Giangvien']['diachi'];?></span>
 	<span><b>Số điện thoại:</b> <?php echo $data['Giangvien']['sodienthoai'];?></span>
 	<span><b>Email:</b> <?php echo $data['Giangvien']['email'];?></span>
