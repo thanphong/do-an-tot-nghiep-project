@@ -1,7 +1,9 @@
+<div class="xemphonghoc">
 <?php
 	echo $this->Html->script("user.js");
 	echo $this->User->xemphonghoc($khuvus);
 ?>
+
 <table id="danhsachphong" class="Grid" style="width:100%;border-collapse:collapse;">
 <tr class="GridHeader">
 	<td class="GridHeaderCell" rowspan='2' width='80px'>Tên phòng</td>
@@ -22,3 +24,4 @@
 	<td class="GridHeaderCell" align='center'>12</td>
 </tr>
 </table>
+</div>

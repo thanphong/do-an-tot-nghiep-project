@@ -2,7 +2,7 @@
 class UserHelper extends HtmlHelper  {
 	function listnews($lisnew){
 		//$idtloai=1;//xemlai
-		$out="<div>";
+		$out="<div class='contentmain'>";
 		foreach ($lisnew as $item) {
 			//$id_tintuc= $item['Thongbao']['id'];
 			$tieude= $item['Thongbao']['tieude'];
@@ -10,13 +10,14 @@ class UserHelper extends HtmlHelper  {
 			$noidung=$item['Thongbao']['noidung'];
 			$d = getdate(strtotime($date));
 			$ngay= $d['mday'].'/'.$d['mon'].'/'.$d['year'];
-			$out.="<div>";
-			$out.="<div style='padding:2px 10px;'>";
+			$out.="<div class='left'>";
+			$out.="<div class='left' style='padding:2px 10px;'>";
 			$out.="<b><span style='color: red;font-size:13.0pt;line-height:100%;font-family:times new roman,serif'>".$ngay.":</span></b>";
 			$out.="&nbsp;&nbsp;&nbsp;&nbsp;";
 			$out.="<span style='color:#009900;font-size:13.0pt;line-height:100%;font-family:times new roman,serif'>".$tieude."</span></div>";
-			$out.="<div style='padding:15px 10px;font-size:12.0pt;line-height:100%;font-family:times new roman,serif'>".$noidung."</div></div>";
+			$out.="<div style='padding:5px 10px 15px 10px;font-size:12.0pt;line-height:100%;font-family:times new roman,serif'>".$noidung."</div></div>";			
 		}
+		$out.="</div>";
 		return $out;
 	}
 	function tinlienquan($lisnews){
@@ -40,14 +41,14 @@ class UserHelper extends HtmlHelper  {
 	function xemphonghoc($listGiangduong){
 		
 		$register="<table>";
-		$register.="<tr><td><label for='register_uername'>Giảng đường</label></td>";
+		$register.="<tr><td><b for='register_uername'>Giảng đường</b></td>";
 		$register.="<td><select name='' id='giangduong'>";
 		foreach($listGiangduong as $item){
 			$register.="<option value='".$item['Khuvuc']['id']."'>".$item['Khuvuc']['tenKhuVuc']."</option></option>";
 		}
 		
 		$register.="</select></td></tr>";
-		$register.="<tr><td><label for='register_uername'>Ngày:</label></td>";
+		$register.="<tr><td><b for='register_uername'>Ngày</b></td>";
 		$register.="<td><input type='text' name='ngay' data-beatpicker='true' data-beatpicker-id='myDatePicker' id='ngayxem'/></td>";
 		$register.="<table>";
 		return $register;

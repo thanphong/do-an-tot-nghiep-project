@@ -111,7 +111,7 @@ a:hover {
 	margin: auto 0;
 	float: left;
 	width: 960px;
-	height: 40px !important;
+	/*height: 40px !important;*/
 }
 
 #menu-nav ul.nav li {
@@ -148,12 +148,14 @@ a:hover {
 }
 
 #menu-nav ul.nav li ul a,ul.nav ul.nav li ul a:visited {
-	padding: 7px 10px;
+	padding: 5px 10px;
 	display: block;
 	text-decoration: none;
 	background-color: #1262a8;
 	width: 150px;
 	font-weight: bold;
+	border-bottom:dotted 1px #60c6ff;
+	font-size:11px;
 }
 
 #menu-nav1 { /* background-image:url(../img/images/menu_center.png);
@@ -205,7 +207,7 @@ a:hover {
 	margin: auto 0;
 	float: left;
 	width: 1250px;
-	height: 40px !important;
+	/*height: 40px !important;*/
 }
 
 #menu-nav1 ul.nav li {
@@ -349,7 +351,7 @@ ul.nav1 li.current {
 	position: relative;
 	right: 7px;
 	text-indent: -9999px;
-	top: 7px;
+	top: 1px;
 	width: 21px;
 	height: 21px;
 	z-index: 3;
@@ -488,17 +490,19 @@ select {
 
 
 #footer {
-	border: none;
+	float:left;
 	text-align: left;
-	padding: 10px 0px 20px 10px;
+	padding: 5px 0px 5px 10px;
 	border: 1px solid rgb(176, 196, 222);
 	-webkit-border-radius: 10px 10px 10px 10px;
 	-moz-border-radius: 10px 10px 10px 10px;
 	border-radius: 10px 10px 10px 10px;
 	background-color: #8AB1FE;
-	opacity: 0.7;
-	box-shadow: 0px 0px 10px #036803;
+	box-shadow: 0px 0px 5px #036803;
 	-moz-box-shadow: 0px 0px 10px #036803;
+	clear:both;
+	margin-top:10px;
+	width:960px
 }
 
 .footer span {
@@ -506,3 +510,5 @@ select {
 	font-weight: normal;
 	color: #636363;
 }
+#logo img{width:400px}
+.xemphonghoc,.contentmain{float:left;padding:10px;background:#fff;width:98%}
