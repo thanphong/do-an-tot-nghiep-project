@@ -1,24 +1,15 @@
 <div class="contentmain chitietkhoa">
 	<h2>Chi tiết phòng học</h2>
 	<span><b>Mã phòng học:</b> <?php echo $data['Phong']['maPhong'];?></span>
-	<span><b>Tên giảng viên:</b> <?php echo $data['Giangvien']['ten'];?></span>
-	<span><b>Giới tính:</b>
-		 <?php if($data['Giangvien']['gioitinh']==1) echo "Nữ";
-		 	echo "Nam";		 		
-		?></span>
-	<span><b>Học hàm:</b> <?php echo $data['Giangvien']['hocham'];?></span>
-	<span><b>Học vị:</b> <?php echo $data['Giangvien']['hocvi'];?></span>
-	<span><b>Khoa:</b> <?php ?></span>
-	<span><b>Chuyên ngành:</b> <?php echo $data['Giangvien']['chuyennganh'];?></span>
-	<span><b>Địa chỉ:</b> <?php echo $data['Giangvien']['diachi'];?></span>
-	<span><b>Số điện thoại:</b> <?php echo $data['Giangvien']['sodienthoai'];?></span>
-	<span><b>Email:</b> <?php echo $data['Giangvien']['email'];?></span>
-	<span><b>Ngày sinh:</b> <?php echo $data['Giangvien']['ngaySinh'];?></span>
-
+	<span><b>Tên phòng học:</b> <?php echo $data['Phong']['tenPhong'];?></span>
+	<span><b>Số lượng ghế:</b> <?php echo $data['Phong']['soLuongGhe'];?></span>
+	<span><b>Trạng thái:</b> <?php echo $data['Phong']['trangThai'];?></span>
+	<span><b>Khu vực:</b> <?php echo $data['Phong']['khuVuc'];?></span>
+	<span><b>Ngày cập nhật:</b> <?php echo $data['Phong']['ngayCapNhap'];?></span>
 		
 	<div class="left clear divIcon">
 		<a class="icback" href="/DoAn/Giaovus/quanlyGiangVien" title="Quay lại"></a>
-		<a class="icedit" href="/DoAn/Giaovus/suaGiangvien/<?php echo $data['Giangvien']['id'];?>" title="Sửa"></a>
-		<a class="icdelete" href="/DoAn/Giaovus/xoaGiangvien/<?php echo $data['Giangvien']['id'];?>" title="Xóa"></a>
+		<a class="icedit" href="/DoAn/Giaovus/suaPhonghoc/<?php echo $data['Phong']['id'];?>" title="Sửa"></a>
+		<a class="icdelete" href="/DoAn/Giaovus/xoaPhonghoc/<?php echo $data['Phong']['id'];?>" title="Xóa"></a>
 	</div>
 </div>

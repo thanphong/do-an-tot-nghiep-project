@@ -183,12 +183,28 @@ class GiaoVusController extends AppController{
 		$phong=$this->Phong->find('first', array('conditions' => array('Phong.id' => $id),'recursive'=>-1));
 		$this->set("data",$phong);
 	}
+	public function suaPhonghoc($id) {}
+	public function xoaPhonghoc($id) {}
 	//
 	//quản lý thiết bị
-	public function quanlyThietbi() {
+	public function quanlyThietbi($page=null,$end=null){
 		$listLoaiThietbi=$this->Loaithietbi->find("all",array('recursive'=>-1));
 		$this->set("listLoaiThietbi",$listLoaiThietbi);
+		$this->populateThietbi($page,$end);
 	}
+	public function populateThietbi($page=null,$end=null){
+		$page=(($page==null || !isset($page))?1:$page);
+		$end=(($end==null)||!isset($end)?$this->numberpage:$end);
+		$numberrecord=$this->Thietbi->find('count');
+		$this->set("data",$this->Thietbi->find("all",array('limit' => $this->numberRecord, 'offset'=>($page-1)*$this->numberRecord,'recursive'=>-1)));
+		$this->pagination($page, $numberrecord,$end);
+	}
+	public function xemThietbi($id) {
+		$thietbi=$this->Thietbi->find('first', array('conditions' => array('Thietbi.id' => $id),'recursive'=>-1));
+		$this->set("data",$thietbi);
+	}
+	public function suaThietbi($id) {}
+	public function xoaThietbi($id) {}
 	//quản lý lớp học phần
 	public function quanlyLophocphan() {
 		$listKhoa=$this->Khoa->find("all",array('recursive'=>-1));
