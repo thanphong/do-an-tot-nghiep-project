@@ -577,9 +577,10 @@ label{font-weight:bold}
 	width: 100px;
 }
 .contentmain div{float:left}
-.chitietkhoa h2{color:#f08e5d;text-transform:uppercase;}
+.contentmain h2,.chitietkhoa h2{color:#f08e5d;text-transform:uppercase;margin:0 0 10px 0}
+.contentmain h2{margin-bottom:15px;text-align:center}
 .chitietkhoa span{float:left;clear:both;margin:5px 0 0 10px}
-.chitietkhoa b{width:120px}
+.chitietkhoa b{float:left;width:120px}
 .date {
 	clear: both;
 	font-size: 12px;
