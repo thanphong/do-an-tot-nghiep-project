@@ -74,7 +74,12 @@ class GiaoVusController extends AppController{
 		$this->set("danhsachGv",$this->Giangvien->find("all",array('limit' => $this->numberRecord, 'offset'=>($page-1)*$this->numberRecord,'recursive'=>-1)));
 		$this->pagination($page, $numberrecord,$end);
 	}
-	//
+	//Vy 6-11-2014
+	public function xemGiangvien($id) {
+		$gvien=$this->Giangvien->find('first', array('conditions' => array('Giangvien.id' => $id),'recursive'=>-1));
+		$this->set("data",$gvien);
+	}
+	//Khoa
 	public function quanlyKhoa() {
 		$data=$this->Khoa->find('all',array('recursive'=>-1));
 		$this->set("data",$data);
@@ -98,7 +103,7 @@ class GiaoVusController extends AppController{
 		return $makhoa;
 	}
 	public function xemKhoas($id) {
-		$khoa=$this->Khoa->find('first', array('conditions' => array('Khoa.id' => $id)));
+		$khoa=$this->Khoa->find('first', array('conditions' => array('Khoa.id' => $id),'recursive'=>-1));
 		$this->set("data",$khoa);
 	}
 	public function suaKhoa($id) {
@@ -106,7 +111,7 @@ class GiaoVusController extends AppController{
 			$this->Khoa->updateAll(array('Khoa.tenKhoa' =>"'".$this->request->data('tenKhoa')."'",
 					'Khoa.mota'=>"'".$this->request->data('mota')."'"),array('Khoa.id' => $id));
 		}else{
-			$khoa=$this->Khoa->find('first', array('conditions' => array('Khoa.id' => $id)));
+			$khoa=$this->Khoa->find('first', array('conditions' => array('Khoa.id' => $id),'recursive'=>-1));
 			$this->set("khoa",$khoa);
 		}
 		$data=$this->Khoa->find('all',array('recursive'=>-1));
