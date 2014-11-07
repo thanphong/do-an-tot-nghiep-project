@@ -28,9 +28,10 @@ class GiaoVuHelper extends HtmlHelper{
 		if(isset($data)){
 			$name=$data['Khoa']['tenKhoa'];
 			$mota=$data['Khoa']['mota'];
+			$register="<div class='contentmain'><h2>Tạo mới Khoa</h2>";
 			$action="/DoAn/giaovus/suaKhoa/".$data['Khoa']['id'];
 		}	
-		$register="<div class='contentmain'><h2>Tạo mới Khoa</h2>";
+		$register="<div class='contentmain'><h2>Cập nhật khoa</h2>";
 		$register.="<form action='".$action."' method='POST' id='registration_form' name='Khoa' class='left'><table>";
 		$register.="<tr><td><label for='register_name'>Tên Khoa</label></td>";
 		$register.="<td><input type='text' name='tenKhoa' value='".$name."' id='register_name' /><td></tr>";
@@ -391,7 +392,7 @@ class GiaoVuHelper extends HtmlHelper{
 	//
 	//quản lý thông báo
 	function form_thongbao(){
-		$action="/DoAn/giaovus/themThongbao";
+		$action="/DoAn/giaovus/quanlyThongbao";
 		$name="";
 		$mota="";
 		$noidung="";

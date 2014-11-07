@@ -511,7 +511,7 @@ select {
 	color: #636363;
 }
 #logo img{width:320px}
-.xemphonghoc,.contentmain{float:left;padding:10px;background:#fff;width:98%}
+.xemphonghoc,.contentmain{float:left;padding:10px;background:#fff;width:98%;border-radius:5px}
 label{font-weight:bold}
 .password{margin-top:5px}
 .login input[type=submit] {
