@@ -223,13 +223,12 @@ class GiaoVusController extends AppController{
 		$thietbi=$this->Thietbi->find('first', array('conditions' => array('Thietbi.id' => $id),'recursive'=>0));
 		$this->set("data",$thietbi);
 	}
-	public function suaThietbi($id) {
+	public function suaThietbi($id,$page,$end) {
 		if($this->request->is('post')){
 			$loai=$this->Loaithietbi->find("first",array('conditions'=>array('Loaithietbi.id'=>$this->request->data['loaiThietbi'])));
 			$matb=$this->TaoMaThietbi($this->request->data['loaiThietbi'],$loai['Loaithietbi']['code']);
-			$this->request->data('mathietbi')=$matb;
 			//$this->request->data('ngayCapNhap')=date("Y/m/d");
-			$this->Thietbi->updateAll(array('Thietbi.mathietbi' =>"'".$this->request->data('mathietbi')."'",
+			$this->Thietbi->updateAll(array('Thietbi.mathietbi' =>"'".$matb."'",
 					'Thietbi.tenThietbi' =>"'".$this->request->data('tenThietbi')."'",
 					'Thietbi.loaiThietbi'=>"'".$this->request->data('loaiThietbi')."'",
 					'Thietbi.ngayCapNhap'=>"'".date("Y/m/d")."'"),array('Thietbi.id' => $id));
