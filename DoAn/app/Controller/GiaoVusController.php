@@ -144,6 +144,17 @@ class GiaoVusController extends AppController{
 		}
 		$this->set("data",$this->Hocphan->find("all",array('recursive'=>-1)));
 	}
+	public function populateHocphan($page=null,$end=null){
+		$page=(($page==null || !isset($page))?1:$page);
+		$end=(($end==null)||!isset($end)?$this->numberpage:$end);
+		$numberrecord=$this->Hocphan->find('count');
+		$this->set("data",$this->Hocphan->find("all",array('limit' => $this->numberRecord, 'offset'=>($page-1)*$this->numberRecord,'recursive'=>0)));
+		$this->pagination($page, $numberrecord,$end);
+	}
+	public function xemHocphan($id) {
+		$hocphan=$this->Hocphan->find('first', array('conditions' => array('Hocphan.id' => $id),'recursive'=>-1));
+		$this->set("data",$hocphan);
+	}
 	public function suaHocphan($id) {
 		if($this->request->is("post")){
 			$this->Hocphan->updateAll(array('Hocphan.tenhocphan' =>"'".$this->request->data('tenhocphan')."'",'Hocphan.trangthai'=>$this->request->data('trangthai'),
@@ -161,9 +172,7 @@ class GiaoVusController extends AppController{
 		$this->Hocphan->deleteAll(array('Hocphan.id'=>$id));
 		$this->redirect(array('controller' => 'giaovus', 'action' => 'themMoiHocphan'));
 	}
-	public function xemHocphan() {
 
-	}
 	//quản lý phòng
 	public function quanlyphong($page=null,$end=null) {
 		$listthietbi=$this->Thietbi->find("all",array('recursive'=>-1));
@@ -251,20 +260,25 @@ class GiaoVusController extends AppController{
 	}
 	//
 	//quản lý thông báo
-	public function quanlyThongbao() {
+	public function quanlyThongbao($page=null,$end=null) {
 		$id=$this->Auth->user("id");
 		$listhongbao=$this->Thongbao->find("all",array('conditions' => array('Thongbao.nguoidang' => $id),'order'=>array('Thongbao.ngaydang'=>'ASC')));
 		$this->set("listThongbao",$listhongbao);
-		
-	}
-	public function themThongbao(){
 		if($this->request->is("POST")){
 			$id=$this->Auth->user("id");
 			$this->request->data['ngaydang']=date('y/m/d h:i:s',time());
 			$this->request->data['ngayCapnhap']=date('y/m/d h:i:s',time());
 			$this->request->data['nguoidang']=$id;
-		}
-		$this->render("quanlyThongbao");
+			$this->Thongbao->save($this->request->data);
+		}	
+		$this->populateThongbao($page,$end);	
+	}
+	public function populateThongbao($page=null,$end=null){
+		$page=(($page==null || !isset($page))?1:$page);
+		$end=(($end==null)||!isset($end)?$this->numberpage:$end);
+		$numberrecord=$this->Thongbao->find('count');
+		$this->set("data",$this->Thongbao->find("all",array('limit' => $this->numberRecord, 'offset'=>($page-1)*$this->numberRecord,'recursive'=>0)));
+		$this->pagination($page, $numberrecord,$end);
 	}
 	//
 
