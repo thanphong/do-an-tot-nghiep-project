@@ -11,5 +11,6 @@ class Loaithietbi extends AppModel{
 					'dependent'=> true
 			)
 	);
+
 }
 ?>
