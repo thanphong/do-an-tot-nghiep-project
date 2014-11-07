@@ -433,7 +433,7 @@ class GiaoVuHelper extends HtmlHelper{
 	function convertViewdate($inputdate){
 		$date= $inputdate;
 		$d = getdate(strtotime($date));
-		echo $ngay= $d['mday'].'-'.$d['mon'].'-'.$d['year'];
+		echo $ngay= $d['mday'].' - '.$d['mon'].' - '.$d['year'];
 	}
 }
 ?>
