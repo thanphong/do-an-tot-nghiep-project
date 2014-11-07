@@ -16218,3 +16218,87 @@ Stack Trace:
 #3 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
 #4 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
+2014-11-07 07:59:52 Error: Fatal Error (64): Can't use method return value in write context in [D:\PHP\DoAn\app\Controller\GiaoVusController.php, line 230]
+2014-11-07 07:59:52 Error: [FatalErrorException] Can't use method return value in write context
+Request URL: /DoAn/Giaovus/suaThietbi/9
+Stack Trace:
+#0 D:\PHP\DoAn\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(64, 'Can't use metho...', 'D:\PHP\DoAn\app...', 230)
+#1 [internal function]: ErrorHandler::handleError(64, 'Can't use metho...', 'D:\PHP\DoAn\app...', 230, Array)
+#2 D:\PHP\DoAn\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 64, 'Can't use metho...', 'D:\PHP\DoAn\app...', 230, Array)
+#3 D:\PHP\DoAn\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-07 08:00:05 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-07 08:00:13 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-07 08:00:15 Error: Fatal Error (64): Can't use method return value in write context in [D:\PHP\DoAn\app\Controller\GiaoVusController.php, line 230]
+2014-11-07 08:00:15 Error: [FatalErrorException] Can't use method return value in write context
+Request URL: /DoAn/Giaovus/quanlyThietbi
+Stack Trace:
+#0 D:\PHP\DoAn\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(64, 'Can't use metho...', 'D:\PHP\DoAn\app...', 230)
+#1 [internal function]: ErrorHandler::handleError(64, 'Can't use metho...', 'D:\PHP\DoAn\app...', 230, Array)
+#2 D:\PHP\DoAn\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 64, 'Can't use metho...', 'D:\PHP\DoAn\app...', 230, Array)
+#3 D:\PHP\DoAn\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-07 08:00:19 Error: Fatal Error (64): Can't use method return value in write context in [D:\PHP\DoAn\app\Controller\GiaoVusController.php, line 230]
+2014-11-07 08:00:19 Error: [FatalErrorException] Can't use method return value in write context
+Request URL: /DoAn/Giaovus/quanlyHocphan
+Stack Trace:
+#0 D:\PHP\DoAn\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(64, 'Can't use metho...', 'D:\PHP\DoAn\app...', 230)
+#1 [internal function]: ErrorHandler::handleError(64, 'Can't use metho...', 'D:\PHP\DoAn\app...', 230, Array)
+#2 D:\PHP\DoAn\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 64, 'Can't use metho...', 'D:\PHP\DoAn\app...', 230, Array)
+#3 D:\PHP\DoAn\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-07 08:01:20 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-07 08:01:24 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-07 08:01:27 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-07 08:02:28 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
