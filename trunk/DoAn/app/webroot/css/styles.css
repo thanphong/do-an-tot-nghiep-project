@@ -579,7 +579,7 @@ label{font-weight:bold}
 .contentmain div{float:left}
 .contentmain h2,.chitietkhoa h2{color:#f08e5d;text-transform:uppercase;margin:0 0 10px 0}
 .contentmain h2{margin-bottom:15px;text-align:center}
-.chitietkhoa span{float:left;clear:both;margin:5px 0 0 10px}
+.chitietkhoa span{float:left;clear:both;margin:5px 0 0 10px;width:100%}
 .chitietkhoa b{float:left;width:120px}
 .date {
 	clear: both;
@@ -639,3 +639,4 @@ p{float:left;font:bold 13px Arial;margin:10px;color:#009933}
 .divIcon{margin:10px 0}
 .containTin{float:left;padding:5px 15px;clear:both}
 .containTin p{margin:0;font:normal 12px Arial;color:#333}
+.chitietkhoa span > span{clear:none;float:left;width:85%;margin:none}

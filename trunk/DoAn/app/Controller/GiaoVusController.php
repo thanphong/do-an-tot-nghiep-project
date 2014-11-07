@@ -254,6 +254,7 @@ class GiaoVusController extends AppController{
 		$this->render('quanlyThietbi');
 	}
 	public function xoaThietbi($id) {}
+	
 	//quản lý lớp học phần
 	public function quanlyLophocphan() {
 		$listKhoa=$this->Khoa->find("all",array('recursive'=>-1));
@@ -280,6 +281,10 @@ class GiaoVusController extends AppController{
 		$numberrecord=$this->Thongbao->find('count');
 		$this->set("data",$this->Thongbao->find("all",array('limit' => $this->numberRecord, 'offset'=>($page-1)*$this->numberRecord,'recursive'=>-1)));
 		$this->pagination($page, $numberrecord,$end);
+	}
+	public function xemThongbao($id) {
+		$tbao=$this->Thongbao->find('first', array('conditions' => array('Thongbao.id' => $id),'recursive'=>-1));
+		$this->set("data",$tbao);
 	}
 	//
 
