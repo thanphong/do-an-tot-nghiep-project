@@ -1,6 +1,7 @@
 <?php
-	echo $this->giaovu->form_thietbi($listLoaiThietbi);
+	echo $this->giaovu->form_thietbi((isset($thietbi)?$thietbi:null),$listLoaiThietbi); 
 	echo $this->giaovu->listDanhsachThietbi($data);
+	//print_r($thietbi);
 ?>
 <div class="clear"></div>
 	<div id="paging" class="right">

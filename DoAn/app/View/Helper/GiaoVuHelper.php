@@ -296,23 +296,40 @@ class GiaoVuHelper extends HtmlHelper{
 	}
 	//
 	//quản lý thiết bị
-	function form_thietbi($listLoaithietbi){
+	function form_thietbi($thietbi=null,$listLoaithietbi){
 		$action="/DoAn/giaovus/quanlyThietbi";
 		$name="";
 		$mota="";
+		$loai=-1;
+		$trangthai=-1;
 		$register="<div class='contentmain'><h2>Tạo mới thiết bị</h2>";
+		if(isset($thietbi)){
+			$name=$thietbi['Thietbi']['tenThietbi'];
+			$loai=$thietbi['Thietbi']['loaiThietbi'];
+			$trangthai=$thietbi['Thietbi']['trangThai'];
+			$action="/DoAn/giaovus/suaKhoa/".$data['Khoa']['id'];
+			$register="<div class='contentmain'><h2>Cập nhật thiết bị</h2>";
+		}				
 		$register.="<form action='".$action."' method='POST' id='registration_form' name='Thietbi' class='left'><table>";
 		$register.="<tr><td><label for='register_name'>Tên thiết bị</label></td>";
 		$register.="<td><input type='text' name='tenThietbi' value='".$name."' id='register_name' /><td></tr>";
 		$register.="<tr><td><label for='register_name'>Loại thiết bị</label></td>";
 		$register.="<td><select name='loaiThietbi' id=''>";
 		foreach ($listLoaithietbi as $item){
-			$register.="<option value='".$item['Loaithietbi']['id']."'>".$item['Loaithietbi']['tenLoai']."</option>";
+			$checked="";
+			if($loai==$item['Loaithietbi']['id']){
+				$checked="selected";
+			}
+			$register.="<option value='".$item['Loaithietbi']['id']."' ".$checked.">".$item['Loaithietbi']['tenLoai']."</option>";
 		}
 		$register.="</select></td></tr>";
 		$register.="<tr><td><label for='register_uername'>Trạng thái</label></td>";
+		$checked1="";$checked2="";$checked3="";
+		if($trangthai==1){$checked1="selected";}
+		if($trangthai==2){$checked2="selected";}
+		if($trangthai==3){$checked3="selected";}
 		$register.="<td><select name='trangThai' id=''>";
-		$register.="<option value='1'>Tốt</option><option value='2'>Hỏng</option><option value='3'>Đang sửa chữa</option>";
+		$register.="<option value='1' ".$checked1.">Tốt</option><option value='2' ".$checked2.">Hỏng</option><option value='3' ".$checked3.">Đang sửa chữa</option>";
 		$register.="</select></td></tr>";
 		$register.="</table>";
 		$register.="<div class='left clear cachbtleft cachbt'>
