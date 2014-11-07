@@ -96,6 +96,7 @@ class GiaoVusController extends AppController{
 		if($this->request->is('post')){
 			$makhoa=$this->TaoMaKhoa($this->request->data['tenKhoa']);
 			$this->request->data['maKhoa']=$makhoa;
+			$this->request->data['ngayCapNhap']=date('y/m/d h:i:s',time());
 			$this->Khoa->save($this->request->data);
 		}
 		$this->redirect(array( 'action' => 'quanlyKhoa'));
@@ -203,7 +204,7 @@ class GiaoVusController extends AppController{
 			$loai=$this->Loaithietbi->find("first",array('conditions'=>array('Loaithietbi.id'=>$this->request->data['loaiThietbi'])));
 			$matb=$this->TaoMaThietbi($this->request->data['loaiThietbi'],$loai['Loaithietbi']['code']);
 			$this->request->data['mathietbi']=$matb;
-			$this->request->data['ngayCapNhap']=date("Y/m/d");
+			$this->request->data['ngayCapNhap']=date('y/m/d h:i:s',time());
 			$this->Thietbi->save($this->request->data);
 		}
 		$listLoaiThietbi=$this->Loaithietbi->find("all",array('recursive'=>-1));
@@ -277,7 +278,7 @@ class GiaoVusController extends AppController{
 		$page=(($page==null || !isset($page))?1:$page);
 		$end=(($end==null)||!isset($end)?$this->numberpage:$end);
 		$numberrecord=$this->Thongbao->find('count');
-		$this->set("data",$this->Thongbao->find("all",array('limit' => $this->numberRecord, 'offset'=>($page-1)*$this->numberRecord,'recursive'=>0)));
+		$this->set("data",$this->Thongbao->find("all",array('limit' => $this->numberRecord, 'offset'=>($page-1)*$this->numberRecord,'recursive'=>-1)));
 		$this->pagination($page, $numberrecord,$end);
 	}
 	//

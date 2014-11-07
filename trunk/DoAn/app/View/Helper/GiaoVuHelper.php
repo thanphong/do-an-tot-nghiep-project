@@ -412,10 +412,10 @@ class GiaoVuHelper extends HtmlHelper{
 				</div></form></div>";
 		return $register;
 	}
-	function listThongbao($list){
+	function listThongbao($data){
 		$register="<p>Không tìm thấy danh sách</p>";
 		if(isset($data)&&count($data)>0){
-			$register="<Table><tr><Td>STT</td><td>Tiêu đề</td><td>file đính kèm</td><td>Ngày đăng</td><td>Tác vụ</td></tr>";
+			$register="<table class='list'><thead><tr><th>STT</th><th>Tiêu đề</th><th>file đính kèm</th><th>Ngày đăng</th><th>Tác vụ</th></tr></thead>";
 			$i=1;
 			foreach ($data as $item){
 				$register.="<tr><td>".$i."</td><td>".$item['Thongbao']['tieude']."</td><td></td><td>".$item['Thongbao']['ngaydang']."</td>";

@@ -11,11 +11,11 @@ class UserHelper extends HtmlHelper  {
 			$d = getdate(strtotime($date));
 			$ngay= $d['mday'].'/'.$d['mon'].'/'.$d['year'];
 			$out.="<div class='left'>";
-			$out.="<div class='left' style='padding:2px 10px;'>";
+			$out.="<div class='left' style='padding:2px 5px;'>";
 			$out.="<b><span style='color: red;font-size:13.0pt;line-height:100%;font-family:times new roman,serif'>".$ngay.":</span></b>";
 			$out.="&nbsp;&nbsp;&nbsp;&nbsp;";
 			$out.="<span style='color:#009900;font-size:13.0pt;line-height:100%;font-family:times new roman,serif'>".$tieude."</span></div>";
-			$out.="<div style='padding:5px 10px 15px 10px;font-size:12.0pt;line-height:100%;font-family:times new roman,serif'>".$noidung."</div></div>";			
+			$out.="<div class='containTin'>".$noidung."</div></div>";			
 		}
 		$out.="</div>";
 		return $out;
