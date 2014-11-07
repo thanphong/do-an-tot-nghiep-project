@@ -11,5 +11,15 @@ class Thietbi extends AppModel{
 					'dependent'=> true
 			)
 	);
+	var $belongsTo = array(
+			'Loaithietbi'=> array(
+					'className' => 'Loaithietbi',
+					'foreignKey' => 'loaiThietbi',
+					'conditions' => '',
+					'order' => '',
+					'limit' => '',
+					'dependent'=> true
+			)
+	);
 }
 ?>

@@ -176,34 +176,72 @@ class GiaoVusController extends AppController{
 		$page=(($page==null || !isset($page))?1:$page);
 		$end=(($end==null)||!isset($end)?$this->numberpage:$end);
 		$numberrecord=$this->Phong->find('count');
-		$this->set("data",$this->Phong->find("all",array('limit' => $this->numberRecord, 'offset'=>($page-1)*$this->numberRecord,'recursive'=>-1)));
+		$this->set("data",$this->Phong->find("all",array('limit' => $this->numberRecord, 'offset'=>($page-1)*$this->numberRecord,'recursive'=>0)));
 		$this->pagination($page, $numberrecord,$end);
 	}
 	public function xemPhonghoc($id) {
 		$phong=$this->Phong->find('first', array('conditions' => array('Phong.id' => $id),'recursive'=>-1));
 		$this->set("data",$phong);
 	}
-	public function suaPhonghoc($id) {}
+	public function suaPhonghoc($id) {
+		
+	}
 	public function xoaPhonghoc($id) {}
 	//
 	//quản lý thiết bị
 	public function quanlyThietbi($page=null,$end=null){
+		if($this->request->is('post')){
+			$loai=$this->Loaithietbi->find("first",array('conditions'=>array('Loaithietbi.id'=>$this->request->data['loaiThietbi'])));
+			$matb=$this->TaoMaThietbi($this->request->data['loaiThietbi'],$loai['Loaithietbi']['code']);
+			$this->request->data['mathietbi']=$matb;
+			$this->request->data['ngayCapNhap']=date("Y/m/d");
+			$this->Thietbi->save($this->request->data);
+		}
 		$listLoaiThietbi=$this->Loaithietbi->find("all",array('recursive'=>-1));
 		$this->set("listLoaiThietbi",$listLoaiThietbi);
-		$this->populateThietbi($page,$end);
+		$this->populateThietbi($page,$end);		
+	}
+	public function TaoMaThietbi($idloaitbi,$code){	
+		$arr=$this->Thietbi->find("first",array('conditions' => array('Thietbi.loaiThietbi'=>$idloaitbi),'order'=>array('Thietbi.id'=>'DESC')));
+		if(isset($arr) && $arr!=null){
+			$idtb=$arr['Thietbi']['id'];
+			if($idtb+1<10){
+				return $code."0".($idtb+1);
+			}
+			return  $code."".($idtb+1);
+		}
+		return $code."01";
 	}
 	public function populateThietbi($page=null,$end=null){
 		$page=(($page==null || !isset($page))?1:$page);
 		$end=(($end==null)||!isset($end)?$this->numberpage:$end);
 		$numberrecord=$this->Thietbi->find('count');
-		$this->set("data",$this->Thietbi->find("all",array('limit' => $this->numberRecord, 'offset'=>($page-1)*$this->numberRecord,'recursive'=>-1)));
+		$this->set("data",$this->Thietbi->find("all",array('limit' => $this->numberRecord, 'offset'=>($page-1)*$this->numberRecord,'recursive'=>0)));
 		$this->pagination($page, $numberrecord,$end);
 	}
 	public function xemThietbi($id) {
-		$thietbi=$this->Thietbi->find('first', array('conditions' => array('Thietbi.id' => $id),'recursive'=>-1));
+		$thietbi=$this->Thietbi->find('first', array('conditions' => array('Thietbi.id' => $id),'recursive'=>0));
 		$this->set("data",$thietbi);
 	}
-	public function suaThietbi($id) {}
+	public function suaThietbi($id) {
+		if($this->request->is('post')){
+			$loai=$this->Loaithietbi->find("first",array('conditions'=>array('Loaithietbi.id'=>$this->request->data['loaiThietbi'])));
+			$matb=$this->TaoMaThietbi($this->request->data['loaiThietbi'],$loai['Loaithietbi']['code']);
+			$this->request->data('mathietbi')=$matb;
+			//$this->request->data('ngayCapNhap')=date("Y/m/d");
+			$this->Thietbi->updateAll(array('Thietbi.mathietbi' =>"'".$this->request->data('mathietbi')."'",
+					'Thietbi.tenThietbi' =>"'".$this->request->data('tenThietbi')."'",
+					'Thietbi.loaiThietbi'=>"'".$this->request->data('loaiThietbi')."'",
+					'Thietbi.ngayCapNhap'=>"'".date("Y/m/d")."'"),array('Thietbi.id' => $id));
+		}else{
+			$thietbi=$this->Thietbi->find('first', array('conditions' => array('Thietbi.id' => $id),'recursive'=>-1));
+			$this->set("thietbi",$thietbi);
+		}
+		$data=$this->Thietbi->find('all',array('recursive'=>-1));
+		$this->set("data",$data);
+		$this->populateThietbi($page,$end);
+		$this->render('quanlyThietbi');
+	}
 	public function xoaThietbi($id) {}
 	//quản lý lớp học phần
 	public function quanlyLophocphan() {

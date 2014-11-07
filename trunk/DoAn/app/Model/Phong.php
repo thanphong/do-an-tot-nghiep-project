@@ -19,4 +19,14 @@ class Phong extends AppModel{
 					'dependent'=> true
 			)
 	);
+	var $belongsTo = array(
+		'Khuvuc'=> array(
+					'className' => 'Khuvuc',
+					'foreignKey' => 'khuVuc',
+					'conditions' => '',
+					'order' => '',
+					'limit' => '',
+					'dependent'=> true
+			)
+	);
 }
