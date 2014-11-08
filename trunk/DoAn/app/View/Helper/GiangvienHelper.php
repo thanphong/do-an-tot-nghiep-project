@@ -5,7 +5,7 @@ class GiangvienHelper extends HtmlHelper{
 		$menu.="<li class=''>".$this->link('Lớp học phần',array('controller' => 'users','action' => '','full_base' => true))."</li>";
 		$menu.="<li class=''>".$this->link('Phòng học',array('controller' => 'users','action' => 'xemPhonghoc','full_base' => true))."</li>";
 		$menu.="<li class=''>".$this->link('Quản lý',array('controller' => 'users','action' => 'index','full_base' => true));
-		$menu.="<ul><li>".$this->link("Báo ngỉ-dạy bù",array('controller' => 'Giangviens','action' => 'BaongiDaybu','full_base' => true))."</li>";
+		$menu.="<ul><li>".$this->link("Báo ngỉ-Báo bù",array('controller' => 'Giangviens','action' => 'baonghibaobu','full_base' => true))."</li>";
 		$menu.="</ul></li>";
 		$menu.="<li class=''>".$this->link('Trợ giúp',array('controller' => 'users','action' => 'index','full_base' => true));
 		$menu.="<ul><li>".$this->link("Cá nhân",array('controller' => 'users','action' => 'formConsulting','full_base' => true))."</li>";
@@ -24,6 +24,8 @@ class GiangvienHelper extends HtmlHelper{
 			$out.="<option value='".$item['Hocki']['id']."'>Học kỳ".$item['Hocki']['mahocky']." năm học ".$item['Hocki']['namhoc']."</option>";
 		}
 		$out.="</select>";
+		$out.="<input class='button2 sizebutton2' id='btnbaonghi' type='button' value='Báo nghỉ' name='bn'/>";
+		$out.="<input class='button2 sizebutton2' id='btnbaobu' type='button' value='Báo bù' name='bn'/>";
 		return $out;
 	}
 }
