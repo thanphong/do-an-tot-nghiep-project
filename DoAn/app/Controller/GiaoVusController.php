@@ -304,7 +304,10 @@ class GiaoVusController extends AppController{
 		$this->Thongbao->deleteAll(array('Thongbao.id'=>$id));
 		$this->redirect(array('controller' => 'giaovus', 'action' => 'quanlyThongbao'));
 	}
-	//
+		//
+	public function canhan() {
+		$this->redirect(array("controller"=>"Giangviens","action"=>'canhan'));
+	}
 
 }
 

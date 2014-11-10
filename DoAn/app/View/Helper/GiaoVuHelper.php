@@ -1,8 +1,8 @@
 <?php
 class GiaoVuHelper extends HtmlHelper{
-	var $Gioitinhs=array("Nam","Nữ");
-	var $Hocvis=array("Ts"=>"Tiến sĩ","Ths"=>"Thạc sĩ","Ks"=>"Kỹ sư");
-	var $Hochams=array("GS"=>"Giáo sư","PGS"=>"Phó giáo sư");
+// 	var $Gioitinhs=array("Nam","Nữ");
+// 	var $Hocvis=array("Ts"=>"Tiến sĩ","Ths"=>"Thạc sĩ","Ks"=>"Kỹ sư");
+// 	var $Hochams=array("GS"=>"Giáo sư","PGS"=>"Phó giáo sư");
 	function create_menu($username){
 	
 		$menu="<ul class='nav'><li class='highlight'>".$this->link('Thông báo',array('controller' => 'users','action' => 'index','full_base' => true))."</li>";
@@ -16,7 +16,7 @@ class GiaoVuHelper extends HtmlHelper{
 		$menu.="<li>".$this->link("Quản lý thông báo",array('controller' => 'Giaovus','action' => 'quanlyThongbao','full_base' => true))."</li>";
 		$menu.="<li>".$this->link("Quản lý thiết bị",array('controller' => 'Giaovus','action' => 'quanlyThietbi','full_base' => true))."</li></ul></li>";
 		$menu.="<li style='float:right'>".$this->link('Thoát',array('controller' => 'users','action' => 'logout','full_base' => true))."</li>";
-		$menu.="<li style='float:right'>".$this->link('Cá nhân',array('controller' => 'users','action' => 'profile','full_base' => true,$username))."</li>";
+		$menu.="<li style='float:right'>".$this->link('Cá nhân',array('controller' => 'Giaovus','action' => 'canhan','full_base' => true,$username))."</li>";
 		$menu.="<span class='titlelog'>Xin chào: ".$username."<b class='line'>|</b></span>";
 		$menu.="</ul>";
 		return $menu;
@@ -439,5 +439,6 @@ class GiaoVuHelper extends HtmlHelper{
 		$d = getdate(strtotime($date));
 		echo $ngay= $d['mday'].' - '.$d['mon'].' - '.$d['year'];
 	}
+	
 }
 ?>
