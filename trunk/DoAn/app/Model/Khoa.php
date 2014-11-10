@@ -17,6 +17,14 @@ class Khoa extends AppModel{
 					'order' => '',
 					'limit' => '',
 					'dependent'=> true
+			),
+			'Nganh' => array(
+					'className' => 'Nganh',
+					'foreignKey' => 'Makhoa',
+					'conditions' => '',
+					'order' => '',
+					'limit' => '',
+					'dependent'=> true
 			)
 	);
 }

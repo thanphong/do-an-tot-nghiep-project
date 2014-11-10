@@ -20,5 +20,15 @@ class Hocphan extends AppModel{
 					'dependent'=> true
 			)
 	);
+	var $belongsTo = array(
+			'Nganh'=> array(
+					'className' => 'Nganh',
+					'foreignKey' => 'nganh',
+					'conditions' => '',
+					'order' => '',
+					'limit' => '',
+					'dependent'=> true
+			)
+	);
 }
 ?>

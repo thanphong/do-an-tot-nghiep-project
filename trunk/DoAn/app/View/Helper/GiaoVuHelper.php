@@ -184,8 +184,7 @@ class GiaoVuHelper extends HtmlHelper{
 		return $register;
 	}
 //
-	function form_Hocphan($data=null,$listKhoa){
-		
+	function form_Hocphan($data=null,$listKhoa){		
 		$action="/DoAn/giaovus/themMoiHocphan";
 		$name="";
 		$mota="";
@@ -214,7 +213,7 @@ class GiaoVuHelper extends HtmlHelper{
 		$register.="</select></td></tr>";
 		$register.="<tr><td><label for='register_name'>Trạng thái</label></td>";
 		$register.="<td><select name='trangthai' id=''>";
-		$register.="<option value='1'>Còn học</option><option value='0'>Ngừng</option></select></td></tr>";
+		$register.="<option value='1'>Chưa học</option><option value='2'>Đang học</option><option value='3'>Kết thúc</option></select></td></tr>";
 		$register.="<tr><td><label for='register_uername'>Mô tả</label></td>";
 		$register.="<td><textarea rows='4' cols='50' name='mota' id='mota' >".$mota."</textarea></td></td>";
 		$register.="</table>";
@@ -232,9 +231,9 @@ class GiaoVuHelper extends HtmlHelper{
 			$i=1;
 			foreach ($data as $item){
 				$register.="<tr><td>".$i."</td><td>".$item['Hocphan']['maHocPhan']."</td><td>".$item['Hocphan']['tenhocphan']."</td><td>".$item['Hocphan']['trangthai']."</td><td>".$item['Hocphan']['mota']."</td>";
-				$register.="<td>".$this->link('Xem',array('controller' => 'Giaovus', 'action' => 'xemHocphan', $item['Hocphan']['id']));
-				$register.=$this->link('Sửa',array('controller' => 'Giaovus', 'action' => 'suaHocphan', $item['Hocphan']['id']));
-				$register.=$this->link('Xóa',array('controller' => 'Giaovus', 'action' => 'xoaHocphan', $item['Hocphan']['id']));
+				$register.="<td>".$this->link('',array('controller' => 'Giaovus', 'action' => 'xemHocphan', $item['Hocphan']['id']),array('class'=>'icview','title'=>'xem'));
+				$register.=$this->link('',array('controller' => 'Giaovus', 'action' => 'suaHocphan', $item['Hocphan']['id']),array('class'=>'icedit','title'=>'sửa'));
+				$register.=$this->link('',array('controller' => 'Giaovus', 'action' => 'xoaHocphan', $item['Hocphan']['id']),array('class'=>'icdelete','title'=>'xóa'));
 				$register.="</td></tr>";
 				$i++;
 			}
@@ -308,7 +307,7 @@ class GiaoVuHelper extends HtmlHelper{
 			$name=$thietbi['Thietbi']['tenThietbi'];
 			$loai=$thietbi['Thietbi']['loaiThietbi'];
 			$trangthai=$thietbi['Thietbi']['trangThai'];
-			$action="/DoAn/giaovus/suaKhoa/".$data['Khoa']['id'];
+			$action="/DoAn/giaovus/suaThietbi/".$thietbi['Thietbi']['id'];
 			$register="<div class='contentmain'><h2>Cập nhật thiết bị</h2>";
 		}				
 		$register.="<form action='".$action."' method='POST' id='registration_form' name='Thietbi' class='left'><table>";
@@ -391,15 +390,20 @@ class GiaoVuHelper extends HtmlHelper{
 	}
 	//
 	//quản lý thông báo
-	function form_thongbao(){
+	function form_thongbao($thongbao=null){
 		$action="/DoAn/giaovus/quanlyThongbao";
-		$name="";
-		$mota="";
+		$tieude="";
 		$noidung="";
 		$register="<div class='contentmain'><h2>Tạo mới thông báo</h2>";
+		if(isset($thongbao)){
+			$tieude=$thongbao['Thongbao']['tieude'];
+			$noidung=$thongbao['Thongbao']['noidung'];
+			$action="/DoAn/giaovus/suaThongbao/".$thongbao['Thongbao']['id'];
+			$register="<div class='contentmain'><h2>Cập nhật thông báo</h2>";
+		}
 		$register.="<form action='".$action."' method='POST' id='registration_form' name='Thongbao' class='contentmain'><table>";
 		$register.="<tr><td><label for='register_name'>Tiêu đề</label></td>";
-		$register.="<td><input type='text' name='tieude' value='".$name."' id='register_name' /><td></tr>";
+		$register.="<td><input type='text' name='tieude' value='".$tieude."' id='register_name' /><td></tr>";
 		$register.="<tr><td><label for='register_uername'>Nội dung</label></td>";
 		$register.="<td><textarea rows='4' cols='50' name='noidung' id='noidung_news' >".$noidung."</textarea><td></tr>";
 		$register.="<tr><td><label for='register_uername'>Tập tin đính kèm</label></td>";

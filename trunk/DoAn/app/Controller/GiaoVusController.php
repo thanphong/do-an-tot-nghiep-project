@@ -136,14 +136,12 @@ class GiaoVusController extends AppController{
 	}
 
 	//học phần
-	public function quanlyHocphan() {
-		$this->set("listKhoa",$this->Khoa->find('all',array('recursive'=>-1)));
-	}
-	public function themMoiHocphan() {
+	public function quanlyHocphan($page=null,$end=null) {
 		if($this->request->is('post')){
 			$this->Hocphan->saveAll($this->request->data);
 		}
-		$this->set("data",$this->Hocphan->find("all",array('recursive'=>-1)));
+		$this->set("listKhoa",$this->Khoa->find('all',array('recursive'=>-1)));
+		$this->populateHocphan($page,$end);
 	}
 	public function populateHocphan($page=null,$end=null){
 		$page=(($page==null || !isset($page))?1:$page);
@@ -153,7 +151,7 @@ class GiaoVusController extends AppController{
 		$this->pagination($page, $numberrecord,$end);
 	}
 	public function xemHocphan($id) {
-		$hocphan=$this->Hocphan->find('first', array('conditions' => array('Hocphan.id' => $id),'recursive'=>-1));
+		$hocphan=$this->Hocphan->find('first', array('conditions' => array('Hocphan.id' => $id),'recursive'=>0));
 		$this->set("data",$hocphan);
 	}
 	public function suaHocphan($id) {
@@ -285,6 +283,26 @@ class GiaoVusController extends AppController{
 	public function xemThongbao($id) {
 		$tbao=$this->Thongbao->find('first', array('conditions' => array('Thongbao.id' => $id),'recursive'=>-1));
 		$this->set("data",$tbao);
+	}
+	public function suaThongbao($id,$page=null,$end=null) {
+		if($this->request->is('post')){
+			$ngayCapnhat=date('y/m/d h:i:s',time());
+			$this->Thongbao->updateAll(array('Thongbao.tieude'=>"'".$this->request->data('tieude')."'",
+					'Thongbao.noidung'=>"'".$this->request->data('noidung')."'",
+					'Thongbao.ngayCapnhap'=>"'".$ngayCapnhat."'"					
+			),array('Thongbao.id' => $id));
+		}
+		else{
+			$thongbao=$this->Thongbao->find('first', array('conditions' => array('Thongbao.id' => $id),'recursive'=>-1));
+			$this->set("thongbao",$thongbao);
+		}
+
+		$this->populateThongbao($page,$end);
+		$this->render('quanlyThongbao');
+	}
+	public function xoaThongbao($id) {
+		$this->Thongbao->deleteAll(array('Thongbao.id'=>$id));
+		$this->redirect(array('controller' => 'giaovus', 'action' => 'quanlyThongbao'));
 	}
 	//
 
