@@ -56,6 +56,25 @@ class GiangViensController extends AppController{
 		}
 		$this->set("Lichgiangday",$lichday);
 	}
+<<<<<<< .mine
+	//
+	public function canhan() {
+		$user=$this->Session->read('Auth.User');
+		$this->set("user",$user);
+		
+	}
+	public function thaydoimatkhau() {
+	
+	}
+	public function kiemtramatkhau() {
+		$this->layout=null;
+		if($this->request->is('post')){
+			$pass=AuthComponent::password($this->request->data['pass']);
+			$data=$this->User->find("all",array('conditions'=>array('User.maGiangvien'=>$this->Session->read('Auth.User.Giangvien.id'),'User.matKhau'=>$pass),'recursive'=>-1));
+			$this->set("data",$data);	
+		}
+	}
+=======
 	public function lichbaonghi() {
 		$this->layout=null;
 		$hocky=$this->request->data['hocky'];
