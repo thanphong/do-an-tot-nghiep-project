@@ -97,6 +97,11 @@ class UsersController extends AppController {
 		}	
 		$this->set("listphong",$listphong);
 	}
+	public function profile($id) {
+	//	$this->set("profile", $this->User->find("all",array('recursive'=>-1)));
+		$data=$this->User->find('first',array('conditions' => array('User.maGiangvien' => $id)));
+		$this->set("data",$data);
+	}
 }
 
 ?>
