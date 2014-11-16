@@ -136,10 +136,10 @@ public class GetDataJson {
 		}
 		return null;
 	}
-	public static List<TkbieuJson> baongi(int mgv, List<TkbieuJson> tkbieuJsons,String lydo) {
+	public static List<TkbieuJson> baongi(int mgv, List<TkbieuJson> tkbieuJsons) {
 		// TODO Auto-generated method stub
 		try {
-			String Url= sURL + "/baonghi/"+mgv+"/"+lydo;
+			String Url= sURL + "/baonghi/"+mgv;
 			String json=TkbieuJson.toJsonArray(tkbieuJsons);
 			DefaultHttpClient httpclient = new DefaultHttpClient();
 			HttpPost post = new HttpPost(Url);

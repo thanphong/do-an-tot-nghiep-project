@@ -28,5 +28,7 @@
     <string name="headertutiet">Từ tiết</string>
     <string name="headerdentiet">Đến tiết</string>
     <string name="headersotiet">Số tiết</string>
+    <!-- comfirm -->
+    <string name="cofimbaonghi">Bạn có xác nhận lưu dữ liệu!</string>
 
 </resources>
