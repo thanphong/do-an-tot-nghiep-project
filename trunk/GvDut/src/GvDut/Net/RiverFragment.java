@@ -151,8 +151,14 @@ public class RiverFragment extends Fragment {
 
 				@Override
 				public void onClick(View v) {
+					tkbieuJsons.get(0).setLydo(lydo.getText().toString());
 					// TODO Auto-generated method stub
-					baongi(lydo.getText().toString());
+					dialogframge = new DialogFragment();
+					dialogframge.type = 1;
+					dialogframge.context = context;
+					FragmentManager fragmentManager = getFragmentManager();
+					dialogframge.show(fragmentManager, "Ngày tháng");
+					//baongi();
 				}
 			});
 			//
@@ -420,13 +426,13 @@ public class RiverFragment extends Fragment {
 		}
 	}
 	//
-	public void baongi(final String lydo){
+	public void baongi(){
 		try {
 			final List<TkbieuJson> tkbieu = new AsyncTask<String, Void, List<TkbieuJson>>() {
 				@Override
 				protected List<TkbieuJson> doInBackground(String... params) {
 					// TODO Auto-generated method stub
-					return (List<TkbieuJson>) GetDataJson.baongi(mgv,tkbieuJsons,lydo);
+					return (List<TkbieuJson>) GetDataJson.baongi(mgv,tkbieuJsons);
 				}
 			}.execute("").get();
 		} catch (Exception e) {

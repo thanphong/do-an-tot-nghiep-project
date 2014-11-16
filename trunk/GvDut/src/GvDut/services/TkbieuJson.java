@@ -15,6 +15,7 @@ public class TkbieuJson {
 	private int baongi;
 	private String ngaynghi;
 	private int sotietnghi;
+	private String lydo;
 	public String getLophp() {
 		return lophp;
 	}
@@ -88,6 +89,18 @@ public class TkbieuJson {
 	 */
 	public void setSotietnghi(int sotietnghi) {
 		this.sotietnghi = sotietnghi;
+	}
+	/**
+	 * @return the lydo
+	 */
+	public String getLydo() {
+		return lydo;
+	}
+	/**
+	 * @param lydo the lydo to set
+	 */
+	public void setLydo(String lydo) {
+		this.lydo = lydo;
 	}
 	@Override
 	public String toString() {

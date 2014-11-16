@@ -17,6 +17,7 @@ import android.view.View;
 
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class DialogFragment extends android.app.DialogFragment implements
 		DatePickerDialog.OnDateSetListener {
@@ -50,7 +51,9 @@ public class DialogFragment extends android.app.DialogFragment implements
 			AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 			// Get the layout inflater
 			LayoutInflater inflater = getActivity().getLayoutInflater();
-			View v = inflater.inflate(R.layout.fom_baonghibu_layout, null);
+			View v = inflater.inflate(R.layout.comfirm_layout, null);
+			TextView txtAlert=(TextView)v.findViewById(R.id.comfirm);
+			txtAlert.setText(R.string.cofimbaonghi);
 			builder.setView(v)
 					.setPositiveButton("Cancel",
 							new DialogInterface.OnClickListener() {
