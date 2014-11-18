@@ -25,36 +25,39 @@ public final class R {
         public static final int ic_launcher=0x7f020002;
     }
     public static final class id {
-        public static final int TKbieu=0x7f09000f;
-        public static final int TKbieuBaonghi=0x7f090003;
-        public static final int action_settings=0x7f090010;
-        public static final int btbaonghi=0x7f090004;
-        public static final int btdangkybu=0x7f090008;
-        public static final int btlogin=0x7f09000e;
-        public static final int comfirm=0x7f090005;
+        public static final int TKbieu=0x7f090011;
+        public static final int TKbieuBaobu=0x7f090005;
+        public static final int TKbieuBaonghi=0x7f090007;
+        public static final int action_settings=0x7f090012;
+        public static final int btbaobu=0x7f090006;
+        public static final int btbaonghi=0x7f090008;
+        public static final int btdangkybu=0x7f09000c;
+        public static final int btlogin=0x7f090010;
+        public static final int comfirm=0x7f090009;
         public static final int content_frame=0x7f090001;
         public static final int drawer_layout=0x7f090000;
-        public static final int drawer_list=0x7f090002;
-        public static final int linearNews=0x7f09000b;
-        public static final int lydo=0x7f090006;
-        public static final int pass=0x7f09000d;
-        public static final int scrollBuscalendar=0x7f09000a;
-        public static final int tableBaonghi=0x7f090007;
-        public static final int tv_content=0x7f090009;
-        public static final int username=0x7f09000c;
+        public static final int drawer_list=0x7f090004;
+        public static final int linearNews=0x7f090003;
+        public static final int lydo=0x7f09000a;
+        public static final int pass=0x7f09000f;
+        public static final int scrollBuscalendar=0x7f090002;
+        public static final int tableBaonghi=0x7f09000b;
+        public static final int tv_content=0x7f09000d;
+        public static final int username=0x7f09000e;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
-        public static final int baongi_layout=0x7f030001;
-        public static final int comfirm_layout=0x7f030002;
-        public static final int drawer_list_item=0x7f030003;
-        public static final int example_layout=0x7f030004;
-        public static final int fom_baonghibu_layout=0x7f030005;
-        public static final int fragment_layout=0x7f030006;
-        public static final int home_layout=0x7f030007;
-        public static final int login_layout=0x7f030008;
-        public static final int textview_styles=0x7f030009;
-        public static final int thoikhoabieu_layout=0x7f03000a;
+        public static final int baobu_layout=0x7f030001;
+        public static final int baongi_layout=0x7f030002;
+        public static final int comfirm_layout=0x7f030003;
+        public static final int drawer_list_item=0x7f030004;
+        public static final int example_layout=0x7f030005;
+        public static final int fom_baonghibu_layout=0x7f030006;
+        public static final int fragment_layout=0x7f030007;
+        public static final int home_layout=0x7f030008;
+        public static final int login_layout=0x7f030009;
+        public static final int textview_styles=0x7f03000a;
+        public static final int thoikhoabieu_layout=0x7f03000b;
     }
     public static final class menu {
         public static final int main=0x7f080000;
@@ -64,14 +67,17 @@ public final class R {
         public static final int app_name=0x7f050000;
         /**  comfirm 
          */
-        public static final int cofimbaonghi=0x7f05000f;
+        public static final int cofimbaonghi=0x7f050012;
         public static final int drawer_close=0x7f050004;
         public static final int drawer_open=0x7f050003;
         public static final int headerBaonghi=0x7f050009;
         public static final int headerLhp=0x7f050007;
         public static final int headerNGAYDAY=0x7f050008;
+        public static final int headerSotietbu=0x7f050011;
+        public static final int headerSotietnghi=0x7f050010;
         public static final int headerStt=0x7f050006;
         public static final int headerdentiet=0x7f05000d;
+        public static final int headerngaybao=0x7f05000f;
         public static final int headerngaynghi=0x7f05000b;
         public static final int headersotiet=0x7f05000e;
         /**  baonghi 

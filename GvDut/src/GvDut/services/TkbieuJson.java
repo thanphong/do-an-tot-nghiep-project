@@ -16,6 +16,7 @@ public class TkbieuJson {
 	private String ngaynghi;
 	private int sotietnghi;
 	private String lydo;
+
 	public String getLophp() {
 		return lophp;
 	}

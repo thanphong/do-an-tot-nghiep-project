@@ -2,16 +2,16 @@
 <resources>
 
     <string name="app_name">TEADUT</string>
-    <string name="action_settings">Settings</string>
+	<string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
 
     <string-array name="Menu">
         <item>Trang chủ</item>
-        <item>Đăng nhập</item>
         <item>Xem thời khóa biểu</item>
         <item>Xem phòng</item>
         <item>Báo nghỉ</item>
         <item>Báo dạy bù</item>
+        <item>Đăng nhập</item>
     </string-array>
 
     <string name="drawer_open">Open navigation drawer</string>
@@ -28,6 +28,9 @@
     <string name="headertutiet">Từ tiết</string>
     <string name="headerdentiet">Đến tiết</string>
     <string name="headersotiet">Số tiết</string>
+    <string name="headerngaybao">Ngày báo</string>
+     <string name="headerSotietnghi">Số tiết nghỉ</string>
+     <string name="headerSotietbu">Số tiết bù</string>
     <!-- comfirm -->
     <string name="cofimbaonghi">Bạn có xác nhận lưu dữ liệu!</string>
 

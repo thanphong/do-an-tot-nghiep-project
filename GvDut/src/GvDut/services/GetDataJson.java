@@ -159,5 +159,26 @@ public class GetDataJson {
 		}
 		return null;
 	}
+	public static List<LichnghiJson> getLichnghi(int mgv) {
+		// TODO Auto-generated method stub
+		try {
+			String Url= sURL + "/getLichnghi/"+mgv;
+			DefaultHttpClient Client = new DefaultHttpClient();
+			HttpGet httpget = new HttpGet(Url);
+			httpget.setHeader("Accept", "application/json");
+			httpget.setHeader("Content-type", "application/json; charset=utf-8");
+			//httpget.setHeader("Cookie", sessionCookie);
+
+			ResponseHandler<String> responseHandler = new BasicResponseHandler();
+			String SetServerString = Client.execute(httpget, responseHandler);
+			Log.d("a", SetServerString);
+			return (List<LichnghiJson>) LichnghiJson.fromJsonArrayToObject(SetServerString);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			Log.d("err", e.toString());
+			e.printStackTrace();
+		}
+		return null;
+	}
 
 }
