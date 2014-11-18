@@ -9,7 +9,7 @@ $(document).ready(function() {
 	});
 	$('#updatepas').click(function(e){
 		if($("#newMatkhau").val()!=$("#comfirmMatkhau").val()){
-			alert("MÃ¢Ì£t khÃ¢Ì‰u xaÌc nhÃ¢Ì£n khÃ´ng Ä‘uÌng!");
+			alert("Mâ?t khâ?u xa´c nhâ?n không du´ng!");
 		}
 	});
 	$('#oldMatkhau').change(function(){

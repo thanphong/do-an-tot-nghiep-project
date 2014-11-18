@@ -31,10 +31,11 @@ App::uses('CakeResponse', 'Network');
 */
 class HtmlHelper extends AppHelper {
 
-	public $Gioitinhs=array("Nam","Nữ");
-	public $Hocvis=array("Ts"=>"Tiến sĩ","Ths"=>"Thạc sĩ","Ks"=>"Kỹ sư");
-	public $Hochams=array("GS"=>"Giáo sư","PGS"=>"Phó giáo sư");
+	public $Gioitinhs=array("Nam","N?");
+	public $Hocvis=array("Ts"=>"Ti?n si","Ths"=>"Th?c si","Ks"=>"K? su");
+	public $Hochams=array("GS"=>"Gi�o su","PGS"=>"Ph� gi�o su");
 	
+
 	/**
 	 * Reference to the Response object
 	 *

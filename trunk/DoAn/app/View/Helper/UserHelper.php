@@ -38,7 +38,7 @@ class UserHelper extends HtmlHelper  {
 		return $output;
 	}
 	//
-	function xemphonghoc($listGiangduong){
+	function xemphonghoc($listGiangduong,$listTuan){
 		
 		$register="<table>";
 		$register.="<tr><td><b for='register_uername'>Giảng đường</b></td>";
@@ -50,6 +50,12 @@ class UserHelper extends HtmlHelper  {
 		$register.="</select></td></tr>";
 		$register.="<tr><td><b for='register_uername'>Ngày</b></td>";
 		$register.="<td><input type='text' name='ngay' data-beatpicker='true' data-beatpicker-id='myDatePicker' id='ngayxem'/></td>";
+		$register.="<td><select name='' id='tuan'>";
+		foreach($listTuan as $item){
+			$register.="<option value='".$item['Tuanhoc']['id']."'>Tuần ".$item['Tuanhoc']['tuan']."(".$item['Tuanhoc']['ngaybatdau']."-".$item['Tuanhoc']['ngaykethuc'].")</option></option>";
+		}
+		
+		$register.="</select></td></tr>";
 		$register.="<table>";
 		return $register;
 	}

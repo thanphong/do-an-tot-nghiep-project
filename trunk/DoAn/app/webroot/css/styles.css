@@ -464,6 +464,7 @@ select {
 	display: table-row;
 }
 
+
 .GridCellC {
 	text-align: center;
 	border-top: solid 1px #d0dee9;
@@ -511,7 +512,7 @@ select {
 	color: #636363;
 }
 #logo img{width:320px}
-.xemphonghoc,.contentmain{float:left;padding:10px;background:#fff;width:98%;border-radius:5px}
+.baocao,.xemphonghoc,.contentmain{float:left;padding:10px;background:#fff;width:98%;border-radius:5px}
 label{font-weight:bold}
 .password{margin-top:5px}
 .login input[type=submit] {
@@ -577,6 +578,7 @@ label{font-weight:bold}
 	width: 100px;
 }
 .contentmain div{float:left}
+.baocao div{float:left;width:100%}
 .contentmain h2,.chitietkhoa h2{color:#f08e5d;text-transform:uppercase;margin:0 0 10px 0}
 .contentmain h2{margin-bottom:15px;text-align:center}
 .chitietkhoa span{float:left;clear:both;margin:5px 0 0 10px;width:100%}
@@ -640,3 +642,7 @@ p{float:left;font:bold 13px Arial;margin:10px;color:#009933}
 .containTin{float:left;padding:5px 15px;clear:both}
 .containTin p{margin:0;font:normal 12px Arial;color:#333}
 .chitietkhoa span > span{clear:none;float:left;width:85%;margin:none}
+.checkLhpBaongi{
+	background: url('../img/image/check.png');
+	background-repeat: no-repeat;
+}

@@ -1,0 +1,52 @@
+#blanket {
+   background-color:#111;
+   opacity: 0.65;
+   *background:none;
+   position:absolute;
+   z-index: 9001;
+   top:0px;
+   left:0px;
+   width:100%;
+}
+
+#popupBaoBu, #popUpDiv {
+	position:absolute;
+	background: #eaf0f5 url('../img/images/GridHeaderBG.png') repeat-x;
+	width:800px;
+	min-height:400px;
+	z-index: 9002;
+	padding:10px;
+	top:100px!important;
+	left:250px!important;
+}
+
+/**/
+.tickLopbaobu{
+		background: url('../img/image/baobu.png');
+		background-repeat: no-repeat;
+}
+.GridRowLhp{
+	height: 23px;
+	border: solid 1px #d0dee9;
+	background: #bae8f4 url('../img/images/RowBG.png') repeat-x;
+}
+.GridCellBu {
+	text-align: center;
+	border-top: solid 1px #d0dee9;
+	border-right: solid 1px #d0dee9;
+	padding: 2px 4px 2px 4px;
+	background-color: #ffccff
+}
+.cobaonghi{
+	background: url('../img/image/check.png');
+	background-repeat: no-repeat;
+}
+.baonghibu{width:49% !important}
+#popUpDiv table,.baonghibu table{margin:10px 0 0;float:left}
+.headtt{background:none repeat scroll 0 0 #2ba4cc;color:#fff;display:inline-block;font-size:1.1em;font-weight:700;margin-bottom:3px;text-shadow:1px 1px #036;width:98.7%!important;padding:5px 0 5px 10px}
+.headtt .note{border-left: 7px solid #ffa842;margin-right:5px}
+#contentpoup{width:100%}
+.groupButton{margin:10px 0 0 350px}
+#tableBaongi{float:left;width:100%}
+.close{background:url(../img/icon/close2-icon.png) no-repeat scroll 0 0 transparent;height:24px;position:absolute;right:12px;text-indent:-9999px;top:12px;width:24px;z-index:3}
+.close:hover{opacity:0.7}

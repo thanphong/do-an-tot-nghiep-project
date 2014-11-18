@@ -1,7 +1,7 @@
 <div class="xemphonghoc">
 <?php
 	echo $this->Html->script("user.js");
-	echo $this->User->xemphonghoc($khuvus);
+	echo $this->User->xemphonghoc($khuvus,$tuans);
 ?>
 
 <table id="danhsachphong" class="Grid" style="width:100%;border-collapse:collapse;">
