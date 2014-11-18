@@ -1,51 +1,58 @@
 package GvDut.Net;
 
-import android.app.Activity;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
-import android.content.Context;
+import java.util.List;
+
+import GvDut.services.GetDataJson;
+import GvDut.services.NewsJson;
+import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
-
+import android.text.Html;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.View.OnClickListener;
-
 import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ListView;
-
 import android.widget.TextView;
+import android.widget.AdapterView.OnItemClickListener;
 
-public class MainActivity extends Activity {
+public class MainActivity extends AbtractActivity {
 
-	// Within which the entire activity is enclosed
-	DrawerLayout mDrawerLayout;
-	int mgv;
-	// ListView represents Navigation Drawer
-	ListView mDrawerList;
+	LinearLayout layoutNews;
 
-	// ActionBarDrawerToggle indicates the presence of Navigation Drawer in the
-	// action bar
-	ActionBarDrawerToggle mDrawerToggle;
-	Button btLogin;
-	// Title of the action bar
-	String mTitle = "";
-	Context context = this;
-	RiverFragment rFragment ;
+	@Override
+	public void init() {
+		// TODO Auto-generated method stub
+		layoutNews = (LinearLayout) findViewById(R.id.linearNews);
+	}
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-
+		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
-		setHomelayout();
+		getListNews();
+	}
 
+	@Override
+	public int getLayoutContent() {
+		// TODO Auto-generated method stub
+		return R.layout.activity_main;
+	}
+
+	@Override
+	public void addButtonListener() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void setDrawerLayout() {
+		// TODO Auto-generated method stub
 		mTitle = (String) getTitle();
 
 		// Getting reference to the DrawerLayout
@@ -75,11 +82,13 @@ public class MainActivity extends Activity {
 
 		// Setting DrawerToggle on DrawerLayout
 		mDrawerLayout.setDrawerListener(mDrawerToggle);
-
+		String[] menu=getResources().getStringArray(R.array.Menu);
+		if(mgv!=0){
+			menu[menu.length-1]="Thoát";
+		}
 		// Creating an ArrayAdapter to add items to the listview mDrawerList
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(
-				getBaseContext(), R.layout.drawer_list_item, getResources()
-						.getStringArray(R.array.Menu));
+				getBaseContext(), R.layout.drawer_list_item,menu);
 
 		// Setting the adapter on mDrawerList
 		mDrawerList.setAdapter(adapter);
@@ -101,108 +110,79 @@ public class MainActivity extends Activity {
 				String[] rivers = getResources().getStringArray(R.array.Menu);
 
 				// Currently selected river
-				
+
 				mTitle = rivers[position];
-
-				// Creating a fragment object
-				if(rFragment!=null){
-					mgv=rFragment.mgv;
+				Intent t ;
+				if (mgv == 0 && position!=0) {
+					t = new Intent(MainActivity.this, LoginActivity.class);
+					startActivity(t);
+				} else {
+					switch (position) {
+					case stateHome:
+						t = new Intent(MainActivity.this, MainActivity.class);
+						startActivity(t);
+						break;
+					case stateDangnhap:
+						mgv=0;
+						t = new Intent(MainActivity.this, MainActivity.class);
+						startActivity(t);
+						break;
+					case stateThoiKhoabieu:
+						t = new Intent(MainActivity.this,
+								ThoiKhoaBieuActivity.class);
+						startActivity(t);
+						break;
+					case stateBaonghi:
+						t = new Intent(MainActivity.this,
+								BaonghiActivity.class);
+						startActivity(t);
+						break;
+					case stateXemphong:
+						break;
+					case stateBaobu:
+						t = new Intent(MainActivity.this,
+								BaobuActivity.class);
+						
+						startActivity(t);
+						break;
+					default:
+						break;
+					}
+					// Creating a fragment object
+					getActionBar().setTitle(rivers[position]);
+					mDrawerLayout.closeDrawer(mDrawerList);
 				}
-				rFragment = new RiverFragment();
-				rFragment.context = context;
-				// Creating a Bundle object
-				Bundle data = new Bundle();
-
-				// Setting the index of the currently selected item of
-				// mDrawerList
-				
-				data.putInt("position", position);
-				data.putInt("magv", mgv);
-
-				// Setting the position to the fragment
-				rFragment.setArguments(data);
-
-				// Getting reference to the FragmentManager
-				FragmentManager fragmentManager = getFragmentManager();
-
-				// Creating a fragment transaction
-				FragmentTransaction ft = fragmentManager.beginTransaction();
-
-				// Adding a fragment to the fragment transaction
-				ft.replace(R.id.content_frame, rFragment);
-
-				// Committing the transaction
-				ft.commit();
-				// Closing the drawer
-				mDrawerLayout.closeDrawer(mDrawerList);
-
 			}
 		});
 	}
 
-	@Override
-	protected void onPostCreate(Bundle savedInstanceState) {
-		super.onPostCreate(savedInstanceState);
-		mDrawerToggle.syncState();
-	}
-
-	/** Handling the touch event of app icon */
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		if (mDrawerToggle.onOptionsItemSelected(item)) {
-			return true;
+	public void getListNews() {
+		try {
+			final List<NewsJson> listNews = new AsyncTask<String, Void, List<NewsJson>>() {
+				@Override
+				protected List<NewsJson> doInBackground(String... params) {
+					// TODO Auto-generated method stub
+					return (List<NewsJson>) GetDataJson.getListNews();
+				}
+			}.execute("").get();
+			if (listNews != null) {
+				String tt = "";
+				for (NewsJson newsJson : listNews) {
+					TextView tieude = (TextView) getLayoutInflater().inflate(
+							R.layout.textview_styles, null);
+					tt = "<b><span ><font color='red'>" + newsJson.getNgay()
+							+ ":</font></span></b>&nbsp;&nbsp;&nbsp;&nbsp;";
+					tt += "<span ><font color='#009900'>"
+							+ newsJson.getTieude() + "</font></span>";
+					tt += "<div>" + newsJson.getNoidung() + "</div>";
+					tieude.setText(Html.fromHtml(tt));
+					layoutNews.addView(tieude);
+				}
+			}
+		} catch (Exception e) {
+			Log.d("err", e.toString());
+			e.fillInStackTrace();
 		}
-		return super.onOptionsItemSelected(item);
 	}
 
-	/** Called whenever we call invalidateOptionsMenu() */
-	@Override
-	public boolean onPrepareOptionsMenu(Menu menu) {
-		// If the drawer is open, hide action items related to the content view
-		boolean drawerOpen = mDrawerLayout.isDrawerOpen(mDrawerList);
-
-		menu.findItem(R.id.action_settings).setVisible(!drawerOpen);
-		return super.onPrepareOptionsMenu(menu);
-	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
-		return true;
-	}
-
-	// duy
-	public void setHomelayout() {
-		//
-		// Creating a fragment object
-		RiverFragment rFragment = new RiverFragment();
-		rFragment.context = context;
-		// Creating a Bundle object
-		Bundle data = new Bundle();
-
-		// Setting the index of the currently selected item of mDrawerList
-		data.putInt("position", 0);
-
-		// Setting the position to the fragment
-		rFragment.setArguments(data);
-
-		// Getting reference to the FragmentManager
-		FragmentManager fragmentManager = getFragmentManager();
-
-		// Creating a fragment transaction
-		FragmentTransaction ft = fragmentManager.beginTransaction();
-
-		// Adding a fragment to the fragment transaction
-		ft.replace(R.id.content_frame, rFragment);
-
-		// Committing the transaction
-		ft.commit();
-		TextView tieude = (TextView) getLayoutInflater().inflate(
-				R.layout.textview_styles, null);
-
-	}
-
-	//
-	
 }
