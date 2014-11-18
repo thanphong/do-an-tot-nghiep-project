@@ -11,6 +11,10 @@ public class TkbBaonghiJson {
 
 	private int id;
 	private String lichnghi;
+	private String maLophp;
+	private String lophp;
+	private int soTietBaoNghi;
+	private int soTietBaoBu;
 	private List<LichnghiJson> lichnghiJsons;
 
 	public int getId() {
@@ -37,8 +41,41 @@ public class TkbBaonghiJson {
 		this.lichnghiJsons = lichnghiJsons;
 	}
 
+	public String getMaLophp() {
+		return maLophp;
+	}
+
+	public void setMaLophp(String maLophp) {
+		this.maLophp = maLophp;
+	}
+
+	public String getLophp() {
+		return lophp;
+	}
+
+	public void setLophp(String lophp) {
+		this.lophp = lophp;
+	}
+
+	public int getSoTietBaoNghi() {
+		return soTietBaoNghi;
+	}
+
+	public void setSoTietBaoNghi(int soTietBaoNghi) {
+		this.soTietBaoNghi = soTietBaoNghi;
+	}
+
+	public int getSoTietBaoBu() {
+		return soTietBaoBu;
+	}
+
+	public void setSoTietBaoBu(int soTietBaoBu) {
+		this.soTietBaoBu = soTietBaoBu;
+	}
+
 	public String toJson() {
-		return new JSONSerializer().exclude("*.class").serialize(this);
+		lichnghi=LichnghiJson.toJsonArray(lichnghiJsons);
+		return new JSONSerializer().exclude("*.class").exclude("lichnghi").serialize(this);
 	}
 
 	public static TkbBaonghiJson fromJsonToObject(String json) {

@@ -1,22 +1,28 @@
 package GvDut.Net;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import GvDut.services.GetDataJson;
 import GvDut.services.LichbaobuJson;
 import GvDut.services.LichnghiJson;
+import GvDut.services.TkbBaonghiJson;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
 
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -27,11 +33,13 @@ public class BaobuActivity extends AbtractActivity {
 
 	TableLayout tablebaobu;
 	Context context=this;
+	List<LichnghiJson>lichnghis=new ArrayList<LichnghiJson>();;
+	Button btbaobu;
 	@Override
 	public void init() {
 		// TODO Auto-generated method stub
 		tablebaobu=(TableLayout)findViewById(R.id.TKbieuBaobu);
-		
+		btbaobu=(Button)findViewById(R.id.btbaobu);
 	}
 
 	@Override
@@ -50,7 +58,22 @@ public class BaobuActivity extends AbtractActivity {
 	@Override
 	public void addButtonListener() {
 		// TODO Auto-generated method stub
-
+		btbaobu.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+//				List<LichbaobuJson>lichbaobuJsons=new ArrayList<LichbaobuJson>();
+//				for (LichnghiJson lichnghiJson : lichnghis) {
+//					LichbaobuJson lichbaobuJson=new LichbaobuJson();
+//					lichbaobuJson.setLichnghi(lichnghiJson.getId());
+//					lichbaobuJsons.add(lichbaobuJson);
+//				}
+				Intent t=new Intent(BaobuActivity.this,FormBaobuActivity.class);
+				t.putExtra("lichnghiJson",LichnghiJson.toJsonArray(lichnghis) );
+				startActivity(t);
+			}
+		});
 	}
 
 	@Override
@@ -148,133 +171,154 @@ public class BaobuActivity extends AbtractActivity {
 	}
 	public void getLichnghi(){
 		try {
-			final List<LichnghiJson> lichnghis = new AsyncTask<String, Void, List<LichnghiJson>>() {
+			final List<TkbBaonghiJson> tkbBaonghiJsons = new AsyncTask<String, Void, List<TkbBaonghiJson>>() {
 				@Override
-				protected List<LichnghiJson> doInBackground(String... params) {
+				protected List<TkbBaonghiJson> doInBackground(String... params) {
 					// TODO Auto-generated method stub
-					return (List<LichnghiJson>) GetDataJson.getLichnghi(mgv);
+					return (List<TkbBaonghiJson>) GetDataJson.getLichnghi(mgv);
 				}
 			}.execute("").get();
-			if(lichnghis!=null){
-				int i = 0;
+			if(tkbBaonghiJsons!=null){
+				int i = 1;
+				
 				TableRow.LayoutParams tableRowParams = new TableRow.LayoutParams();
 				tableRowParams.setMargins(1, 1, 1, 1);
 				tableRowParams.weight = 1;
 				TableRow.LayoutParams tableRowParamsbaonghi = new TableRow.LayoutParams();
-				tableRowParamsbaonghi.setMargins(0, 0, 0, 0);
+				tableRowParamsbaonghi.setMargins(0, 1, 0, 1);
 				tableRowParamsbaonghi.weight = 1;
 				tableRowParamsbaonghi.span=3;
 				TableRow.LayoutParams layout=new TableRow.LayoutParams(TableRow.LayoutParams.FILL_PARENT, TableRow.LayoutParams.FILL_PARENT);
-				for (LichnghiJson lichnghiJson : lichnghis) {
-					List<LichbaobuJson> lichbaobus=(List<LichbaobuJson>) LichbaobuJson.fromJsonArrayToObject(lichnghiJson.getJsondaybu());
-					i++;
+				layout.setMargins(0, 1, 0, 1);
+				for (final TkbBaonghiJson tkbBaonghiJson : tkbBaonghiJsons) {
 					TableRow tableRow = new TableRow(context);
 					tableRow.setBackgroundColor(Color.parseColor("#d0dee9"));
-					
 					TextView lopbaonghi = new TextView(context);
 					lopbaonghi.setBackgroundColor(Color.parseColor("#bae8f4"));
 					lopbaonghi.setGravity(Gravity.LEFT);
-					lopbaonghi.setLayoutParams(tableRowParamsbaonghi);   
-					lopbaonghi.setText("["+lichnghiJson.getMaLophp()+"]"+lichnghiJson.getLophp());
+					lopbaonghi.setText("["+tkbBaonghiJson.getMaLophp()+"]"+tkbBaonghiJson.getLophp());
+					lopbaonghi.setLayoutParams(tableRowParamsbaonghi);  
+					
 					TextView sotietbaonghi=new TextView(context);
 					sotietbaonghi.setBackgroundColor(Color.parseColor("#bae8f4"));
-					sotietbaonghi.setGravity(Gravity.CENTER);
+					sotietbaonghi.setGravity(Gravity.LEFT);
 					sotietbaonghi.setLayoutParams(layout);   
-					sotietbaonghi.setText(lichnghiJson.getSotiet()+"");
+					sotietbaonghi.setText(tkbBaonghiJson.getSoTietBaoNghi()+"");
+					
 					TextView sotietdabu=new TextView(context);
 					sotietdabu.setBackgroundColor(Color.parseColor("#bae8f4"));
-					sotietdabu.setGravity(Gravity.CENTER);
+					sotietdabu.setGravity(Gravity.LEFT);
 					sotietdabu.setLayoutParams(layout);   
-					sotietdabu.setText(lichnghiJson.getSotietbu()+"");
+					sotietdabu.setText(tkbBaonghiJson.getSoTietBaoBu()+"");
+					
 					tableRow.addView(lopbaonghi);
 					tableRow.addView(sotietbaonghi);
 					tableRow.addView(sotietdabu);
-					//
 					
-					
-					TableRow tableRowbanghi = new TableRow(context);
-					tableRowbanghi.setBackgroundColor(Color.parseColor("#d0dee9"));
-					
-					TextView txtsttBaonghi = new TextView(context);
-					txtsttBaonghi.setBackgroundColor(Color.WHITE);
-					txtsttBaonghi.setGravity(Gravity.CENTER);
-					txtsttBaonghi.setLayoutParams(tableRowParams);   
-					txtsttBaonghi.setText(i+"");
-					TextView txtngayBaonghi = new TextView(context);
-					txtngayBaonghi.setBackgroundColor(Color.WHITE);
-					txtngayBaonghi.setGravity(Gravity.CENTER);
-					txtngayBaonghi.setLayoutParams(tableRowParams);   
-					txtngayBaonghi.setText(lichnghiJson.getNgaybao());
-					TextView txtngaynghi = new TextView(context);
-					txtngaynghi.setBackgroundColor(Color.WHITE);
-					txtngaynghi.setGravity(Gravity.CENTER);
-					txtngaynghi.setLayoutParams(tableRowParams);   
-					txtngaynghi.setText(lichnghiJson.getNgayngi());
-					TextView txtsotietnghi = new TextView(context);
-					txtsotietnghi.setBackgroundColor(Color.WHITE);
-					txtsotietnghi.setGravity(Gravity.CENTER);
-					txtsotietnghi.setLayoutParams(tableRowParams);   
-					txtsotietnghi.setText(lichnghiJson.getSotiet()+"");
-					
-					TextView txtsotietbus = new TextView(context);	
-					txtsotietbus.setGravity(Gravity.CENTER);
-					txtsotietbus.setBackgroundColor(Color.WHITE);
-					txtsotietbus.setLayoutParams(tableRowParams);   
-					
-					tableRowbanghi.addView(txtsttBaonghi);
-					tableRowbanghi.addView(txtngayBaonghi);
-					tableRowbanghi.addView(txtngaynghi);
-					tableRowbanghi.addView(txtsotietnghi);
-					tableRowbanghi.addView(txtsotietbus);
-					//
-					//
 					tablebaobu.addView(tableRow);
-					tablebaobu.addView(tableRowbanghi);
-					for (LichbaobuJson lichbaobuJson : lichbaobus) {
+					List<LichnghiJson>lichnghiJsons=(List<LichnghiJson>) LichnghiJson.fromJsonArrayToObject(tkbBaonghiJson.getLichnghi());
+					for (final LichnghiJson lichnghiJson : lichnghiJsons) {
+						TableRow  tbrowbaonghi=new TableRow(context);
+						tbrowbaonghi.setBackgroundColor(Color.parseColor("#d0dee9"));
+						
+						final TextView txtsttBaonghi = new TextView(context);
+						txtsttBaonghi.setBackgroundColor(Color.WHITE);
+						txtsttBaonghi.setGravity(Gravity.CENTER);
+						txtsttBaonghi.setLayoutParams(tableRowParams);   
+						txtsttBaonghi.setText(i+"");
+						
+						TextView txtngayBaonghi = new TextView(context);
+						txtngayBaonghi.setBackgroundColor(Color.WHITE);
+						txtngayBaonghi.setGravity(Gravity.CENTER);
+						txtngayBaonghi.setLayoutParams(tableRowParams);   
+						txtngayBaonghi.setText(lichnghiJson.getNgaybao());
+						TextView txtngaynghi = new TextView(context);
+						txtngaynghi.setBackgroundColor(Color.WHITE);
+						txtngaynghi.setGravity(Gravity.CENTER);
+						txtngaynghi.setLayoutParams(tableRowParams);   
+						txtngaynghi.setText(lichnghiJson.getNgayngi());
+						TextView txtsotietnghi = new TextView(context);
+						txtsotietnghi.setBackgroundColor(Color.WHITE);
+						txtsotietnghi.setGravity(Gravity.CENTER);
+						txtsotietnghi.setLayoutParams(tableRowParams);   
+						txtsotietnghi.setText(lichnghiJson.getSotiet()+"");
+						
+						TextView txtsotietbus = new TextView(context);	
+						txtsotietbus.setGravity(Gravity.CENTER);
+						txtsotietbus.setBackgroundColor(Color.WHITE);
+						txtsotietbus.setLayoutParams(tableRowParams);   
+						
+						tbrowbaonghi.addView(txtsttBaonghi);
+						tbrowbaonghi.addView(txtngayBaonghi);
+						tbrowbaonghi.addView(txtngaynghi);
+						tbrowbaonghi.addView(txtsotietnghi);
+						tbrowbaonghi.addView(txtsotietbus);
+						
+						tbrowbaonghi.setOnClickListener(new OnClickListener() {
+							
+							@Override
+							public void onClick(View v) {
+								// TODO Auto-generated method stub
+								ColorDrawable txtcolor = (ColorDrawable) txtsttBaonghi
+										.getBackground();
+								if (txtcolor.getColor() == Color.WHITE) {
+									lichnghiJson.setNgaybao(tkbBaonghiJson.getMaLophp());
+									lichnghiJson.setTenLhp(tkbBaonghiJson.getLophp());
+									lichnghis.add(lichnghiJson);
+									txtsttBaonghi.setBackgroundColor(Color.BLUE);
+								} else {
+									lichnghis.remove(lichnghiJson);
+									txtsttBaonghi.setBackgroundColor(Color.WHITE);
+								}
+								
+							}
+						});
+						tablebaobu.addView(tbrowbaonghi);
+						List<LichbaobuJson>lichbaobuJsons=(List<LichbaobuJson>) LichbaobuJson.fromJsonArrayToObject(lichnghiJson.getJsondaybu());
+						for (LichbaobuJson lichbaobuJson : lichbaobuJsons) {
+							i++;
+							TableRow tableRowbaobu = new TableRow(context);
+							tableRowbaobu.setBackgroundColor(Color.parseColor("#d0dee9"));
+							TextView txtsttBaobu = new TextView(context);
+							txtsttBaobu.setGravity(Gravity.CENTER);
+							txtsttBaobu.setLayoutParams(tableRowParams);  
+							txtsttBaobu.setBackgroundColor(Color.parseColor("#ffccff"));
+							txtsttBaobu.setText(i+"");
+							
+							TextView txtngayBaobu= new TextView(context);
+							txtngayBaobu.setBackgroundColor(Color.parseColor("#ffccff"));
+							txtngayBaobu.setGravity(Gravity.CENTER);
+							txtngayBaobu.setLayoutParams(tableRowParams);   
+							txtngayBaobu.setText(lichbaobuJson.getNgaybao());
+							
+							TextView txtngaybu= new TextView(context);
+							txtngaybu.setGravity(Gravity.CENTER);
+							txtngaybu.setLayoutParams(tableRowParams);   
+							txtngaybu.setBackgroundColor(Color.parseColor("#ffccff"));
+							txtngaybu.setText(lichbaobuJson.getNgayday());
+							
+							TextView txtsotietnghis = new TextView(context);	
+							txtsotietnghis.setGravity(Gravity.CENTER);
+							txtsotietnghis.setBackgroundColor(Color.parseColor("#ffccff"));
+							txtsotietnghis.setLayoutParams(tableRowParams);  
+							
+							TextView txtsotietbu = new TextView(context);						
+							txtsotietbu.setGravity(Gravity.CENTER);
+							txtsotietbu.setLayoutParams(tableRowParams);   
+							txtsotietbu.setBackgroundColor(Color.parseColor("#ffccff"));
+							txtsotietbu.setText(lichbaobuJson.getSotietbu()+"");
+							
+							tableRowbaobu.addView(txtsttBaobu);
+							tableRowbaobu.addView(txtngayBaobu);
+							tableRowbaobu.addView(txtngaybu);
+							tableRowbaobu.addView(txtsotietnghis);
+							tableRowbaobu.addView(txtsotietbu);
+							tablebaobu.addView(tableRowbaobu);
+						}
 						i++;
-						TableRow tableRowbaobu = new TableRow(context);
-						tableRowbanghi.setBackgroundColor(Color.parseColor("#d0dee9"));
-						
-						TextView txtsttBaobu = new TextView(context);
-						txtsttBaobu.setGravity(Gravity.CENTER);
-						txtsttBaobu.setLayoutParams(tableRowParams);  
-						txtsttBaobu.setBackgroundColor(Color.parseColor("#ffccff"));
-						txtsttBaobu.setText(i+"");
-						
-						TextView txtngayBaobu= new TextView(context);
-						txtngayBaobu.setBackgroundColor(Color.parseColor("#ffccff"));
-						txtngayBaobu.setGravity(Gravity.CENTER);
-						txtngayBaobu.setLayoutParams(tableRowParams);   
-						txtngayBaobu.setText(lichbaobuJson.getNgaybao());
-						
-						TextView txtngaybu= new TextView(context);
-						txtngaybu.setGravity(Gravity.CENTER);
-						txtngaybu.setLayoutParams(tableRowParams);   
-						txtngaybu.setBackgroundColor(Color.parseColor("#ffccff"));
-						txtngaybu.setText(lichbaobuJson.getNgayday());
-						
-						TextView txtsotietnghis = new TextView(context);	
-						txtsotietnghis.setGravity(Gravity.CENTER);
-						txtsotietnghis.setBackgroundColor(Color.parseColor("#ffccff"));
-						txtsotietnghis.setLayoutParams(tableRowParams);  
-						
-						TextView txtsotietbu = new TextView(context);						
-						txtsotietbu.setGravity(Gravity.CENTER);
-						txtsotietbu.setLayoutParams(tableRowParams);   
-						txtsotietbu.setBackgroundColor(Color.parseColor("#ffccff"));
-						txtsotietbu.setText(lichbaobuJson.getSotietbu()+"");
-						
-						tableRowbaobu.addView(txtsttBaobu);
-						tableRowbaobu.addView(txtngayBaobu);
-						tableRowbaobu.addView(txtngaybu);
-						tableRowbaobu.addView(txtsotietnghis);
-						tableRowbaobu.addView(txtsotietbu);
-						tablebaobu.addView(tableRowbaobu);
-						
 					}
-					//
-					i=0;
-				}
+					i=1;
+				}		
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

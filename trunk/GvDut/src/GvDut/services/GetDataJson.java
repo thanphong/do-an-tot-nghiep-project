@@ -159,7 +159,7 @@ public class GetDataJson {
 		}
 		return null;
 	}
-	public static List<LichnghiJson> getLichnghi(int mgv) {
+	public static List<TkbBaonghiJson> getLichnghi(int mgv) {
 		// TODO Auto-generated method stub
 		try {
 			String Url= sURL + "/getLichnghi/"+mgv;
@@ -172,7 +172,30 @@ public class GetDataJson {
 			ResponseHandler<String> responseHandler = new BasicResponseHandler();
 			String SetServerString = Client.execute(httpget, responseHandler);
 			Log.d("a", SetServerString);
-			return (List<LichnghiJson>) LichnghiJson.fromJsonArrayToObject(SetServerString);
+			return (List<TkbBaonghiJson>) TkbBaonghiJson.fromJsonArrayToObject(SetServerString);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			Log.d("err", e.toString());
+			e.printStackTrace();
+		}
+		return null;
+	}
+	public static List<PhongJson> getPhongs(int mgv,LichbaobuJson lichbaobuJson) {
+		// TODO Auto-generated method stub
+		try {
+			String Url= sURL + "/getPhong/"+mgv;
+			String json=lichbaobuJson.toJson();
+			DefaultHttpClient httpclient = new DefaultHttpClient();
+			HttpPost post = new HttpPost(Url);
+			post.setHeader("Accept", "application/json");
+			post.setHeader("Content-type", "application/json; charset=utf-8");
+			post.setEntity(new ByteArrayEntity(json.getBytes("UTF8")));
+			post.setHeader("json", json);
+			HttpResponse httpResponse = httpclient.execute(post);
+			HttpEntity entity1 = httpResponse.getEntity();
+			String s = EntityUtils.toString(entity1);
+			Log.d("a", s);
+			return (List<PhongJson>) PhongJson.fromJsonArrayToObject(s);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			Log.d("err", e.toString());
