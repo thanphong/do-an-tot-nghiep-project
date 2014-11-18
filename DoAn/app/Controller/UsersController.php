@@ -2,7 +2,7 @@
 
 class UsersController extends AppController {
 	var $layout = "user";
-	public $uses = array('Quyengiangvien','Khuvuc','Phong','Hocki','Lichgiangday','Tuanhoc','Lophocphan','Giangvien','Thongbao');
+	public $uses = array('Quyengiangvien','Khuvuc','Phong','Hocki','Lichgiangday','Tuanhoc','Lophocphan','Giangvien','Thongbao','Tuanhoc');
 	public function beforeFilter() {
 		parent::beforeFilter();
 		$this->Auth->allow(array('index','login','logout','xemPhonghoc','danhsachphong'));
@@ -42,6 +42,7 @@ class UsersController extends AppController {
 
 	public function xemPhonghoc() {
 		$this->set("khuvus", $this->Khuvuc->find("all",array('recursive'=>-1)));
+		$this->set("tuans",$this->Tuanhoc->find("all",array('recursive'=>-1)));
 	}
 	public function danhsachphong(){
 		$this->layout=null;
@@ -90,17 +91,12 @@ class UsersController extends AppController {
 // 				array_push($lichday,array("tutiet"=>$tutiet,"dentiet"=>$dentiet));
 			foreach ($listlich as $item){
 				$gv=$this->Giangvien->find('first',array('conditions' =>array('Giangvien.id'=>$item['Lichgiangday']['magiangvien']),'recursive'=>-1));
-				$lhp=$this->Lophocphan->find('first',array('conditions' =>array('Lophocphan.id'=>$item['Lophocphan']['malophocphan']),'recursive'=>-1));
+				$lhp=$this->Lophocphan->find('first',array('conditions' =>array('Lophocphan.id'=>$item['Lichgiangday']['malophocphan']),'recursive'=>-1));
 				array_push($lichday,array("tutiet"=>$item['Lichgiangday']['tutiet'],"dentiet"=>$item['Lichgiangday']['dentiet'],"LopHp"=>$lhp['Lophocphan']['tenLopHocPhan'],"giangvien"=>$gv["Giangvien"]['ten']));
 			}
 			$listphong[$i]['lichday']=$lichday;
 		}	
 		$this->set("listphong",$listphong);
-	}
-	public function profile($id) {
-	//	$this->set("profile", $this->User->find("all",array('recursive'=>-1)));
-		$data=$this->User->find('first',array('conditions' => array('User.maGiangvien' => $id)));
-		$this->set("data",$data);
 	}
 }
 
