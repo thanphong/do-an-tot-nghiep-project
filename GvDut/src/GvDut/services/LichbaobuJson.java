@@ -11,6 +11,8 @@ public class LichbaobuJson {
 	private int id;
 	private int lichnghi;
 	private int sotietbu;
+	private int tietdau;
+	private int tietcuoi;
 	private String maphong;
 	private String ngayday;
 	private String ngaybao;
@@ -62,6 +64,18 @@ public class LichbaobuJson {
 	public void setSotietbu(int sotietbu) {
 		this.sotietbu = sotietbu;
 	}
+	public int getTietdau() {
+		return tietdau;
+	}
+	public void setTietdau(int tietdau) {
+		this.tietdau = tietdau;
+	}
+	public int getTietcuoi() {
+		return tietcuoi;
+	}
+	public void setTietcuoi(int tietcuoi) {
+		this.tietcuoi = tietcuoi;
+	}
 	public String toJson() {
 		return new JSONSerializer().exclude("*.class").serialize(this);
 	}
@@ -74,5 +88,7 @@ public class LichbaobuJson {
 				.use(null, ArrayList.class).use("values", LichbaobuJson.class)
 				.deserialize(json);
 	}
-	
+	public static String toJsonArray(Collection<LichbaobuJson> collection) {
+		return new JSONSerializer().exclude("*.class").serialize(collection);
+	}
 }

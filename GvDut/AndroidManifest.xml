@@ -37,7 +37,8 @@
         </activity>
         <activity android:name=".BaobuActivity" >
         </activity>
-        
+         <activity android:name=".FormBaobuActivity" >
+        </activity>
     </application>
 
 </manifest>
