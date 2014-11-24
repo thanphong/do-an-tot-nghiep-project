@@ -253,7 +253,7 @@ public class BaonghiActivity extends AbtractActivity {
 					cobaongi.setGravity(Gravity.CENTER);
 					cobaongi.setLayoutParams(tableRowParams);
 					if (tkbieuJson.getBaongi() > 0)
-						cobaongi.setBackgroundResource(R.drawable.check);
+						cobaongi.setBackgroundResource(R.drawable.checkmark_24);
 
 					tableRow.addView(tvstt, tableRowParams);
 					tableRow.addView(tvLhp, tableRowParams);

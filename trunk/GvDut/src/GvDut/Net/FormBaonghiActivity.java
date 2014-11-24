@@ -5,6 +5,7 @@ import java.util.List;
 
 
 import GvDut.services.GetDataJson;
+import GvDut.services.LichbaobuJson;
 import GvDut.services.TkbieuJson;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -24,11 +25,13 @@ import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
@@ -38,7 +41,8 @@ import android.widget.AdapterView.OnItemClickListener;
 public class FormBaonghiActivity extends AbtractActivity {
 
 	Context context = this;
-	TableLayout tableBaonghi;
+//	TableLayout tableBaonghi;
+	LinearLayout tableBaonghi;
 	DialogActivity dialog;
 	Button btbaonghi;
 	EditText lydo;
@@ -46,7 +50,7 @@ public class FormBaonghiActivity extends AbtractActivity {
 	@Override
 	public void init() {
 		// TODO Auto-generated method stub
-		tableBaonghi = (TableLayout) findViewById(R.id.tableBaonghi);
+		tableBaonghi = (LinearLayout) findViewById(R.id.tableBaonghi);
 		btbaonghi = (Button) findViewById(R.id.btdangkybu);
 		lydo = (EditText) findViewById(R.id.lydo);
 	}
@@ -262,34 +266,75 @@ public class FormBaonghiActivity extends AbtractActivity {
 	//
 	public void formbaongi() {
 
-		TableRow.LayoutParams tableRowParams = new TableRow.LayoutParams();
+		LinearLayout.LayoutParams tableRowParams = new LinearLayout.LayoutParams(new ViewGroup.MarginLayoutParams(
+				LinearLayout.LayoutParams.MATCH_PARENT,
+				LinearLayout.LayoutParams.WRAP_CONTENT));
 		tableRowParams.setMargins(1, 1, 1, 1);
-		tableRowParams.weight = 1;
-
+		LinearLayout.LayoutParams lpmyLayout = new LinearLayout.LayoutParams(
+				new ViewGroup.MarginLayoutParams(
+						LinearLayout.LayoutParams.FILL_PARENT,
+						LinearLayout.LayoutParams.WRAP_CONTENT));
+		lpmyLayout.setMargins(5, 5, 5, 5);
+		lpmyLayout.weight=1;
+		lpmyLayout.gravity=Gravity.CENTER_VERTICAL;
+		
 		int i = 0;
 		for (TkbieuJson tkbieuJson : tkbieuJsons) {
 			i = i + 1;
-			TableRow tableRow = new TableRow(context);
-			tableRow.setBackgroundColor(Color.parseColor("#d0dee9"));
-
+			LinearLayout layoutbaonghi=new LinearLayout(context);
+			layoutbaonghi.setBackgroundDrawable(getResources().getDrawable(R.drawable.my_custom_background));
+			layoutbaonghi.setLayoutParams(tableRowParams);
+			layoutbaonghi.setOrientation(LinearLayout.VERTICAL);
+			
+			LinearLayout layoutstt=new LinearLayout(context);
+			layoutstt.setLayoutParams(tableRowParams);
+			layoutstt.setOrientation(LinearLayout.HORIZONTAL);
+			layoutstt.setBackgroundColor(getResources().getColor(R.color.tieude));
+		
+			TextView labelstt=new TextView(context);
+			labelstt.setGravity(Gravity.CENTER_VERTICAL);
+			labelstt.setText(getString(R.string.headerStt));
+			labelstt.setTextColor(Color.WHITE);
+			labelstt.setLayoutParams(lpmyLayout);
 			final TextView tvstt = new TextView(context);
-			tvstt.setBackgroundColor(Color.WHITE);
-			tvstt.setGravity(Gravity.CENTER);
-			tvstt.setLayoutParams(tableRowParams);
-			tvstt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 13);
+			tvstt.setGravity(Gravity.CENTER_VERTICAL);
+			tvstt.setLayoutParams(lpmyLayout);
+			tvstt.setTextColor(Color.WHITE);
 			tvstt.setText(i + "");
+			layoutstt.addView(labelstt);
+			layoutstt.addView(tvstt);
 
+			LinearLayout layoutLhp=new LinearLayout(context);
+			layoutLhp.setLayoutParams(tableRowParams);
+			layoutLhp.setOrientation(LinearLayout.HORIZONTAL);
+			layoutLhp.setBackgroundDrawable(getResources().getDrawable(R.drawable.background_text));
+			
+			TextView labellhp=new TextView(context);
+			labellhp.setGravity(Gravity.CENTER_VERTICAL);
+			labellhp.setText(getString(R.string.headerLhp));
+			labellhp.setLayoutParams(lpmyLayout);
+			
 			TextView tvLhp = new TextView(context);
-			tvLhp.setBackgroundColor(Color.WHITE);
 			tvLhp.setGravity(Gravity.CENTER);
-			tvLhp.setLayoutParams(tableRowParams);
-			tvLhp.setTextSize(TypedValue.COMPLEX_UNIT_SP, 13);
+			tvLhp.setLayoutParams(lpmyLayout);
 			tvLhp.setText(tkbieuJson.getLophp());
-
+			layoutLhp.addView(labellhp);
+			layoutLhp.addView(tvLhp);
+			
+			LinearLayout layoutngaynghi=new LinearLayout(context);
+			layoutngaynghi.setLayoutParams(tableRowParams);
+			layoutngaynghi.setOrientation(LinearLayout.HORIZONTAL);
+			layoutngaynghi.setBackgroundDrawable(getResources().getDrawable(R.drawable.background_text));
+			
+			TextView labelngaybu=new TextView(context);
+			labelngaybu.setGravity(Gravity.CENTER_VERTICAL);
+			labelngaybu.setText(getString(R.string.headerngaynghi));
+			labelngaybu.setLayoutParams(lpmyLayout);
+			
 			final EditText ngaynghi = new EditText(context);
 			ngaynghi.setGravity(Gravity.CENTER);
 			ngaynghi.setTextSize(TypedValue.COMPLEX_UNIT_SP, 12);
-			ngaynghi.setLayoutParams(tableRowParams);
+			ngaynghi.setLayoutParams(lpmyLayout);
 			final int j = i - 1;
 			ngaynghi.setOnClickListener(new OnClickListener() {
 				@Override
@@ -304,11 +349,24 @@ public class FormBaonghiActivity extends AbtractActivity {
 					dialog.show(fragmentManager, "Ngày tháng");
 				}
 			});
+			layoutngaynghi.addView(labelngaybu);
+			layoutngaynghi.addView(ngaynghi);
+			
+			LinearLayout layoutsotiet=new LinearLayout(context);
+			layoutsotiet.setLayoutParams(tableRowParams);
+			layoutsotiet.setOrientation(LinearLayout.HORIZONTAL);
+			layoutsotiet.setBackgroundDrawable(getResources().getDrawable(R.drawable.background_text));
+			
+			TextView labelSotiet=new TextView(context);
+			labelSotiet.setGravity(Gravity.CENTER_VERTICAL);
+			labelSotiet.setText(getString(R.string.headersotiet));
+			labelSotiet.setLayoutParams(lpmyLayout);
+			
 			final EditText sotiet = new EditText(context);
 			sotiet.setGravity(Gravity.CENTER);
 			sotiet.setTextSize(TypedValue.COMPLEX_UNIT_SP, 13);
 			sotiet.setInputType(InputType.TYPE_CLASS_NUMBER);
-			sotiet.setLayoutParams(tableRowParams);
+			sotiet.setLayoutParams(lpmyLayout);
 			sotiet.addTextChangedListener(new TextWatcher() {
 
 				@Override
@@ -332,11 +390,14 @@ public class FormBaonghiActivity extends AbtractActivity {
 							Integer.parseInt(sotiet.getText().toString()));
 				}
 			});
-			tableRow.addView(tvstt, tableRowParams);
-			tableRow.addView(tvLhp, tableRowParams);
-			tableRow.addView(ngaynghi, tableRowParams);
-			tableRow.addView(sotiet, tableRowParams);
-			tableBaonghi.addView(tableRow);
+			layoutsotiet.addView(labelSotiet);
+			layoutsotiet.addView(sotiet);
+			
+			layoutbaonghi.addView(layoutstt);
+			layoutbaonghi.addView(layoutLhp);
+			layoutbaonghi.addView(layoutngaynghi);
+			layoutbaonghi.addView(layoutsotiet);
+			tableBaonghi.addView(layoutbaonghi);
 		}
 	}
 

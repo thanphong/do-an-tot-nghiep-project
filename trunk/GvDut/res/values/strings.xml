@@ -40,7 +40,10 @@
     <string name="headerphongs">DANH SÁCH PHÒNG PHÙ HỢP</string>
     <string name="headerTenphong">Tên phòng</string>
      <string name="headerSocho">Số chỗ</string>
+     <string name="headerLydo">Lý do</string>
     <!-- comfirm -->
     <string name="cofimbaonghi">Bạn có xác nhận lưu dữ liệu!</string>
 
+    <!-- color -->
+     <color name="tieude">#3dbbff</color>
 </resources>

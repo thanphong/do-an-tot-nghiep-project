@@ -4,6 +4,7 @@ import java.util.List;
 
 import GvDut.services.GetDataJson;
 import GvDut.services.NewsJson;
+import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -14,6 +15,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
@@ -167,7 +169,15 @@ public class MainActivity extends AbtractActivity {
 			}.execute("").get();
 			if (listNews != null) {
 				String tt = "";
+				LinearLayout.LayoutParams tableRowParams = new LinearLayout.LayoutParams(new ViewGroup.MarginLayoutParams(
+						LinearLayout.LayoutParams.MATCH_PARENT,
+						LinearLayout.LayoutParams.WRAP_CONTENT));
+				tableRowParams.setMargins(1, 1, 1,1);
+				
 				for (NewsJson newsJson : listNews) {
+					LinearLayout mylayoutNews=new LinearLayout(this);
+					mylayoutNews.setLayoutParams(tableRowParams);
+					mylayoutNews.setBackgroundDrawable(getResources().getDrawable(R.drawable.my_custom_background));
 					TextView tieude = (TextView) getLayoutInflater().inflate(
 							R.layout.textview_styles, null);
 					tt = "<b><span ><font color='red'>" + newsJson.getNgay()
@@ -176,7 +186,10 @@ public class MainActivity extends AbtractActivity {
 							+ newsJson.getTieude() + "</font></span>";
 					tt += "<div>" + newsJson.getNoidung() + "</div>";
 					tieude.setText(Html.fromHtml(tt));
-					layoutNews.addView(tieude);
+					tieude.setPadding(5, 5, 5, 0);
+					tieude.setLayoutParams(tableRowParams);
+					mylayoutNews.addView(tieude);
+					layoutNews.addView(mylayoutNews);
 				}
 			}
 		} catch (Exception e) {
