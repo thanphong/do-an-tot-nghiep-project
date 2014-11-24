@@ -16,6 +16,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 import android.view.View.OnClickListener;
 
@@ -105,7 +106,11 @@ public class LoginActivity extends AbtractActivity {
 					if (account != null) {
 						mgv = account.getAccountId();
 						ten=account.getAccountName();
-						showDialog(success);
+						Toast.makeText(LoginActivity.this, "success",
+								Toast.LENGTH_SHORT).show();
+						Intent t=new Intent(LoginActivity.this,MainActivity.class);
+						startActivity(t);
+						//showDialog(success);
 						// Log.d("username", account.getAccountName());
 					}
 					else{

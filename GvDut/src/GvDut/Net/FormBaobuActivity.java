@@ -21,28 +21,34 @@ import android.text.TextWatcher;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.TableRow;
+
 import android.widget.TextView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.TableLayout;
 
 public class FormBaobuActivity extends AbtractActivity {
 
 	List<LichnghiJson> lichnghiJsons;
 	List<LichbaobuJson>lisLichbaobuJsons=new ArrayList<LichbaobuJson>();
-	TableLayout tbdanhsachbaobu;
+	//TableLayout tbdanhsachbaobu;
+	LinearLayout tbdanhsachbaobu;
 	Context context=this;
-	
+	Button btbaou;
 	DialogActivity dialog;
 	@Override
 	public void init() {
 		// TODO Auto-generated method stub
-		tbdanhsachbaobu = (TableLayout) findViewById(R.id.danhsachBaobu);
+		tbdanhsachbaobu = (LinearLayout) findViewById(R.id.danhsachBaobu);
+		btbaou=(Button)findViewById(R.id.btdkBu);
+		btbaou.setPadding(2, 2, 2, 2);
+		btbaou.setTextColor(Color.WHITE);
 	}
 
 	@Override
@@ -64,7 +70,14 @@ public class FormBaobuActivity extends AbtractActivity {
 	@Override
 	public void addButtonListener() {
 		// TODO Auto-generated method stub
-
+			btbaou.setOnClickListener(new OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					// TODO Auto-generated method stub
+					
+				}
+			});
 	}
 
 	@Override
@@ -178,37 +191,83 @@ public class FormBaobuActivity extends AbtractActivity {
 	}
 	//
 	public void formBaobu(){
-		TableRow.LayoutParams tableRowParams = new TableRow.LayoutParams();
+		
+		LinearLayout.LayoutParams tableRowParams = new LinearLayout.LayoutParams(new ViewGroup.MarginLayoutParams(
+				LinearLayout.LayoutParams.MATCH_PARENT,
+				LinearLayout.LayoutParams.WRAP_CONTENT));
 		tableRowParams.setMargins(1, 1, 1, 1);
-		tableRowParams.weight = 1;
-
+		LinearLayout.LayoutParams lpmyLayout = new LinearLayout.LayoutParams(
+				new ViewGroup.MarginLayoutParams(
+						LinearLayout.LayoutParams.FILL_PARENT,
+						LinearLayout.LayoutParams.WRAP_CONTENT));
+		lpmyLayout.setMargins(5, 5, 5, 5);
+		lpmyLayout.weight=1;
+		lpmyLayout.gravity=Gravity.CENTER_VERTICAL;
+		
 		int i = 0;
 		for (LichnghiJson lichnghiJson : lichnghiJsons) {
+			LinearLayout layoutbaobu=new LinearLayout(context);
+			layoutbaobu.setBackgroundDrawable(getResources().getDrawable(R.drawable.my_custom_background));
+			layoutbaobu.setLayoutParams(tableRowParams);
+			layoutbaobu.setOrientation(LinearLayout.VERTICAL);
+			
+			LinearLayout layoutstt=new LinearLayout(context);
+			layoutstt.setLayoutParams(tableRowParams);
+			
+			layoutstt.setOrientation(LinearLayout.HORIZONTAL);
+			layoutstt.setBackgroundColor(getResources().getColor(R.color.tieude));
+			
 			LichbaobuJson lichbaobuJson=new LichbaobuJson();
 			lichbaobuJson.setLichnghi(lichnghiJson.getId());
 			lisLichbaobuJsons.add(lichbaobuJson);
 			i ++;
-			TableRow tableRow = new TableRow(context);
-			tableRow.setBackgroundColor(Color.parseColor("#d0dee9"));
-			
+			TextView labelstt=new TextView(context);
+			labelstt.setGravity(Gravity.CENTER_VERTICAL);
+			labelstt.setText(getString(R.string.headerStt));
+			labelstt.setTextColor(Color.WHITE);
+			labelstt.setLayoutParams(lpmyLayout);
 			final TextView tvstt = new TextView(context);
-			tvstt.setBackgroundColor(Color.WHITE);
-			tvstt.setGravity(Gravity.CENTER);
-			tvstt.setLayoutParams(tableRowParams);
+			tvstt.setGravity(Gravity.CENTER_VERTICAL);
+			tvstt.setLayoutParams(lpmyLayout);
 			tvstt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 13);
+			tvstt.setTextColor(Color.WHITE);
 			tvstt.setText(i + "");
+			layoutstt.addView(labelstt);
+			layoutstt.addView(tvstt);
+			
+			LinearLayout layoutLhp=new LinearLayout(context);
+			layoutLhp.setLayoutParams(tableRowParams);
+			layoutLhp.setOrientation(LinearLayout.HORIZONTAL);
+			layoutLhp.setBackgroundDrawable(getResources().getDrawable(R.drawable.background_text));
+			
+			TextView labellhp=new TextView(context);
+			labellhp.setGravity(Gravity.CENTER_VERTICAL);
+			labellhp.setText(getString(R.string.headerLhp));
+			labellhp.setLayoutParams(lpmyLayout);
 			
 			TextView tvLhp = new TextView(context);
 			tvLhp.setBackgroundColor(Color.WHITE);
 			tvLhp.setGravity(Gravity.CENTER);
-			tvLhp.setLayoutParams(tableRowParams);
+			tvLhp.setLayoutParams(lpmyLayout);
 			tvLhp.setTextSize(TypedValue.COMPLEX_UNIT_SP, 13);
 			tvLhp.setText(lichnghiJson.getTenLhp());
+			layoutLhp.addView(labellhp);
+			layoutLhp.addView(tvLhp);
+			
+			LinearLayout layoutngaybu=new LinearLayout(context);
+			layoutngaybu.setLayoutParams(tableRowParams);
+			layoutngaybu.setOrientation(LinearLayout.HORIZONTAL);
+			layoutngaybu.setBackgroundDrawable(getResources().getDrawable(R.drawable.background_text));
+			
+			TextView labelngaybu=new TextView(context);
+			labelngaybu.setGravity(Gravity.CENTER_VERTICAL);
+			labelngaybu.setText(getString(R.string.headerngaybu));
+			labelngaybu.setLayoutParams(lpmyLayout);
 			
 			final EditText ngaybu = new EditText(context);
 			ngaybu.setGravity(Gravity.CENTER);
 			ngaybu.setTextSize(TypedValue.COMPLEX_UNIT_SP, 12);
-			ngaybu.setLayoutParams(tableRowParams);
+			ngaybu.setLayoutParams(lpmyLayout);
 			final int j = i - 1;
 			ngaybu.setOnClickListener(new OnClickListener() {
 				
@@ -216,7 +275,6 @@ public class FormBaobuActivity extends AbtractActivity {
 				public void onClick(View v) {
 					// TODO Auto-generated method stub
 					dialog = new DialogActivity();
-					dialog.phongJsons=getphong(lisLichbaobuJsons.get(j));
 					dialog.depatureDate = ngaybu;
 					dialog.context = context;
 					dialog.type = 1;
@@ -225,12 +283,24 @@ public class FormBaobuActivity extends AbtractActivity {
 					dialog.show(fragmentManager, "Ngày tháng");
 				}
 			});
+			layoutngaybu.addView(labelngaybu);
+			layoutngaybu.addView(ngaybu);
+			
+			LinearLayout layoutTutiet=new LinearLayout(context);
+			layoutTutiet.setLayoutParams(tableRowParams);
+			layoutTutiet.setOrientation(LinearLayout.HORIZONTAL);
+			layoutTutiet.setBackgroundDrawable(getResources().getDrawable(R.drawable.background_text));
+			
+			TextView labeltutiet=new TextView(context);
+			labeltutiet.setGravity(Gravity.CENTER_VERTICAL);
+			labeltutiet.setText(getString(R.string.headertietdau));
+			labeltutiet.setLayoutParams(lpmyLayout);
 			
 			final EditText tietdau= new EditText(context);
 			tietdau.setGravity(Gravity.CENTER);
 			tietdau.setTextSize(TypedValue.COMPLEX_UNIT_SP, 13);
 			tietdau.setInputType(InputType.TYPE_CLASS_NUMBER);
-			tietdau.setLayoutParams(tableRowParams);
+			tietdau.setLayoutParams(lpmyLayout);
 			tietdau.addTextChangedListener(new TextWatcher() {
 				
 				@Override
@@ -249,15 +319,28 @@ public class FormBaobuActivity extends AbtractActivity {
 				@Override
 				public void afterTextChanged(Editable s) {
 					// TODO Auto-generated method stub
-					lisLichbaobuJsons.get(j).setTietdau(Integer.parseInt(tietdau.getText().toString()));
+					if(!tietdau.getText().toString().equals(""))
+						lisLichbaobuJsons.get(j).setTietdau(Integer.parseInt(tietdau.getText().toString()));
 				}
 			});
+			layoutTutiet.addView(labeltutiet);
+			layoutTutiet.addView(tietdau);
+			
+			LinearLayout layoutdentiet=new LinearLayout(context);
+			layoutdentiet.setLayoutParams(tableRowParams);
+			layoutdentiet.setOrientation(LinearLayout.HORIZONTAL);
+			layoutdentiet.setBackgroundDrawable(getResources().getDrawable(R.drawable.background_text));
+			
+			TextView labeldentiet=new TextView(context);
+			labeldentiet.setGravity(Gravity.CENTER_VERTICAL);
+			labeldentiet.setText(getString(R.string.headertietcuoi));
+			labeldentiet.setLayoutParams(lpmyLayout);
 			
 			final EditText tietcuoi= new EditText(context);
 			tietcuoi.setGravity(Gravity.CENTER);
 			tietcuoi.setTextSize(TypedValue.COMPLEX_UNIT_SP, 13);
 			tietcuoi.setInputType(InputType.TYPE_CLASS_NUMBER);
-			tietcuoi.setLayoutParams(tableRowParams);
+			tietcuoi.setLayoutParams(lpmyLayout);
 			tietcuoi.addTextChangedListener(new TextWatcher() {
 				
 				@Override
@@ -276,37 +359,55 @@ public class FormBaobuActivity extends AbtractActivity {
 				@Override
 				public void afterTextChanged(Editable s) {
 					// TODO Auto-generated method stub
-					lisLichbaobuJsons.get(j).setTietcuoi(Integer.parseInt(tietcuoi.getText().toString()));
+					if(!tietcuoi.getText().toString().equals(""))
+						lisLichbaobuJsons.get(j).setTietcuoi(Integer.parseInt(tietcuoi.getText().toString()));
 				}
 			});
+			layoutdentiet.addView(labeldentiet);
+			layoutdentiet.addView(tietcuoi);
 			
-			TextView phong = new TextView(context);
-			phong.setBackgroundColor(Color.WHITE);
+			LinearLayout layoutphong=new LinearLayout(context);
+			layoutphong.setLayoutParams(tableRowParams);
+			layoutphong.setOrientation(LinearLayout.HORIZONTAL);
+			layoutphong.setBackgroundDrawable(getResources().getDrawable(R.drawable.background_text));
+			
+			TextView labelphong=new TextView(context);
+			labelphong.setGravity(Gravity.CENTER_VERTICAL);
+			labelphong.setText(getString(R.string.headermaphong));
+			labelphong.setLayoutParams(lpmyLayout);
+			
+			final EditText phong = new EditText(context);
 			phong.setGravity(Gravity.CENTER);
-			phong.setLayoutParams(tableRowParams);
+			phong.setLayoutParams(lpmyLayout);
 			phong.setTextSize(TypedValue.COMPLEX_UNIT_SP, 13);
+			phong.setOnKeyListener(null);
+			
 			phong.setOnClickListener(new OnClickListener() {
 				
 				@Override
 				public void onClick(View v) {
 					// TODO Auto-generated method stub
 					dialog = new DialogActivity();
-//					dialog.depatureDate = ngaybu;
+					dialog.depatureDate =phong ;
 					dialog.context = context;
 					dialog.type =2;
+					dialog.phongJsons=getphong(lisLichbaobuJsons.get(j));
 					dialog.lichbaobuJson = lisLichbaobuJsons.get(j);
 					FragmentManager fragmentManager = getFragmentManager();
 					dialog.show(fragmentManager, "Danh sách phòng");
 				}
 			});
+			layoutphong.addView(labelphong);
+			layoutphong.addView(phong);
 			
-			tableRow.addView(tvstt, tableRowParams);
-			tableRow.addView(tvLhp, tableRowParams);
-			tableRow.addView(ngaybu, tableRowParams);
-			tableRow.addView(tietdau, tableRowParams);
-			tableRow.addView(tietcuoi, tableRowParams);
-			tableRow.addView(phong, tableRowParams);
-			tbdanhsachbaobu.addView(tableRow);
+			layoutbaobu.addView(layoutstt);
+			layoutbaobu.addView(layoutLhp);
+			layoutbaobu.addView(layoutngaybu);
+			layoutbaobu.addView(layoutTutiet);
+			layoutbaobu.addView(layoutdentiet);
+			layoutbaobu.addView(layoutphong);
+			tbdanhsachbaobu.addView(layoutbaobu);
+			
 		}
 	}
 	//

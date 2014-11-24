@@ -13,13 +13,17 @@ import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TableLayout;
+import android.widget.TableRow;
 import android.widget.TextView;
+import android.view.View.OnClickListener;
 
 public class DialogActivity extends DialogFragment {
 
@@ -97,6 +101,40 @@ public class DialogActivity extends DialogFragment {
 		case 2:
 			v = inflater.inflate(R.layout.danhsachphong_layout, null);
 			TableLayout danhsachphong=(TableLayout)v.findViewById(R.id.danhsachphong);
+			int i = 1;
+			
+			TableRow.LayoutParams tableRowParams = new TableRow.LayoutParams();
+			tableRowParams.setMargins(1, 1, 1, 1);
+			tableRowParams.weight = 1;
+			for (final PhongJson phong : phongJsons) {
+				TableRow tableRow = new TableRow(context);
+				TextView tvStt = new TextView(context);
+				tvStt.setBackgroundColor(Color.parseColor("#bae8f4"));
+				tvStt.setGravity(Gravity.LEFT);
+				tvStt.setText(i+"");
+				final TextView tvmaphong = new TextView(context);
+				tvmaphong.setBackgroundColor(Color.parseColor("#bae8f4"));
+				tvmaphong.setGravity(Gravity.LEFT);
+				tvmaphong.setText(phong.getMaphong());
+				tvmaphong.setLayoutParams(tableRowParams);
+				TextView tvsoghe = new TextView(context);
+				tvsoghe.setBackgroundColor(Color.parseColor("#bae8f4"));
+				tvsoghe.setGravity(Gravity.LEFT);
+				tvsoghe.setText(phong.getSoluong()+"");
+				tvsoghe.setLayoutParams(tableRowParams);
+				tableRow.addView(tvStt);
+				tableRow.addView(tvmaphong);
+				tableRow.addView(tvsoghe);
+				tableRow.setOnClickListener(new OnClickListener() {
+					@Override
+					public void onClick(View v) {
+						// TODO Auto-generated method stub
+						depatureDate.setText(tvmaphong.getText().toString());
+						lichbaobuJson.setId(phong.getId());
+					}
+				});
+				danhsachphong.addView(tableRow);
+			}
 			builder.setView(v)
 					.setPositiveButton("Đóng",
 							new DialogInterface.OnClickListener() {

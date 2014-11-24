@@ -1,7 +1,8 @@
 <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:background="@drawable/digital_sea_wide_wide" >
 
     <!-- The main content view -->
 
@@ -16,9 +17,14 @@
             android:orientation="vertical" >
 
             <TextView
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="News" />
+                android:layout_margin="1dip"
+                android:background="@color/tieude"
+                android:gravity="center"
+                android:text="THÔNG BÁO"
+                android:textColor="@android:color/white"
+                android:textSize="16dp" />
 
             <ScrollView
                 android:id="@+id/scrollBuscalendar"
@@ -31,6 +37,8 @@
                     style="@style/texbuscalendar"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:background="@android:color/white"
                     android:orientation="vertical" >
                 </LinearLayout>
             </ScrollView>

@@ -11,109 +11,32 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical" >
-            
-             <TableLayout
-                android:id="@+id/danhsachBaobu"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="#eaf0f5" >
+            android:fillViewport="true" >
 
-                <TableRow
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:background="#eaf0f5" >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
 
-                    <TextView
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_margin="1dip"
-                        android:layout_span="4"
-                        android:background="#eaf0f5"
-                        android:text="@string/headerbaobu"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textColor="#000"
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
-                </TableRow>
-
-                <TableRow
+                <LinearLayout
+                    android:id="@+id/danhsachBaobu"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#d0dee9" >
+                    android:orientation="vertical" >
+                </LinearLayout>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="1dip"
-                        android:layout_weight="1"
-                        android:background="#eaf0f5"
-                        android:text="@string/headerStt"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textSize="12sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="1dip"
-                        android:layout_weight="1"
-                        android:background="#eaf0f5"
-                        android:text="@string/headerLhp"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textSize="12sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="1dip"
-                        android:layout_weight="1"
-                        android:background="#eaf0f5"
-                        android:text="@string/headerngaybu"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textSize="12sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="1dip"
-                        android:layout_weight="1"
-                        android:background="#eaf0f5"
-                        android:text="@string/headertietdau"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textSize="12sp" />
-                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="1dip"
-                        android:layout_weight="1"
-                        android:background="#eaf0f5"
-                        android:text="@string/headertietcuoi"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textSize="12sp" />
-                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="1dip"
-                        android:layout_weight="1"
-                        android:background="#eaf0f5"
-                        android:text="@string/headermaphong"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textSize="12sp" />
-                </TableRow>
-            </TableLayout>
-            <Button 
-                android:id="@+id/btdkBu"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Đăng ký bù"
-                />
-        </LinearLayout>
+                <Button
+                    android:id="@+id/btdkBu"
+                    android:layout_marginLeft="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Đăng ký bù"
+                    android:background="@drawable/list_status_button" />
+            </LinearLayout>
+        </ScrollView>
     </FrameLayout>
     <!-- The navigation drawer -->
 

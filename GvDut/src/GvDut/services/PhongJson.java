@@ -10,6 +10,7 @@ import flexjson.JSONSerializer;
 public class PhongJson {
 	private int id;
 	private String maphong;
+	private int soluong;
 	public int getId() {
 		return id;
 	}
@@ -21,6 +22,18 @@ public class PhongJson {
 	}
 	public void setMaphong(String maphong) {
 		this.maphong = maphong;
+	}
+	/**
+	 * @return the soluong
+	 */
+	public int getSoluong() {
+		return soluong;
+	}
+	/**
+	 * @param soluong the soluong to set
+	 */
+	public void setSoluong(int soluong) {
+		this.soluong = soluong;
 	}
 	public String toJson() {
 		
