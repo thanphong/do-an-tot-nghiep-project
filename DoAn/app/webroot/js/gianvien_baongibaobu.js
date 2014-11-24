@@ -78,9 +78,10 @@ $(document)
 													.createElement("td");
 											chonbaongi.className = "GridCellC";
 											chonbaongi.align = 'center';
-											if(jsonStr[iterable_element].Lichnghi.length>0 ){
+											if (jsonStr[iterable_element].Lichnghi.length > 0) {
 												chonbaongi.className += " cobaonghi";
 											}
+
 											tr.appendChild(stt);
 											tr.appendChild(tenLophocphan);
 											tr.appendChild(tkb);
@@ -112,7 +113,7 @@ $(document)
 											table.deleteRow(i);
 										}
 										var i = 0;
-										var index=0;
+										var index = 0;
 										for ( var iterable_element in jsonStr) {
 											i++;
 											index++;
@@ -120,164 +121,256 @@ $(document)
 											var trlophp = document
 													.createElement("tr");
 											trlophp.className = "GridRowLhp";
-											var image = document.createElement("IMG");
-											image.src="../img/image/baobu.png";
+											var image = document
+													.createElement("IMG");
+											image.src = "../img/image/baobu.png";
 											var headertenlhp = document
 													.createElement("td");
 											headertenlhp.colSpan = 3;
 											headertenlhp.className = "GridCellC";
 											headertenlhp.style.textAlign = 'left';
 											headertenlhp.appendChild(image);
-											var textb=document.createElement("b");
-											textb.appendChild(document
-													.createTextNode("["
-															+ jsonStr[iterable_element].lophocphans.maLopHocPhan
-															+ "]"
-															+ jsonStr[iterable_element].lophocphans.tenLopHocPhan));
+											var textb = document
+													.createElement("b");
+											textb
+													.appendChild(document
+															.createTextNode("["
+																	+ jsonStr[iterable_element].lophocphans.maLopHocPhan
+																	+ "]"
+																	+ jsonStr[iterable_element].lophocphans.tenLopHocPhan));
 											headertenlhp.appendChild(textb);
-											var headersotietnghi = document.createElement("td");
+											var headersotietnghi = document
+													.createElement("td");
 											headersotietnghi.className = "GridCellC";
-											headersotietnghi.appendChild(document
-													.createTextNode(jsonStr[iterable_element].lichnghis.soTiet));
+											headersotietnghi
+													.appendChild(document
+															.createTextNode(jsonStr[iterable_element].sotietnghi));
 											var headersotietbu = document
 													.createElement("td");
 											headersotietbu.className = "GridCellC";
-											if(jsonStr[iterable_element].sotietbu!=0)
-												headersotietbu.appendChild(document.createTextNode(jsonStr[iterable_element].sotietbu));
+											if (jsonStr[iterable_element].sotietbu != 0)
+												headersotietbu
+														.appendChild(document
+																.createTextNode(jsonStr[iterable_element].sotietbu));
 											trlophp.appendChild(headertenlhp);
-											trlophp.appendChild(headersotietnghi);
+											trlophp
+													.appendChild(headersotietnghi);
 											trlophp.appendChild(headersotietbu);
 											table.appendChild(trlophp);
 											//
 											// bao nghi
-											var tr = document
-													.createElement("tr");
-											tr.addEventListener("click",
-													function() {
-														chonLhpBaoNgi(this);
-													});
-											tr.className = "GridRow";
-											var stt = document
-													.createElement("td");
-											stt.appendChild(document
-													.createTextNode(i));
-											stt.className = "GridCellC";
-											stt.align = 'center';
-											var inputIdBaongi = document
-													.createElement("input");
-											inputIdBaongi.setAttribute("type",
-													"hidden");
-											inputIdBaongi.setAttribute("name",
-													"malichday" + index);
-											inputIdBaongi
-													.setAttribute(
-															"value",
-															jsonStr[iterable_element].lichnghis.id);
-											var inputmalhp = document
-													.createElement("input");
-											inputmalhp.setAttribute("type",
-													"hidden");
-											inputmalhp.setAttribute("name",
-													"malhp" + index);
-											inputmalhp
-													.setAttribute(
-															"value",
-															jsonStr[iterable_element].lophocphans.maLopHocPhan);
-											stt.appendChild(inputIdBaongi);
-											stt.appendChild(inputmalhp);
+											var lichnghi = jsonStr[iterable_element].lichnghi;
+											for ( var iterable in lichnghi) {
 
-											var ngaybao = document
-													.createElement("td");
-											ngaybao.className = "GridCellC";
-											ngaybao.style.textAlign = 'left';
-											ngaybao
-													.appendChild(document
-															.createTextNode(jsonStr[iterable_element].lichnghis.ngaybaongi));
-											var tenlophp = document
-													.createElement("input");
-											tenlophp.setAttribute("type",
-													"hidden");
-											tenlophp.setAttribute("name",
-													"tenlhp" + index);
-											tenlophp
-													.setAttribute(
-															"value",
-															jsonStr[iterable_element].lophocphans.tenLopHocPhan);
-											var ngaygni = document
-													.createElement("td");
-											ngaygni.className = "GridCellC";
-											ngaygni.style.textAlign = 'left';
-											ngaygni
-													.appendChild(document
-															.createTextNode(jsonStr[iterable_element].lichnghis.ngaynghi));
-											ngaygni.appendChild(tenlophp);
-											var sotiet = document
-													.createElement("td");
-											sotiet.className = "GridCellC";
-											sotiet
-													.appendChild(document
-															.createTextNode(jsonStr[iterable_element].lichnghis.soTiet));
-											var tietbu = document
-													.createElement("td");
-											tietbu.className = "GridCellC";
-											tietbu.style.textAlign = 'left';
-											tr.appendChild(stt);
-											tr.appendChild(ngaybao);
-											tr.appendChild(ngaygni);
-											tr.appendChild(sotiet);
-											tr.appendChild(tietbu);
-											table.appendChild(tr);
-											//
-											// baobu
-											for ( var t = 0; t < jsonStr[iterable_element].lichdaybu.length; t++) {
-												var trbaobu = document
+												var tr = document
 														.createElement("tr");
-												trbaobu.className = "GridRow";
-												i++;
-												var sttbaobu = document
+												tr
+														.addEventListener(
+																"click",
+																function() {
+																	chonLhpBaoNgi(this);
+																});
+												tr.className = "GridRow";
+												var stt = document
 														.createElement("td");
-												sttbaobu.className = "GridCellBu";
-												sttbaobu.appendChild(document
+												stt.appendChild(document
 														.createTextNode(i));
-												trbaobu.appendChild(sttbaobu);
+												stt.className = "GridCellC";
+												stt.align = 'center';
+												var inputIdBaongi = document
+														.createElement("input");
+												inputIdBaongi.setAttribute(
+														"type", "hidden");
+												inputIdBaongi.setAttribute(
+														"name", "malichday"
+																+ index);
+												inputIdBaongi
+														.setAttribute(
+																"value",
+																lichnghi[iterable].Lichnghi.id);
+												var inputmalhp = document
+														.createElement("input");
+												inputmalhp.setAttribute("type",
+														"hidden");
+												inputmalhp.setAttribute("name",
+														"malhp" + index);
+												inputmalhp
+														.setAttribute(
+																"value",
+																jsonStr[iterable_element].lophocphans.maLopHocPhan);
+												var inputtenlhp = document
+														.createElement("input");
+												inputtenlhp.setAttribute(
+														"type", "hidden");
+												inputtenlhp.setAttribute(
+														"name", "tenlhp"
+																+ index);
+												inputtenlhp
+														.setAttribute(
+																"value",
+																jsonStr[iterable_element].lophocphans.tenLopHocPhan);
 
-												var ngaybaobu = document
+												var inputTkb = document
+														.createElement("input");
+												inputTkb.setAttribute("type",
+														"hidden");
+												inputTkb
+														.setAttribute(
+																"value",
+																jsonStr[iterable_element].lichgiangdays.thu
+																		+ ","
+																		+ jsonStr[iterable_element].lichgiangdays.tutiet
+																		+ "-"
+																		+ jsonStr[iterable_element].lichgiangdays.dentiet);
+
+												stt.appendChild(inputIdBaongi);
+												stt.appendChild(inputmalhp);
+												stt.appendChild(inputtenlhp);
+												stt.appendChild(inputTkb);
+
+												var ngaybao = document
 														.createElement("td");
-												ngaybaobu.className = "GridCellBu";
-												ngaybaobu.style.textAlign = 'left';
-												ngaybaobu
+												ngaybao.className = "GridCellC";
+												ngaybao.style.textAlign = 'left';
+												ngaybao
 														.appendChild(document
-																.createTextNode(jsonStr[iterable_element].lichdaybu[t].ngaybao));
-												trbaobu.appendChild(ngaybaobu);
-
-												var ngaydaybu = document
+																.createTextNode(lichnghi[iterable].Lichnghi.ngaybaongi));
+												var tenlophp = document
+														.createElement("input");
+												tenlophp.setAttribute("type",
+														"hidden");
+												tenlophp.setAttribute("name",
+														"tenlhp" + index);
+												tenlophp
+														.setAttribute(
+																"value",
+																jsonStr[iterable_element].lophocphans.tenLopHocPhan);
+												var ngaygni = document
 														.createElement("td");
-												ngaydaybu.className = "GridCellBu";
-												ngaydaybu.style.textAlign = 'left';
-												ngaydaybu
+												ngaygni.className = "GridCellC";
+												ngaygni.style.textAlign = 'left';
+												ngaygni
 														.appendChild(document
-																.createTextNode(jsonStr[iterable_element].lichdaybu[t].ngayday));
-												trbaobu.appendChild(ngaydaybu);
-
-												var sotietnghi = document
+																.createTextNode(lichnghi[iterable].Lichnghi.ngaynghi));
+												ngaygni.appendChild(tenlophp);
+												var sotiet = document
 														.createElement("td");
-												sotietnghi.className = "GridCellBu";
-												trbaobu.appendChild(sotietnghi);
-
-												var sotietbu = document
-														.createElement("td");
-												sotietbu.className = "GridCellBu";
-												sotietbu
+												sotiet.className = "GridCellC";
+												sotiet
 														.appendChild(document
-																.createTextNode(jsonStr[iterable_element].lichdaybu[t].soTiet));
-												trbaobu.appendChild(sotietbu);
-												table.appendChild(trbaobu);
+																.createTextNode(lichnghi[iterable].Lichnghi.soTiet));
+												var tietbu = document
+														.createElement("td");
+												tietbu.className = "GridCellC";
+												tietbu.style.textAlign = 'left';
+												tr.appendChild(stt);
+												tr.appendChild(ngaybao);
+												tr.appendChild(ngaygni);
+												tr.appendChild(sotiet);
+												tr.appendChild(tietbu);
+												table.appendChild(tr);
+
+												// baobu
+												var lichbaobu = lichnghi[iterable].Lichdaybu;
+												for ( var t = 0; t < lichbaobu.length; t++) {
+													var trbaobu = document
+															.createElement("tr");
+													trbaobu
+															.addEventListener(
+																	"click",
+																	function() {
+																		chonLhpBaobu(this);
+																	});
+													trbaobu.className = "GridRow";
+													i++;
+													var sttbaobu = document
+															.createElement("td");
+													sttbaobu.className = "GridCellBu";
+													sttbaobu
+															.appendChild(document
+																	.createTextNode(i));
+
+													var inputidbaobu = document
+															.createElement("input");
+													inputidbaobu.setAttribute(
+															"type", "hidden");
+													inputidbaobu.setAttribute(
+															"value",
+															lichbaobu[t].id);
+													var tenlhp = document
+															.createElement("input");
+													tenlhp.setAttribute("type",
+															"hidden");
+													tenlhp
+															.setAttribute(
+																	"value",
+																	jsonStr[iterable_element].lophocphans.tenLopHocPhan);
+													sttbaobu
+															.appendChild(inputidbaobu);
+													sttbaobu
+															.appendChild(tenlhp);
+													trbaobu
+															.appendChild(sttbaobu);
+													var ngaybaobu = document
+															.createElement("td");
+													ngaybaobu.className = "GridCellBu";
+													ngaybaobu.style.textAlign = 'left';
+													ngaybaobu
+															.appendChild(document
+																	.createTextNode(lichbaobu[t].ngaybao));
+													trbaobu
+															.appendChild(ngaybaobu);
+
+													var ngaydaybu = document
+															.createElement("td");
+													ngaydaybu.className = "GridCellBu";
+													ngaydaybu.style.textAlign = 'left';
+													ngaydaybu
+															.appendChild(document
+																	.createTextNode(lichbaobu[t].ngaydaybu));
+													trbaobu
+															.appendChild(ngaydaybu);
+
+													var sotietnghi = document
+															.createElement("td");
+													sotietnghi.className = "GridCellBu";
+													trbaobu
+															.appendChild(sotietnghi);
+
+													var sotietbu = document
+															.createElement("td");
+													sotietbu.className = "GridCellBu";
+													sotietbu
+															.appendChild(document
+																	.createTextNode(lichbaobu[t].dentiet
+																			- lichbaobu[t].tutiet
+																			+ 1));
+													var tutiet = document
+															.createElement("input");
+													tutiet.setAttribute("type",
+															"hidden");
+													tutiet
+															.setAttribute(
+																	"value",
+																	lichbaobu[t].tutiet
+																			+ "-"
+																			+ lichbaobu[t].dentiet);
+													sotietbu
+															.appendChild(tutiet);
+													trbaobu
+															.appendChild(sotietbu);
+													table.appendChild(trbaobu);
+												}
+												i++;
 											}
 											i = 0;
+											//
 										}
 									}
 								});
+
 					}
+
 					// end function
 					$("#btnbaonghi")
 							.click(
@@ -500,7 +593,8 @@ $(document)
 												tenlhp.style.textAlign = 'left';
 												tenlhp
 														.appendChild(document
-																.createTextNode(tds[2].getElementsByTagName("input")[0].value));
+																.createTextNode(tds[2]
+																		.getElementsByTagName("input")[0].value));
 												var inputIdMtkb = document
 														.createElement("input");
 												inputIdMtkb.setAttribute(
@@ -635,6 +729,209 @@ $(document)
 										}
 									});
 					// end
+					//
+					$("#btnhuybaobu")
+							.click(
+									function() {
+										var tables = document
+												.getElementById("danhsachbaongi");
+
+										var tablebaongi = document
+												.getElementById("danhsachlopbaobu");
+										for ( var i = tablebaongi.rows.length - 1; i > 1; i--) {
+											tablebaongi.deleteRow(i);
+										}
+										var trs = tables
+												.getElementsByTagName("tr");
+										var tds;
+										var classname;
+										var j = 0;
+										var inputs1;
+										var inputstutiet;
+
+										for ( var i = 0; i < trs.length; i++) {
+											tds = trs[i]
+													.getElementsByTagName("td");
+											classname = tds[0].className;
+											if (classname
+													.indexOf("checkLhpBaobu") > -1) {
+												inputs1 = tds[0]
+														.getElementsByTagName("input");
+												inputstutiet = tds[4]
+														.getElementsByTagName("input")[0].value
+														.split("-");
+
+												j++;
+												var tr = document
+														.createElement("tr");
+												tr.className = "GridRow";
+
+												var stt = document
+														.createElement("td");
+												stt.appendChild(document
+														.createTextNode(j));
+												stt.className = "GridCellC";
+												stt.align = 'center';
+
+												var malhp = document
+														.createElement("td");
+												malhp
+														.appendChild(document
+																.createTextNode(inputs1[1].value));
+												malhp.className = "GridCellC";
+												malhp.align = 'center';
+
+												var ngayday = document
+														.createElement("td");
+												ngayday
+														.appendChild(document
+																.createTextNode(tds[2].innerHTML));
+												ngayday.className = "GridCellC";
+												ngayday.align = 'center';
+												var tutiet = document
+														.createElement("td");
+												tutiet
+														.appendChild(document
+																.createTextNode(inputstutiet[0]));
+												tutiet.className = "GridCellC";
+												tutiet.align = 'center';
+
+												var dentiet = document
+														.createElement("td");
+												dentiet
+														.appendChild(document
+																.createTextNode(inputstutiet[1]));
+												dentiet.className = "GridCellC";
+												dentiet.align = 'center';
+
+												var inputIdMabaobu = document
+														.createElement("input");
+												inputIdMabaobu.setAttribute(
+														"type", "hidden");
+												inputIdMabaobu.setAttribute(
+														"name", "mabaobu" + j);
+												inputIdMabaobu.setAttribute(
+														"value",
+														inputs1[0].value);
+												dentiet
+														.appendChild(inputIdMabaobu);
+
+												tr.appendChild(stt);
+												tr.appendChild(malhp);
+												tr.appendChild(ngayday);
+												tr.appendChild(tutiet);
+												tr.appendChild(dentiet);
+												tablebaongi.appendChild(tr);
+											}
+										}
+										var numberlohp = document
+												.createElement("input");
+										numberlohp.setAttribute("type",
+												"hidden");
+										numberlohp.setAttribute("name",
+												"numberLopbaobu");
+										numberlohp.setAttribute("value", j);
+										tablebaongi.appendChild(numberlohp);
+										popup('popUphuybaobu');
+									});
+					// end
+					$("#btnhuybaonghi")
+							.click(
+									function() {
+										var tables = document
+												.getElementById("danhsachbaongi");
+										var tablebaongi = document
+												.getElementById("danhsachhuybaonghi");
+										for ( var i = tablebaongi.rows.length - 1; i > 1; i--) {
+											tablebaongi.deleteRow(i);
+										}
+										var trs = tables
+												.getElementsByTagName("tr");
+										var tds;
+										var idtkb;
+										var j = 0;
+										for ( var i = 0; i < trs.length; i++) {
+
+											tds = trs[i]
+													.getElementsByTagName("td");
+											classname = tds[0].className;
+											if (classname
+													.indexOf("checkLhpBaongi") > -1) {
+												j++;
+												idtkb = tds[0]
+														.getElementsByTagName("input")[0].value;
+												var tr = document
+														.createElement("tr");
+												tr.className = "GridRow";
+
+												var stt = document
+														.createElement("td");
+												stt.appendChild(document
+														.createTextNode(j));
+												stt.className = "GridCellC";
+												stt.align = 'center';
+												var inputIdMabaonghi = document
+														.createElement("input");
+												inputIdMabaonghi.setAttribute(
+														"type", "hidden");
+												inputIdMabaonghi
+														.setAttribute("name",
+																"mabaonghi" + j);
+												inputIdMabaonghi.setAttribute(
+														"value", idtkb);
+												stt
+														.appendChild(inputIdMabaonghi);
+												var tenlhp = document
+														.createElement("td");
+												tenlhp
+														.appendChild(document
+																.createTextNode(tds[0]
+																		.getElementsByTagName("input")[2].value));
+												tenlhp.className = "GridCellC";
+												tenlhp.align = 'center';
+												var TKB = document
+														.createElement("td");
+												TKB
+														.appendChild(document
+																.createTextNode(tds[0]
+																		.getElementsByTagName("input")[3].value));
+												TKB.className = "GridCellC";
+												TKB.align = 'center';
+
+												var ngaynghi = document
+														.createElement("td");
+												ngaynghi
+														.appendChild(document
+																.createTextNode(tds[2].textContent));
+												ngaynghi.className = "GridCellC";
+												ngaynghi.align = 'center';
+
+												var sotiet = document
+														.createElement("td");
+												sotiet
+														.appendChild(document
+																.createTextNode(tds[3].textContent));
+												sotiet.className = "GridCellC";
+												sotiet.align = 'center';
+												tr.appendChild(stt);
+												tr.appendChild(tenlhp);
+												tr.appendChild(TKB);
+												tr.appendChild(ngaynghi);
+												tr.appendChild(sotiet);
+												tablebaongi.appendChild(tr);
+											}
+										}
+										var numberlohp = document
+												.createElement("input");
+										numberlohp.setAttribute("type",
+												"hidden");
+										numberlohp.setAttribute("name",
+												"numberLopbaobu");
+										numberlohp.setAttribute("value", j);
+										tablebaongi.appendChild(numberlohp);
+										popup('popUphuybaonghi');
+									});
+					//
 					function chonlophocphan(e) {
 						var tds = e.getElementsByTagName('td');
 						var classname = tds[0].className;
@@ -676,6 +973,17 @@ $(document)
 							tds[0].className += " checkLhpBaongi";
 						}
 					}
+					function chonLhpBaobu(e) {
+						var tds = e.getElementsByTagName('td');
+						var classname = tds[0].className;
+						if (classname.indexOf("checkLhpBaobu") > -1) {
+							tds[0].className = tds[0].className.replace(
+									" checkLhpBaobu", "");
+						} else {
+
+							tds[0].className += " checkLhpBaobu";
+						}
+					}
 					//
 					function chonphong(e) {
 						e.innerHTML = "";
@@ -692,6 +1000,7 @@ $(document)
 									data : {
 										tutiet : tutiet,
 										ngay : ngay,
+										hocky : $("#hocky").val(),
 										dentien : dentien
 									},
 									dataType : "JSON",
@@ -750,17 +1059,9 @@ $(document)
 																	+ ""));
 											socho.className = "GridCellC";
 											socho.align = 'left';
-											var maychieu = document
-													.createElement("td");
-											maychieu
-													.appendChild(document
-															.createTextNode(jsonStr[iterable_element].phongs.maPhong));
-											maychieu.className = "GridCellC";
-											maychieu.align = 'left';
 											tr.appendChild(stt);
 											tr.appendChild(tenphong);
 											tr.appendChild(socho);
-											tr.appendChild(maychieu);
 											tablephong.appendChild(tr);
 										}
 									}
@@ -810,4 +1111,33 @@ $(document)
 														'Chọn xác nhận thì sẽ không thể thay đổi, chọn Hủy sẽ hoàn tác tác vụ! Xác nhận/Hủy?',
 														'Dknghi', 'post_2');
 									});
+					// /
+					$("#huybaobu")
+							.click(
+									function() {
+										var divdialog = document
+												.getElementById("dialogbox");
+										var divdialogPoup = document
+												.getElementById("popUphuybaobu");
+										divdialogPoup.appendChild(divdialog);
+										Confirm
+												.render(
+														'Chọn xác nhận thì sẽ không thể thay đổi, chọn Hủy sẽ hoàn tác tác vụ! Xác nhận/Hủy?',
+														'huyDkbu', 'post_2');
+									});
+					//
+					$("#huybaonghi")
+							.click(
+									function() {
+										var divdialog = document
+												.getElementById("dialogbox");
+										var divdialogPoup = document
+												.getElementById("popUphuybaonghi");
+										divdialogPoup.appendChild(divdialog);
+										Confirm
+												.render(
+														'Chọn xác nhận thì sẽ không thể thay đổi, chọn Hủy sẽ hoàn tác tác vụ! Xác nhận/Hủy?',
+														'huyDknghi', 'post_2');
+									});
+
 				});

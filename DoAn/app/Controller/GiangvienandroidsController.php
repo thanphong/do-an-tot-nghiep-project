@@ -11,7 +11,7 @@ class GiangvienandroidsController extends AppController{
 		if($this->request->is("post")){
 			$json = file_get_contents('php://input');
 			$obj = json_decode($json);
-				
+
 			$this->request->data['User']['maGiangvien']=$obj->{'accountName'};
 			$this->request->data['User']['matKhau']=$obj->{'pass'};
 			//$this->Auth->user['matKhau']=$obj->{'pass'};
@@ -140,57 +140,69 @@ class GiangvienandroidsController extends AppController{
 	}
 	//
 	public function getPhong($mgv){
-		if($this->request->is("post")){
-			$date = date('Y/m/d', time());
-			$hocky=$this->Hocki->find("first",array('conditions'=>array('Hocki.batdau <='=>$date,'Hocki.kethuc >='=>$date)));
-			$ky=$hocky['Hocki']['id'];
-			$json = file_get_contents('php://input');
-			$obj = json_decode($json);
-			$idlichnghi=$obj->{'lichnghi'};
-			$lhp=$this->Lophocphan->query("SELECT lophocphans.soLuong FROM lophocphans,lichgiangdays,lichnghis where lophocphans.id=lichgiangdays.malophocphan and lichgiangdays.id=lichnghis.maThoiKhoabieu and lichnghis.id=".$idlichnghi);
-			$soghe=$lhp[0]['lophocphans']['soLuong'];
-			$ngadaybu=$obj->{'ngayday'};
-			$tutiet=$obj->{'tietdau'};
-			$dentiet=$obj->{'tietcuoi'};
-			$date_stamp = strtotime(date('Y-m-d', strtotime($ngadaybu)));
-			$stamp = date('l', $date_stamp);
-			$thu=0;
-			switch ($stamp){
-				case "Sunday":
-					$thu=8;
+		$date = date('Y/m/d', time());
+		$hocky=$this->Hocki->find("first",array('conditions'=>array('Hocki.batdau <='=>$date,'Hocki.kethuc >='=>$date)));
+		$ky=$hocky['Hocki']['id'];
+		$json = file_get_contents('php://input');
+		$obj = json_decode($json);
+		$idlichnghi=$obj->{'lichnghi'};
+		$lhp=$this->Lophocphan->query("SELECT lophocphans.soLuong FROM lophocphans,lichgiangdays,lichnghis where lophocphans.id=lichgiangdays.malophocphan and lichgiangdays.id=lichnghis.maThoiKhoabieu and lichnghis.id=".$idlichnghi);
+		$soghe=$lhp[0]['lophocphans']['soLuong'];
+		$ngadaybu=$obj->{'ngayday'};
+		$tutiet=$obj->{'tietdau'};
+		$dentiet=$obj->{'tietcuoi'};
+		$date_stamp = strtotime(date('Y-m-d', strtotime($ngadaybu)));
+		$stamp = date('l', $date_stamp);
+		$thu=0;
+		switch ($stamp){
+			case "Sunday":
+				$thu=8;
+				break;
+			case "Monday":
+				$thu=2;
+				break;
+			case "Tuesday":
+				$thu=3;
+				break;
+			case "Wednesday":
+				$thu=4;
+				break;
+			case "Thursday":
+				$thu=5;
+				break;
+			case "Friday":
+				$thu=6;
+				break;
+			case "Saturday":
+				$thu=7;
+				break;
+			default:
+				$thu=-1;
+		}
+		$sql='SELECT * FROM lichgiangdays where (lichgiangdays.tutiet >='.$tutiet.' and lichgiangdays.tutiet <='.$dentiet.' and lichgiangdays.magiangvien ='.$mgv.' and lichgiangdays.mahocky ='.$ky.' and lichgiangdays.thu ='.$thu.')
+				or (lichgiangdays.tutiet <='.$tutiet.' and lichgiangdays.dentiet >='.$dentiet.' and lichgiangdays.magiangvien ='.$mgv.' and lichgiangdays.mahocky ='.$ky.' and lichgiangdays.thu ='.$thu.')
+						or (lichgiangdays.dentiet >='.$tutiet.' and lichgiangdays.dentiet <='.$dentiet.' and lichgiangdays.magiangvien ='.$mgv.' and lichgiangdays.mahocky ='.$ky.' and lichgiangdays.thu ='.$thu.')
+								or (lichgiangdays.tutiet >='.$tutiet.' and lichgiangdays.dentiet <='.$dentiet.' and lichgiangdays.magiangvien ='.$mgv.' and lichgiangdays.mahocky ='.$ky.' and lichgiangdays.thu ='.$thu.')';
+
+		$lichday=$this->Lichgiangday->query($sql);
+		$phongjson=array();
+		if(count($lichday)<1){
+			$ngadaybu="'".$ngadaybu."'";
+			$phongs=$this->Phong->query('CALL timphong('.$thu.','.$tutiet.','.$dentiet.','.$ky.','.$ngadaybu.','.$soghe.')');
+			$i=0;
+			foreach ($phongs as $item){
+				$phong=array();
+				$phong['id']=$item['phongs']['id'];
+				$phong['maphong']=$item['phongs']['maPhong'];;
+				$phong['soluong']=$item['phongs']['soLuongGhe'];
+				array_push($phongjson,$phong);
+				if($i>20){
 					break;
-				case "Monday":
-					$thu=2;
-					break;
-				case "Tuesday":
-					$thu=3;
-					break;
-				case "Wednesday":
-					$thu=4;
-					break;
-				case "Thursday":
-					$thu=5;
-					break;
-				case "Friday":
-					$thu=6;
-					break;
-				case "Saturday":
-					$thu=7;
-					break;
-				default:
-					$thu=-1;
-			}
-			$sql="SELECT * FROM lichgiangdays where (lichgiangdays.tutiet >=".$tutiet." and lichgiangdays.tutiet <=".$dentiet." and lichgiangdays.magiangvien=".$mgv." and lichgiangdays.mahocky=".$ky." and lichgiangdays.thu=".$thu.")
-					or (lichgiangdays.tutiet <=".$tutiet." and lichgiangdays.dentiet >=".$dentiet." and lichgiangdays.magiangvien=".$mgv." and lichgiangdays.mahocky=".$ky." and lichgiangdays.thu=".$thu.")
-					or (lichgiangdays.dentiet >=".$tutiet."and lichgiangdays.dentiet <=".$dentiet." and lichgiangdays.magiangvien=".$mgv." and lichgiangdays.mahocky=".$ky." and lichgiangdays.thu=".$thu.")
-					or (lichgiangdays.tutiet >=".$tutiet." and lichgiangdays.dentiet <=".$dentiet." and lichgiangdays.magiangvien=".$mgv." and lichgiangdays.mahocky=".$ky." and lichgiangdays.thu=".$thu.")";
-			//$lichday=$this->Lichgiangday->find("all",array('conditions'=>array('Lichgiangday.thu'=>$thu,'Lichgiangday.mahocky'=>$ky,'Lichgiangday.magiangvien'=>$mgv,'Lichgiangday.dentiet >='=>$tutiet,"Lichgiangday.tutiet <="=>$dentiet),'recursive'=>-1));
-			$lichday=$this->Lichgiangday->query($sql);
-			//$lichthi=$this->Lichthi->find("all",array('conditions'=>array('Lichthi.ngaythi'=>$ngadaybu,'Lichthi.tutiet >='=>$tutiet,"Lichthi.dentiet <="=>$dentiet),'recursive'=>-1));
-			if(count($lichday)<1){
-				$phongs=$this->Phong->query("CALL timphong(".$thu.",".$tutiet.",".$dentien.",".$ky.",".$ngadaybu.",".$soghe.")");
+				}
+				$i++;
 			}
 		}
+		$this->set("phongs",$phongjson);
 	}
 }
 ?>

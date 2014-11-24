@@ -27,6 +27,8 @@ class GiangvienHelper extends HtmlHelper{
 		$out.="</select>";
 		$out.="<input class='button2 sizebutton2' id='btnbaonghi' type='button' value='Báo nghỉ' name='bn'/>";
 		$out.="<input class='button2 sizebutton2' id='btnbaobu' type='button' value='Báo bù' name='bn'/>";
+		$out.="<input class='button2 sizebutton2' id='btnhuybaonghi' type='button' value='Hủy báo nghỉ' name='bn'/>";
+		$out.="<input class='button2 sizebutton2' id='btnhuybaobu' type='button' value='Hủy báo bù' name='bn'/>";
 		return $out;
 	}
 	function formCanhan($user){
