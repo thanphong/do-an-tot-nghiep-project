@@ -78,20 +78,31 @@ class GiangViensController extends AppController{
 		$this->layout=null;
 		$hocky=$this->request->data['hocky'];
 		$idgv=$this->Session->read('Auth.User.Giangvien.id');
-		$lichngi=$this->Lichnghi->query("select lichnghis.id,lichnghis.ngaynghi,lichnghis.soTiet,lichnghis.ngaybaongi,lophocphans.tenLopHocPhan,lophocphans.maLopHocPhan from lichnghis,lichgiangdays,lophocphans
-				where lichnghis.maThoiKhoabieu=lichgiangdays.id and lichgiangdays.malophocphan=lophocphans.id and lichgiangdays.magiangvien=".$idgv." and lichgiangdays.mahocky=".$hocky);
-		for($i=0;$i<count($lichngi);$i++){
-			$lichbaobu=array();
-			$tietbaobu=0;
-			$baobu=$this->Lichdaybu->find("all",array('conditions'=>array('Lichdaybu.malichnghi'=>$lichngi[$i]['lichnghis']['id'])));
-			foreach ($baobu as $item){
-				$tietbaobu+=$item['Lichdaybu']['dentiet']-$item['Lichdaybu']['tutiet']+1;
-				array_push($lichbaobu,array("ngaybao"=>$item['Lichdaybu']['ngaybao'],"ngayday"=>$item['Lichdaybu']['ngaydaybu'],"soTiet"=>$item['Lichdaybu']['dentiet']-$item['Lichdaybu']['tutiet']+1));
+		
+		$lichday=$this->Lichgiangday->query("select lichgiangdays.id,lophocphans.tenLopHocPhan,lophocphans.maLopHocPhan,lichgiangdays.thu,lichgiangdays.tutiet,lichgiangdays.dentiet from lichnghis,lichgiangdays,lophocphans
+				where lichnghis.maThoiKhoabieu=lichgiangdays.id and lichgiangdays.malophocphan=lophocphans.id and lichgiangdays.magiangvien=".$idgv." and lichgiangdays.mahocky=".$hocky." group by lichnghis.maThoiKhoabieu");
+		$i=0;
+		foreach ($lichday as $items){
+			$sotietnghi=0;
+			$sotietdabu=0;
+			$lichbaonghi=$this->Lichnghi->find("all",array('conditions'=>array('Lichnghi.maThoiKhoabieu'=>$items['lichgiangdays']['id'])));
+			foreach ($lichbaonghi as $items){
+				$sotietnghi+=$items['Lichnghi']['soTiet'];
+				$daybus=$items['Lichdaybu'];
+				$sotietbu=0;
+				foreach ($daybus as $item){
+					$sotietbu+=$item['dentiet']-$item['tutiet']+1;	
+				}
+				$sotietdabu+=$sotietbu;
 			}
-			$lichngi[$i]['lichdaybu']=$lichbaobu;
-			$lichngi[$i]['sotietbu']=$tietbaobu;
+			$lichday[$i]['sotietnghi']=$sotietnghi;
+			$lichday[$i]['sotietbu']=$sotietdabu;
+			$lichday[$i]['lichnghi']=$lichbaonghi;
+			$i++;
+			//array_push($lichday,$lichbaonghi);
+		
 		}
-		$this->set("lichnghi",$lichngi);
+		$this->set("lichnghi",$lichday);
 	}
 	//endjson
 	public function createbaonghi() {
@@ -115,8 +126,10 @@ class GiangViensController extends AppController{
 	//
 	public function timphonghoc() {
 		$this->layout=null;
+		$mgv=$this->Session->read('Auth.User.Giangvien.id');
+		$ky=$this->request->data['hocky'];
 		$tutiet=$this->request->data['tutiet'];
-		$dentien=$this->request->data['dentien'];
+		$dentiet=$this->request->data['dentien'];
 		$ngay=$this->request->data['ngay'];
 		$date_stamp = strtotime(date('Y-m-d', strtotime($ngay)));
 		$stamp = date('l', $date_stamp);
@@ -146,13 +159,18 @@ class GiangViensController extends AppController{
 			default:
 				$thu=-1;
 		}
-		$sql="SELECT * FROM lichgiangdays where (lichgiangdays.tutiet>=".$tutiet." and lichgiangdays.tutiet<=".$dentiet." and lichgiangdays.magiangvien=".$mgv." and lichgiangdays.mahocky=".$ky." and lichgiangdays.thu=".$thu.")
-					or (lichgiangdays.tutiet<=".$tutiet." and lichgiangdays.dentiet>=".$dentiet." and lichgiangdays.magiangvien=".$mgv." and lichgiangdays.mahocky=".$ky." and lichgiangdays.thu=".$thu.")
-					or (lichgiangdays.dentiet >=".$tutiet."and lichgiangdays.dentiet<=".$dentiet." and lichgiangdays.magiangvien=".$mgv." and lichgiangdays.mahocky=".$ky." and lichgiangdays.thu=".$thu.")
-					or (lichgiangdays.tutiet >=".$tutiet." and lichgiangdays.dentiet<=".$dentiet." and lichgiangdays.magiangvien=".$mgv." and lichgiangdays.mahocky=".$ky." and lichgiangdays.thu=".$thu.")";
+		$sql='SELECT * FROM lichgiangdays where (lichgiangdays.tutiet >='.$tutiet.' and lichgiangdays.tutiet <='.$dentiet.' and lichgiangdays.magiangvien ='.$mgv.' and lichgiangdays.mahocky ='.$ky.' and lichgiangdays.thu ='.$thu.')
+					or (lichgiangdays.tutiet <='.$tutiet.' and lichgiangdays.dentiet >='.$dentiet.' and lichgiangdays.magiangvien ='.$mgv.' and lichgiangdays.mahocky ='.$ky.' and lichgiangdays.thu ='.$thu.')
+					or (lichgiangdays.dentiet >='.$tutiet.' and lichgiangdays.dentiet <='.$dentiet.' and lichgiangdays.magiangvien ='.$mgv.' and lichgiangdays.mahocky ='.$ky.' and lichgiangdays.thu ='.$thu.')
+					or (lichgiangdays.tutiet >='.$tutiet.' and lichgiangdays.dentiet <='.$dentiet.' and lichgiangdays.magiangvien ='.$mgv.' and lichgiangdays.mahocky ='.$ky.' and lichgiangdays.thu ='.$thu.')';
+
 		$lichday=$this->Lichgiangday->query($sql);
-		if(count($lichday)<1)
-			$data=$this->Phong->query("CALL timphong(".$thu.",".$tutiet.",".$dentien.",".$ngay.",60)");
+		$num=60;
+		$data=null;
+		if(count($lichday)<1){
+			$ngay="'".$ngay."'";
+			$data=$this->Phong->query("CALL timphong(".$thu.",".$tutiet.",".$dentiet.",".$ky.",".$ngay.",".$num.")");
+		}
 		$this->set("lisphong",$data);
 	}
 	//
@@ -175,5 +193,25 @@ class GiangViensController extends AppController{
 	}
 
 	//
+	public function huybaobu() {
+		if($this->request->is("post")){
+			$number=$this->request->data["numberLopbaobu"];
+			for ($i=1;$i<=$number;$i++){
+				$iddkbu=$this->request->data['mabaobu'.$i];
+				$this->Lichdaybu->deleteAll(array('Lichdaybu.id'=>$iddkbu));
+			}
+			$this->redirect(array( 'controller'=>'Giangviens','action' => 'baonghibaobu'));
+		}
+	}
+	public function huybaonghi() {
+		if($this->request->is("post")){
+			$number=$this->request->data["numberLopbaobu"];
+			for ($i=1;$i<=$number;$i++){
+				$iddkbu=$this->request->data['mabaonghi'.$i];
+				$this->Lichnghi->deleteAll(array('Lichnghi.id'=>$iddkbu));
+			}
+			$this->redirect(array( 'controller'=>'Giangviens','action' => 'baonghibaobu'));
+		}
+	}
 }
 ?>

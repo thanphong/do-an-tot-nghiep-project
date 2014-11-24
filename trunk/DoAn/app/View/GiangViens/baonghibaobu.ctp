@@ -113,7 +113,7 @@
 			<div class='groupButton'>
 			    <input class='button2' type='button' name='luu' value="Lưu" id="luudkbu"/>
 			</div>
-			<div style="display:none; overflow: scroll;width:100%;height:40%" id="danhsachphong"  >
+			<div style="display:none; overflow: scroll;width:100%;height: 350px" id="danhsachphong"  >
 			  	<table class='Grid' >
 					<tr class="GridHeader" >
 				    	<td class="GridHeaderCell" colspan="3">Danh sách phòng phù hợp</td>
@@ -125,8 +125,63 @@
 			    	</tr>
 			    </table>
 			</div>
-			    
-			</div>	
+		</div>
+		<!--POPUP huy bao bu-->    
+		<div id="popUphuybaobu" style="display:none;">
+			<form id="formhuybaobu" action="/DoAn/Giangviens/huybaobu" method='POST'>
+				    <div class='contentpoup' id='contentpoup'>
+				    	<a class='right close' onclick="popup('popUphuybaobu')"></a>
+				    	<div class='headtt'><span class='note'></span><span>Danh sách báo bù</span></div>
+				    </div>
+				    <div class="clear">				    	
+					    <table id="danhsachlopbaobu" class='Grid' style="border-collapse:collapse;">
+							<tr class="GridHeader">
+								<td colspan="5" class="GridHeaderCell"><b>Danh sách lớp báo bù</b></td>
+							</tr>
+							<tr class="GridHeader">
+								<td class="GridHeaderCell"><b> STT</b></td>
+								<td class="GridHeaderCell"><b>Tên lớp học phần</b></td>
+								<td class="GridHeaderCell"><b>Ngày bù</b></td>
+								<td class="GridHeaderCell"><b>Từ tiết</b></td>
+								<td class="GridHeaderCell"><b>Đến tiết</b></td>
+							</tr>
+						</table>					
+				    </div>
+				 </form>
+			<div class='groupButton'>
+			    	<input class='button2' type='button' name='luu' value="Lưu" id="huybaobu" />
+			    	<input class='button2' type='button' name='huy' value="Hủy" id="huy" onclick="popup('popUphuybaobu')" />
+			</div>
+		</div>
+		<!-- -->	
+		<!--POPUP huy bao nghi-->    
+		<div id="popUphuybaonghi" style="display:none;">
+			<form id="formhuybaonghi" action="/DoAn/Giangviens/huybaonghi" method='POST'>
+				    <div class='contentpoup' id='contentpoup'>
+				    	<a class='right close' onclick="popup('popUphuybaonghi')"></a>
+				    	<div class='headtt'><span class='note'></span><span>Danh sách hủy báo nghỉ </span></div>
+				    </div>
+				    <div class="clear">				    	
+					    <table id="danhsachhuybaonghi" class='Grid' style="border-collapse:collapse;">
+							<tr class="GridHeader">
+								<td colspan="5" class="GridHeaderCell"><b>Danh sách lớp báo bù</b></td>
+							</tr>
+							<tr class="GridHeader">
+								<td class="GridHeaderCell"><b> STT</b></td>
+								<td class="GridHeaderCell"><b>Tên lớp học phần</b></td>
+								<td class="GridHeaderCell"><b>TKB</b></td>
+								<td class="GridHeaderCell"><b>Ngày nghỉ</b></td>
+								<td class="GridHeaderCell"><b>Số tiết</b></td>
+							</tr>
+						</table>					
+				    </div>
+				 </form>
+			<div class='groupButton'>
+			    	<input class='button2' type='button' name='luu' value="Lưu" id="huybaonghi" />
+			    	<input class='button2' type='button' name='huy' value="Hủy" id="huybn" onclick="popup('popUphuybaonghi')" />
+			</div>
+		</div>
+		<!-- -->	
 			<div id="dialogoverlay"></div>
 				<div id="dialogbox">
 					 <div>

@@ -642,7 +642,7 @@ p{float:left;font:bold 13px Arial;margin:10px;color:#009933}
 .containTin{float:left;padding:5px 15px;clear:both}
 .containTin p{margin:0;font:normal 12px Arial;color:#333}
 .chitietkhoa span > span{clear:none;float:left;width:85%;margin:none}
-.checkLhpBaongi{
+.checkLhpBaongi, .checkLhpBaobu{
 	background: url('../img/image/check.png');
 	background-repeat: no-repeat;
 }

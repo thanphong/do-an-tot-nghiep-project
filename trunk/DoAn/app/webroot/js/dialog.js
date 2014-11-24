@@ -25,6 +25,12 @@ function dangkynghi(id){
 function dangkybu(id){
 	document.getElementById("formDangkybu").submit();
 }
+function huydangkybu(id){
+	document.getElementById("formhuybaobu").submit();
+}
+function huydankynghi(id){
+	document.getElementById("formhuybaonghi").submit();
+}
 function CustomConfirm(){
 	this.render = function(dialog,op,id){
 		var winW = window.innerWidth;
@@ -52,6 +58,12 @@ function CustomConfirm(){
 		}
 		if(op == "Dknghi"){
 			dangkynghi(id);
+		}
+		if(op == "huyDkbu"){
+			huydangkybu(id);
+		}
+		if(op == "huyDknghi"){
+			huydankynghi(id);
 		}
 		document.getElementById('dialogbox').style.display = "none";
 		document.getElementById('dialogoverlay').style.display = "none";
