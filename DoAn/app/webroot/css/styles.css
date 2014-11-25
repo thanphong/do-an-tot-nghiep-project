@@ -638,6 +638,7 @@ p{float:left;font:bold 13px Arial;margin:10px;color:#009933}
 .icview{background-image:url(../img/icon/list.png)}
 .icback{background-image:url(../img/icon/icback.png)}
 .icback:hover, .icview:hover,.icadd:hover, .icedit:hover, .icdelete:hover{opacity:1}
+
 .divIcon{margin:10px 0}
 .containTin{float:left;padding:5px 15px;clear:both}
 .containTin p{margin:0;font:normal 12px Arial;color:#333}

@@ -5,6 +5,7 @@ $(document)
 				function() {
 					getLichgiangday();
 					getLichdagnkyngi();
+					kiemtrahople("2014-11-24");
 					$("#hocky").change(function() {
 						// alert($(this).val()+""+$("#ngayxem").val());
 						getLichgiangday();
@@ -81,7 +82,6 @@ $(document)
 											if (jsonStr[iterable_element].Lichnghi.length > 0) {
 												chonbaongi.className += " cobaonghi";
 											}
-
 											tr.appendChild(stt);
 											tr.appendChild(tenLophocphan);
 											tr.appendChild(tkb);
@@ -368,9 +368,7 @@ $(document)
 										}
 									}
 								});
-
 					}
-
 					// end function
 					$("#btnbaonghi")
 							.click(
@@ -733,6 +731,7 @@ $(document)
 					$("#btnhuybaobu")
 							.click(
 									function() {
+
 										var tables = document
 												.getElementById("danhsachbaongi");
 
@@ -838,6 +837,8 @@ $(document)
 					$("#btnhuybaonghi")
 							.click(
 									function() {
+										var divnot = document
+												.getElementById("baonghiNotdelete");
 										var tables = document
 												.getElementById("danhsachbaongi");
 										var tablebaongi = document
@@ -850,6 +851,8 @@ $(document)
 										var tds;
 										var idtkb;
 										var j = 0;
+										var indexnotdelete = 0;
+										var ngaybao;
 										for ( var i = 0; i < trs.length; i++) {
 
 											tds = trs[i]
@@ -857,6 +860,11 @@ $(document)
 											classname = tds[0].className;
 											if (classname
 													.indexOf("checkLhpBaongi") > -1) {
+												// kiem tra xoa hop le
+												// ngaybao=tds[0]
+												// .getElementsByTagName("input")[0].value;
+												//
+
 												j++;
 												idtkb = tds[0]
 														.getElementsByTagName("input")[0].value;
@@ -941,6 +949,7 @@ $(document)
 						} else {
 
 							tds[0].className += " checkLhpBaongi";
+
 						}
 					}
 					function chonngayngi() {
@@ -1140,4 +1149,18 @@ $(document)
 														'huyDknghi', 'post_2');
 									});
 
+					function kiemtrahople(ngay) {
+						var date = new Date(ngay);
+						var now = new Date();
+						var daynow = now.getDay();
+						var daybao = date.getDay();
+						var weeknow = now.getWeek();
+						var weekngay = date.getWeek();
+						alert(weeknow + "-" + weekngay);
+					}
+					Date.prototype.getWeek = function() {
+						var onejan = new Date(this.getFullYear(), 0, 1);
+						return Math.ceil((((this - onejan) / 86400000)
+								+ onejan.getDay() + 1) / 7);
+					}
 				});

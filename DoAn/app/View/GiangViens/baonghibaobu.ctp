@@ -152,6 +152,20 @@
 			    	<input class='button2' type='button' name='luu' value="Lưu" id="huybaobu" />
 			    	<input class='button2' type='button' name='huy' value="Hủy" id="huy" onclick="popup('popUphuybaobu')" />
 			</div>
+			<div style="display:none; overflow: scroll;width:100%;height: 350px" id="baonghiNotdelete"  >
+			  	<table class='Grid' >
+					<tr class="GridHeader" >
+				    	<td class="GridHeaderCell" colspan="3">Danh sách lớp học phần không được hủy</td>
+				   	</tr>
+			    	<tr class="GridHeader" >
+			    		<td class="GridHeaderCell"><b> STT</b></td>
+						<td class="GridHeaderCell"><b>Tên lớp học phần</b></td>
+						<td class="GridHeaderCell"><b>Ngày bù</b></td>
+						<td class="GridHeaderCell"><b>Từ tiết</b></td>
+						<td class="GridHeaderCell"><b>Đến tiết</b></td>
+			    	</tr>
+			    </table>
+			</div>
 		</div>
 		<!-- -->	
 		<!--POPUP huy bao nghi-->    
@@ -179,6 +193,20 @@
 			<div class='groupButton'>
 			    	<input class='button2' type='button' name='luu' value="Lưu" id="huybaonghi" />
 			    	<input class='button2' type='button' name='huy' value="Hủy" id="huybn" onclick="popup('popUphuybaonghi')" />
+			</div>
+			<div style="display:none; overflow: scroll;width:100%;height: 350px" id="baobuNotdelete"  >
+			  	<table class='Grid' >
+					<tr class="GridHeader" >
+				    	<td class="GridHeaderCell" colspan="3">Danh sách lớp học phần không được hủy</td>
+				   	</tr>
+			    	<tr class="GridHeader" >
+			    		<td class="GridHeaderCell"><b> STT</b></td>
+			    		<td class="GridHeaderCell"><b>Tên lớp học phần</b></td>
+						<td class="GridHeaderCell"><b>TKB</b></td>
+						<td class="GridHeaderCell"><b>Ngày nghỉ</b></td>
+						<td class="GridHeaderCell"><b>Số tiết</b></td>
+			    	</tr>
+			    </table>
 			</div>
 		</div>
 		<!-- -->	

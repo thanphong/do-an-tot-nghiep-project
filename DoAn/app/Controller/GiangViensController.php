@@ -213,5 +213,6 @@ class GiangViensController extends AppController{
 			$this->redirect(array( 'controller'=>'Giangviens','action' => 'baonghibaobu'));
 		}
 	}
+	
 }
 ?>
