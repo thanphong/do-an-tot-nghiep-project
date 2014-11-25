@@ -194,6 +194,11 @@ public class BaonghiActivity extends AbtractActivity {
 
 						startActivity(t);
 						break;
+					case stateSms:
+						t = new Intent(BaonghiActivity.this,
+								SmsActivity.class);
+						startActivity(t);
+						break;
 					default:
 						break;
 					}

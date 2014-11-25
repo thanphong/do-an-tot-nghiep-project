@@ -106,15 +106,16 @@ public class LoginActivity extends AbtractActivity {
 					if (account != null) {
 						mgv = account.getAccountId();
 						ten=account.getAccountName();
-						Toast.makeText(LoginActivity.this, "success",
+						Toast.makeText(LoginActivity.this, "Đăng nhập thành công!",
 								Toast.LENGTH_SHORT).show();
 						Intent t=new Intent(LoginActivity.this,MainActivity.class);
 						startActivity(t);
 						//showDialog(success);
-						// Log.d("username", account.getAccountName());
 					}
 					else{
-						showDialog(error);
+						Toast.makeText(LoginActivity.this, "Đăng nhập thất bại!",
+								Toast.LENGTH_SHORT).show();
+						//showDialog(error);
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block

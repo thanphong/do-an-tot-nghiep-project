@@ -18,7 +18,6 @@
             android:layout_marginLeft="3dp"
             android:layout_marginRight="3dp"
             android:layout_marginTop="30dp"
-            android:background="@drawable/my_custom_background"
             android:gravity="center"
             android:orientation="vertical" >
 
@@ -28,9 +27,9 @@
                 android:layout_margin="1dip"
                 android:background="@color/tieude"
                 android:gravity="center"
-                android:textSize="16dp"
                 android:text="ĐĂNG NHẬP"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+                android:textSize="16dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -38,7 +37,7 @@
                 android:layout_marginBottom="3dp"
                 android:layout_marginLeft="3dp"
                 android:layout_marginRight="3dp"
-                android:background="@android:color/white"
+                android:background="@drawable/background_text"
                 android:gravity="center"
                 android:orientation="vertical" >
 

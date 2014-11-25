@@ -9,6 +9,7 @@ import flexjson.JSONSerializer;
 
 public class LichbaobuJson {
 	private int id;
+	private int idphong;
 	private int lichnghi;
 	private int sotietbu;
 	private int tietdau;
@@ -90,5 +91,17 @@ public class LichbaobuJson {
 	}
 	public static String toJsonArray(Collection<LichbaobuJson> collection) {
 		return new JSONSerializer().exclude("*.class").serialize(collection);
+	}
+	/**
+	 * @return the idphong
+	 */
+	public int getIdphong() {
+		return idphong;
+	}
+	/**
+	 * @param idphong the idphong to set
+	 */
+	public void setIdphong(int idphong) {
+		this.idphong = idphong;
 	}
 }

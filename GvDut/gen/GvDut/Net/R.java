@@ -34,23 +34,26 @@ public final class R {
         public static final int checked_2_24=0x7f020006;
         public static final int checkmark_24=0x7f020007;
         public static final int digital_sea_wide_wide=0x7f020008;
-        public static final int ic_drawer=0x7f020009;
-        public static final int ic_launcher=0x7f02000a;
-        public static final int icon_text_arrow=0x7f02000b;
-        public static final int list_status_button=0x7f02000c;
-        public static final int my_custom_background=0x7f02000d;
-        public static final int sea_dust_wide=0x7f02000e;
+        public static final int edit_text_design=0x7f020009;
+        public static final int ic_drawer=0x7f02000a;
+        public static final int ic_launcher=0x7f02000b;
+        public static final int icon_text_arrow=0x7f02000c;
+        public static final int list_status_button=0x7f02000d;
+        public static final int my_custom_background=0x7f02000e;
+        public static final int sea_dust_wide=0x7f02000f;
     }
     public static final class id {
-        public static final int TKbieu=0x7f0a0014;
+        public static final int TKbieu=0x7f0a0016;
         public static final int TKbieuBaobu=0x7f0a0005;
         public static final int TKbieuBaonghi=0x7f0a0007;
-        public static final int action_settings=0x7f0a0015;
+        public static final int action_settings=0x7f0a0017;
+        public static final int addr_edittext=0x7f0a0014;
         public static final int btbaobu=0x7f0a0006;
         public static final int btbaonghi=0x7f0a0008;
         public static final int btdangkybu=0x7f0a000d;
         public static final int btdkBu=0x7f0a000f;
         public static final int btlogin=0x7f0a0013;
+        public static final int btsms=0x7f0a0015;
         public static final int comfirm=0x7f0a0009;
         public static final int content_frame=0x7f0a0001;
         public static final int danhsachBaobu=0x7f0a000e;
@@ -78,9 +81,10 @@ public final class R {
         public static final int fragment_layout=0x7f030009;
         public static final int home_layout=0x7f03000a;
         public static final int login_layout=0x7f03000b;
-        public static final int stylesbutton=0x7f03000c;
-        public static final int textview_styles=0x7f03000d;
-        public static final int thoikhoabieu_layout=0x7f03000e;
+        public static final int sms_layout=0x7f03000c;
+        public static final int stylesbutton=0x7f03000d;
+        public static final int textview_styles=0x7f03000e;
+        public static final int thoikhoabieu_layout=0x7f03000f;
     }
     public static final class menu {
         public static final int main=0x7f090000;

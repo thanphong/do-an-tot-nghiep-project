@@ -29,6 +29,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import android.widget.TextView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -37,7 +38,6 @@ public class FormBaobuActivity extends AbtractActivity {
 
 	List<LichnghiJson> lichnghiJsons;
 	List<LichbaobuJson>lisLichbaobuJsons=new ArrayList<LichbaobuJson>();
-	//TableLayout tbdanhsachbaobu;
 	LinearLayout tbdanhsachbaobu;
 	Context context=this;
 	Button btbaou;
@@ -75,7 +75,30 @@ public class FormBaobuActivity extends AbtractActivity {
 				@Override
 				public void onClick(View v) {
 					// TODO Auto-generated method stub
-					
+					if(lisLichbaobuJsons.size()>0){
+						try {
+							final List<LichbaobuJson>lichbaobuJsons  = new AsyncTask<String, Void, List<LichbaobuJson>>() {
+								@Override
+								protected List<LichbaobuJson> doInBackground(String... params) {
+									// TODO Auto-generated method stub
+									return (List<LichbaobuJson>) GetDataJson.baoBu(mgv,lisLichbaobuJsons);
+								}
+							}.execute("").get();
+							if(lichbaobuJsons!=null){
+								Toast.makeText(FormBaobuActivity.this, "Báo dạy bù thành công!",
+										Toast.LENGTH_SHORT).show();
+								Intent t=new Intent(FormBaobuActivity.this,BaobuActivity.class);
+								startActivity(t);
+							}
+							else{
+								Toast.makeText(FormBaobuActivity.this, "Báo dạy bù thất bại!",
+										Toast.LENGTH_SHORT).show();
+							}
+						} catch (Exception e) {
+							e.printStackTrace();
+							// TODO: handle exception
+						}
+					}
 				}
 			});
 	}
