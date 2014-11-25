@@ -4,7 +4,7 @@ import java.util.List;
 
 import GvDut.services.GetDataJson;
 import GvDut.services.NewsJson;
-import android.content.Context;
+
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -12,8 +12,6 @@ import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
 import android.text.Html;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -145,6 +143,11 @@ public class MainActivity extends AbtractActivity {
 						t = new Intent(MainActivity.this,
 								BaobuActivity.class);
 						
+						startActivity(t);
+						break;
+					case stateSms:
+						t = new Intent(MainActivity.this,
+								SmsActivity.class);
 						startActivity(t);
 						break;
 					default:

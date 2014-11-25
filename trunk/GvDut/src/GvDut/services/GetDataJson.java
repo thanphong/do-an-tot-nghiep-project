@@ -1,14 +1,12 @@
 package GvDut.services;
 
-
 import java.net.URLDecoder;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
-
 
 import org.apache.http.client.ResponseHandler;
 
@@ -17,13 +15,10 @@ import org.apache.http.client.methods.HttpPost;
 
 import org.apache.http.entity.ByteArrayEntity;
 
-
 import org.apache.http.impl.client.BasicResponseHandler;
 import org.apache.http.impl.client.DefaultHttpClient;
 
-
 import org.apache.http.util.EntityUtils;
-
 
 import android.util.Log;
 
@@ -47,38 +42,31 @@ public class GetDataJson {
 			a.setPass(pass);
 			post.setHeader("Accept", "application/json");
 			post.setHeader("Content-type", "application/json; charset=utf-8");
-			String json=a.toJson();
-			
+			String json = a.toJson();
+
 			post.setEntity(new ByteArrayEntity(json.getBytes("UTF8")));
 			post.setHeader("json", json);
 			HttpResponse httpResponse = httpclient.execute(post);
-			// Header[] headers = httpResponse.getAllHeaders();
-			// for (int i = 0; i < headers.length; i++) {
-			// Header h = headers[i];
-			// if (h.getName().equals("Set-Cookie"))
-			// sessionCookie = h.getValue();
-			// Log.d("Header Value: ", h.getValue());
-			// }
-			
 			HttpEntity entity1 = httpResponse.getEntity();
 			String s = EntityUtils.toString(entity1);
 			Log.d("dee", s);
-			return AccountJson.fromJsonToObject(URLDecoder.decode(s,"UTF-8"));
+			return AccountJson.fromJsonToObject(URLDecoder.decode(s, "UTF-8"));
 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			return null;
 		}
 	}
-	public static String getTest(int id) {	
+
+	public static String getTest(int id) {
 		// oracle = new URL("http://10.0.2.2:8080/vnbus/ss/ss");
 		try {
-			String Url= sURL + "/test/"+id;
+			String Url = sURL + "/test/" + id;
 			DefaultHttpClient Client = new DefaultHttpClient();
 			HttpGet httpget = new HttpGet(Url);
 			httpget.setHeader("Accept", "application/json");
 			httpget.setHeader("Content-type", "application/json; charset=utf-8");
-			//httpget.setHeader("Cookie", sessionCookie);
+			// httpget.setHeader("Cookie", sessionCookie);
 
 			ResponseHandler<String> responseHandler = new BasicResponseHandler();
 			String SetServerString = Client.execute(httpget, responseHandler);
@@ -97,12 +85,12 @@ public class GetDataJson {
 	public static Collection<NewsJson> getListNews() {
 		// TODO Auto-generated method stub
 		try {
-			String Url= sURL + "/getNews/";
+			String Url = sURL + "/getNews/";
 			DefaultHttpClient Client = new DefaultHttpClient();
 			HttpGet httpget = new HttpGet(Url);
 			httpget.setHeader("Accept", "application/json");
 			httpget.setHeader("Content-type", "application/json; charset=utf-8");
-			//httpget.setHeader("Cookie", sessionCookie);
+			// httpget.setHeader("Cookie", sessionCookie);
 
 			ResponseHandler<String> responseHandler = new BasicResponseHandler();
 			String SetServerString = Client.execute(httpget, responseHandler);
@@ -115,20 +103,22 @@ public class GetDataJson {
 		}
 		return null;
 	}
+
 	public static List<TkbieuJson> getThoikhoabieu(int mgv) {
 		// TODO Auto-generated method stub
 		try {
-			String Url= sURL + "/getTkbieu/"+mgv;
+			String Url = sURL + "/getTkbieu/" + mgv;
 			DefaultHttpClient Client = new DefaultHttpClient();
 			HttpGet httpget = new HttpGet(Url);
 			httpget.setHeader("Accept", "application/json");
 			httpget.setHeader("Content-type", "application/json; charset=utf-8");
-			//httpget.setHeader("Cookie", sessionCookie);
+			// httpget.setHeader("Cookie", sessionCookie);
 
 			ResponseHandler<String> responseHandler = new BasicResponseHandler();
 			String SetServerString = Client.execute(httpget, responseHandler);
 			Log.d("a", SetServerString);
-			return (List<TkbieuJson>) TkbieuJson.fromJsonArrayToObject(SetServerString);
+			return (List<TkbieuJson>) TkbieuJson
+					.fromJsonArrayToObject(SetServerString);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			Log.d("err", e.toString());
@@ -136,11 +126,12 @@ public class GetDataJson {
 		}
 		return null;
 	}
+
 	public static List<TkbieuJson> baongi(int mgv, List<TkbieuJson> tkbieuJsons) {
 		// TODO Auto-generated method stub
 		try {
-			String Url= sURL + "/baonghi/"+mgv;
-			String json=TkbieuJson.toJsonArray(tkbieuJsons);
+			String Url = sURL + "/baonghi/" + mgv;
+			String json = TkbieuJson.toJsonArray(tkbieuJsons);
 			DefaultHttpClient httpclient = new DefaultHttpClient();
 			HttpPost post = new HttpPost(Url);
 			post.setHeader("Accept", "application/json");
@@ -159,20 +150,22 @@ public class GetDataJson {
 		}
 		return null;
 	}
+
 	public static List<TkbBaonghiJson> getLichnghi(int mgv) {
 		// TODO Auto-generated method stub
 		try {
-			String Url= sURL + "/getLichnghi/"+mgv;
+			String Url = sURL + "/getLichnghi/" + mgv;
 			DefaultHttpClient Client = new DefaultHttpClient();
 			HttpGet httpget = new HttpGet(Url);
 			httpget.setHeader("Accept", "application/json");
 			httpget.setHeader("Content-type", "application/json; charset=utf-8");
-			//httpget.setHeader("Cookie", sessionCookie);
+			// httpget.setHeader("Cookie", sessionCookie);
 
 			ResponseHandler<String> responseHandler = new BasicResponseHandler();
 			String SetServerString = Client.execute(httpget, responseHandler);
 			Log.d("a", SetServerString);
-			return (List<TkbBaonghiJson>) TkbBaonghiJson.fromJsonArrayToObject(SetServerString);
+			return (List<TkbBaonghiJson>) TkbBaonghiJson
+					.fromJsonArrayToObject(SetServerString);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			Log.d("err", e.toString());
@@ -180,11 +173,12 @@ public class GetDataJson {
 		}
 		return null;
 	}
-	public static List<PhongJson> getPhongs(int mgv,LichbaobuJson lichbaobuJson) {
+
+	public static List<PhongJson> getPhongs(int mgv, LichbaobuJson lichbaobuJson) {
 		// TODO Auto-generated method stub
 		try {
-			String Url= sURL + "/getPhong/"+mgv;
-			String json=lichbaobuJson.toJson();
+			String Url = sURL + "/getPhong/" + mgv;
+			String json = lichbaobuJson.toJson();
 			DefaultHttpClient httpclient = new DefaultHttpClient();
 			HttpPost post = new HttpPost(Url);
 			post.setHeader("Accept", "application/json");
@@ -199,6 +193,51 @@ public class GetDataJson {
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			Log.d("err", e.toString());
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	public static List<LichbaobuJson> baoBu(int mgv,
+			List<LichbaobuJson> lisLichbaobuJsons) {
+		// TODO Auto-generated method stub
+		try {
+			String Url = sURL + "/baobu/" + mgv;
+			String json = LichbaobuJson.toJsonArray(lisLichbaobuJsons);
+			DefaultHttpClient httpclient = new DefaultHttpClient();
+			HttpPost post = new HttpPost(Url);
+			post.setHeader("Accept", "application/json");
+			post.setHeader("Content-type", "application/json; charset=utf-8");
+			post.setEntity(new ByteArrayEntity(json.getBytes("UTF8")));
+			post.setHeader("json", json);
+			HttpResponse httpResponse = httpclient.execute(post);
+			HttpEntity entity1 = httpResponse.getEntity();
+			String s = EntityUtils.toString(entity1);
+			Log.d("a", s);
+			return (List<LichbaobuJson>) LichbaobuJson.fromJsonArrayToObject(s);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	public static LichnghiJson sendsms(int mgv, String contents) {
+		// TODO Auto-generated method stub
+		try {
+			String Url = sURL + "/sendsms/" + mgv;
+			DefaultHttpClient httpclient = new DefaultHttpClient();
+			HttpPost post = new HttpPost(Url);
+			post.setHeader("Accept", "application/json");
+			post.setHeader("Content-type", "application/json; charset=utf-8");
+			post.setEntity(new ByteArrayEntity(contents.getBytes("UTF8")));
+			post.setHeader("json", contents);
+			HttpResponse httpResponse = httpclient.execute(post);
+			HttpEntity entity1 = httpResponse.getEntity();
+			String s = EntityUtils.toString(entity1);
+			Log.d("a", s);
+			List<LichnghiJson> lichnghiJsons=(List<LichnghiJson>)  LichnghiJson.fromJsonArrayToObject(s);
+			return lichnghiJsons.get(0);
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return null;

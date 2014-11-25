@@ -18,13 +18,16 @@ import android.widget.ListView;
 public abstract class AbtractActivity extends Activity {
 	static final int DATE_DIALOG_ID = 100;
 	static final int stateHome=0;
-	static final int stateThoiKhoabieu=1;
-	static final int stateXemphong=2;
-	static final int stateBaonghi=3;
-	static final int stateBaobu=4;
+	static final int stateThoiKhoabieu=stateHome+1;
+	static final int stateXemphong=stateThoiKhoabieu+1;
+	static final int stateBaonghi=stateXemphong+1;
+	static final int stateBaobu=stateBaonghi+1;
+	static final int stateSms=stateBaobu+1;
+	static final int stateDangnhap = stateSms+1;
+	
 	static final int success=0;
 	static final int error=-1;
-	static final int stateDangnhap = 5;
+	
 	DrawerLayout mDrawerLayout;
 	// ListView represents Navigation Drawer
 	ListView mDrawerList;

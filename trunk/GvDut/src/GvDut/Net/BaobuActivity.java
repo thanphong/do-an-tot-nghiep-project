@@ -26,6 +26,7 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TableRow;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.TableLayout;
 
@@ -63,15 +64,15 @@ public class BaobuActivity extends AbtractActivity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-//				List<LichbaobuJson>lichbaobuJsons=new ArrayList<LichbaobuJson>();
-//				for (LichnghiJson lichnghiJson : lichnghis) {
-//					LichbaobuJson lichbaobuJson=new LichbaobuJson();
-//					lichbaobuJson.setLichnghi(lichnghiJson.getId());
-//					lichbaobuJsons.add(lichbaobuJson);
-//				}
-				Intent t=new Intent(BaobuActivity.this,FormBaobuActivity.class);
-				t.putExtra("lichnghiJson",LichnghiJson.toJsonArray(lichnghis) );
-				startActivity(t);
+				if(lichnghis.size()>0){
+					Intent t=new Intent(BaobuActivity.this,FormBaobuActivity.class);
+					t.putExtra("lichnghiJson",LichnghiJson.toJsonArray(lichnghis) );
+					startActivity(t);
+				}
+				else{
+					Toast.makeText(BaobuActivity.this, "Bạn chưa chọn lớp học phần!",
+							Toast.LENGTH_SHORT).show();
+				}
 			}
 		});
 	}
@@ -159,6 +160,10 @@ public class BaobuActivity extends AbtractActivity {
 
 						startActivity(t);
 						break;
+					case stateSms:
+						t = new Intent(BaobuActivity.this,
+								SmsActivity.class);
+						startActivity(t);
 					default:
 						break;
 					}

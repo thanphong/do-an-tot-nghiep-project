@@ -34,6 +34,7 @@ public class DialogActivity extends DialogFragment {
 	public TkbieuJson tkbieuJson;
 	public LichbaobuJson lichbaobuJson;
 	public List<PhongJson>phongJsons;
+	public Dialog dialog;
 	private DatePickerDialog.OnDateSetListener datePickerListener = new DatePickerDialog.OnDateSetListener() {
 		// when dialog box is closed, below method will be called.
 		public void onDateSet(DatePicker view, int selectedYear,
@@ -54,16 +55,12 @@ public class DialogActivity extends DialogFragment {
 	@Override
 	public Dialog onCreateDialog(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
-		AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+		final AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 		// Get the layout inflater
 		LayoutInflater inflater = getActivity().getLayoutInflater();
 		View v;
-		final Dialog dialog;
 		switch (type) {
 		case 0:
-//			 builder = new AlertDialog.Builder(getActivity());
-//			// Get the layout inflater
-//			LayoutInflater inflater = getActivity().getLayoutInflater();
 			v = inflater.inflate(R.layout.comfirm_layout, null);
 			TextView txtAlert = (TextView) v.findViewById(R.id.comfirm);
 			txtAlert.setText(R.string.cofimbaonghi);
@@ -130,10 +127,12 @@ public class DialogActivity extends DialogFragment {
 					public void onClick(View v) {
 						// TODO Auto-generated method stub
 						depatureDate.setText(tvmaphong.getText().toString());
-						lichbaobuJson.setId(phong.getId());
+						lichbaobuJson.setIdphong(phong.getId());
+						dialog.dismiss();
 					}
 				});
 				danhsachphong.addView(tableRow);
+				i++;
 			}
 			builder.setView(v)
 					.setPositiveButton("Đóng",
@@ -154,5 +153,4 @@ public class DialogActivity extends DialogFragment {
 		return null;
 	}
 	//
-	
 }
