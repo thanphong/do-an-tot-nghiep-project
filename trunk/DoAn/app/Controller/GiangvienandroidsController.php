@@ -204,5 +204,46 @@ class GiangvienandroidsController extends AppController{
 		}
 		$this->set("phongs",$phongjson);
 	}
+	public function baobu($magv){
+		if($this->request->is("post")){
+			$date = date('Y-m-d');
+			$json = file_get_contents('php://input');
+			$obj = json_decode($json);
+			foreach ($obj as $item){
+				$lichbu=array();
+				$idtkb=$item->{'lichnghi'};
+				$ngaybu=html_entity_decode($item->{'ngayday'},ENT_QUOTES);
+				$tutiet=$item->{'tietdau'};
+				$dentiet=$item->{'tietcuoi'};
+				$maphong=$item->{'idphong'};
+				array_push($lichbu,array("malichnghi"=>$idtkb,"ngaydaybu"=>$ngaybu,"tutiet"=>$tutiet,"dentiet"=>$dentiet,"maphong"=>$maphong,"ngaybao"=>$date));
+				$this->Lichdaybu->saveAll($lichbu);
+			}
+			$this->set("data",$obj);
+		}
+	}
+	public function sendsms($mgv){
+		if($this->request->is("post")){
+			$date = date('Y-m-d');
+			$json = file_get_contents('php://input');
+			//$obj = json_decode($json);
+			
+			list($cp, $malhp, $ngayngi,$sotiet,$lydo)=split(" ",$json);
+			$lhp=$this->Lophocphan->find("first",array("conditions"=>array("Lophocphan.maLopHocPhan"=>$malhp)));
+			$lichgiangday=$this->Lichgiangday->find("first",array("conditions"=>array('Lichgiangday.magiangvien'=>$mgv,'Lichgiangday.malophocphan'=>$lhp['Lophocphan']['Id'])));
+			$idlichgiangday=$lichgiangday['Lichgiangday']['id'];
+			$lichnghi=array();
+			$lichnghi['maThoiKhoabieu']=$idlichgiangday;
+			$lichnghi['ngaynghi']=$ngayngi;
+			$lichnghi['soTiet']=$sotiet;
+			$lichnghi['ngaybaongi']=$date;
+			$lichnghi['lydo']=$lydo;
+			$this->Lichnghi->saveAll($lichnghi);
+			$lichnghiresult=$this->Lichnghi->find("first",array('conditions'=>array('Lichnghi.maThoiKhoabieu'=>$idlichgiangday,'Lichnghi.ngaynghi'=>$ngayngi)));
+			$lichnghijson=array();
+			array_push($lichnghijson,array("id"=>$lichnghiresult['Lichnghi']['id'],"ngayngi"=>$lichnghiresult['Lichnghi']['ngaynghi'],"sotiet"=>$lichnghiresult['Lichnghi']['soTiet']));
+			$this->set("data",$lichnghijson);
+		}
+	}
 }
 ?>
