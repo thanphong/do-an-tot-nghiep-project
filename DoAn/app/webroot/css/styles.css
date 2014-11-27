@@ -100,7 +100,6 @@ a:hover {
     -moz-border-radius: 5px 5px 5px 5px;
     border-radius: 5px 5px 5px 5px;*/
 	background-color: #c4eaff;
-	opacity: 0.9;
 	cursor: pointer;
 	border-radius:10px;
 
@@ -642,6 +641,14 @@ p{float:left;font:bold 13px Arial;margin:10px;color:#009933}
 .divIcon{margin:10px 0}
 .containTin{float:left;padding:5px 15px;clear:both}
 .containTin p{margin:0;font:normal 12px Arial;color:#333}
+
+.chitietkhoa span > span{clear:none;float:left;width:85%;margin:none}
+#registration_form{width:100%}
+#registration_form table{width:95%}
+.thaydoimatkhau{margin:10px 0 0}
+.thaydoimatkhau label{float:left;padding:0 5px}
+.thaydoimatkhau input{float:left;width:205px;margin-right:5px}
+#registration_form .cachbtleft{margin-left:400px}
 .chitietkhoa span > span{clear:none;float:left;width:85%;margin:none}
 .checkLhpBaongi, .checkLhpBaobu{
 	background: url('../img/image/check.png');

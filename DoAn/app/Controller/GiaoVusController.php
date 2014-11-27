@@ -308,6 +308,10 @@ class GiaoVusController extends AppController{
 	public function canhan() {
 		$this->redirect(array("controller"=>"Giangviens","action"=>'canhan'));
 	}
+	public function listNganh(){
+		$khoa=$this->request->data['khoa'];
+		$listnganh=$this->Nganh->find("all",array('conditions' => array('Nganh.Makhoa' =>$khoa),'recursive'=>-1));
+	}
 
 }
 
