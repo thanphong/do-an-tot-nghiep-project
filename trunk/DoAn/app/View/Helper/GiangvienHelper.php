@@ -99,15 +99,21 @@ class GiangvienHelper extends HtmlHelper{
 				</div></form></div>";
 		return $register;
 	}
-	function formThaydoiMatkhau(){
+	function formThaydoiMatkhau($success){
 		$register="";
 		$action="/DoAn/giangviens/thaydoimatkhau";
 		$register="<div class='contentmain'><h2>Thay đổi mật khẩu</h2>";
-		$register.="<form action='".$action."' method='POST' id='registration_form' name='Giangvien' class='left'><table>";
-		$register.="<tr><td><label for='register_name'>Mật khẩu cũ:</label></td><td><input type='password' name='oldMatkhau' value='' id='oldMatkhau' /><br><label for='checkpass' id='chekpass'></label></br></td>";
-		$register.="<td><label for='register_name'>Mật khẩu mới:</label></td><td><input type='password' name='newMatkhau' value='' id='newMatkhau' /></td>";
-		$register.="<td><label for='register_name'>Xác nhận mật khẩu:</label></td><td><input type='password' name='comfirmMatkhau' value='' id='comfirmMatkhau' /></td><td><input class='button2 sizebutton2' id='updatepas' type='button' value='Thay đổi mật khẩu' name='updatepass'/></td>";
-		$register.="</tr></table></form></div>";
+		if(isset($success)){$register.="<div class='left'><h3>Đổi mật khẩu thành công</h3></div>";}
+		$register.="<form action='".$action."' method='POST' id='registration_form' name='Giangvien' class='left'><div class='thaydoimatkhau left'>";
+		$register.="<div class='left'><label for='register_name'>Mật khẩu cũ</label><input type='password' name='oldMatkhau' value='' id='oldMatkhau' /><label for='checkpass' id='chekpass'></label></div>";
+		$register.="<div class='left'><label for='register_name'>Mật khẩu mới</label><input type='password' name='newMatkhau' value='' id='newMatkhau' /></div>";
+		$register.="<div class='left'><label for='register_name'>Xác nhận mật khẩu</label><input type='password' name='comfirmMatkhau' value='' id='comfirmMatkhau' /></div></div>";
+		$register.="";
+		$register.="<div class='left clear cachbtleft cachbt'> <input class='button2' id='updatepas' type='submit' value='Thay đổi mật khẩu' name='updatepass'/></div>";
+				
+		$register.="		</form></div>";
+		
+		
 		return $register;
 	}
 }

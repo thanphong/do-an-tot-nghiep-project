@@ -2,7 +2,7 @@
 class GiangViensController extends AppController{
 	var $name="GiangViens";
 	var $layout = "giangvien";
-	public $uses = array('Khuvuc','Phong','Hocki','Lichgiangday','Tuanhoc','Lophocphan','Giangvien','Thongbao','Lichnghi','Lichdaybu');
+	public $uses = array('Khuvuc','Phong','Hocki','Lichgiangday','Tuanhoc','Lophocphan','Giangvien','Thongbao','Lichnghi','Lichdaybu','User');
 	function beforeFilter(){
 		parent::beforeFilter();
 		$this->Auth->allow(array('index','BaongiDaybu'));
@@ -63,7 +63,15 @@ class GiangViensController extends AppController{
 		
 	}
 	public function thaydoimatkhau() {
-	
+		$this->request->data['newMatkhau'] = Security::hash($this->request->data['newMatkhau'],NULL,TRUE);	
+		if($this->request->is('post')){
+			$this->User->updateAll(array('User.matKhau' =>"'".$this->request->data('newMatkhau')."'")
+					,array('User.id' =>$this->Session->read('Auth.User.id')));
+			$this->set('success','success');
+			$this->redirect(array('controller' => 'giangviens', 'action' => 'canhan'));	
+		//	$this->render('canhan');
+		}
+		
 	}
 	public function kiemtramatkhau() {
 		$this->layout=null;
@@ -73,7 +81,6 @@ class GiangViensController extends AppController{
 			$this->set("data",$data);	
 		}
 	}
-
 	public function lichbaonghi() {
 		$this->layout=null;
 		$hocky=$this->request->data['hocky'];

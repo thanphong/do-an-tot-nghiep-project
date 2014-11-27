@@ -19,4 +19,26 @@ $(document).ready(function() {
 	myDatePicker.on("hide", function() {
 		statusGenerator("Date picker hide")
 	});
+	
+
+			$(".khoa").change(function()
+			{
+			var id=$(this).val();
+			var dataString = 'id='+ id;
+
+			$.ajax
+			({
+			type: "POST",
+			url:  "/DoAn/Giaovus/listNganh",
+			data: dataString,
+			cache: false,
+			success: function(html)
+			{
+			$(".nganh").html(html);
+			} 
+			});
+
+			});
+
+
 });
