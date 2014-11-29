@@ -654,3 +654,118 @@ p{float:left;font:bold 13px Arial;margin:10px;color:#009933}
 	background: url('../img/image/check.png');
 	background-repeat: no-repeat;
 }
+
+#tabs{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font: 12px/1.5em Arial,Helvetica,sans-serif;
+}
+
+#tabs li{
+  float: left;
+  margin: 0 .5em 0 0;
+  list-style:none;
+}
+
+#tabs a{
+  position: relative;
+  background: #ddd;
+  background-image: linear-gradient(to bottom,#fff,#ddd);  
+  padding: 7px 5px 7px 15px;
+  float: left;
+  text-decoration: none;
+  color: #444;
+  text-shadow: 0 1px 0 rgba(255,255,255,.8);
+  border-radius: 5px 0 0 0;
+  box-shadow: 0 2px 2px rgba(0,0,0,.4);
+    font-weight:bold;
+}
+
+#tabs a:hover,
+#tabs a:hover::after,
+#tabs a:focus,
+#tabs a:focus::after{
+  background: #fff;
+}
+
+#tabs a:focus{
+  outline: 0;
+}
+
+#tabs a::after{
+  content:'';
+  position:absolute;
+  z-index: 1;
+  top: 0;
+  right: -.5em;  
+  bottom: 0;
+  width: 1em;
+  background: #ddd;
+  background-image: linear-gradient(to bottom,#fff,#ddd);  
+  box-shadow: 2px 2px 2px rgba(0,0,0,.4);
+  transform: skew(10deg);
+  border-radius: 0 5px 0 0;  
+}
+
+#tabs #current a,
+#tabs #current a::after{
+  background: #fff;
+  z-index: 3;
+}
+
+#contenttab
+{
+    position: relative;
+    z-index: 2;	
+   border-top:3px solid #69dcff;
+}
+
+.blockcontent-body 
+{
+  /* box-shadow: 1px 2px 5px #000;*/
+   color: #3D3E3D;  
+   list-style: none;
+   padding-top: 5px;
+}
+.blockcontent-body ul,
+.blockcontent-body li, 
+.blockcontent-body a,
+.blockcontent-body a:link,
+.blockcontent-body a:visited,
+.blockcontent-body a:hover
+{
+   color: #3D3E3D;
+   margin: 5px 5px 5px 0;
+}
+.blockcontent-body a, .blockcontent-body a:link
+{
+   color: #0b508c;
+   text-decoration: none;
+}
+
+.blockcontent-body a:visited, .blockcontent-body a.visited
+{
+   color: #0b508c;
+   text-decoration: none;
+}
+
+.blockcontent-body a:hover, .blockcontent-body a.hover
+{
+   color: #FF8C00;
+   text-decoration: none;
+}
+
+.blockcontent-body ul li
+{
+   background-image:url(../img/images/blockcontentbullets.png);
+   line-height: 15px;
+   color: #3D3E3D;
+   margin:  0 0 0 5px;
+   padding: 0 0 0 7px;
+  list-style: none;
+   background-repeat: no-repeat;
+   background-position: top left;  
+}
+.blockcontent-body .nav{margin:0; padding: 0;}
