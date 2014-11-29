@@ -1,4 +1,3 @@
 <?php
-	 
-	echo $this->User->listnews($news);
+	echo $this->User->listnews($news,$newlhp);
 ?>

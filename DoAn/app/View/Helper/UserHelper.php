@@ -1,23 +1,42 @@
 <?php
 class UserHelper extends HtmlHelper  {
-	function listnews($lisnew){
+	function listnews($lisnew,$listnewlhp){
 		//$idtloai=1;//xemlai
-		$out="<div class='contentmain'>";
-		foreach ($lisnew as $item) {
-			//$id_tintuc= $item['Thongbao']['id'];
-			$tieude= $item['Thongbao']['tieude'];
-			$date= $item['Thongbao']['ngaydang'];
-			$noidung=$item['Thongbao']['noidung'];
-			$d = getdate(strtotime($date));
-			$ngay= $d['mday'].'/'.$d['mon'].'/'.$d['year'];
-			$out.="<div class='left'>";
-			$out.="<div class='left' style='padding:2px 5px;'>";
-			$out.="<b><span style='color: red;font-size:13.0pt;line-height:100%;font-family:times new roman,serif'>".$ngay.":</span></b>";
-			$out.="&nbsp;&nbsp;&nbsp;&nbsp;";
-			$out.="<span style='color:#009900;font-size:13.0pt;line-height:100%;font-family:times new roman,serif'>".$tieude."</span></div>";
-			$out.="<div class='containTin'>".$noidung."</div></div>";			
-		}
-		$out.="</div>";
+		$out="<div class='div-text'><ul id='tabs'><li><a href='#' name='tab1'>Thông báo chung</a></li>";
+		$out.="<li><a href='#' name='tab2'>Thông báo lớp học phần</a></li></ul>";
+		$out.="<div class='contentmain' id='contenttab'>";		
+			$out.="<div id='tab1' class='blockcontent-body'>";
+			foreach ($lisnew as $item) {
+				//$id_tintuc= $item['Thongbao']['id'];
+				$tieude= $item['Thongbao']['tieude'];
+				$date= $item['Thongbao']['ngaydang'];
+				$noidung=$item['Thongbao']['noidung'];
+				$d = getdate(strtotime($date));
+				$ngay= $d['mday'].'/'.$d['mon'].'/'.$d['year'];
+				$out.="<span class='left'>";
+				$out.="<span class='left' style='padding:2px 5px;'>";
+				$out.="<b><span style='color: red;font-size:13.0pt;line-height:100%;font-family:times new roman,serif'>".$ngay.":</span></b>";
+				$out.="&nbsp;&nbsp;&nbsp;&nbsp;";
+				$out.="<span style='color:#009900;font-size:13.0pt;line-height:100%;font-family:times new roman,serif'>".$tieude."</span></span>";
+				$out.="<span class='containTin'>".$noidung."</span></span>";			
+			}
+			$out.="</div>";
+			$out.="<div id='tab2' class='blockcontent-body'";
+			foreach ($listnewlhp as $item) {
+				//$id_tintuc= $item['Thongbao']['id'];
+				$tieude= $item['Thongbao']['tieude'];
+				$date= $item['Thongbao']['ngaydang'];
+				$noidung=$item['Thongbao']['noidung'];
+				$d = getdate(strtotime($date));
+				$ngay= $d['mday'].'/'.$d['mon'].'/'.$d['year'];
+				$out.="<span class='left'>";
+				$out.="<span class='left' style='padding:2px 5px;'>";
+				$out.="<b><span style='color: red;font-size:13.0pt;line-height:100%;font-family:times new roman,serif'>".$ngay.":</span></b>";
+				$out.="&nbsp;&nbsp;&nbsp;&nbsp;";
+				$out.="<span style='color:#009900;font-size:13.0pt;line-height:100%;font-family:times new roman,serif'>".$tieude."</span></span>";
+				$out.="<span class='containTin'>".$noidung."</span></span>";
+			}
+			$out.="</div></div>";
 		return $out;
 	}
 	function tinlienquan($lisnews){

@@ -33,8 +33,11 @@ class UsersController extends AppController {
 	}
 
 	public function index() {
-		$news=$this->Thongbao->find("all",array( 'order' => array('Thongbao.ngaydang DESC'),'limit' => 10));
+		$news=$this->Thongbao->find("all",array('conditions' => array('Thongbao.loaithongbao' => 1), 'order' => array('Thongbao.ngaydang DESC'),'limit' => 10));
 		$this->set("news",$news);
+		//thong bao lop hoc phan
+		$newlhp=$this->Thongbao->find('all',array('conditions'=>array('Thongbao.loaithongbao'=>2),'order'=>array('Thongbao.ngaydang DESC'),'limit'=>10));
+		$this->set("newlhp",$newlhp);
 		//print_r($this->User->find('first', array('conditions' => array('User.id' => 45))));
 		//print_r($this->Auth->user());
 		//print_r(AuthComponent::password("123"));
