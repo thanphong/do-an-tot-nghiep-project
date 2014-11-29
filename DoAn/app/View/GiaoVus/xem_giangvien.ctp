@@ -17,8 +17,8 @@
 
 		
 	<div class="left clear divIcon">
-		<a class="icback" href="/DoAn/Giaovus/quanlyGiangVien" title="Quay lại"></a>
-		<a class="icedit" href="/DoAn/Giaovus/suaGiangvien/<?php echo $data['Giangvien']['id'];?>" title="Sửa"></a>
-		<a class="icdelete" href="/DoAn/Giaovus/xoaGiangvien/<?php echo $data['Giangvien']['id'];?>" title="Xóa"></a>
+		<a class="icback" href="/DoAn/GiaoVus/quanlyGiangVien" title="Quay lại"></a>
+		<a class="icedit" href="/DoAn/GiaoVus/suaGiangvien/<?php echo $data['Giangvien']['id'];?>" title="Sửa"></a>
+		<a class="icdelete" href="/DoAn/GiaoVus/xoaGiangvien/<?php echo $data['Giangvien']['id'];?>" title="Xóa"></a>
 	</div>
 </div>

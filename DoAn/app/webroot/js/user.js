@@ -96,7 +96,7 @@ $(document)
 
 					}
 					function chonphong(e) {
-						alert(e.className);
+						
 					}
 					function thaydoimauchon(e){
 						if(e.className!='busy'){

@@ -7,10 +7,7 @@ class GiaoVusController extends AppController{
 		parent::beforeFilter();
 		$this->Auth->allow('quanlyGiangVien','themGiangvien','index');
 		if(!$this->isGiaovu()){
-			if(!$this->isGiangvien())
 				$this->redirect(array( 'controller'=>'Users','action' => 'index'));
-			else
-				$this->redirect(array( 'controller'=>'Giangviens','action' => 'index'));
 		}
 	}
 	function index(){
@@ -158,7 +155,7 @@ class GiaoVusController extends AppController{
 		if($this->request->is("post")){
 			$this->Hocphan->updateAll(array('Hocphan.tenhocphan' =>"'".$this->request->data('tenhocphan')."'",'Hocphan.trangthai'=>$this->request->data('trangthai'),
 					'Hocphan.mota'=>"'".$this->request->data('mota')."'"),array('Hocphan.id' => $id));
-			$this->redirect(array('controller' => 'giaovus', 'action' => 'themMoiHocphan'));
+			$this->redirect(array('controller' => 'GiaoVus', 'action' => 'themMoiHocphan'));
 		}
 		else{
 			$hocphan=$this->Hocphan->find("first",array('conditions' => array('Hocphan.id' => $id)));
@@ -169,7 +166,7 @@ class GiaoVusController extends AppController{
 	}
 	public function xoaHocphan($id) {
 		$this->Hocphan->deleteAll(array('Hocphan.id'=>$id));
-		$this->redirect(array('controller' => 'giaovus', 'action' => 'themMoiHocphan'));
+		$this->redirect(array('controller' => 'GiaoVus', 'action' => 'themMoiHocphan'));
 	}
 
 	//quản lý phòng
@@ -302,11 +299,11 @@ class GiaoVusController extends AppController{
 	}
 	public function xoaThongbao($id) {
 		$this->Thongbao->deleteAll(array('Thongbao.id'=>$id));
-		$this->redirect(array('controller' => 'giaovus', 'action' => 'quanlyThongbao'));
+		$this->redirect(array('controller' => 'GiaoVus', 'action' => 'quanlyThongbao'));
 	}
 		//
 	public function canhan() {
-		$this->redirect(array("controller"=>"Giangviens","action"=>'canhan'));
+		$this->redirect(array("controller"=>"GiangViens","action"=>'canhan'));
 	}
 	public function listNganh(){
 		$khoa=$this->request->data['khoa'];

@@ -35,7 +35,6 @@ class HtmlHelper extends AppHelper {
 	public $Hocvis=array("Ts"=>"Ti?n si","Ths"=>"Th?c si","Ks"=>"K? su");
 	public $Hochams=array("GS"=>"Giáo su","PGS"=>"Phó giáo su");
 	
-
 	/**
 	 * Reference to the Response object
 	 *

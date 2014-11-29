@@ -34,9 +34,9 @@ class AppController extends Controller {
 	var $helpers = array("Form","Html","Common","User","Userform","Giangvien","Js","Paginator","Session");
 	var $layout = null;
 	var $components = array('Session','Auth' => array(
-		'loginAction'=>array('controller' => 'Users', 'action' => 'login'),
-        'loginRedirect' => array('controller' => 'Users', 'action' => 'index'),
-        'logoutRedirect' => array('controller' => 'Users', 'action' => 'index'),
+		'loginAction'=>array('Controller' => 'Users', 'action' => 'login'),
+        'loginRedirect' => array('Controller' => 'Users', 'action' => 'index'),
+        'logoutRedirect' => array('Controller' => 'Users', 'action' => 'index'),
         'authError' => 'You must be logged in to view this page.',
         'loginError' => 'Invalid Username or Password entered, please try again.',
 		'authenticate' => array( 'Form' => array('userModel' => 'User',
@@ -47,8 +47,9 @@ class AppController extends Controller {
 	var $numberpageStep=3;
 	// only allow the login controllers only
 	public function beforeFilter() {
-		$this->Auth->actionPath = 'controllers/';
-		$this->Auth->authorize = 'controller';
+		$this->Auth->authorize = 'Controller';
+		$this->Auth->actionPath = 'Controllers/';
+		$this->Auth->authorize = 'Controller';
 	}
 	
 	public function isAuthorized($user) {

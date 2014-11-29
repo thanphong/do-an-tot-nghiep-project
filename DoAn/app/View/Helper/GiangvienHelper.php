@@ -1,19 +1,18 @@
 <?php
 class GiangvienHelper extends HtmlHelper{
-	
 	function create_menu($username){
-		$menu="<ul class='nav'><li class='highlight'>".$this->link('Thông báo',array('controller' => 'users','action' => 'index','full_base' => true))."</li>";
-		$menu.="<li class=''>".$this->link('Lớp học phần',array('controller' => 'users','action' => '','full_base' => true))."</li>";
-		$menu.="<li class=''>".$this->link('Phòng học',array('controller' => 'users','action' => 'xemPhonghoc','full_base' => true))."</li>";
-		$menu.="<li class=''>".$this->link('Quản lý',array('controller' => 'users','action' => 'index','full_base' => true));
-		$menu.="<ul><li>".$this->link("Báo ngỉ-Báo bù",array('controller' => 'Giangviens','action' => 'baonghibaobu','full_base' => true))."</li>";
+		$menu="<ul class='nav'><li class='highlight'>".$this->link('Thông báo',array('controller' => 'Users','action' => 'index','full_base' => true))."</li>";
+		$menu.="<li class=''>".$this->link('Lớp học phần',array('controller' => 'Users','action' => '','full_base' => true))."</li>";
+		$menu.="<li class=''>".$this->link('Phòng học',array('controller' => 'Users','action' => 'xemPhonghoc','full_base' => true))."</li>";
+		$menu.="<li class=''>".$this->link('Quản lý',array('controller' => 'Users','action' => 'index','full_base' => true));
+		$menu.="<ul><li>".$this->link("Báo ngỉ-Báo bù",array('controller' => 'GiangViens','action' => 'baonghibaobu','full_base' => true))."</li>";
 		$menu.="</ul></li>";
-		$menu.="<li class=''>".$this->link('Trợ giúp',array('controller' => 'users','action' => 'index','full_base' => true));
-		$menu.="<ul><li>".$this->link("Cá nhân",array('controller' => 'users','action' => 'formConsulting','full_base' => true))."</li>";
-		$menu.="<li>".$this->link("quản lý",array('controller' => 'users','action' => 'index','full_base' => true))."</li>";
-		$menu.="<li>".$this->link("Tài liệu biểu mẫu",array('controller' => 'users','action' => 'index','full_base' => true))."</li></ul></li>";
-		$menu.="<li style='float:right'>".$this->link('Thoát',array('controller' => 'users','action' => 'logout','full_base' => true))."</li>";
-		$menu.="<li style='float:right'>".$this->link('Cá nhân',array('controller' => 'giangviens','action' => 'canhan','full_base' => true,$username))."</li>";
+		$menu.="<li class=''>".$this->link('Trợ giúp',array('controller' => 'Users','action' => 'index','full_base' => true));
+		$menu.="<ul><li>".$this->link("Cá nhân",array('controller' => 'Users','action' => 'formConsulting','full_base' => true))."</li>";
+		$menu.="<li>".$this->link("quản lý",array('controller' => 'Users','action' => 'index','full_base' => true))."</li>";
+		$menu.="<li>".$this->link("Tài liệu biểu mẫu",array('controller' => 'Users','action' => 'index','full_base' => true))."</li></ul></li>";
+		$menu.="<li style='float:right'>".$this->link('Thoát',array('controller' => 'Users','action' => 'logout','full_base' => true))."</li>";
+		$menu.="<li style='float:right'>".$this->link('Cá nhân',array('controller' => 'GiangViens','action' => 'canhan','full_base' => true,$username))."</li>";
 		$menu.="<span class='titlelog'>Xin chào: ".$username." <b class='line'>|</b></span>";
 		$menu.="</ul>";
 		return $menu;
@@ -25,6 +24,7 @@ class GiangvienHelper extends HtmlHelper{
 			$out.="<option value='".$item['Hocki']['id']."'>Học kỳ".$item['Hocki']['mahocky']." năm học ".$item['Hocki']['namhoc']."</option>";
 		}
 		$out.="</select>";
+		$out.="<input type='hidden' id='thoigianhoc'>";
 		$out.="<input class='button2 sizebutton2' id='btnbaonghi' type='button' value='Báo nghỉ' name='bn'/>";
 		$out.="<input class='button2 sizebutton2' id='btnbaobu' type='button' value='Báo bù' name='bn'/>";
 		$out.="<input class='button2 sizebutton2' id='btnhuybaonghi' type='button' value='Hủy báo nghỉ' name='bn'/>";
@@ -33,7 +33,7 @@ class GiangvienHelper extends HtmlHelper{
 	}
 	function formCanhan($user){
 	
-		$action="/DoAn/giangviens/Capnhapthongtin";
+		$action="/DoAn/GiangViens/Capnhapthongtin";
 		$selected="";
 		$register="<div class='contentmain'><h2>Thông tin cá nhân</h2>";
 		$register.="<form action='".$action."' method='POST' id='registration_form' name='Giangvien' class='left'><table>";
@@ -101,7 +101,7 @@ class GiangvienHelper extends HtmlHelper{
 	}
 	function formThaydoiMatkhau($success){
 		$register="";
-		$action="/DoAn/giangviens/thaydoimatkhau";
+		$action="/DoAn/GiangViens/thaydoimatkhau";
 		$register="<div class='contentmain'><h2>Thay đổi mật khẩu</h2>";
 		if(isset($success)){$register.="<div class='left'><h3>Đổi mật khẩu thành công</h3></div>";}
 		$register.="<form action='".$action."' method='POST' id='registration_form' name='Giangvien' class='left'><div class='thaydoimatkhau left'>";

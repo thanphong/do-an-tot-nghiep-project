@@ -3,13 +3,13 @@
 <head>
 </head>
 <body>
-	<?php echo $this->GiaoVu->creatFormKhoa((isset($khoa)?$khoa:null)); 
-		echo $this->GiaoVu->danhSachKhoa($data);
+	<?php echo $this->Giaovu->creatFormKhoa((isset($khoa)?$khoa:null)); 
+		echo $this->Giaovu->danhSachKhoa($data);
 	?>
 	<div class="clear"></div>
 	<div id="paging" class="right">
 	<?php 
-		    echo $this->Common->pagination("Giaovus","quanlyKhoa",$page,$pagebgin,$pageend,$numberrecord);
+		    echo $this->Common->pagination("GiaoVus","quanlyKhoa",$page,$pagebgin,$pageend,$numberrecord);
 	?>
     </div>
 	

@@ -18,14 +18,6 @@ class Giangvien extends AppModel{
 					'limit' => '',
 					'dependent'=> true
 			),
-			'Giangvienkhoa' => array(
-					'className' => 'Giangvienkhoa',
-					'foreignKey' => 'magiangvien',
-					'conditions' => '',
-					'order' => '',
-					'limit' => '',
-					'dependent'=> true
-			),
 			'Quyengiangvien' => array(
 					'className' => 'Quyengiangvien',
 					'foreignKey' => 'magiangvien',

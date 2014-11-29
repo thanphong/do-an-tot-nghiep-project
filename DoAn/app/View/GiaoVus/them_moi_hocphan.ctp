@@ -3,8 +3,8 @@
 <head>
 </head>
 <body>
-	<?php echo $this->GiaoVu->form_Hocphan((isset($hocphan)?$hocphan:null)); 
-		echo $this->GiaoVu->danhsachHocPhan($data);
+	<?php echo $this->Giaovu->form_Hocphan((isset($hocphan)?$hocphan:null)); 
+		echo $this->Giaovu->danhsachHocPhan($data);
 	?>
 	
 </body></html>

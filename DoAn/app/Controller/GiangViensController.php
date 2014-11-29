@@ -7,14 +7,14 @@ class GiangViensController extends AppController{
 		parent::beforeFilter();
 		$this->Auth->allow(array('index','BaongiDaybu'));
 		if(!$this->isGiangvien()&&!$this->isGiaovu()){
-			$this->redirect(array("controller"=>"Users",'action'=>'index'));
+			$this->redirect(array("Controller"=>"Users",'action'=>'index'));
 		}
 		if($this->isGiaovu()){
 			$layout="giaovu";
 		}
 	}
 	function index(){
-
+		$this->redirect(array("Controller"=>"Users",'action'=>'index'));
 	}
 	function view($id){
 		$data=$this->GiangVien->findTinbyId($id);
@@ -42,10 +42,18 @@ class GiangViensController extends AppController{
 		$idgv=$this->Session->read('Auth.User.Giangvien.id');
 		$this->set("hockys", $this->Hocki->find("all",array('recursive'=>-1)));
 	}
+	//
+	public function gethocky(){
+		$this->layout=null;
+		$hocky=$this->request->data['hocky'];
+		$hockys=$this->Hocki->find("first",array('conditions'=>array("Hocki.id"=>$hocky),'recursive'=>-1));
+		$this->set("hocky",$hockys);
+	}
 	//json
 	public function thoikhoabieu(){
 		$this->layout=null;
 		$hocky=$this->request->data['hocky'];
+		
 		$idgv=$this->Session->read('Auth.User.Giangvien.id');
 		$lichday=$this->Lichgiangday->find('all',array('conditions'=>array('Lichgiangday.mahocky'=>$hocky,'Lichgiangday.magiangvien'=>$idgv)));
 		for($i=0;$i<count($lichday);$i++){
@@ -114,9 +122,10 @@ class GiangViensController extends AppController{
 	//endjson
 	public function createbaonghi() {
 		if($this->request->is('post')){
+			
 			if(isset($this->request->data)){
 				$num=$this->request->data['numberLhp'];
-				$ngaybao=$this->request->data['ngaybao'];
+				$ngaybao=date('Y/m/d', time());
 				$lydo=$this->request->data['lydo'];
 				for ($i=1;$i<=$num;$i++){
 					$lichngi=array();
@@ -128,7 +137,7 @@ class GiangViensController extends AppController{
 				}
 			}
 		}
-		$this->redirect(array( 'controller'=>'Giangviens','action' => 'baonghibaobu'));
+		$this->redirect(array( 'controller'=>'GiangViens','action' => 'baonghibaobu'));
 	}
 	//
 	public function timphonghoc() {
@@ -184,7 +193,7 @@ class GiangViensController extends AppController{
 	public function createbaobu() {
 		if($this->request->is("post")){
 			$number=$this->request->data["numberLopbaobu"];
-			$ngaybao=$this->request->data['ngaybao'];
+			$ngaybao=date('Y/m/d', time());
 			for($i=1;$i<=$number;$i++){
 				$lichbu=array();
 				$iddkbu=$this->request->data['mabaobu'.$i];
@@ -196,7 +205,7 @@ class GiangViensController extends AppController{
 				$this->Lichdaybu->saveAll($lichbu);
 			}
 		}
-		$this->redirect(array( 'controller'=>'Giangviens','action' => 'baonghibaobu'));
+		$this->redirect(array( 'controller'=>'GiangViens','action' => 'baonghibaobu'));
 	}
 
 	//
@@ -207,7 +216,7 @@ class GiangViensController extends AppController{
 				$iddkbu=$this->request->data['mabaobu'.$i];
 				$this->Lichdaybu->deleteAll(array('Lichdaybu.id'=>$iddkbu));
 			}
-			$this->redirect(array( 'controller'=>'Giangviens','action' => 'baonghibaobu'));
+			$this->redirect(array( 'controller'=>'GiangViens','action' => 'baonghibaobu'));
 		}
 	}
 	public function huybaonghi() {
@@ -217,7 +226,7 @@ class GiangViensController extends AppController{
 				$iddkbu=$this->request->data['mabaonghi'.$i];
 				$this->Lichnghi->deleteAll(array('Lichnghi.id'=>$iddkbu));
 			}
-			$this->redirect(array( 'controller'=>'Giangviens','action' => 'baonghibaobu'));
+			$this->redirect(array( 'controller'=>'GiangViens','action' => 'baonghibaobu'));
 		}
 	}
 	
