@@ -64,17 +64,26 @@
  */
 class DATABASE_CONFIG {
 
-	public $default = array(
-			'datasource' => 'Database/Mysql',
-			'persistent' => false,
-			'host' => 'localhost',
-			'login' => 'root',
-			'password' => 'thanhthang',
-			'database' => 'doan',
-			'prefix' => '',
-			'encoding' => 'utf8',
-	);
-
+public $default = array(
+ 			'datasource' => 'Database/Mysql',
+ 			'persistent' => false,
+ 			'host' => 'localhost',
+ 			'login' => 'root',
+ 			'password' => 'thanhthang',
+ 			'database' => 'doan',
+ 			'prefix' => '',
+ 			'encoding' => 'utf8',
+ 	);
+//	public $default = array(
+//			'datasource' => 'Database/Mysql',
+//				'persistent' => false,
+//				'host' => 'mysql.hostinger.vn',
+//				'login' => 'u190911511_root',
+//				'password' => 'thanhthang',
+//				'database' => 'u190911511_doan',
+//				'prefix' => '',
+//				'encoding' => 'utf8',
+//		);
 	public $test = array(
 			'datasource' => 'Database/Mysql',
 			'persistent' => false,

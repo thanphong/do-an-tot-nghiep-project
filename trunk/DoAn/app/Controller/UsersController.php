@@ -22,7 +22,7 @@ class UsersController extends AppController {
 		}
 		//if already logged-in, redirect
 		if($this->Session->check('Auth.User')){
-			$this->redirect(array('controller'=>'Giangviens','action' => 'index'));
+			$this->redirect(array('controller'=>'GiangViens','action' => 'index'));
 		}
 		$this->redirect($this->Auth->redirect());
 	}

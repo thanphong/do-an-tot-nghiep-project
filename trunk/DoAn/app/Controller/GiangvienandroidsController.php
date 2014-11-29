@@ -2,7 +2,7 @@
 class GiangvienandroidsController extends AppController{
 	var $layout = null;
 	var $name="Gianvienadroids";
-	public $uses = array("Thongbao","Lichgiangday",'Hocki','Lophocphan','Phong','Lichnghi','Lichdaybu','Lichthi');
+	public $uses = array("Thongbao","Giangvien","Lichgiangday",'Hocki','Lophocphan','Phong','Lichnghi','Lichdaybu','Lichthi');
 	public function beforeFilter() {
 		parent::beforeFilter();
 		$this->Auth->allow();
@@ -227,7 +227,7 @@ class GiangvienandroidsController extends AppController{
 			$date = date('Y-m-d');
 			$json = file_get_contents('php://input');
 			//$obj = json_decode($json);
-			
+
 			list($cp, $malhp, $ngayngi,$sotiet,$lydo)=split(" ",$json);
 			$lhp=$this->Lophocphan->find("first",array("conditions"=>array("Lophocphan.maLopHocPhan"=>$malhp)));
 			$lichgiangday=$this->Lichgiangday->find("first",array("conditions"=>array('Lichgiangday.magiangvien'=>$mgv,'Lichgiangday.malophocphan'=>$lhp['Lophocphan']['Id'])));
@@ -243,6 +243,48 @@ class GiangvienandroidsController extends AppController{
 			$lichnghijson=array();
 			array_push($lichnghijson,array("id"=>$lichnghiresult['Lichnghi']['id'],"ngayngi"=>$lichnghiresult['Lichnghi']['ngaynghi'],"sotiet"=>$lichnghiresult['Lichnghi']['soTiet']));
 			$this->set("data",$lichnghijson);
+		}
+	}
+	public function sms($phonenumber){
+		if($this->request->is("post")){
+			$smsJson=array();
+			$date = date('Y-m-d');
+			$json = file_get_contents('php://input');
+			$content="";
+			
+			$cp=split(" ",$json)[0];
+			if(strcasecmp ($cp,"HD")==0 ){
+				$content.="Soạn tin theo cú pháp:HD gởi đến 01649568431 để xem hướng dẫn.";
+				$content.="Soạn tin theo cú pháp:BN <mã lớp học phần> <ngày nghỉ> <số tiết nghỉ> <mã lý do> gởi đến 01649568431 để đăng ký báo nghỉ.";
+				array_push($smsJson,array("phonenumber"=>$phonenumber,"content"=>$content));
+			}
+			else{
+				if(strcasecmp ($cp,"BN")==0){
+					list($cp, $malhp, $ngayngi,$sotiet,$lydo)=split(" ",$json);
+					$giangvien=$this->Giangvien->find("first",array("conditions"=>array("Giangvien.sodienthoai"=>$phonenumber)));
+					$lhp=$this->Lophocphan->find("first",array("conditions"=>array("Lophocphan.maLopHocPhan"=>$malhp)));
+					$lichgianday=$this->Lichgiangday->find("first",array("Lichgiangday.magiangvien"=>$giangvien['Giangvien']['id'],'Lichgiangday.malophocphan'=>$lhp['Lophocphan']['Id']));
+					$idlichgiangday=$lichgianday['Lichgiangday']['id'];
+					$lichnghi=array();
+					$lichnghi['maThoiKhoabieu']=$idlichgiangday;
+					$lichnghi['ngaynghi']=$ngayngi;
+					$lichnghi['soTiet']=$sotiet;
+					$lichnghi['ngaybaongi']=$date;
+					$lichnghi['lydo']=$lydo;
+					$this->Lichnghi->saveAll($lichnghi);
+					$lichnghiresult=$this->Lichnghi->find("first",array('conditions'=>array('Lichnghi.maThoiKhoabieu'=>$idlichgiangday,'Lichnghi.ngaynghi'=>$ngayngi)));
+					if(isset($lichnghiresult)&& $lichnghiresult!=null){
+						$content.="Đăng ký nghỉ thành công.Vui lòng đăng nhập website để kiểm tra thông tin.";
+						array_push($smsJson,array("phonenumber"=>$phonenumber,"content"=>$content));
+					}
+				}
+				else{
+					$content.="Tin nhắn sai cú pháp vui lòng soạn tin nhăn:HD gởi đến 01649568431 để xem hướng dẫn.";
+					array_push($smsJson,array("phonenumber"=>$phonenumber,"content"=>$content));
+				}
+				
+			}
+			$this->set("data",$smsJson);
 		}
 	}
 }

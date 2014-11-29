@@ -2,7 +2,7 @@
 	<div>
 		<?php
 		echo $this->Html->css(array("baongibu.css","dialog.css"));
-		echo $this->Html->script(array("gianvien_baongibaobu.js","css-pop.js","dialog.js"));
+		echo $this->Html->script(array("gianvien_baongibaobu.js","baonghi.js","baobu.js","css-pop.js","dialog.js"));
 		echo $this->Giangvien->formbaongidaybu($hockys);
 		?>
 	</div>
@@ -36,15 +36,15 @@
 	<!--POPUP-->    
 	    <div id="blanket" style="display:none;"></div>
 			<div id="popUpDiv" style="display:none;">
-				<form id="formDangkyngi" action="/DoAn/Giangviens/createbaonghi" method='POST'>
+				<form id="formDangkyngi" action="/DoAn/GiangViens/createbaonghi" method='POST'>
 				    <div class='contentpoup' id='contentpoup'>
 				    	<a class='right close' onclick="popup('popUpDiv')"></a>
 				    	<div class='headtt'><span class='note'></span><span>Danh sách báo nghỉ</span></div>
 				    	<table id="tableBaongi">
-				    		<tr>
+				    		<!--<tr>
 				    			<td><b>Ngày báo:</b></td>
 				    			<td><input style='width:300px' type='text' name='ngaybao' data-beatpicker='true' data-beatpicker-id="baongi" /></td>
-				    		</tr>
+				    		</tr>-->
 				    		<tr>
 				    			<td><b>Lý do:</b></td>
 				    			<td><input style='width:720px' type='text' name='lydo'></td>
@@ -77,17 +77,17 @@
 		</div>	
 	<!-- / POPUP-->
 		<div id="popupBaoBu" style="display:none;">
-			<form id="formDangkybu" action="/DoAn/Giangviens/createbaobu" method='POST'>
+			<form id="formDangkybu" action="/DoAn/GiangViens/createbaobu" method='POST'>
 			    <div class='contentpoup' id='contentpoupbaobu'>
 			    	<a class='right close' onclick="popup('popupBaoBu')"></a>
 			    	<div class='headtt'><span class='note'></span><span>Danh sách báo dạy bù</span></div>
 			  	
-			    	<table id="tableBaobu">
+			    	<!--<table id="tableBaobu">
 			    		<tr>
 			    			<td><b>Ngày báo:</b></td>
 			    			<td><input style='width:300px' type='text' name='ngaybao' data-beatpicker='true' data-beatpicker-id="baongi" /></td>
 			    		</tr>
-			    	</table>
+			    	</table>-->
 			    </div>
 			    <div class="cach"></div>
 			    <div class="clear">
@@ -128,7 +128,7 @@
 		</div>
 		<!--POPUP huy bao bu-->    
 		<div id="popUphuybaobu" style="display:none;">
-			<form id="formhuybaobu" action="/DoAn/Giangviens/huybaobu" method='POST'>
+			<form id="formhuybaobu" action="/DoAn/GiangViens/huybaobu" method='POST'>
 				    <div class='contentpoup' id='contentpoup'>
 				    	<a class='right close' onclick="popup('popUphuybaobu')"></a>
 				    	<div class='headtt'><span class='note'></span><span>Danh sách báo bù</span></div>
@@ -170,7 +170,7 @@
 		<!-- -->	
 		<!--POPUP huy bao nghi-->    
 		<div id="popUphuybaonghi" style="display:none;">
-			<form id="formhuybaonghi" action="/DoAn/Giangviens/huybaonghi" method='POST'>
+			<form id="formhuybaonghi" action="/DoAn/GiangViens/huybaonghi" method='POST'>
 				    <div class='contentpoup' id='contentpoup'>
 				    	<a class='right close' onclick="popup('popUphuybaonghi')"></a>
 				    	<div class='headtt'><span class='note'></span><span>Danh sách hủy báo nghỉ </span></div>
@@ -178,7 +178,7 @@
 				    <div class="clear">				    	
 					    <table id="danhsachhuybaonghi" class='Grid' style="border-collapse:collapse;">
 							<tr class="GridHeader">
-								<td colspan="5" class="GridHeaderCell"><b>Danh sách lớp báo bù</b></td>
+								<td colspan="5" class="GridHeaderCell"><b>Danh sách lớp báo nghỉ</b></td>
 							</tr>
 							<tr class="GridHeader">
 								<td class="GridHeaderCell"><b> STT</b></td>
