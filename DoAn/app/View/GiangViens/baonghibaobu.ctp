@@ -18,7 +18,7 @@
 				</tr>
 			</table>
 		</div>
-		<div class="baonghibu" style="margin-left:5px">
+		<div class="baonghibu" style="margin-left:15px">
 			<table id="danhsachbaongi" class='Grid' style="width:100%;border-collapse:collapse;">
 				<tr class="GridHeader">
 					<td colspan="6" class="GridHeaderCell"><b>Danh sách lớp báo nghỉ</b></td>

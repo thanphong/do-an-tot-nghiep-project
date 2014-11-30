@@ -2,7 +2,8 @@
 class UserHelper extends HtmlHelper  {
 	function listnews($lisnew,$listnewlhp){
 		//$idtloai=1;//xemlai
-		$out="<div class='div-text'><ul id='tabs'><li><a href='#' name='tab1'>Thông báo chung</a></li>";
+		$out="<input type='hidden' id='note' value='home'/>";
+		$out.="<div class='div-text'><ul id='tabs'><li><a href='#' name='tab1'>Thông báo chung</a></li>";
 		$out.="<li><a href='#' name='tab2'>Thông báo lớp học phần</a></li></ul>";
 		$out.="<div class='contentmain' id='contenttab'>";		
 			$out.="<div id='tab1' class='blockcontent-body'>";
@@ -58,8 +59,8 @@ class UserHelper extends HtmlHelper  {
 	}
 	//
 	function xemphonghoc($listGiangduong,$listTuan){
-		
-		$register="<table>";
+		$register="<input type='hidden' id='note' value='phonghoc'/>";
+		$register.="<table>";
 		$register.="<tr><td><b for='register_uername'>Giảng đường</b></td>";
 		$register.="<td><select name='' id='giangduong'>";
 		foreach($listGiangduong as $item){

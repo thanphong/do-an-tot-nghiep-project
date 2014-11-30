@@ -5,10 +5,10 @@ class GiaoVuHelper extends HtmlHelper{
 // 	var $Hochams=array("GS"=>"Giáo sư","PGS"=>"Phó giáo sư");
 	function create_menu($username){
 	
-		$menu="<ul class='nav'><li class='highlight'>".$this->link('Thông báo',array('controller' => 'Users','action' => 'index','full_base' => true))."</li>";
-		$menu.="<li class=''>".$this->link('Lớp học phần',array('controller' => 'Users','action' => '','full_base' => true))."</li>";
-		$menu.="<li class=''>".$this->link('Phòng học',array('controller' => 'Users','action' => 'xemPhonghoc','full_base' => true))."</li>";
-		$menu.="<li class=''><a href='#'>Quản lý</a>";
+		$menu="<ul class='nav'><li id='home' class='highlight'>".$this->link('Thông báo',array('controller' => 'Users','action' => 'index','full_base' => true))."</li>";
+		$menu.="<li id='lophocphan'>".$this->link('Lớp học phần',array('controller' => 'Users','action' => '','full_base' => true))."</li>";
+		$menu.="<li id='phonghoc'>".$this->link('Phòng học',array('controller' => 'Users','action' => 'xemPhonghoc','full_base' => true))."</li>";
+		$menu.="<li id='quanly'><a href='#'>Quản lý</a>";
 		$menu.="<ul><li>".$this->link("Quản lý học phần",array('controller' => 'GiaoVus','action' => 'quanlyHocphan','full_base' => true))."</li>";
 		$menu.="<li>".$this->link("Quản lý giảng viên",array('controller' => 'GiaoVus','action' => 'quanlyGiangVien','full_base' => true))."</li>";
 		$menu.="<li>".$this->link("Quản lý khoa",array('controller' => 'GiaoVus','action' => 'quanlyKhoa','full_base' => true))."</li>";
@@ -16,7 +16,7 @@ class GiaoVuHelper extends HtmlHelper{
 		$menu.="<li>".$this->link("Quản lý thông báo",array('controller' => 'GiaoVus','action' => 'quanlyThongbao','full_base' => true))."</li>";
 		$menu.="<li>".$this->link("Quản lý thiết bị",array('controller' => 'GiaoVus','action' => 'quanlyThietbi','full_base' => true))."</li></ul></li>";
 		$menu.="<li style='float:right'>".$this->link('Thoát',array('controller' => 'Users','action' => 'logout','full_base' => true))."</li>";
-		$menu.="<li style='float:right'>".$this->link('Cá nhân',array('controller' => 'GiaoVus','action' => 'canhan','full_base' => true,$username))."</li>";
+		$menu.="<li id='canhan' style='float:right'>".$this->link('Cá nhân',array('controller' => 'GiaoVus','action' => 'canhan','full_base' => true,$username))."</li>";
 		$menu.="<span class='titlelog'>Xin chào: ".$username."<b class='line'>|</b></span>";
 		$menu.="</ul>";
 		return $menu;

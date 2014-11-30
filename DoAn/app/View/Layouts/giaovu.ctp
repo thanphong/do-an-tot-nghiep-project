@@ -10,7 +10,7 @@
 			<!-- Include external files and scripts here (See HTML helper for more info.) -->
 		<?php
 			echo $this->Html->css(array("styles.css","BeatPicker.min.css","giaovu.css"));
-			echo $this->Html->script(array("datetimepicket/jquery-1.11.0.min.js","datetimepicket/BeatPicker.min.js","giaovu.js"));
+			echo $this->Html->script(array("datetimepicket/jquery-1.11.0.min.js","datetimepicket/BeatPicker.min.js","giaovu.js","general.js"));
 			echo $this->fetch('meta');
 			echo $this->fetch('css');
 			echo $this->fetch('script');
