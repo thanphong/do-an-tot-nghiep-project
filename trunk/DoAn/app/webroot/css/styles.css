@@ -679,7 +679,7 @@ p{float:left;font:bold 13px Arial;margin:10px;color:#009933}
   color: #444;
   text-shadow: 0 1px 0 rgba(255,255,255,.8);
   border-radius: 5px 0 0 0;
-  box-shadow: 0 2px 2px rgba(0,0,0,.4);
+ /*  box-shadow: 0 2px 2px rgba(0,0,0,.4);*/
     font-weight:bold;
 }
 
@@ -704,7 +704,7 @@ p{float:left;font:bold 13px Arial;margin:10px;color:#009933}
   width: 1em;
   background: #ddd;
   background-image: linear-gradient(to bottom,#fff,#ddd);  
-  box-shadow: 2px 2px 2px rgba(0,0,0,.4);
+ /* box-shadow: 2px 2px 2px rgba(0,0,0,.4);*/
   transform: skew(10deg);
   border-radius: 0 5px 0 0;  
 }
@@ -719,7 +719,7 @@ p{float:left;font:bold 13px Arial;margin:10px;color:#009933}
 {
     position: relative;
     z-index: 2;	
-   border-top:3px solid #69dcff;
+ /*   border-top:3px solid #69dcff;*/
 }
 
 .blockcontent-body 
