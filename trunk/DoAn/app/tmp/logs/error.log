@@ -22593,3 +22593,1888 @@ Request URL: /DoAn/img/images/logovn.pgn
 Stack Trace:
 #0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2014-11-29 11:06:58 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-29 11:25:30 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 04:54:57 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 04:55:11 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 05:09:08 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 05:11:38 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 05:13:43 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 05:15:19 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 05:15:35 Error: [MissingActionException] Action UsersController::icon.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'icon.png',
+)
+Request URL: /DoAn/users/icon.png
+Stack Trace:
+#0 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-11-30 05:15:37 Error: [MissingActionException] Action UsersController::formConsulting() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'formConsulting',
+)
+Request URL: /DoAn/users/formConsulting
+Stack Trace:
+#0 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-11-30 05:17:56 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 05:18:12 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 05:19:06 Error: [MissingActionException] Action UsersController::icon.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'icon.png',
+)
+Request URL: /DoAn/users/icon.png
+Stack Trace:
+#0 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-11-30 05:19:06 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 05:19:06 Error: [MissingActionException] Action UsersController::icon.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'icon.png',
+)
+Request URL: /DoAn/users/icon.png
+Stack Trace:
+#0 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-11-30 05:22:17 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 05:43:23 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 05:51:48 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 05:52:01 Error: [MissingTableException] Table lichthis for model Lichthi was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'lichthis',
+  'class' => 'Lichthi',
+  'ds' => 'default',
+)
+Request URL: /DoAn/GiangViens/thoikhoabieu
+Stack Trace:
+#0 D:\PHP\DoAn\lib\Cake\Model\Model.php(3551): Model->setSource('lichthis')
+#1 D:\PHP\DoAn\lib\Cake\Model\Model.php(1369): Model->getDataSource()
+#2 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(2495): Model->schema()
+#3 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(1732): DboSource->fields(Object(Lichthi), 'Lichthi', '')
+#4 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(1233): DboSource->generateAssociationQuery(Object(Lichgiangday), Object(Lichthi), 'hasMany', 'Lichthi', Array, Array, true)
+#5 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(1137): DboSource->queryAssociation(Object(Lichgiangday), Object(Lichthi), 'hasMany', 'Lichthi', Array, Array, true, Array, 0, Array)
+#6 D:\PHP\DoAn\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Lichgiangday), Array)
+#7 D:\PHP\DoAn\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#8 D:\PHP\DoAn\app\Controller\GiangViensController.php(58): Model->find('all', Array)
+#9 [internal function]: GiangViensController->thoikhoabieu()
+#10 D:\PHP\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GiangViensController), Array)
+#11 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiangViensController), Object(CakeRequest))
+#13 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-11-30 05:52:01 Error: [MissingViewException] View file "D:\PHP\DoAn\app\View\GiangViens\gethocky.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'D:\\PHP\\DoAn\\app\\View\\GiangViens\\gethocky.ctp',
+)
+Request URL: /DoAn/GiangViens/gethocky
+Stack Trace:
+#0 D:\PHP\DoAn\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 D:\PHP\DoAn\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiangViensController), Object(CakeRequest))
+#4 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-11-30 05:52:01 Error: [MissingActionException] Action GiangViensController::icon.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'GiangViensController',
+  'action' => 'icon.png',
+)
+Request URL: /DoAn/GiangViens/icon.png
+Stack Trace:
+#0 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiangViensController), Object(CakeRequest))
+#2 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-11-30 05:59:16 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 05:59:33 Error: [MissingActionException] Action UsersController::icon.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'icon.png',
+)
+Request URL: /DoAn/Users/icon.png
+Stack Trace:
+#0 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-11-30 05:59:33 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 05:59:33 Error: [MissingActionException] Action UsersController::icon.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'icon.png',
+)
+Request URL: /DoAn/Users/icon.png
+Stack Trace:
+#0 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-11-30 06:00:51 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 06:00:53 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 06:00:55 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 06:00:56 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 06:00:58 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 06:01:38 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 06:09:01 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 06:09:03 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 06:09:04 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 06:09:05 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 06:09:35 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 06:09:37 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 06:09:41 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 06:10:21 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 06:10:26 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 06:11:17 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 06:11:49 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 06:12:12 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 06:12:14 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 06:12:19 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 12:02:17 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 12:04:14 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 12:04:18 Error: [MissingActionException] Action GiangViensController::icon.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'GiangViensController',
+  'action' => 'icon.png',
+)
+Request URL: /DoAn/GiangViens/icon.png
+Stack Trace:
+#0 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiangViensController), Object(CakeRequest))
+#2 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-11-30 12:04:18 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 12:04:18 Error: [MissingActionException] Action GiangViensController::icon.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'GiangViensController',
+  'action' => 'icon.png',
+)
+Request URL: /DoAn/GiangViens/icon.png
+Stack Trace:
+#0 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiangViensController), Object(CakeRequest))
+#2 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-11-30 12:04:19 Error: [MissingViewException] View file "D:\PHP\DoAn\app\View\GiangViens\gethocky.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'D:\\PHP\\DoAn\\app\\View\\GiangViens\\gethocky.ctp',
+)
+Request URL: /DoAn/GiangViens/gethocky
+Stack Trace:
+#0 D:\PHP\DoAn\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 D:\PHP\DoAn\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiangViensController), Object(CakeRequest))
+#4 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-11-30 12:04:19 Error: [MissingTableException] Table lichthis for model Lichthi was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'lichthis',
+  'class' => 'Lichthi',
+  'ds' => 'default',
+)
+Request URL: /DoAn/GiangViens/thoikhoabieu
+Stack Trace:
+#0 D:\PHP\DoAn\lib\Cake\Model\Model.php(3551): Model->setSource('lichthis')
+#1 D:\PHP\DoAn\lib\Cake\Model\Model.php(1369): Model->getDataSource()
+#2 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(2495): Model->schema()
+#3 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(1732): DboSource->fields(Object(Lichthi), 'Lichthi', '')
+#4 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(1233): DboSource->generateAssociationQuery(Object(Lichgiangday), Object(Lichthi), 'hasMany', 'Lichthi', Array, Array, true)
+#5 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(1137): DboSource->queryAssociation(Object(Lichgiangday), Object(Lichthi), 'hasMany', 'Lichthi', Array, Array, true, Array, 0, Array)
+#6 D:\PHP\DoAn\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Lichgiangday), Array)
+#7 D:\PHP\DoAn\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#8 D:\PHP\DoAn\app\Controller\GiangViensController.php(58): Model->find('all', Array)
+#9 [internal function]: GiangViensController->thoikhoabieu()
+#10 D:\PHP\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GiangViensController), Array)
+#11 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiangViensController), Object(CakeRequest))
+#13 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-11-30 12:07:12 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 12:07:12 Error: [MissingTableException] Table lichthis for model Lichthi was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'lichthis',
+  'class' => 'Lichthi',
+  'ds' => 'default',
+)
+Request URL: /DoAn/GiangViens/thoikhoabieu
+Stack Trace:
+#0 D:\PHP\DoAn\lib\Cake\Model\Model.php(3551): Model->setSource('lichthis')
+#1 D:\PHP\DoAn\lib\Cake\Model\Model.php(1369): Model->getDataSource()
+#2 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(2495): Model->schema()
+#3 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(1732): DboSource->fields(Object(Lichthi), 'Lichthi', '')
+#4 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(1233): DboSource->generateAssociationQuery(Object(Lichgiangday), Object(Lichthi), 'hasMany', 'Lichthi', Array, Array, true)
+#5 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(1137): DboSource->queryAssociation(Object(Lichgiangday), Object(Lichthi), 'hasMany', 'Lichthi', Array, Array, true, Array, 0, Array)
+#6 D:\PHP\DoAn\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Lichgiangday), Array)
+#7 D:\PHP\DoAn\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#8 D:\PHP\DoAn\app\Controller\GiangViensController.php(58): Model->find('all', Array)
+#9 [internal function]: GiangViensController->thoikhoabieu()
+#10 D:\PHP\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GiangViensController), Array)
+#11 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiangViensController), Object(CakeRequest))
+#13 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-11-30 12:07:12 Error: [MissingViewException] View file "D:\PHP\DoAn\app\View\GiangViens\gethocky.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'D:\\PHP\\DoAn\\app\\View\\GiangViens\\gethocky.ctp',
+)
+Request URL: /DoAn/GiangViens/gethocky
+Stack Trace:
+#0 D:\PHP\DoAn\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 D:\PHP\DoAn\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiangViensController), Object(CakeRequest))
+#4 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-11-30 12:13:09 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 12:13:09 Error: [MissingTableException] Table lichthis for model Lichthi was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'lichthis',
+  'class' => 'Lichthi',
+  'ds' => 'default',
+)
+Request URL: /DoAn/GiangViens/thoikhoabieu
+Stack Trace:
+#0 D:\PHP\DoAn\lib\Cake\Model\Model.php(3551): Model->setSource('lichthis')
+#1 D:\PHP\DoAn\lib\Cake\Model\Model.php(1369): Model->getDataSource()
+#2 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(2495): Model->schema()
+#3 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(1732): DboSource->fields(Object(Lichthi), 'Lichthi', '')
+#4 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(1233): DboSource->generateAssociationQuery(Object(Lichgiangday), Object(Lichthi), 'hasMany', 'Lichthi', Array, Array, true)
+#5 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(1137): DboSource->queryAssociation(Object(Lichgiangday), Object(Lichthi), 'hasMany', 'Lichthi', Array, Array, true, Array, 0, Array)
+#6 D:\PHP\DoAn\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Lichgiangday), Array)
+#7 D:\PHP\DoAn\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#8 D:\PHP\DoAn\app\Controller\GiangViensController.php(58): Model->find('all', Array)
+#9 [internal function]: GiangViensController->thoikhoabieu()
+#10 D:\PHP\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GiangViensController), Array)
+#11 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiangViensController), Object(CakeRequest))
+#13 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-11-30 12:13:09 Error: [MissingViewException] View file "D:\PHP\DoAn\app\View\GiangViens\gethocky.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'D:\\PHP\\DoAn\\app\\View\\GiangViens\\gethocky.ctp',
+)
+Request URL: /DoAn/GiangViens/gethocky
+Stack Trace:
+#0 D:\PHP\DoAn\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 D:\PHP\DoAn\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiangViensController), Object(CakeRequest))
+#4 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-11-30 12:14:02 Error: [MissingActionException] Action UsersController::icon.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'icon.png',
+)
+Request URL: /DoAn/Users/icon.png
+Stack Trace:
+#0 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-11-30 12:14:06 Error: [MissingTableException] Table lichthis for model Lichthi was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'lichthis',
+  'class' => 'Lichthi',
+  'ds' => 'default',
+)
+Request URL: /DoAn/GiangViens/thoikhoabieu
+Stack Trace:
+#0 D:\PHP\DoAn\lib\Cake\Model\Model.php(3551): Model->setSource('lichthis')
+#1 D:\PHP\DoAn\lib\Cake\Model\Model.php(1369): Model->getDataSource()
+#2 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(2495): Model->schema()
+#3 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(1732): DboSource->fields(Object(Lichthi), 'Lichthi', '')
+#4 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(1233): DboSource->generateAssociationQuery(Object(Lichgiangday), Object(Lichthi), 'hasMany', 'Lichthi', Array, Array, true)
+#5 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(1137): DboSource->queryAssociation(Object(Lichgiangday), Object(Lichthi), 'hasMany', 'Lichthi', Array, Array, true, Array, 0, Array)
+#6 D:\PHP\DoAn\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Lichgiangday), Array)
+#7 D:\PHP\DoAn\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#8 D:\PHP\DoAn\app\Controller\GiangViensController.php(58): Model->find('all', Array)
+#9 [internal function]: GiangViensController->thoikhoabieu()
+#10 D:\PHP\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GiangViensController), Array)
+#11 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiangViensController), Object(CakeRequest))
+#13 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-11-30 12:14:06 Error: [MissingViewException] View file "D:\PHP\DoAn\app\View\GiangViens\gethocky.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'D:\\PHP\\DoAn\\app\\View\\GiangViens\\gethocky.ctp',
+)
+Request URL: /DoAn/GiangViens/gethocky
+Stack Trace:
+#0 D:\PHP\DoAn\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 D:\PHP\DoAn\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiangViensController), Object(CakeRequest))
+#4 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-11-30 12:14:32 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 12:14:32 Error: [MissingTableException] Table lichthis for model Lichthi was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'lichthis',
+  'class' => 'Lichthi',
+  'ds' => 'default',
+)
+Request URL: /DoAn/GiangViens/thoikhoabieu
+Stack Trace:
+#0 D:\PHP\DoAn\lib\Cake\Model\Model.php(3551): Model->setSource('lichthis')
+#1 D:\PHP\DoAn\lib\Cake\Model\Model.php(1369): Model->getDataSource()
+#2 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(2495): Model->schema()
+#3 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(1732): DboSource->fields(Object(Lichthi), 'Lichthi', '')
+#4 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(1233): DboSource->generateAssociationQuery(Object(Lichgiangday), Object(Lichthi), 'hasMany', 'Lichthi', Array, Array, true)
+#5 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(1137): DboSource->queryAssociation(Object(Lichgiangday), Object(Lichthi), 'hasMany', 'Lichthi', Array, Array, true, Array, 0, Array)
+#6 D:\PHP\DoAn\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Lichgiangday), Array)
+#7 D:\PHP\DoAn\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#8 D:\PHP\DoAn\app\Controller\GiangViensController.php(58): Model->find('all', Array)
+#9 [internal function]: GiangViensController->thoikhoabieu()
+#10 D:\PHP\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GiangViensController), Array)
+#11 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiangViensController), Object(CakeRequest))
+#13 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-11-30 12:14:32 Error: [MissingViewException] View file "D:\PHP\DoAn\app\View\GiangViens\gethocky.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'D:\\PHP\\DoAn\\app\\View\\GiangViens\\gethocky.ctp',
+)
+Request URL: /DoAn/GiangViens/gethocky
+Stack Trace:
+#0 D:\PHP\DoAn\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 D:\PHP\DoAn\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiangViensController), Object(CakeRequest))
+#4 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-11-30 12:16:54 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 12:16:54 Error: [MissingViewException] View file "D:\PHP\DoAn\app\View\GiangViens\gethocky.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'D:\\PHP\\DoAn\\app\\View\\GiangViens\\gethocky.ctp',
+)
+Request URL: /DoAn/GiangViens/gethocky
+Stack Trace:
+#0 D:\PHP\DoAn\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 D:\PHP\DoAn\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiangViensController), Object(CakeRequest))
+#4 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-11-30 12:16:54 Error: [MissingTableException] Table lichthis for model Lichthi was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'lichthis',
+  'class' => 'Lichthi',
+  'ds' => 'default',
+)
+Request URL: /DoAn/GiangViens/thoikhoabieu
+Stack Trace:
+#0 D:\PHP\DoAn\lib\Cake\Model\Model.php(3551): Model->setSource('lichthis')
+#1 D:\PHP\DoAn\lib\Cake\Model\Model.php(1369): Model->getDataSource()
+#2 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(2495): Model->schema()
+#3 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(1732): DboSource->fields(Object(Lichthi), 'Lichthi', '')
+#4 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(1233): DboSource->generateAssociationQuery(Object(Lichgiangday), Object(Lichthi), 'hasMany', 'Lichthi', Array, Array, true)
+#5 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(1137): DboSource->queryAssociation(Object(Lichgiangday), Object(Lichthi), 'hasMany', 'Lichthi', Array, Array, true, Array, 0, Array)
+#6 D:\PHP\DoAn\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Lichgiangday), Array)
+#7 D:\PHP\DoAn\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#8 D:\PHP\DoAn\app\Controller\GiangViensController.php(58): Model->find('all', Array)
+#9 [internal function]: GiangViensController->thoikhoabieu()
+#10 D:\PHP\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GiangViensController), Array)
+#11 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiangViensController), Object(CakeRequest))
+#13 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-11-30 12:20:08 Error: [MissingViewException] View file "D:\PHP\DoAn\app\View\GiangViens\gethocky.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'D:\\PHP\\DoAn\\app\\View\\GiangViens\\gethocky.ctp',
+)
+Request URL: /DoAn/GiangViens/gethocky
+Stack Trace:
+#0 D:\PHP\DoAn\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 D:\PHP\DoAn\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiangViensController), Object(CakeRequest))
+#4 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-11-30 12:20:08 Error: [MissingTableException] Table lichthis for model Lichthi was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'lichthis',
+  'class' => 'Lichthi',
+  'ds' => 'default',
+)
+Request URL: /DoAn/GiangViens/thoikhoabieu
+Stack Trace:
+#0 D:\PHP\DoAn\lib\Cake\Model\Model.php(3551): Model->setSource('lichthis')
+#1 D:\PHP\DoAn\lib\Cake\Model\Model.php(1369): Model->getDataSource()
+#2 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(2495): Model->schema()
+#3 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(1732): DboSource->fields(Object(Lichthi), 'Lichthi', '')
+#4 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(1233): DboSource->generateAssociationQuery(Object(Lichgiangday), Object(Lichthi), 'hasMany', 'Lichthi', Array, Array, true)
+#5 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(1137): DboSource->queryAssociation(Object(Lichgiangday), Object(Lichthi), 'hasMany', 'Lichthi', Array, Array, true, Array, 0, Array)
+#6 D:\PHP\DoAn\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Lichgiangday), Array)
+#7 D:\PHP\DoAn\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#8 D:\PHP\DoAn\app\Controller\GiangViensController.php(58): Model->find('all', Array)
+#9 [internal function]: GiangViensController->thoikhoabieu()
+#10 D:\PHP\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GiangViensController), Array)
+#11 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiangViensController), Object(CakeRequest))
+#13 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-11-30 12:20:19 Error: [MissingActionException] Action UsersController::formConsulting() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'formConsulting',
+)
+Request URL: /DoAn/Users/formConsulting
+Stack Trace:
+#0 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-11-30 12:20:44 Error: [MissingTableException] Table lichthis for model Lichthi was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'lichthis',
+  'class' => 'Lichthi',
+  'ds' => 'default',
+)
+Request URL: /DoAn/GiangViens/thoikhoabieu
+Stack Trace:
+#0 D:\PHP\DoAn\lib\Cake\Model\Model.php(3551): Model->setSource('lichthis')
+#1 D:\PHP\DoAn\lib\Cake\Model\Model.php(1369): Model->getDataSource()
+#2 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(2495): Model->schema()
+#3 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(1732): DboSource->fields(Object(Lichthi), 'Lichthi', '')
+#4 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(1233): DboSource->generateAssociationQuery(Object(Lichgiangday), Object(Lichthi), 'hasMany', 'Lichthi', Array, Array, true)
+#5 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(1137): DboSource->queryAssociation(Object(Lichgiangday), Object(Lichthi), 'hasMany', 'Lichthi', Array, Array, true, Array, 0, Array)
+#6 D:\PHP\DoAn\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Lichgiangday), Array)
+#7 D:\PHP\DoAn\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#8 D:\PHP\DoAn\app\Controller\GiangViensController.php(58): Model->find('all', Array)
+#9 [internal function]: GiangViensController->thoikhoabieu()
+#10 D:\PHP\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GiangViensController), Array)
+#11 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiangViensController), Object(CakeRequest))
+#13 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-11-30 12:20:44 Error: [MissingViewException] View file "D:\PHP\DoAn\app\View\GiangViens\gethocky.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'D:\\PHP\\DoAn\\app\\View\\GiangViens\\gethocky.ctp',
+)
+Request URL: /DoAn/GiangViens/gethocky
+Stack Trace:
+#0 D:\PHP\DoAn\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 D:\PHP\DoAn\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiangViensController), Object(CakeRequest))
+#4 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-11-30 12:25:20 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 12:25:20 Error: [MissingTableException] Table lichthis for model Lichthi was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'lichthis',
+  'class' => 'Lichthi',
+  'ds' => 'default',
+)
+Request URL: /DoAn/GiangViens/thoikhoabieu
+Stack Trace:
+#0 D:\PHP\DoAn\lib\Cake\Model\Model.php(3551): Model->setSource('lichthis')
+#1 D:\PHP\DoAn\lib\Cake\Model\Model.php(1369): Model->getDataSource()
+#2 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(2495): Model->schema()
+#3 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(1732): DboSource->fields(Object(Lichthi), 'Lichthi', '')
+#4 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(1233): DboSource->generateAssociationQuery(Object(Lichgiangday), Object(Lichthi), 'hasMany', 'Lichthi', Array, Array, true)
+#5 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(1137): DboSource->queryAssociation(Object(Lichgiangday), Object(Lichthi), 'hasMany', 'Lichthi', Array, Array, true, Array, 0, Array)
+#6 D:\PHP\DoAn\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Lichgiangday), Array)
+#7 D:\PHP\DoAn\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#8 D:\PHP\DoAn\app\Controller\GiangViensController.php(58): Model->find('all', Array)
+#9 [internal function]: GiangViensController->thoikhoabieu()
+#10 D:\PHP\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GiangViensController), Array)
+#11 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiangViensController), Object(CakeRequest))
+#13 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-11-30 12:25:21 Error: [MissingViewException] View file "D:\PHP\DoAn\app\View\GiangViens\gethocky.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'D:\\PHP\\DoAn\\app\\View\\GiangViens\\gethocky.ctp',
+)
+Request URL: /DoAn/GiangViens/gethocky
+Stack Trace:
+#0 D:\PHP\DoAn\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 D:\PHP\DoAn\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiangViensController), Object(CakeRequest))
+#4 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-11-30 12:25:25 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 12:25:27 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 12:25:30 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 12:25:31 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 12:25:33 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 12:25:42 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 12:25:56 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 12:25:57 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 12:25:59 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 12:26:23 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 12:26:38 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 12:27:59 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 12:28:01 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 12:28:03 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 12:28:05 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 12:28:08 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 12:28:10 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 12:28:12 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 12:29:35 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 12:29:50 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 12:29:50 Error: [MissingTableException] Table lichthis for model Lichthi was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'lichthis',
+  'class' => 'Lichthi',
+  'ds' => 'default',
+)
+Request URL: /DoAn/GiangViens/thoikhoabieu
+Stack Trace:
+#0 D:\PHP\DoAn\lib\Cake\Model\Model.php(3551): Model->setSource('lichthis')
+#1 D:\PHP\DoAn\lib\Cake\Model\Model.php(1369): Model->getDataSource()
+#2 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(2495): Model->schema()
+#3 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(1732): DboSource->fields(Object(Lichthi), 'Lichthi', '')
+#4 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(1233): DboSource->generateAssociationQuery(Object(Lichgiangday), Object(Lichthi), 'hasMany', 'Lichthi', Array, Array, true)
+#5 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(1137): DboSource->queryAssociation(Object(Lichgiangday), Object(Lichthi), 'hasMany', 'Lichthi', Array, Array, true, Array, 0, Array)
+#6 D:\PHP\DoAn\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Lichgiangday), Array)
+#7 D:\PHP\DoAn\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#8 D:\PHP\DoAn\app\Controller\GiangViensController.php(58): Model->find('all', Array)
+#9 [internal function]: GiangViensController->thoikhoabieu()
+#10 D:\PHP\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GiangViensController), Array)
+#11 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiangViensController), Object(CakeRequest))
+#13 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-11-30 12:29:50 Error: [MissingViewException] View file "D:\PHP\DoAn\app\View\GiangViens\gethocky.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'D:\\PHP\\DoAn\\app\\View\\GiangViens\\gethocky.ctp',
+)
+Request URL: /DoAn/GiangViens/gethocky
+Stack Trace:
+#0 D:\PHP\DoAn\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 D:\PHP\DoAn\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiangViensController), Object(CakeRequest))
+#4 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-11-30 12:29:54 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 12:29:55 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 12:35:19 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 12:35:21 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 12:36:37 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 12:36:45 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 12:36:55 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 12:38:03 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 12:43:15 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 12:43:51 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 13:10:10 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 13:10:13 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 13:10:14 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 13:10:17 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 13:10:22 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 13:10:59 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 13:12:03 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 13:14:14 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 13:14:18 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 13:15:03 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 13:15:05 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 13:15:11 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 13:16:24 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 13:16:25 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 13:17:09 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 13:17:10 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 13:17:15 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 13:18:06 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 13:18:07 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 13:18:32 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 13:18:34 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 13:19:05 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 13:19:08 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 13:19:15 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 13:19:19 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 13:21:58 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 13:22:00 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 13:22:02 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 13:22:07 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 13:22:07 Error: [MissingViewException] View file "D:\PHP\DoAn\app\View\GiangViens\gethocky.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'D:\\PHP\\DoAn\\app\\View\\GiangViens\\gethocky.ctp',
+)
+Request URL: /DoAn/GiangViens/gethocky
+Stack Trace:
+#0 D:\PHP\DoAn\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 D:\PHP\DoAn\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiangViensController), Object(CakeRequest))
+#4 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-11-30 13:22:07 Error: [MissingTableException] Table lichthis for model Lichthi was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'lichthis',
+  'class' => 'Lichthi',
+  'ds' => 'default',
+)
+Request URL: /DoAn/GiangViens/thoikhoabieu
+Stack Trace:
+#0 D:\PHP\DoAn\lib\Cake\Model\Model.php(3551): Model->setSource('lichthis')
+#1 D:\PHP\DoAn\lib\Cake\Model\Model.php(1369): Model->getDataSource()
+#2 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(2495): Model->schema()
+#3 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(1732): DboSource->fields(Object(Lichthi), 'Lichthi', '')
+#4 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(1233): DboSource->generateAssociationQuery(Object(Lichgiangday), Object(Lichthi), 'hasMany', 'Lichthi', Array, Array, true)
+#5 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(1137): DboSource->queryAssociation(Object(Lichgiangday), Object(Lichthi), 'hasMany', 'Lichthi', Array, Array, true, Array, 0, Array)
+#6 D:\PHP\DoAn\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Lichgiangday), Array)
+#7 D:\PHP\DoAn\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#8 D:\PHP\DoAn\app\Controller\GiangViensController.php(58): Model->find('all', Array)
+#9 [internal function]: GiangViensController->thoikhoabieu()
+#10 D:\PHP\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GiangViensController), Array)
+#11 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiangViensController), Object(CakeRequest))
+#13 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-11-30 17:02:16 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 17:02:19 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 17:02:21 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 17:02:24 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 17:02:27 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 17:02:35 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 17:02:38 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 17:02:40 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 17:02:42 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 17:02:43 Error: [MissingTableException] Table lichthis for model Lichthi was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'lichthis',
+  'class' => 'Lichthi',
+  'ds' => 'default',
+)
+Request URL: /DoAn/GiangViens/thoikhoabieu
+Stack Trace:
+#0 D:\PHP\DoAn\lib\Cake\Model\Model.php(3551): Model->setSource('lichthis')
+#1 D:\PHP\DoAn\lib\Cake\Model\Model.php(1369): Model->getDataSource()
+#2 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(2495): Model->schema()
+#3 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(1732): DboSource->fields(Object(Lichthi), 'Lichthi', '')
+#4 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(1233): DboSource->generateAssociationQuery(Object(Lichgiangday), Object(Lichthi), 'hasMany', 'Lichthi', Array, Array, true)
+#5 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(1137): DboSource->queryAssociation(Object(Lichgiangday), Object(Lichthi), 'hasMany', 'Lichthi', Array, Array, true, Array, 0, Array)
+#6 D:\PHP\DoAn\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Lichgiangday), Array)
+#7 D:\PHP\DoAn\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#8 D:\PHP\DoAn\app\Controller\GiangViensController.php(58): Model->find('all', Array)
+#9 [internal function]: GiangViensController->thoikhoabieu()
+#10 D:\PHP\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GiangViensController), Array)
+#11 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiangViensController), Object(CakeRequest))
+#13 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-11-30 17:02:43 Error: [MissingViewException] View file "D:\PHP\DoAn\app\View\GiangViens\gethocky.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'D:\\PHP\\DoAn\\app\\View\\GiangViens\\gethocky.ctp',
+)
+Request URL: /DoAn/GiangViens/gethocky
+Stack Trace:
+#0 D:\PHP\DoAn\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 D:\PHP\DoAn\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiangViensController), Object(CakeRequest))
+#4 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-11-30 17:03:20 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 17:03:20 Error: [MissingViewException] View file "D:\PHP\DoAn\app\View\GiangViens\gethocky.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'D:\\PHP\\DoAn\\app\\View\\GiangViens\\gethocky.ctp',
+)
+Request URL: /DoAn/GiangViens/gethocky
+Stack Trace:
+#0 D:\PHP\DoAn\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 D:\PHP\DoAn\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiangViensController), Object(CakeRequest))
+#4 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-11-30 17:03:20 Error: [MissingTableException] Table lichthis for model Lichthi was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'lichthis',
+  'class' => 'Lichthi',
+  'ds' => 'default',
+)
+Request URL: /DoAn/GiangViens/thoikhoabieu
+Stack Trace:
+#0 D:\PHP\DoAn\lib\Cake\Model\Model.php(3551): Model->setSource('lichthis')
+#1 D:\PHP\DoAn\lib\Cake\Model\Model.php(1369): Model->getDataSource()
+#2 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(2495): Model->schema()
+#3 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(1732): DboSource->fields(Object(Lichthi), 'Lichthi', '')
+#4 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(1233): DboSource->generateAssociationQuery(Object(Lichgiangday), Object(Lichthi), 'hasMany', 'Lichthi', Array, Array, true)
+#5 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(1137): DboSource->queryAssociation(Object(Lichgiangday), Object(Lichthi), 'hasMany', 'Lichthi', Array, Array, true, Array, 0, Array)
+#6 D:\PHP\DoAn\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Lichgiangday), Array)
+#7 D:\PHP\DoAn\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#8 D:\PHP\DoAn\app\Controller\GiangViensController.php(58): Model->find('all', Array)
+#9 [internal function]: GiangViensController->thoikhoabieu()
+#10 D:\PHP\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GiangViensController), Array)
+#11 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiangViensController), Object(CakeRequest))
+#13 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-11-30 17:03:26 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 17:03:26 Error: [MissingViewException] View file "D:\PHP\DoAn\app\View\GiangViens\gethocky.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'D:\\PHP\\DoAn\\app\\View\\GiangViens\\gethocky.ctp',
+)
+Request URL: /DoAn/GiangViens/gethocky
+Stack Trace:
+#0 D:\PHP\DoAn\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 D:\PHP\DoAn\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiangViensController), Object(CakeRequest))
+#4 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-11-30 17:03:26 Error: [MissingTableException] Table lichthis for model Lichthi was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'lichthis',
+  'class' => 'Lichthi',
+  'ds' => 'default',
+)
+Request URL: /DoAn/GiangViens/thoikhoabieu
+Stack Trace:
+#0 D:\PHP\DoAn\lib\Cake\Model\Model.php(3551): Model->setSource('lichthis')
+#1 D:\PHP\DoAn\lib\Cake\Model\Model.php(1369): Model->getDataSource()
+#2 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(2495): Model->schema()
+#3 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(1732): DboSource->fields(Object(Lichthi), 'Lichthi', '')
+#4 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(1233): DboSource->generateAssociationQuery(Object(Lichgiangday), Object(Lichthi), 'hasMany', 'Lichthi', Array, Array, true)
+#5 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(1137): DboSource->queryAssociation(Object(Lichgiangday), Object(Lichthi), 'hasMany', 'Lichthi', Array, Array, true, Array, 0, Array)
+#6 D:\PHP\DoAn\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Lichgiangday), Array)
+#7 D:\PHP\DoAn\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#8 D:\PHP\DoAn\app\Controller\GiangViensController.php(58): Model->find('all', Array)
+#9 [internal function]: GiangViensController->thoikhoabieu()
+#10 D:\PHP\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GiangViensController), Array)
+#11 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiangViensController), Object(CakeRequest))
+#13 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-11-30 17:05:02 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 17:05:02 Error: [MissingViewException] View file "D:\PHP\DoAn\app\View\GiangViens\gethocky.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'D:\\PHP\\DoAn\\app\\View\\GiangViens\\gethocky.ctp',
+)
+Request URL: /DoAn/GiangViens/gethocky
+Stack Trace:
+#0 D:\PHP\DoAn\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 D:\PHP\DoAn\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiangViensController), Object(CakeRequest))
+#4 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-11-30 17:05:02 Error: [MissingTableException] Table lichthis for model Lichthi was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'lichthis',
+  'class' => 'Lichthi',
+  'ds' => 'default',
+)
+Request URL: /DoAn/GiangViens/thoikhoabieu
+Stack Trace:
+#0 D:\PHP\DoAn\lib\Cake\Model\Model.php(3551): Model->setSource('lichthis')
+#1 D:\PHP\DoAn\lib\Cake\Model\Model.php(1369): Model->getDataSource()
+#2 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(2495): Model->schema()
+#3 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(1732): DboSource->fields(Object(Lichthi), 'Lichthi', '')
+#4 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(1233): DboSource->generateAssociationQuery(Object(Lichgiangday), Object(Lichthi), 'hasMany', 'Lichthi', Array, Array, true)
+#5 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(1137): DboSource->queryAssociation(Object(Lichgiangday), Object(Lichthi), 'hasMany', 'Lichthi', Array, Array, true, Array, 0, Array)
+#6 D:\PHP\DoAn\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Lichgiangday), Array)
+#7 D:\PHP\DoAn\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#8 D:\PHP\DoAn\app\Controller\GiangViensController.php(58): Model->find('all', Array)
+#9 [internal function]: GiangViensController->thoikhoabieu()
+#10 D:\PHP\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GiangViensController), Array)
+#11 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiangViensController), Object(CakeRequest))
+#13 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-11-30 17:06:07 Error: [MissingActionException] Action UsersController::formConsulting() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'formConsulting',
+)
+Request URL: /DoAn/Users/formConsulting
+Stack Trace:
+#0 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-11-30 17:06:08 Error: [MissingActionException] Action UsersController::formConsulting() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'formConsulting',
+)
+Request URL: /DoAn/Users/formConsulting
+Stack Trace:
+#0 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-11-30 17:06:10 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 17:06:10 Error: [MissingViewException] View file "D:\PHP\DoAn\app\View\GiangViens\gethocky.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'D:\\PHP\\DoAn\\app\\View\\GiangViens\\gethocky.ctp',
+)
+Request URL: /DoAn/GiangViens/gethocky
+Stack Trace:
+#0 D:\PHP\DoAn\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 D:\PHP\DoAn\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiangViensController), Object(CakeRequest))
+#4 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-11-30 17:06:10 Error: [MissingTableException] Table lichthis for model Lichthi was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'lichthis',
+  'class' => 'Lichthi',
+  'ds' => 'default',
+)
+Request URL: /DoAn/GiangViens/thoikhoabieu
+Stack Trace:
+#0 D:\PHP\DoAn\lib\Cake\Model\Model.php(3551): Model->setSource('lichthis')
+#1 D:\PHP\DoAn\lib\Cake\Model\Model.php(1369): Model->getDataSource()
+#2 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(2495): Model->schema()
+#3 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(1732): DboSource->fields(Object(Lichthi), 'Lichthi', '')
+#4 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(1233): DboSource->generateAssociationQuery(Object(Lichgiangday), Object(Lichthi), 'hasMany', 'Lichthi', Array, Array, true)
+#5 D:\PHP\DoAn\lib\Cake\Model\Datasource\DboSource.php(1137): DboSource->queryAssociation(Object(Lichgiangday), Object(Lichthi), 'hasMany', 'Lichthi', Array, Array, true, Array, 0, Array)
+#6 D:\PHP\DoAn\lib\Cake\Model\Model.php(2947): DboSource->read(Object(Lichgiangday), Array)
+#7 D:\PHP\DoAn\lib\Cake\Model\Model.php(2919): Model->_readDataSource('all', Array)
+#8 D:\PHP\DoAn\app\Controller\GiangViensController.php(58): Model->find('all', Array)
+#9 [internal function]: GiangViensController->thoikhoabieu()
+#10 D:\PHP\DoAn\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GiangViensController), Array)
+#11 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#12 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiangViensController), Object(CakeRequest))
+#13 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-11-30 17:06:17 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 17:06:45 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 17:06:52 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 17:07:08 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 17:09:06 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 17:09:16 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 17:09:18 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 17:09:20 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 17:09:25 Error: [MissingActionException] Action GiaoVusController::icon.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'GiaoVusController',
+  'action' => 'icon.png',
+)
+Request URL: /DoAn/GiaoVus/icon.png
+Stack Trace:
+#0 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#2 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-11-30 17:09:25 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /DoAn/img/images/logovn.pgn
+Stack Trace:
+#0 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-30 17:09:25 Error: [MissingActionException] Action GiaoVusController::icon.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'GiaoVusController',
+  'action' => 'icon.png',
+)
+Request URL: /DoAn/GiaoVus/icon.png
+Stack Trace:
+#0 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 D:\PHP\DoAn\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(GiaoVusController), Object(CakeRequest))
+#2 D:\PHP\DoAn\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
