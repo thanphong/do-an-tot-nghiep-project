@@ -120,6 +120,7 @@ a:hover {
 	list-style: none;
 	display: inline;
 	float: left;
+	white-space:nowrap;
 }
 
 #menu-nav ul.nav a,ul.nav a:visited {
@@ -509,6 +510,7 @@ select {
 	float:left;
 	font:normal 11.5px Arial;
 	color: #636363;
+	white-space:nowrap;
 }
 #logo img{width:320px}
 .baocao,.xemphonghoc,.contentmain{float:left;padding:10px;background:#fff;width:98%;border-radius:5px}
