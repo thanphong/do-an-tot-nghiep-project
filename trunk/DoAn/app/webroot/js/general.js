@@ -1,5 +1,4 @@
  $(document).ready(function(){
-
 	 $("#login").click(function(){
 			loading(); // loading
 			setTimeout(function(){ // then show popup, delay in .001 second
@@ -72,4 +71,20 @@
 														// tab
          }
      });
+     		
  });
+ $(document).ready(function(){
+	 function e(e,t){
+		 if($("#note").val()==e){
+			 $("li.highlight").removeClass("highlight");
+			 $("#"+t).addClass("highlight")
+			 }
+		 }
+	 $(".nav li a").each(function(){
+		 e("home","home");
+		 e("phonghoc","phonghoc");
+		 e("canhan","canhan");
+		 e("nghibu","nghibu");
+	 })
+})
+ 
