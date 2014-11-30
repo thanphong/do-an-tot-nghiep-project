@@ -283,6 +283,7 @@ ul.nav1 li.current {
 	font: bold 13px Arial;
 	margin-top:5px;
 	color: #fff;
+	white-space:nowrap;
 }
 .line{margin-left:5px;color:#eaeaea;}
 .highlight {
@@ -675,7 +676,7 @@ p{float:left;font:bold 13px Arial;margin:10px;color:#009933}
   position: relative;
   background: #ddd;
   background-image: linear-gradient(to bottom,#fff,#ddd);  
-  padding: 7px 5px 7px 15px;
+  padding: 7px 8px 7px 15px;
   float: left;
   text-decoration: none;
   color: #444;
@@ -683,6 +684,7 @@ p{float:left;font:bold 13px Arial;margin:10px;color:#009933}
   border-radius: 5px 0 0 0;
  /*  box-shadow: 0 2px 2px rgba(0,0,0,.4);*/
     font-weight:bold;
+    white-space:nowrap;
 }
 
 #tabs a:hover,
@@ -721,6 +723,7 @@ p{float:left;font:bold 13px Arial;margin:10px;color:#009933}
 {
     position: relative;
     z-index: 2;	
+    border-radius:0 5px 5px;
  /*   border-top:3px solid #69dcff;*/
 }
 
@@ -771,3 +774,5 @@ p{float:left;font:bold 13px Arial;margin:10px;color:#009933}
    background-position: top left;  
 }
 .blockcontent-body .nav{margin:0; padding: 0;}
+#giangduong,#ngayxem,#tuan{width:250px}
+.xemphonghoc b{white-space:nowrap}
