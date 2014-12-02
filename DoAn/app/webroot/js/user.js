@@ -37,15 +37,15 @@ $(document)
 										for ( var i = table.rows.length - 1; i > 1; i--) {
 											table.deleteRow(i);
 										}
+										var str="";
 										for ( var iterable_element in jsonStr) {
 											var tr = document
 													.createElement("tr");
 											tr.className = "GridRow";
 											var tenphong = document
 													.createElement("td");
-											tenphong
-													.appendChild(document
-															.createTextNode(jsonStr[iterable_element].Phong.tenPhong));
+											str=jsonStr[iterable_element].Phong.tenPhong+"</br>Số chỗ:"+jsonStr[iterable_element].Phong.soLuongGhe;
+											tenphong.innerHTML=str;
 											tenphong.className = "GridCellC";
 											tenphong.align = 'center';
 											tr.appendChild(tenphong);

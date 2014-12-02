@@ -21,7 +21,7 @@ class CommonHelper extends HtmlHelper{
 	}
 	function create_menu(){
 	
-		$menu="<ul class='nav'><li id='home'>".$this->link('Thông báo',array('controller' => 'users','action' => 'index','full_base' => true))."</li>";
+		$menu="<ul class='nav'><li id='home' class='highlight'>".$this->link('Thông báo',array('controller' => 'users','action' => 'index','full_base' => true))."</li>";
 		$menu.="<li id='lophocphan'>".$this->link('Lớp học phần',array('controller' => 'users','action' => '','full_base' => true))."</li>";
 		$menu.="<li id='phonghoc'>".$this->link('Phòng học',array('controller' => 'users','action' => 'xemPhonghoc','full_base' => true))."</li>";
 		$menu.="<li id='trogiup'>".$this->link('Trợ giúp',array('controller' => 'users','action' => 'index','full_base' => true));

@@ -2,7 +2,7 @@
 class GiangvienandroidsController extends AppController{
 	var $layout = null;
 	var $name="Gianvienadroids";
-	public $uses = array("Thongbao","Giangvien","Lichgiangday",'Hocki','Lophocphan','Phong','Lichnghi','Lichdaybu','Lichthi');
+	public $uses = array("Thongbao","Giangvien","Lichgiangday",'Hocki','Lophocphan','Phong','Lichnghi','Lichdaybu','Lichthi','Thongbao');
 	public function beforeFilter() {
 		parent::beforeFilter();
 		$this->Auth->allow();
@@ -33,7 +33,7 @@ class GiangvienandroidsController extends AppController{
 		json_encode( "ok" );
 	}
 	public function getNews(){
-		$listnews=$this->Thongbao->find("all",array( 'order' => array('Thongbao.ngaydang DESC'),'limit' => 3));
+		$listnews=$this->Thongbao->find("all",array( 'conditions'=>array('Thongbao.loaithongbao'=>1),'order' => array('Thongbao.ngaydang DESC'),'limit' => 3));
 		$data =array();
 		foreach ($listnews as $item){
 			$new=array();
@@ -55,14 +55,15 @@ class GiangvienandroidsController extends AppController{
 		$data =array();
 		foreach ($tkbieus as $item){
 			$tkb=array();
-			$lhp=$this->Lophocphan->find("first",array('conditions'=>array('Lophocphan.id'=>$item['Lichgiangday']['malophocphan']),'recursive'=>-1));
-			$phong=$this->Phong->find("first",array('conditions'=>array('Phong.id'=>$item['Lichgiangday']['maphong']),'recursive'=>-1));
-			$tkb['lophp']=$lhp['Lophocphan']['tenLopHocPhan'];
-			$tkb['maphong']=$phong['Phong']['tenPhong'];
+			$tkb['lophp']=$item['Lophocphan']['tenLopHocPhan'];
+			$tkb['malophp']=$item['Lophocphan']['maLopHocPhan'];
+			$tkb['maphong']=$item['Phong']['tenPhong'];
 			$tkb['thu']=$item['Lichgiangday']['thu'];
 			$tkb['tutiet']=$item['Lichgiangday']['tutiet'];
 			$tkb['dentiet']=$item['Lichgiangday']['dentiet'];
 			$tkb['idlichday']=$item['Lichgiangday']['id'];
+			$tkb['ngaybatdau']=$item['Tuanhoc']['ngaybatdau'];
+			$tkb['ngayketthuc']=$item['Tuanhoc1']['ngaykethuc'];
 			$tkb['baongi']=count($item['Lichnghi']);
 			array_push($data,$tkb);
 		}
@@ -77,11 +78,16 @@ class GiangvienandroidsController extends AppController{
 			$lydo=html_entity_decode($obj[0]->{'lydo'});
 			foreach ($obj as $item){
 				$lichngi=array();
+				$thongbao=array();
 				$idtkb=$item->{'idlichday'};
+				$lhp=$item->{'lophp'};
+				$malhp=$item->{'malophp'};
 				$ngayngi=html_entity_decode($item->{'ngaynghi'},ENT_QUOTES);
 				$sotiet=$item->{'sotietnghi'};
 				array_push($lichngi,array("maThoiKhoabieu"=>$idtkb,"ngaynghi"=>$ngayngi,"soTiet"=>$sotiet,"lydo"=>$lydo,"ngaybaongi"=>$date));
 				$this->Lichnghi->saveAll($lichngi);
+				array_push($thongbao,array("loaithongbao"=>2,"tieude"=>"Thông báo đến lớp [".$malhp."]".$lhp,"noidung"=>"Lớp nghỉ học ngày ".$ngayngi." vì lý do:".$lydo,"nguoidang"=>$magv));
+				$this->Thongbao->saveAll($thongbao);
 			}
 			$this->set("data",$obj);
 		}
@@ -211,13 +217,18 @@ class GiangvienandroidsController extends AppController{
 			$obj = json_decode($json);
 			foreach ($obj as $item){
 				$lichbu=array();
+				$thongbao=array();
 				$idtkb=$item->{'lichnghi'};
 				$ngaybu=html_entity_decode($item->{'ngayday'},ENT_QUOTES);
 				$tutiet=$item->{'tietdau'};
 				$dentiet=$item->{'tietcuoi'};
 				$maphong=$item->{'idphong'};
+				$lichnghi=$this->Lichnghi->find("first",array("conditions"=>array("Lichnghi.id"=>$idtkb),'recursive'=>-1));
+				$lichgiangday=$this->Lichgiangday->find("first",array("conditions"=>array("Lichgiangday.id"=>$lichnghi['Lichnghi']['maThoiKhoabieu'])));
 				array_push($lichbu,array("malichnghi"=>$idtkb,"ngaydaybu"=>$ngaybu,"tutiet"=>$tutiet,"dentiet"=>$dentiet,"maphong"=>$maphong,"ngaybao"=>$date));
 				$this->Lichdaybu->saveAll($lichbu);
+				array_push($thongbao,array("loaithongbao"=>2,"tieude"=>"Thông báo đến lớp [".$lichgiangday['Lophocphan']['maLopHocPhan']."]".$lichgiangday['Lophocphan']['tenLopHocPhan'],"noidung"=>"Lớp học bù ngày ".$ngaybu." tại phòng ".$lichgiangday['Phong']['tenPhong']." từ tiết ".$tutiet." đến tiết ".$dentiet,"nguoidang"=>$magv));
+				$this->Thongbao->saveAll($thongbao);
 			}
 			$this->set("data",$obj);
 		}
@@ -254,18 +265,20 @@ class GiangvienandroidsController extends AppController{
 			
 			$cp=split(" ",$json)[0];
 			if(strcasecmp ($cp,"HD")==0 ){
-				$content.="Soạn tin theo cú pháp:HD gởi đến 01649568431 để xem hướng dẫn.";
-				$content.="Soạn tin theo cú pháp:BN <mã lớp học phần> <ngày nghỉ> <số tiết nghỉ> <mã lý do> gởi đến 01649568431 để đăng ký báo nghỉ.";
+				$content.="Soan tin theo cu phap:HD goi den tong dai de xem huong dan";
+// 				$content.="Soan tin theo cu phap:HD";
+				$content.="Soan tin theo cu phap:BN Malhp ngaynghi sotiet lydo goi den tong dai de dang ky bao nghi.";
 				array_push($smsJson,array("phonenumber"=>$phonenumber,"content"=>$content));
 			}
 			else{
 				if(strcasecmp ($cp,"BN")==0){
 					list($cp, $malhp, $ngayngi,$sotiet,$lydo)=split(" ",$json);
-					$giangvien=$this->Giangvien->find("first",array("conditions"=>array("Giangvien.sodienthoai"=>$phonenumber)));
-					$lhp=$this->Lophocphan->find("first",array("conditions"=>array("Lophocphan.maLopHocPhan"=>$malhp)));
-					$lichgianday=$this->Lichgiangday->find("first",array("Lichgiangday.magiangvien"=>$giangvien['Giangvien']['id'],'Lichgiangday.malophocphan'=>$lhp['Lophocphan']['Id']));
+					$giangvien=$this->Giangvien->find("first",array("conditions"=>array("Giangvien.sodienthoai"=>$phonenumber),'recursive'=>-1));
+					$lhp=$this->Lophocphan->find("first",array("conditions"=>array("Lophocphan.maLopHocPhan"=>$malhp),'recursive'=>-1));
+					$lichgianday=$this->Lichgiangday->find("first",array('conditions'=>array("Lichgiangday.magiangvien"=>$giangvien['Giangvien']['id'],'Lichgiangday.malophocphan'=>$lhp['Lophocphan']['Id']),'recursive'=>-1));
 					$idlichgiangday=$lichgianday['Lichgiangday']['id'];
 					$lichnghi=array();
+					$thongbao=array();
 					$lichnghi['maThoiKhoabieu']=$idlichgiangday;
 					$lichnghi['ngaynghi']=$ngayngi;
 					$lichnghi['soTiet']=$sotiet;
@@ -274,15 +287,17 @@ class GiangvienandroidsController extends AppController{
 					$this->Lichnghi->saveAll($lichnghi);
 					$lichnghiresult=$this->Lichnghi->find("first",array('conditions'=>array('Lichnghi.maThoiKhoabieu'=>$idlichgiangday,'Lichnghi.ngaynghi'=>$ngayngi)));
 					if(isset($lichnghiresult)&& $lichnghiresult!=null){
-						$content.="Đăng ký nghỉ thành công.Vui lòng đăng nhập website để kiểm tra thông tin.";
+// 						$content.="Đăng ký nghỉ thành công.Vui lòng đăng nhập website để kiểm tra thông tin.";
+						$content="Dang ky nghi thanh cong.Vui long dang nhap website de kiem tra thong tin";
 						array_push($smsJson,array("phonenumber"=>$phonenumber,"content"=>$content));
+						array_push($thongbao,array("loaithongbao"=>2,"tieude"=>"Thông báo đến lớp [".$lhp['Lophocphan']['maLopHocPhan']."]".$lhp['Lophocphan']['tenLopHocPhan'],"noidung"=>"Lớp nghỉ học ngày ".$ngayngi,"nguoidang"=>$giangvien['Giangvien']['id']));
+						$this->Thongbao->saveAll($thongbao);
 					}
 				}
 				else{
-					$content.="Tin nhắn sai cú pháp vui lòng soạn tin nhăn:HD gởi đến 01649568431 để xem hướng dẫn.";
+					$content.="Tin nhan sai cu phap vui long soan tin nhan:HD goi den tong dai de xem huong dan.";
 					array_push($smsJson,array("phonenumber"=>$phonenumber,"content"=>$content));
 				}
-				
 			}
 			$this->set("data",$smsJson);
 		}

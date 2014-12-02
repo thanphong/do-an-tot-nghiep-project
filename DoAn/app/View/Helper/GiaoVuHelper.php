@@ -8,7 +8,7 @@ class GiaoVuHelper extends HtmlHelper{
 		$menu="<ul class='nav'><li id='home' class='highlight'>".$this->link('Thông báo',array('controller' => 'Users','action' => 'index','full_base' => true))."</li>";
 		$menu.="<li id='lophocphan'>".$this->link('Lớp học phần',array('controller' => 'Users','action' => '','full_base' => true))."</li>";
 		$menu.="<li id='phonghoc'>".$this->link('Phòng học',array('controller' => 'Users','action' => 'xemPhonghoc','full_base' => true))."</li>";
-		$menu.="<li id='quanly'><a href='#'>Quản lý</a>";
+		$menu.="<li id='nghibu'><a href='#'>Quản lý</a>";
 		$menu.="<ul><li>".$this->link("Quản lý học phần",array('controller' => 'GiaoVus','action' => 'quanlyHocphan','full_base' => true))."</li>";
 		$menu.="<li>".$this->link("Quản lý giảng viên",array('controller' => 'GiaoVus','action' => 'quanlyGiangVien','full_base' => true))."</li>";
 		$menu.="<li>".$this->link("Quản lý khoa",array('controller' => 'GiaoVus','action' => 'quanlyKhoa','full_base' => true))."</li>";
@@ -72,26 +72,23 @@ class GiaoVuHelper extends HtmlHelper{
 		$chuyennganh="";
 		$monday;
 		$quyens=array();
-		$khoa=array();
+		$khoa=0;
 		$ngaysinh;
 		$action="/DoAn/GiaoVus/themGiangvien";
 		$selected="";
 		if(isset($giangvien)){
-			$action="/DoAn/GiaoVus/capnhapGiangvien/".$giangvien['id'];
-			$name=$giangvien['ten'];
-			$diachi=$giangvien['diachi'];
-			$hocvi=$giangvien['hocvi'];
-			$hocham=$giangvien['hocham'];
-			foreach ($giangvien['giangvienkhoas'] as $item){
-				array_push($khoa,$item['makhoa']);
-			}
-			//$quyen=$giangvien['quyengiangviens'];
-			foreach ($giangvien['quyengiangviens'] as $item){
+			$action="/DoAn/GiaoVus/capnhapGiangvien/".$giangvien['Giangvien']['id'];
+			$name=$giangvien['Giangvien']['ten'];
+			$diachi=$giangvien['Giangvien']['diachi'];
+			$hocvi=$giangvien['Giangvien']['hocvi'];
+			$hocham=$giangvien['Giangvien']['hocham'];
+			$khoa=$giangvien['Giangvien']['khoa'];
+			foreach ($giangvien['Quyengiangvien'] as $item){
 				array_push($quyens,$item['maquyen']);
 			}
-			$chuyennganh=$giangvien['chuyennganh'];
-			$ngaysinh=$giangvien['ngaySinh'];
-			$monday=$giangvien['giangvienhocphans'];
+			$chuyennganh=$giangvien['Giangvien']['chuyennganh'];
+			$ngaysinh=$giangvien['Giangvien']['ngaySinh'];
+			$monday=$giangvien['Giangvienhocphan'];
 		}
 		$register="<div class='contentmain'><h2>Tạo mới giảng viên</h2>";
 		$register.="<form action='".$action."' method='POST' id='registration_form' name='Giangvien' class='left'><table>";
@@ -148,15 +145,16 @@ class GiaoVuHelper extends HtmlHelper{
 			$register.="<li><input type='checkbox' name='roles[]' value='".$item['Quyen']['id']."' ".$check."><label for='cb".$item['Quyen']['id']."'>".$item['Quyen']['maquyen']."</label></li>";
 		}
 		$register.="</ul></fieldset></td></tr>";
-		$register.="<tr><td><label for='register_uername'>Khoa</label></td><td><fieldset class='group'> <legend>Chọn khoa</legend><ul class='checkbox'>";
+		$register.="<tr><td><label for='register_uername'>Khoa</label></td>";
+		$register.="<td><select name='khoa' id=''>";
+		$selected="";
 		foreach ($listKhoa as $item){
-			$cheked="";
-			if (in_array($item['Khoa']['id'], $khoa)) {
-				$cheked="checked";
+			if($khoa==$item['Khoa']['id']){
+				$selected="selected";
 			}
-			$register.="<li><input type='checkbox' name='khoas[]' value='".$item['Khoa']['id']."' ".$cheked."><label for='cb".$item['Khoa']['id']."'>".$item['Khoa']['tenKhoa']."</label></li>" ;
+			$register.="<option value='".$item['Khoa']['id']."' ".$selected.">".$item['Khoa']['tenKhoa']."</option>";
 		}
-		$register.="</ul></fieldset></td></tr>";
+		$register.="</select></td></tr>";
 		$register.="</table>";
 		$register.="<div class='left clear cachbtleft cachbt'>
 				<input class='button2 sizebutton2' id='btnUsermn' type='submit' value='Lưu' name='ok'/>

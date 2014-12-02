@@ -1,8 +1,9 @@
 <div>
-<?php echo	$this->giangvien->formCanhan($user);
+<?php echo	$this->Giangvien->formCanhan($user,$Khoa);
 ?>
 <hr>
 
-<?php echo	$this->giangvien->formThaydoiMatkhau($success);
+<?php 
+	echo	$this->Giangvien->formThaydoiMatkhau((isset($success)?$success:null));
 ?>
 </div>

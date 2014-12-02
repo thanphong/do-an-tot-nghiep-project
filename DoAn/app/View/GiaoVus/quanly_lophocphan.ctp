@@ -1,3 +1,3 @@
 <?php
-echo $this->Giaovu->form_lopHocPhan($listKhoa);
+echo $this->GiaoVu->form_lopHocPhan($listKhoa);
 ?>

@@ -18,7 +18,7 @@
 				</tr>
 			</table>
 		</div>
-		<div class="baonghibu" style="margin-left:15px">
+		<div class="baonghibu" style="margin-left:5px">
 			<table id="danhsachbaongi" class='Grid' style="width:100%;border-collapse:collapse;">
 				<tr class="GridHeader">
 					<td colspan="6" class="GridHeaderCell"><b>Danh sách lớp báo nghỉ</b></td>
@@ -152,10 +152,10 @@
 			    	<input class='button2' type='button' name='luu' value="Lưu" id="huybaobu" />
 			    	<input class='button2' type='button' name='huy' value="Hủy" id="huy" onclick="popup('popUphuybaobu')" />
 			</div>
-			<div style="display:none; overflow: scroll;width:100%;height: 350px" id="baonghiNotdelete"  >
-			  	<table class='Grid' >
+			<div style="display:none; overflow: scroll;width:100%;height: 350px" id="divbaobuNotdelete"  >
+			  	<table class='Grid' id="baobuNotdelete" >
 					<tr class="GridHeader" >
-				    	<td class="GridHeaderCell" colspan="3">Danh sách lớp học phần không được hủy</td>
+				    	<td class="GridHeaderCell" colspan="5">Danh sách lớp học phần không được hủy</td>
 				   	</tr>
 			    	<tr class="GridHeader" >
 			    		<td class="GridHeaderCell"><b> STT</b></td>
@@ -194,10 +194,10 @@
 			    	<input class='button2' type='button' name='luu' value="Lưu" id="huybaonghi" />
 			    	<input class='button2' type='button' name='huy' value="Hủy" id="huybn" onclick="popup('popUphuybaonghi')" />
 			</div>
-			<div style="display:none; overflow: scroll;width:100%;height: 350px" id="baobuNotdelete"  >
-			  	<table class='Grid' >
+			<div style="display:none; overflow: scroll;width:100%;height: 350px" id="divnothuynghi"  >
+			  	<table class='Grid' id="baonghiNotdelete">
 					<tr class="GridHeader" >
-				    	<td class="GridHeaderCell" colspan="3">Danh sách lớp học phần không được hủy</td>
+				    	<td class="GridHeaderCell" colspan="5">Danh sách lớp học phần không được hủy</td>
 				   	</tr>
 			    	<tr class="GridHeader" >
 			    		<td class="GridHeaderCell"><b> STT</b></td>

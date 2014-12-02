@@ -58,7 +58,7 @@ $(document)
 													.createElement("td");
 											tenLophocphan
 													.appendChild(document
-															.createTextNode(jsonStr[iterable_element].Lophocphan.Lophocphan.tenLopHocPhan));
+															.createTextNode(jsonStr[iterable_element].Lophocphan.tenLopHocPhan));
 											tenLophocphan.className = "GridCellC";
 											tenLophocphan.style.textAlign = 'left';
 
@@ -73,7 +73,7 @@ $(document)
 																	+ "-"
 																	+ jsonStr[iterable_element].Lichgiangday.dentiet
 																	+ ","
-																	+ jsonStr[iterable_element].phong.Phong.tenPhong));
+																	+ jsonStr[iterable_element].Phong.tenPhong));
 											tkb.className = "GridCellC";
 											tkb.style.textAlign = 'left';
 											var chonbaongi = document
@@ -145,21 +145,4 @@ $(document)
 						}
 					}
 					//
-					function getWeek(date) {
-						var onejan = new Date(date.getFullYear(), 0, 1);
-						return Math.ceil((((date - onejan) / 86400000)
-								+ onejan.getDay() + 1) / 7);
-					}
-					function kiemtrahople() {
-						var now = new Date();
-						alert(now.getDay());
-//						var date = new Date(ngay);
-//						var now = new Date();
-//						var daynow = now.getDay();
-//						var daybao = date.getDay();
-//						var weeknow = getWeek(now);
-//						var weekngay = getWeek(date);
-//						alert(weeknow + "-" + weekngay);
-					}
-
 				});

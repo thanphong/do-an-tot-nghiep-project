@@ -19,14 +19,29 @@ class GiaoVusController extends AppController{
 		$this->set("listquyen",$listquyen);
 		$listKhoa=$this->Khoa->find("all",array('recursive'=>-1));
 		$this->set("listKhoa",$listKhoa);
-		
 		$this->populateGiangvien($page,$end);
+	}
+	public function suaGiangvien($idgv,$page=null,$end=null) {
+		$giangvien=$this->Giangvien->find("first",array('conditions'=>array('Giangvien.id'=>$idgv)));
+		$this->set("giangvien",$giangvien);
+		$listquyen=$this->Quyen->find("all",array('recursive'=>-1));
+		$this->set("listquyen",$listquyen);
+		$listKhoa=$this->Khoa->find("all",array('recursive'=>-1));
+		$this->set("listKhoa",$listKhoa);
+		$this->populateGiangvien($page,$end);
+		$this->render('quanlyGiangVien');
+	}
+	public function capnhapGiangvien($idgv,$page=null,$end=null) {
+		if($this->request->is('post')){
+			$roles=$this->request->data["roles"];
+		}
+		$this->redirect(array( 'action' => 'quanlyGiangVien'));
 	}
 	public function themGiangvien() {
 		if($this->request->is('post')){
 			$user=array();
 			$roles=$this->request->data["roles"];
-			$khoas=$this->request->data("khoas");
+			$khoas=$this->request->data("khoa");
 			$magiangvien=$this->taoMagiangvien($this->request->data);
 			$user['User']['maGiangvien']=$magiangvien;
 			$this->request->data["maGiangvien"]=$magiangvien;
@@ -46,23 +61,45 @@ class GiaoVusController extends AppController{
 				$this->Quyengiangvien->save($gvRole);
 			}
 		}
-		$this->render('quanlyGiangVien');
-		//$this->redirect(array( 'action' => 'quanlyGiangVien'));
+		//$this->render('quanlyGiangVien');
+		$this->redirect(array( 'action' => 'quanlyGiangVien'));
 	}
 	public function taoMagiangvien($giangvien){
-		$khoa=$giangvien['khoas'][0];
-
+		$khoa=$giangvien['khoa'];
 		$khoas=$this->Khoa->find("first",array('conditions' => array('Khoa.id' => $khoa),'recursive'=>-1));
-		$arr=$this->Giangvien->find("first",array('conditions' => array('Giangvien.maGiangvien like ' =>'%'. $khoas['Khoa']['maKhoa'].'%'),'order'=>array('Giangvien.maGiangvien'=>'DESC')));
-		if(isset($arr) && $arr!=null){
-			$magiangvien=split($khoas['Khoa']['maKhoa'],$arr['Giangvien']['maGiangvien']);
-			if($magiangvien[1]+1<10){
-				return $khoas['Khoa']['maKhoa'].'0'.($magiangvien[1]+1);
+		$tengiangvien=strtolower($this->convert_vi_to_en($giangvien['ten']));
+		$arr=explode(" ",$tengiangvien);
+		$magv="";
+		for($i=0;$i<count($arr)-1;$i++){
+		
+			if($arr[$i] !=" "){
+				$magv.=$arr[$i][0];
 			}
-			return $khoas['Khoa']['maKhoa'].($magiangvien[1]+1);
 		}
-		return $khoas['Khoa']['maKhoa']."01";
+		$magv.=$arr[count($arr)-1];
+	
+		return $khoas['Khoa']['maKhoa'].$magv;
 	}
+	//
+	function convert_vi_to_en($str) {
+		$str = preg_replace("/(à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ)/", 'a', $str);
+		$str = preg_replace("/(è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ)/", 'e', $str);
+		$str = preg_replace("/(ì|í|ị|ỉ|ĩ)/", 'i', $str);
+		$str = preg_replace("/(ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ)/", 'o', $str);
+		$str = preg_replace("/(ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ)/", 'u', $str);
+		$str = preg_replace("/(ỳ|ý|ỵ|ỷ|ỹ)/", 'y', $str);
+		$str = preg_replace("/(đ)/", 'd', $str);
+		$str = preg_replace("/(À|Á|Ạ|Ả|Ã|Â|Ầ|Ấ|Ậ|Ẩ|Ẫ|Ă|Ằ|Ắ|Ặ|Ẳ|Ẵ)/", 'A', $str);
+		$str = preg_replace("/(È|É|Ẹ|Ẻ|Ẽ|Ê|Ề|Ế|Ệ|Ể|Ễ)/", 'E', $str);
+		$str = preg_replace("/(Ì|Í|Ị|Ỉ|Ĩ)/", 'I', $str);
+		$str = preg_replace("/(Ò|Ó|Ọ|Ỏ|Õ|Ô|Ồ|Ố|Ộ|Ổ|Ỗ|Ơ|Ờ|Ớ|Ợ|Ở|Ỡ)/", 'O', $str);
+		$str = preg_replace("/(Ù|Ú|Ụ|Ủ|Ũ|Ư|Ừ|Ứ|Ự|Ử|Ữ)/", 'U', $str);
+		$str = preg_replace("/(Ỳ|Ý|Ỵ|Ỷ|Ỹ)/", 'Y', $str);
+		$str = preg_replace("/(Đ)/", 'D', $str);
+		return $str;
+	
+	}
+	//
 	public function populateGiangvien($page=null,$end=null){
 	
 		$page=(($page==null || !isset($page))?1:$page);

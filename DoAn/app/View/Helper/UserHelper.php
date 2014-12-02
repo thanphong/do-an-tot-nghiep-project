@@ -14,7 +14,7 @@ class UserHelper extends HtmlHelper  {
 				$noidung=$item['Thongbao']['noidung'];
 				$d = getdate(strtotime($date));
 				$ngay= $d['mday'].'/'.$d['mon'].'/'.$d['year'];
-				$out.="<span class='left'>";
+				$out.="<span class='left clear'>";
 				$out.="<span class='left' style='padding:2px 5px;'>";
 				$out.="<b><span style='color: red;font-size:13.0pt;line-height:100%;font-family:times new roman,serif'>".$ngay.":</span></b>";
 				$out.="&nbsp;&nbsp;&nbsp;&nbsp;";
@@ -30,7 +30,7 @@ class UserHelper extends HtmlHelper  {
 				$noidung=$item['Thongbao']['noidung'];
 				$d = getdate(strtotime($date));
 				$ngay= $d['mday'].'/'.$d['mon'].'/'.$d['year'];
-				$out.="<span class='left'>";
+				$out.="<span class='left clear'>";
 				$out.="<span class='left' style='padding:2px 5px;'>";
 				$out.="<b><span style='color: red;font-size:13.0pt;line-height:100%;font-family:times new roman,serif'>".$ngay.":</span></b>";
 				$out.="&nbsp;&nbsp;&nbsp;&nbsp;";

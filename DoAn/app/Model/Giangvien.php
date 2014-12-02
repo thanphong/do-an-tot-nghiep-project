@@ -34,7 +34,7 @@ class Giangvien extends AppModel{
 					'limit' => '',
 					'dependent'=> true
 			)
-			
+
 	);
 	var $hasOne = array(
 			'User' => array(
@@ -45,7 +45,16 @@ class Giangvien extends AppModel{
 					'limit' => '',
 					'dependent'=> true
 			)
-			);
+	);
+	var $belongsTo = array(
+			'Khoa'=> array(
+					'className' => 'Khoa',
+					'foreignKey' => 'khoa',
+					'conditions' => '',
+					'order' => '',
+					'limit' => '',
+					'dependent'=> true
+			));
 	function index(){
 
 	}

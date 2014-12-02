@@ -34,7 +34,7 @@ class AppController extends Controller {
 	var $helpers = array("Form","Html","Common","User","Userform","Giangvien","Js","Paginator","Session");
 	var $layout = null;
 	var $components = array('Session','Auth' => array(
-		'loginAction'=>array('Controller' => 'Users', 'action' => 'login'),
+		'loginAction'=>array('Controller' => 'Users', 'action' => 'index'),
         'loginRedirect' => array('Controller' => 'Users', 'action' => 'index'),
         'logoutRedirect' => array('Controller' => 'Users', 'action' => 'index'),
         'authError' => 'You must be logged in to view this page.',
