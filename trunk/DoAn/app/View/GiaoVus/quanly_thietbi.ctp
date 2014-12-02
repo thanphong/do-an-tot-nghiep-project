@@ -1,6 +1,6 @@
 <?php
-	echo $this->Giaovu->form_thietbi((isset($thietbi)?$thietbi:null),$listLoaiThietbi); 
-	echo $this->Giaovu->listDanhsachThietbi($data);
+	echo $this->GiaoVu->form_thietbi((isset($thietbi)?$thietbi:null),$listLoaiThietbi); 
+	echo $this->GiaoVu->listDanhsachThietbi($data);
 	//print_r($thietbi);
 ?>
 <div class="clear"></div>

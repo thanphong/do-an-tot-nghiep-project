@@ -1,6 +1,6 @@
 
-	<?php echo $this->Giaovu->creatFormKhoa((isset($khoa)?$khoa:null)); 
-		echo $this->Giaovu->danhSachKhoa($data);
+	<?php echo $this->GiaoVu->creatFormKhoa((isset($khoa)?$khoa:null)); 
+		echo $this->GiaoVu->danhSachKhoa($data);
 
 	?>
 	<div class="clear"></div>

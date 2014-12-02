@@ -1,6 +1,6 @@
 <?php
-	echo $this->Giaovu->form_Hocphan(null,$listKhoa);
-	echo $this->Giaovu->danhsachHocPhan($data);
+	echo $this->GiaoVu->form_Hocphan(null,$listKhoa);
+	echo $this->GiaoVu->danhsachHocPhan($data);
 ?>
 <div class="clear"></div>
 	<div id="paging" class="right">

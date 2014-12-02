@@ -1,6 +1,6 @@
 <?php
-	echo $this->Giaovu->form_phongs($listKhuvuc,$listthietbi);
-	echo $this->Giaovu->listDanhsachPhonghoc($data);
+	echo $this->GiaoVu->form_phongs($listKhuvuc,$listthietbi);
+	echo $this->GiaoVu->listDanhsachPhonghoc($data);
 ?>
 <div class="clear"></div>
 	<div id="paging" class="right">

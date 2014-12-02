@@ -392,6 +392,7 @@ $(document)
 											}
 
 										}
+
 										var numberlohp = document
 												.createElement("input");
 										numberlohp.setAttribute("type",
@@ -409,7 +410,7 @@ $(document)
 					$("#btnhuybaonghi")
 							.click(
 									function() {
-										var divnot = document
+										var tablesnot = document
 												.getElementById("baonghiNotdelete");
 										var tables = document
 												.getElementById("danhsachbaongi");
@@ -418,13 +419,17 @@ $(document)
 										for ( var i = tablebaongi.rows.length - 1; i > 1; i--) {
 											tablebaongi.deleteRow(i);
 										}
+										for ( var i = tablesnot.rows.length - 1; i > 1; i--) {
+											tablesnot.deleteRow(i);
+										}
 										var trs = tables
 												.getElementsByTagName("tr");
 										var tds;
 										var idtkb;
 										var j = 0;
 										var indexnotdelete = 0;
-										var ngaybao;
+										var ngaynbaoghi;
+										var now = new Date();
 										for ( var i = 0; i < trs.length; i++) {
 
 											tds = trs[i]
@@ -433,7 +438,6 @@ $(document)
 											if (classname
 													.indexOf("checkLhpBaongi") > -1) {
 
-												j++;
 												idtkb = tds[0]
 														.getElementsByTagName("input")[0].value;
 												var tr = document
@@ -442,8 +446,6 @@ $(document)
 
 												var stt = document
 														.createElement("td");
-												stt.appendChild(document
-														.createTextNode(j));
 												stt.className = "GridCellC";
 												stt.align = 'center';
 												var inputIdMabaonghi = document
@@ -489,23 +491,58 @@ $(document)
 																.createTextNode(tds[3].textContent));
 												sotiet.className = "GridCellC";
 												sotiet.align = 'center';
-												tr.appendChild(stt);
-												tr.appendChild(tenlhp);
-												tr.appendChild(TKB);
-												tr.appendChild(ngaynghi);
-												tr.appendChild(sotiet);
-												tablebaongi.appendChild(tr);
+
+												ngaynbaoghi = new Date(
+														tds[2].textContent);
+												if (ngaynbaoghi.getTime() > now
+														.getTime()) {
+													j++;
+													
+													stt.appendChild(document
+															.createTextNode(j));
+													tr.appendChild(stt);
+													tr.appendChild(tenlhp);
+													tr.appendChild(TKB);
+													tr.appendChild(ngaynghi);
+													tr.appendChild(sotiet);
+													tablebaongi.appendChild(tr);
+
+												} else {
+													indexnotdelete++;
+													
+													stt
+															.appendChild(document
+																	.createTextNode(indexnotdelete));
+													tr.appendChild(stt);
+													tr.appendChild(tenlhp);
+													tr.appendChild(TKB);
+													tr.appendChild(ngaynghi);
+													tr.appendChild(sotiet);
+													tablesnot.appendChild(tr);
+
+												}
 											}
 										}
-										var numberlohp = document
-												.createElement("input");
-										numberlohp.setAttribute("type",
-												"hidden");
-										numberlohp.setAttribute("name",
-												"numberLopbaobu");
-										numberlohp.setAttribute("value", j);
-										tablebaongi.appendChild(numberlohp);
-										popup('popUphuybaonghi');
+										
+										if (indexnotdelete != 0) {
+											var divdanhsachphong = document
+													.getElementById("divnothuynghi");
+											divdanhsachphong.style.display = "block";
+										}
+										if (j != 0 || indexnotdelete != 0) {
+											var numberlohp = document
+													.createElement("input");
+											numberlohp.setAttribute("type",
+													"hidden");
+											numberlohp.setAttribute("name",
+													"numberLopbaobu");
+											numberlohp.setAttribute("value", j);
+											tablebaongi.appendChild(numberlohp);
+											popup('popUphuybaonghi');
+
+										} else {
+											alert("Bạn chưa chọn lớp hủy báo nghỉ!");
+										}
 									});
 					//
 					$("#luudknghi")
@@ -599,6 +636,7 @@ $(document)
 							return false;
 						return true;
 					}
+
 					function getDateByNumOfWeek(thu, index) {
 						var select = document.createElement("select");
 						select.setAttribute("name", "ngayngi" + index);
@@ -610,12 +648,12 @@ $(document)
 						var now = new Date();
 						var n = d.getDay() + 1;
 						var delta = thu - n;
-						
+
 						d.setDate(d.getDate() + delta);
 						if (d.getTime() < now.getTime()) {
 							d.setDate(d.getDate() + 7);
 						}
-						
+
 						while (d.getTime() >= now.getTime()
 								&& d.getTime() < ngend.getTime()) {
 							var option = document.createElement("option");

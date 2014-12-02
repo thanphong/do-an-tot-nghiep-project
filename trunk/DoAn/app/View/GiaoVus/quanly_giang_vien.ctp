@@ -1,6 +1,7 @@
 <?php
-echo $this->Giaovu->form_giangviens($listquyen,$listKhoa,null);
-echo $this->Giaovu->listDanhsachGiangvien($danhsachGv);
+$giangvien=(isset($giangvien)?$giangvien:null);
+echo $this->GiaoVu->form_giangviens($listquyen,$listKhoa,$giangvien);
+echo $this->GiaoVu->listDanhsachGiangvien($danhsachGv);
 ?>
 	<div class="clear"></div>
 	<div id="paging" class="right">

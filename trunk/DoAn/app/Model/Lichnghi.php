@@ -11,5 +11,15 @@ class Lichnghi extends AppModel{
 					'dependent'=> true
 			)
 	);
+	var $belongsTo = array(
+			'Lichgiangday'=> array(
+					'className' => 'Lichgiangday',
+					'foreignKey' => 'maThoiKhoabieu',
+					'conditions' => '',
+					'order' => '',
+					'limit' => '',
+					'dependent'=> true
+			)
+	);
 }
 ?>

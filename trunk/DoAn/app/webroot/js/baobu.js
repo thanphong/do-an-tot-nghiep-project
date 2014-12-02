@@ -51,6 +51,11 @@ $(document)
 												Malhp.style.textAlign = 'left';
 												Malhp.appendChild(document
 														.createTextNode(malhp));
+												var inputMalp=document.createElement("input");
+												inputMalp.setAttribute("type","hidden");
+												inputMalp.setAttribute("name", "malhp"+j);
+												inputMalp.setAttribute("value",malhp);
+												Malhp.appendChild(inputMalp);
 												var tenlhp = document
 														.createElement("td");
 												tenlhp.className = "GridCellC";
@@ -79,6 +84,7 @@ $(document)
 												var ngaybu = document
 														.createElement("td");
 												ngaybu.className = "GridCellC";
+
 												var inputngaybu = document
 														.createElement("input");
 												inputngaybu.setAttribute(
@@ -94,10 +100,8 @@ $(document)
 												inputngaybu.setAttribute(
 														"data-beatpicker-id",
 														"ngaybu" + j);
-												
-												
-												ngaybu.appendChild(inputngaybu);
 
+												ngaybu.appendChild(inputngaybu);
 												var tutiet = document
 														.createElement("td");
 												tutiet.className = "GridCellC";
@@ -167,6 +171,15 @@ $(document)
 											}
 
 										}
+										for ( var t = 1; t <= j; t++) {
+											var options = {
+												index : t,
+												dateInputNode : $("#ngaybu" + t)
+											}
+											var instance = new BeatPicker(
+													options);
+										}
+
 										var numberlohp = document
 												.createElement("input");
 										numberlohp.setAttribute("type",
@@ -180,25 +193,12 @@ $(document)
 										else {
 											alert("Bạn phải chọn lớp báo nghỉ!");
 										}
-										for ( var t = 1; t <= j; t++) {
-											var inputs = document
-													.getElementsByName("ngaybu"
-															+ t);
-											var date = new BeatPicker({
-												dateInputNode : $("#"
-														+ inputs[0].id),
-												selectionRule : {
-													single : true,
-													range : true
-												}
-											});
-										}
-										var divs = tablebaongi
-												.getElementsByTagName("div");
-										for ( var i = 0; i < divs.length; i++) {
-											divs[i]
-													.removeChild(divs[i].childNodes[1]);
-										}
+//										var divs = tablebaongi
+//												.getElementsByTagName("div");
+//										for ( var i = 0; i < divs.length; i++) {
+//											divs[i]
+//													.removeChild(divs[i].childNodes[1]);
+//										}
 									});
 					// end
 					$("#luudkbu")
@@ -212,27 +212,41 @@ $(document)
 										var tutiet;
 										var dentiet;
 										var phong;
-										for ( var i = 0; i < number.value; i++) {
-//											ngaybu = new Date($("#ngaybu" + i)
-//													.getSelectedDate());
-//											if (ngaybu.getTime() < now
-//													.getTime()) {
-//												stt = 1;
-//											}
+										for ( var i = 1; i <= number.value; i++) {
+											ngaybu = new Date($("#ngaybu" + i)
+													.val());
+											if (ngaybu.getTime() < now
+													.getTime()) {
+												stt = 1;
+												alert("ngày dạy bù không phù hợp!")
+												break;
+											}
+											if (!kiemtrahople(ngaybu)) {
+												stt = 1;
+												alert("Bạn phải liên hệ với phòng đạo tạo để đăng ký bù vào ngày thứ 7 và chủ nhật!");
+												break;
+											}
 											tutiet = $("#tutiet" + i).val();
 											dentiet = $("#dentiet" + i).val();
-											phong=$("#phong-"+i).val();
+											
+											
 											if (tutiet > dentiet) {
 												stt = 1;
+												alert("Tiết học không phù hợp!");
+												break;
 											}
-											if(phong==""){
-												stt=1;
+											try{
+												phong = parseInt($("#maphong" + i).val());
+											}
+											catch(err) {
+												stt = 1;
+												alert("Bạn chưa chọn phòng!");
+												break;
 											}
 
 										}
-										if (stt = 1) {
-											alert("Sai thông tin, kiểm tra lại thông tin!");
-										} else {
+										
+										if (stt == 0) {
 											var divdialog = document
 													.getElementById("dialogbox");
 											var divdialogPoup = document
@@ -252,11 +266,16 @@ $(document)
 
 										var tables = document
 												.getElementById("danhsachbaongi");
+										var tablesnot = document
+												.getElementById("baobuNotdelete");
 
 										var tablebaongi = document
 												.getElementById("danhsachlopbaobu");
 										for ( var i = tablebaongi.rows.length - 1; i > 1; i--) {
 											tablebaongi.deleteRow(i);
+										}
+										for ( var i = tablesnot.rows.length - 1; i > 1; i--) {
+											tablesnot.deleteRow(i);
 										}
 										var trs = tables
 												.getElementsByTagName("tr");
@@ -265,7 +284,9 @@ $(document)
 										var j = 0;
 										var inputs1;
 										var inputstutiet;
-
+										var notindex = 0;
+										var ngaybu;
+										var now = new Date();
 										for ( var i = 0; i < trs.length; i++) {
 											tds = trs[i]
 													.getElementsByTagName("td");
@@ -278,15 +299,13 @@ $(document)
 														.getElementsByTagName("input")[0].value
 														.split("-");
 
-												j++;
 												var tr = document
 														.createElement("tr");
 												tr.className = "GridRow";
 
 												var stt = document
 														.createElement("td");
-												stt.appendChild(document
-														.createTextNode(j));
+
 												stt.className = "GridCellC";
 												stt.align = 'center';
 
@@ -333,23 +352,52 @@ $(document)
 												dentiet
 														.appendChild(inputIdMabaobu);
 
-												tr.appendChild(stt);
-												tr.appendChild(malhp);
-												tr.appendChild(ngayday);
-												tr.appendChild(tutiet);
-												tr.appendChild(dentiet);
-												tablebaongi.appendChild(tr);
+												ngaybu = new Date(
+														tds[2].textContent);
+												if (ngaybu.getTime() > now
+														.getTime()) {
+													j++;
+													stt.appendChild(document
+															.createTextNode(j));
+													tr.appendChild(stt);
+													tr.appendChild(malhp);
+													tr.appendChild(ngayday);
+													tr.appendChild(tutiet);
+													tr.appendChild(dentiet);
+													tablebaongi.appendChild(tr);
+												} else {
+													notindex++;
+													stt
+															.appendChild(document
+																	.createTextNode(notindex));
+													tr.appendChild(stt);
+													tr.appendChild(malhp);
+													tr.appendChild(ngayday);
+													tr.appendChild(tutiet);
+													tr.appendChild(dentiet);
+													tablesnot.appendChild(tr);
+												}
+
 											}
 										}
-										var numberlohp = document
-												.createElement("input");
-										numberlohp.setAttribute("type",
-												"hidden");
-										numberlohp.setAttribute("name",
-												"numberLopbaobu");
-										numberlohp.setAttribute("value", j);
-										tablebaongi.appendChild(numberlohp);
-										popup('popUphuybaobu');
+										if (notindex != 0) {
+											var divdanhsachphong = document
+													.getElementById("divbaobuNotdelete");
+											divdanhsachphong.style.display = "block";
+										}
+										if (j != 0 || notindex != 0) {
+											var numberlohp = document
+													.createElement("input");
+											numberlohp.setAttribute("type",
+													"hidden");
+											numberlohp.setAttribute("name",
+													"numberLopbaobu");
+											numberlohp.setAttribute("value", j);
+											tablebaongi.appendChild(numberlohp);
+											popup('popUphuybaobu');
+										} else {
+											alert("Bạn phải chọn lớp học phần!");
+										}
 									});
 					// end
 					//
@@ -465,7 +513,36 @@ $(document)
 						var ipidphong = document.createElement("input");
 						ipidphong.setAttribute("type", "hidden");
 						ipidphong.setAttribute("name", "maphong" + index);
+						ipidphong.setAttribute("id", "maphong" + index);
 						ipidphong.setAttribute("value", inputmaphong[0].value);
+						var iputmaphong=document.createElement("input");
+						iputmaphong.setAttribute("type", "hidden");
+						iputmaphong.setAttribute("name", "tenphong" + index);
+						iputmaphong.setAttribute("value", tds[1].textContent);
 						td.append(ipidphong);
+					}
+					//
+					function getWeek(date) {
+						var onejan = new Date(date.getFullYear(), 0, 1);
+						return Math.ceil((((date - onejan) / 86400000)
+								+ onejan.getDay() + 1) / 7);
+					}
+					function kiemtrahople(date) {
+						var now = new Date();
+						var nowWeek = getWeek(now);
+						var dateWeek = getWeek(date);
+						var ngaybu = date.getDay() + 1;
+						if (ngaybu == 1)
+							return false;
+						if (nowWeek == dateWeek) {
+							if (ngaybu == 7) {
+								var nowdate = now.getDay() + 1;
+								var howdate = now.getHours() + 1;
+								if ((nowdate == 5 && howdate < 15)
+										|| nowdate < 5)
+									return true;
+							}
+						}
+						return true;
 					}
 				});

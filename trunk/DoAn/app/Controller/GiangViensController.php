@@ -2,7 +2,7 @@
 class GiangViensController extends AppController{
 	var $name="GiangViens";
 	var $layout = "giangvien";
-	public $uses = array('Khuvuc','Phong','Hocki','Lichgiangday','Tuanhoc','Lophocphan','Giangvien','Thongbao','Lichnghi','Lichdaybu','User');
+	public $uses = array('Khuvuc','Phong','Hocki','Lichgiangday','Tuanhoc','Lophocphan','Giangvien','Thongbao','Lichnghi','Lichdaybu','User','Khoa');
 	function beforeFilter(){
 		parent::beforeFilter();
 		$this->Auth->allow(array('index','BaongiDaybu'));
@@ -53,20 +53,18 @@ class GiangViensController extends AppController{
 	public function thoikhoabieu(){
 		$this->layout=null;
 		$hocky=$this->request->data['hocky'];
-		
 		$idgv=$this->Session->read('Auth.User.Giangvien.id');
 		$lichday=$this->Lichgiangday->find('all',array('conditions'=>array('Lichgiangday.mahocky'=>$hocky,'Lichgiangday.magiangvien'=>$idgv)));
-		for($i=0;$i<count($lichday);$i++){
-			$lhp=$this->Lophocphan->find("first",array('conditions'=>array('Lophocphan.id'=>$lichday[$i]['Lichgiangday']['malophocphan']),'recursive'=>-1));
-			$mahocphan=$this->Phong->find("first",array('conditions'=>array('Phong.id'=>$lichday[$i]['Lichgiangday']['maphong']),'recursive'=>-1));
-			$lichday[$i]['Lophocphan']=$lhp;
-			$lichday[$i]['phong']=$mahocphan;
-		}
+
 		$this->set("Lichgiangday",$lichday);
 	}
 	//
 	public function canhan() {
+		
 		$user=$this->Session->read('Auth.User');
+		$khoa=$this->Session->read('Auth.User.Giangvien.khoa');
+		$khoas=$this->Khoa->find("first",array('conditions'=>array('Khoa.id'=>$khoa),'recursive'=>-1));
+		$this->set("Khoa",$khoas);
 		$this->set("user",$user);
 		
 	}
@@ -127,13 +125,18 @@ class GiangViensController extends AppController{
 				$num=$this->request->data['numberLhp'];
 				$ngaybao=date('Y/m/d', time());
 				$lydo=$this->request->data['lydo'];
+				
 				for ($i=1;$i<=$num;$i++){
 					$lichngi=array();
+					$thongbao=array();
 					$idtkb=$this->request->data['idTKB'.$i];
 					$ngayngi=$this->request->data['ngayngi'.$i];
 					$sotiet=$this->request->data['sotiet'.$i];
 					array_push($lichngi,array("maThoiKhoabieu"=>$idtkb,"ngaynghi"=>$ngayngi,"soTiet"=>$sotiet,"lydo"=>$lydo,"ngaybaongi"=>$ngaybao));
 					$this->Lichnghi->saveAll($lichngi);
+					$tkb=$this->Lichgiangday->find("first",array("conditions"=>array("Lichgiangday.id"=>$idtkb)));
+					array_push($thongbao,array("loaithongbao"=>2,"tieude"=>"Thông báo đến lớp [".$tkb['Lophocphan']['maLopHocPhan']."]".$tkb['Lophocphan']['tenLopHocPhan'],"noidung"=>"Lớp nghỉ học ngày ".$ngayngi,"nguoidang"=>$tkb['Lichgiangday']['magiangvien']));
+					$this->Thongbao->saveAll($thongbao);
 				}
 			}
 		}
@@ -193,16 +196,23 @@ class GiangViensController extends AppController{
 	public function createbaobu() {
 		if($this->request->is("post")){
 			$number=$this->request->data["numberLopbaobu"];
+			$mgv=$this->Session->read('Auth.User.Giangvien.id');
 			$ngaybao=date('Y/m/d', time());
 			for($i=1;$i<=$number;$i++){
 				$lichbu=array();
+				$thongbao=array();
 				$iddkbu=$this->request->data['mabaobu'.$i];
 				$ngaybu=$this->request->data['ngaybu'.$i];
 				$tutiet=$this->request->data['tutiet'.$i];
 				$dentiet=$this->request->data['dentiet'.$i];
 				$maphong=$this->request->data['maphong'.$i];
+				$tenphong=$this->request->data['tenphong'.$i];
+				$malhp=$this->request->data['malhp'.$i];
 				array_push($lichbu,array("malichnghi"=>$iddkbu,"maphong"=>$maphong,"ngaydaybu"=>$ngaybu,"tutiet"=>$tutiet,"dentiet"=>$dentiet,"ngaybao"=>$ngaybao));
 				$this->Lichdaybu->saveAll($lichbu);
+				$lophp=$this->Lophocphan->find("first",array("conditions"=>array("Lophocphan.maLopHocPhan"=>$malhp),'recursive'=>-1));
+				array_push($thongbao,array("loaithongbao"=>2,"tieude"=>"Thông báo đến lớp [".$lophp['Lophocphan']['maLopHocPhan']."]".$lophp['Lophocphan']['tenLopHocPhan'],"noidung"=>"Lớp học bù ngày ".$ngaybu." tại phòng ".$tenphong." từ tiết ".$tutiet." đến tiết ".$dentiet,"nguoidang"=>$mgv));
+				$this->Thongbao->saveAll($thongbao);
 			}
 		}
 		$this->redirect(array( 'controller'=>'GiangViens','action' => 'baonghibaobu'));

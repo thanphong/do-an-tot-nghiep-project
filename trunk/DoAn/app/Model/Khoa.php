@@ -10,9 +10,9 @@ class Khoa extends AppModel{
 					'limit' => '',
 					'dependent'=> true
 			),
-			'Giangvienkhoa' => array(
-					'className' => 'Giangvienkhoa',
-					'foreignKey' => 'makhoa',
+			'Giangvien' => array(
+					'className' => 'Giangvien',
+					'foreignKey' => 'khoa',
 					'conditions' => '',
 					'order' => '',
 					'limit' => '',

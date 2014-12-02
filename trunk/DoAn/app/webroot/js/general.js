@@ -1,4 +1,5 @@
  $(document).ready(function(){
+
 	 $("#login").click(function(){
 			loading(); // loading
 			setTimeout(function(){ // then show popup, delay in .001 second

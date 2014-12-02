@@ -19,5 +19,39 @@ class Lichgiangday extends AppModel{
 					'dependent'=> true
 			)
 	);
+	var $belongsTo = array(
+			'Lophocphan'=> array(
+					'className' => 'Lophocphan',
+					'foreignKey' => 'malophocphan',
+					'conditions' => '',
+					'order' => '',
+					'limit' => '',
+					'dependent'=> true
+			),
+			'Phong'=> array(
+					'className' => 'Phong',
+					'foreignKey' => 'maphong',
+					'conditions' => '',
+					'order' => '',
+					'limit' => '',
+					'dependent'=> true
+			),
+			'Tuanhoc'=> array(
+					'className' => 'Tuanhoc',
+					'foreignKey' => 'tuanbatdau',
+					'conditions' => '',
+					'order' => '',
+					'limit' => '',
+					'dependent'=> true
+			),
+			'Tuanhoc1'=> array(
+					'className' => 'Tuanhoc',
+					'foreignKey' => 'tuanketthuc',
+					'conditions' => '',
+					'order' => '',
+					'limit' => '',
+					'dependent'=> true
+			)
+	);
 }
 ?>
