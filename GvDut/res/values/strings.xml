@@ -42,6 +42,7 @@
     <string name="headerTenphong">Tên phòng</string>
      <string name="headerSocho">Số chỗ</string>
      <string name="headerLydo">Lý do</string>
+     <string name="huongdanSMS">Bạn soạn tin nhắn theo cú pháp: BN [Mã Lớp học phần] [ngày nghỉ] [Số tiết] để báo nghỉ đến lớp mình giảng dạy. </string>
     <!-- comfirm -->
     <string name="cofimbaonghi">Bạn có xác nhận lưu dữ liệu!</string>
 

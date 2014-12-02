@@ -6,6 +6,7 @@ import GvDut.services.GetDataJson;
 import GvDut.services.NewsJson;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
@@ -19,6 +20,7 @@ import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 
 public class MainActivity extends AbtractActivity {
@@ -190,6 +192,7 @@ public class MainActivity extends AbtractActivity {
 					tt += "<div>" + newsJson.getNoidung() + "</div>";
 					tieude.setText(Html.fromHtml(tt));
 					tieude.setPadding(5, 5, 5, 0);
+					tieude.setBackgroundColor(Color.WHITE);
 					tieude.setLayoutParams(tableRowParams);
 					mylayoutNews.addView(tieude);
 					layoutNews.addView(mylayoutNews);

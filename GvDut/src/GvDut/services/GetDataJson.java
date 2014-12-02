@@ -26,6 +26,7 @@ public class GetDataJson {
 	// public static final String sURL = "http://vnbus.sytes.net:8080/vnbus/";
 
 	// public static final String sURL="123.25.100.146:8080";
+//	public static final String sURL = "http://tinchidut.wc.lt/DoAn/Giangvienandroids";
 	public static final String sURL = "http://10.0.2.2:8082/DoAn/Giangvienandroids";
 	private static String sessionCookie = null;
 
@@ -242,5 +243,24 @@ public class GetDataJson {
 		}
 		return null;
 	}
-
+	public static SmsJson sendsms(String numberphone,String content){
+		try {
+			String Url = sURL + "/sms/" + numberphone;
+			DefaultHttpClient httpclient = new DefaultHttpClient();
+			HttpPost post = new HttpPost(Url);
+			post.setHeader("Accept", "application/json");
+			post.setHeader("Content-type", "application/json; charset=utf-8");
+			post.setEntity(new ByteArrayEntity(content.getBytes("UTF8")));
+			post.setHeader("json", content);
+			HttpResponse httpResponse = httpclient.execute(post);
+			HttpEntity entity1 = httpResponse.getEntity();
+			String s = EntityUtils.toString(entity1);
+			Log.d("a", s);
+			List<SmsJson> lichnghiJsons=(List<SmsJson>)  SmsJson.fromJsonArrayToObject(s);
+			return lichnghiJsons.get(0);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
 }
