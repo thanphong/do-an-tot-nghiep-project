@@ -1,5 +1,9 @@
 package GvDut.Net;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import GvDut.services.GetDataJson;
@@ -18,6 +22,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.view.Gravity;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -25,6 +30,7 @@ import android.widget.ListView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 
 public class BaonghiActivity extends AbtractActivity {
@@ -128,16 +134,16 @@ public class BaonghiActivity extends AbtractActivity {
 		mDrawerLayout.setDrawerListener(mDrawerToggle);
 
 		// Creating an ArrayAdapter to add items to the listview mDrawerList
-		String[] menu=getResources().getStringArray(R.array.Menu);
-		if(mgv!=0){
-			menu[menu.length-1]="Thoát";
+		String[] menu = getResources().getStringArray(R.array.Menu);
+		if (mgv != 0) {
+			menu[menu.length - 1] = "Thoát";
 		}
 		// Creating an ArrayAdapter to add items to the listview mDrawerList
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(
-				getBaseContext(), R.layout.drawer_list_item,menu);
-//		ArrayAdapter<String> adapter = new ArrayAdapter<String>(
-//				getBaseContext(), R.layout.drawer_list_item, getResources()
-//						.getStringArray(R.array.Menu));
+				getBaseContext(), R.layout.drawer_list_item, menu);
+		// ArrayAdapter<String> adapter = new ArrayAdapter<String>(
+		// getBaseContext(), R.layout.drawer_list_item, getResources()
+		// .getStringArray(R.array.Menu));
 
 		// Setting the adapter on mDrawerList
 		mDrawerList.setAdapter(adapter);
@@ -172,7 +178,7 @@ public class BaonghiActivity extends AbtractActivity {
 						startActivity(t);
 						break;
 					case stateDangnhap:
-						mgv=0;
+						mgv = 0;
 						t = new Intent(BaonghiActivity.this, MainActivity.class);
 						startActivity(t);
 						break;
@@ -195,8 +201,7 @@ public class BaonghiActivity extends AbtractActivity {
 						startActivity(t);
 						break;
 					case stateSms:
-						t = new Intent(BaonghiActivity.this,
-								SmsActivity.class);
+						t = new Intent(BaonghiActivity.this, SmsActivity.class);
 						startActivity(t);
 						break;
 					default:
@@ -225,8 +230,14 @@ public class BaonghiActivity extends AbtractActivity {
 				int i = 0;
 				TableRow.LayoutParams tableRowParams = new TableRow.LayoutParams();
 				tableRowParams.setMargins(1, 1, 1, 1);
+				tableRowParams.width = ViewGroup.LayoutParams.MATCH_PARENT;
+				tableRowParams.height = ViewGroup.LayoutParams.MATCH_PARENT;
 				tableRowParams.weight = 1;
-
+				TableRow.LayoutParams tableRowParamscheck = new TableRow.LayoutParams();
+				tableRowParamscheck.setMargins(1, 1, 1, 1);
+				tableRowParamscheck.width = ViewGroup.LayoutParams.WRAP_CONTENT;
+				tableRowParamscheck.height = ViewGroup.LayoutParams.WRAP_CONTENT;
+				final SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
 				for (final TkbieuJson tkbieuJson : tkbieu) {
 					i++;
 					TableRow tableRow = new TableRow(context);
@@ -253,17 +264,9 @@ public class BaonghiActivity extends AbtractActivity {
 							+ tkbieuJson.getDentiet() + ","
 							+ tkbieuJson.getMaphong());
 
-					TextView cobaongi = new TextView(context);
-					cobaongi.setBackgroundColor(Color.WHITE);
-					cobaongi.setGravity(Gravity.CENTER);
-					cobaongi.setLayoutParams(tableRowParams);
-					if (tkbieuJson.getBaongi() > 0)
-						cobaongi.setBackgroundResource(R.drawable.checkmark_24);
-
 					tableRow.addView(tvstt, tableRowParams);
 					tableRow.addView(tvLhp, tableRowParams);
 					tableRow.addView(tvtkb, tableRowParams);
-					tableRow.addView(cobaongi, tableRowParams);
 
 					tableRow.setOnClickListener(new OnClickListener() {
 
@@ -273,12 +276,23 @@ public class BaonghiActivity extends AbtractActivity {
 
 							ColorDrawable txtcolor = (ColorDrawable) tvstt
 									.getBackground();
-							if (txtcolor.getColor() == Color.WHITE) {
-								tkbieuJsons.add(tkbieuJson);
-								tvstt.setBackgroundColor(Color.BLUE);
-							} else {
-								tkbieuJsons.remove(tkbieuJson);
-								tvstt.setBackgroundColor(Color.WHITE);
+							try {
+								if (comparedateNow(formatter.parse(tkbieuJson
+										.getNgayketthuc()))) {
+									if (txtcolor.getColor() == Color.WHITE) {
+										tkbieuJsons.add(tkbieuJson);
+										tvstt.setBackgroundColor(Color.BLUE);
+									} else {
+										tkbieuJsons.remove(tkbieuJson);
+										tvstt.setBackgroundColor(Color.WHITE);
+									}
+								}else{
+									Toast.makeText(context, "Lớp học phần đã hết thời gian học!",
+											Toast.LENGTH_SHORT).show();
+								}
+							} catch (ParseException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
 							}
 
 						}
@@ -292,4 +306,12 @@ public class BaonghiActivity extends AbtractActivity {
 		}
 	}
 
+	//
+	public boolean comparedateNow(Date date) {
+		Calendar calendare = Calendar.getInstance();
+		if (calendare.getTime().compareTo(date) < 0)
+			return true;
+		return false;
+
+	}
 }

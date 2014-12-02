@@ -12,93 +12,102 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:layout_marginLeft="3dp"
-            android:layout_marginRight="3dp"
-            android:layout_marginTop="6dp"
-            android:orientation="vertical" >
+            android:fillViewport="true" >
 
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:layout_margin="1dip"
-                android:background="@color/tieude"
-                android:text="@string/headertkb"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="@android:color/white"
-                android:textSize="17sp"
-                android:textStyle="bold" />
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/my_custom_background"
+                android:orientation="vertical" >
 
-            <TableLayout
-                android:id="@+id/TKbieuBaonghi"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="#eaf0f5" >
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="1dip"
+                    android:background="@color/tieude"
+                    android:text="@string/headertkb"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@android:color/white"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
 
-                <TableRow
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#d0dee9" >
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:background="@android:color/white"
+                    android:gravity="center"
+                    android:orientation="vertical" >
 
-                    <TextView
+                    <TableLayout
+                        android:id="@+id/TKbieuBaonghi"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="#eaf0f5" >
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#d0dee9" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dip"
+                                android:layout_weight="1"
+                                android:background="#eaf0f5"
+                                android:text="@string/headerStt"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dip"
+                                android:layout_weight="1"
+                                android:background="#eaf0f5"
+                                android:text="@string/headerLhp"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dip"
+                                android:layout_weight="1"
+                                android:background="#eaf0f5"
+                                android:text="@string/headerNGAYDAY"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textStyle="bold" />
+                        </TableRow>
+                    </TableLayout>
+
+                    <Button
+                        android:id="@+id/btbaonghi"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="1dip"
-                        android:layout_weight="1"
-                        android:background="#eaf0f5"
-                        android:text="@string/headerStt"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textSize="12sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="1dip"
-                        android:layout_weight="1"
-                        android:background="#eaf0f5"
-                        android:text="@string/headerLhp"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textSize="12sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="1dip"
-                        android:layout_weight="1"
-                        android:background="#eaf0f5"
-                        android:text="@string/headerNGAYDAY"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textSize="12sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="1dip"
-                        android:layout_weight="1"
-                        android:background="#eaf0f5"
-                        android:text="@string/headerBaonghi"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textSize="12sp" />
-                </TableRow>
-            </TableLayout>
-
-            <Button
-                android:id="@+id/btbaonghi"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="4dp"
-                android:background="@drawable/list_status_button"
-                android:onClick="baonghi"
-                android:paddingLeft="3dp"
-                android:paddingRight="3dp"
-                android:text="Báo nghỉ"
-                android:textColor="@android:color/white" />
-        </LinearLayout>
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="9dp"
+                        android:background="@drawable/list_status_button"
+                        android:onClick="baonghi"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:text="Báo nghỉ"
+                        android:textColor="@android:color/white" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
     </FrameLayout>
     <!-- The navigation drawer -->
 

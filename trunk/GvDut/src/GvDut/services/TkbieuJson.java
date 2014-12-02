@@ -8,6 +8,7 @@ import flexjson.JSONSerializer;
 
 public class TkbieuJson {
 	private String lophp;
+	private String malophp;
 	private int thu;
 	private int idlichday;
 	private String maphong;
@@ -15,6 +16,8 @@ public class TkbieuJson {
 	private int baongi;
 	private String ngaynghi;
 	private int sotietnghi;
+	private String ngaybatdau;
+	private String ngayketthuc;
 	private String lydo;
 
 	public String getLophp() {
@@ -102,6 +105,42 @@ public class TkbieuJson {
 	 */
 	public void setLydo(String lydo) {
 		this.lydo = lydo;
+	}
+	/**
+	 * @return the malophp
+	 */
+	public String getMalophp() {
+		return malophp;
+	}
+	/**
+	 * @param malophp the malophp to set
+	 */
+	public void setMalophp(String malophp) {
+		this.malophp = malophp;
+	}
+	/**
+	 * @return the ngaybatdau
+	 */
+	public String getNgaybatdau() {
+		return ngaybatdau;
+	}
+	/**
+	 * @param ngaybatdau the ngaybatdau to set
+	 */
+	public void setNgaybatdau(String ngaybatdau) {
+		this.ngaybatdau = ngaybatdau;
+	}
+	/**
+	 * @return the ngayketthuc
+	 */
+	public String getNgayketthuc() {
+		return ngayketthuc;
+	}
+	/**
+	 * @param ngayketthuc the ngayketthuc to set
+	 */
+	public void setNgayketthuc(String ngayketthuc) {
+		this.ngayketthuc = ngayketthuc;
 	}
 	@Override
 	public String toString() {

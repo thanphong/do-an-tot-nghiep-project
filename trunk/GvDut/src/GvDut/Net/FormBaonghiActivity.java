@@ -343,7 +343,7 @@ public class FormBaonghiActivity extends AbtractActivity {
 					dialog = new DialogActivity();
 					dialog.depatureDate = ngaynghi;
 					dialog.context = context;
-					dialog.type = 1;
+					dialog.type = 3;
 					dialog.tkbieuJson = tkbieuJsons.get(j);
 					FragmentManager fragmentManager = getFragmentManager();
 					dialog.show(fragmentManager, "Ngày tháng");
