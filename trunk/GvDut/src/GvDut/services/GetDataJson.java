@@ -27,7 +27,8 @@ public class GetDataJson {
 
 	// public static final String sURL="123.25.100.146:8080";
 //	public static final String sURL = "http://tinchidut.wc.lt/DoAn/Giangvienandroids";
-	public static final String sURL = "http://10.0.2.2:8082/DoAn/Giangvienandroids";
+//	public static final String sURL = "http://10.0.2.2:8082/DoAn/Giangvienandroids";
+	public static final String sURL = "http://192.168.42.237:8082/DoAn/Giangvienandroids";
 	private static String sessionCookie = null;
 
 	// -----------------------cac ham da hoan thanh
@@ -222,7 +223,7 @@ public class GetDataJson {
 		return null;
 	}
 
-	public static LichnghiJson sendsms(int mgv, String contents) {
+	public static SmsJson sendsms(int mgv, String contents) {
 		// TODO Auto-generated method stub
 		try {
 			String Url = sURL + "/sendsms/" + mgv;
@@ -236,7 +237,7 @@ public class GetDataJson {
 			HttpEntity entity1 = httpResponse.getEntity();
 			String s = EntityUtils.toString(entity1);
 			Log.d("a", s);
-			List<LichnghiJson> lichnghiJsons=(List<LichnghiJson>)  LichnghiJson.fromJsonArrayToObject(s);
+			List<SmsJson> lichnghiJsons=(List<SmsJson>)  SmsJson.fromJsonArrayToObject(s);
 			return lichnghiJsons.get(0);
 		} catch (Exception e) {
 			e.printStackTrace();
