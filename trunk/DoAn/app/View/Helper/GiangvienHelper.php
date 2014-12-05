@@ -4,9 +4,7 @@ class GiangvienHelper extends HtmlHelper{
 		$menu="<ul class='nav'><li id='home' class='highlight'>".$this->link('Thông báo',array('controller' => 'Users','action' => 'index','full_base' => true))."</li>";
 		$menu.="<li id='lophocphan'>".$this->link('Lớp học phần',array('controller' => 'Users','action' => '','full_base' => true))."</li>";
 		$menu.="<li id='phonghoc'>".$this->link('Phòng học',array('controller' => 'Users','action' => 'xemPhonghoc','full_base' => true))."</li>";
-		$menu.="<li id='nghibu'>".$this->link('Quản lý',array('controller' => 'Users','action' => 'index','full_base' => true));
-		$menu.="<ul><li>".$this->link("Báo ngỉ-Báo bù",array('controller' => 'GiangViens','action' => 'baonghibaobu','full_base' => true))."</li>";
-		$menu.="</ul></li>";
+		$menu.="<li id='dankynghibu'>".$this->link('Đăng ký nghỉ dạy/dạy bù',array('controller' => 'GiangViens','action' => 'baonghibaobu','full_base' => true))."</li>";
 		$menu.="<li id='trogiup'>".$this->link('Trợ giúp',array('controller' => 'Users','action' => 'index','full_base' => true));
 		$menu.="<ul><li>".$this->link("Cá nhân",array('controller' => 'Users','action' => 'formConsulting','full_base' => true))."</li>";
 		$menu.="<li>".$this->link("quản lý",array('controller' => 'Users','action' => 'index','full_base' => true))."</li>";

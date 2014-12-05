@@ -18,7 +18,7 @@ class UserHelper extends HtmlHelper  {
 				$out.="<span class='left' style='padding:2px 5px;'>";
 				$out.="<b><span style='color: red;font-size:13.0pt;line-height:100%;font-family:times new roman,serif'>".$ngay.":</span></b>";
 				$out.="&nbsp;&nbsp;&nbsp;&nbsp;";
-				$out.="<span style='color:#009900;font-size:13.0pt;line-height:100%;font-family:times new roman,serif'>".$tieude."</span></span>";
+				$out.="<span class='tdthongbao'>".$tieude."</span></span>";
 				$out.="<span class='containTin'>".$noidung."</span></span>";			
 			}
 			$out.="</div>";
@@ -34,7 +34,7 @@ class UserHelper extends HtmlHelper  {
 				$out.="<span class='left' style='padding:2px 5px;'>";
 				$out.="<b><span style='color: red;font-size:13.0pt;line-height:100%;font-family:times new roman,serif'>".$ngay.":</span></b>";
 				$out.="&nbsp;&nbsp;&nbsp;&nbsp;";
-				$out.="<span style='color:#009900;font-size:13.0pt;line-height:100%;font-family:times new roman,serif'>".$tieude."</span></span>";
+				$out.="<span class='tdthongbao'>".$tieude."</span></span>";
 				$out.="<span class='containTin'>".$noidung."</span></span>";
 			}
 			$out.="</div></div>";

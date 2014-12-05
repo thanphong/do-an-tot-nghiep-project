@@ -60,38 +60,54 @@ class GiangViensController extends AppController{
 	}
 	//
 	public function canhan() {
-		
-		$user=$this->Session->read('Auth.User');
+
+		//$user=$this->Session->read('Auth.User');
+		$idgv=$this->Session->read('Auth.User.Giangvien.id');
+		$user=$this->Giangvien->find('first',array('conditions'=>array('Giangvien.id'=>$idgv),'recursive'=>-1));
 		$khoa=$this->Session->read('Auth.User.Giangvien.khoa');
 		$khoas=$this->Khoa->find("first",array('conditions'=>array('Khoa.id'=>$khoa),'recursive'=>-1));
 		$this->set("Khoa",$khoas);
 		$this->set("user",$user);
-		
+
 	}
 	public function thaydoimatkhau() {
-		$this->request->data['newMatkhau'] = Security::hash($this->request->data['newMatkhau'],NULL,TRUE);	
+		$this->request->data['newMatkhau'] = Security::hash($this->request->data['newMatkhau'],NULL,TRUE);
 		if($this->request->is('post')){
 			$this->User->updateAll(array('User.matKhau' =>"'".$this->request->data('newMatkhau')."'")
 					,array('User.id' =>$this->Session->read('Auth.User.id')));
 			$this->set('success','success');
-			$this->redirect(array('controller' => 'giangviens', 'action' => 'canhan'));	
-		//	$this->render('canhan');
+			$this->redirect(array('controller' => 'GiangViens', 'action' => 'canhan'));
+			//	$this->render('canhan');
+		}
+
+	}
+	public function Capnhapthongtin() {
+		if($this->request->is('post')){
+			$idgv=$this->Session->read('Auth.User.Giangvien.id');
+			$query="UPDATE giangviens AS Giangvien  SET Giangvien.ten ='".$this->request->data('ten')."', 
+			Giangvien.ngaySinh ='".$this->request->data('ngaySinh')."', Giangvien.diachi = '".$this->request->data('diachi')."', Giangvien.gioitinh =".$this->request->data('gioitinh').",
+			 Giangvien.sodienthoai = '".$this->request->data('sodienthoai')."', 
+			 Giangvien.email = '".$this->request->data('email')."', Giangvien.hocham = '".$this->request->data('hocham')."', 
+			 Giangvien.hocvi = '".$this->request->data('hocvi')."' WHERE Giangvien.id =".$idgv;
+			$this->Giangvien->query($query);
+			$this->redirect(array('controller' => 'GiangViens', 'action' => 'canhan'));
 		}
 		
 	}
+
 	public function kiemtramatkhau() {
 		$this->layout=null;
 		if($this->request->is('post')){
 			$pass=AuthComponent::password($this->request->data['pass']);
 			$data=$this->User->find("all",array('conditions'=>array('User.maGiangvien'=>$this->Session->read('Auth.User.Giangvien.id'),'User.matKhau'=>$pass),'recursive'=>-1));
-			$this->set("data",$data);	
+			$this->set("data",$data);
 		}
 	}
 	public function lichbaonghi() {
 		$this->layout=null;
 		$hocky=$this->request->data['hocky'];
 		$idgv=$this->Session->read('Auth.User.Giangvien.id');
-		
+
 		$lichday=$this->Lichgiangday->query("select lichgiangdays.id,lophocphans.tenLopHocPhan,lophocphans.maLopHocPhan,lichgiangdays.thu,lichgiangdays.tutiet,lichgiangdays.dentiet from lichnghis,lichgiangdays,lophocphans
 				where lichnghis.maThoiKhoabieu=lichgiangdays.id and lichgiangdays.malophocphan=lophocphans.id and lichgiangdays.magiangvien=".$idgv." and lichgiangdays.mahocky=".$hocky." group by lichnghis.maThoiKhoabieu");
 		$i=0;
@@ -104,7 +120,7 @@ class GiangViensController extends AppController{
 				$daybus=$items['Lichdaybu'];
 				$sotietbu=0;
 				foreach ($daybus as $item){
-					$sotietbu+=$item['dentiet']-$item['tutiet']+1;	
+					$sotietbu+=$item['dentiet']-$item['tutiet']+1;
 				}
 				$sotietdabu+=$sotietbu;
 			}
@@ -113,19 +129,19 @@ class GiangViensController extends AppController{
 			$lichday[$i]['lichnghi']=$lichbaonghi;
 			$i++;
 			//array_push($lichday,$lichbaonghi);
-		
+
 		}
 		$this->set("lichnghi",$lichday);
 	}
 	//endjson
 	public function createbaonghi() {
 		if($this->request->is('post')){
-			
+				
 			if(isset($this->request->data)){
 				$num=$this->request->data['numberLhp'];
 				$ngaybao=date('Y/m/d', time());
 				$lydo=$this->request->data['lydo'];
-				
+
 				for ($i=1;$i<=$num;$i++){
 					$lichngi=array();
 					$thongbao=array();
@@ -179,9 +195,9 @@ class GiangViensController extends AppController{
 				$thu=-1;
 		}
 		$sql='SELECT * FROM lichgiangdays where (lichgiangdays.tutiet >='.$tutiet.' and lichgiangdays.tutiet <='.$dentiet.' and lichgiangdays.magiangvien ='.$mgv.' and lichgiangdays.mahocky ='.$ky.' and lichgiangdays.thu ='.$thu.')
-					or (lichgiangdays.tutiet <='.$tutiet.' and lichgiangdays.dentiet >='.$dentiet.' and lichgiangdays.magiangvien ='.$mgv.' and lichgiangdays.mahocky ='.$ky.' and lichgiangdays.thu ='.$thu.')
-					or (lichgiangdays.dentiet >='.$tutiet.' and lichgiangdays.dentiet <='.$dentiet.' and lichgiangdays.magiangvien ='.$mgv.' and lichgiangdays.mahocky ='.$ky.' and lichgiangdays.thu ='.$thu.')
-					or (lichgiangdays.tutiet >='.$tutiet.' and lichgiangdays.dentiet <='.$dentiet.' and lichgiangdays.magiangvien ='.$mgv.' and lichgiangdays.mahocky ='.$ky.' and lichgiangdays.thu ='.$thu.')';
+				or (lichgiangdays.tutiet <='.$tutiet.' and lichgiangdays.dentiet >='.$dentiet.' and lichgiangdays.magiangvien ='.$mgv.' and lichgiangdays.mahocky ='.$ky.' and lichgiangdays.thu ='.$thu.')
+						or (lichgiangdays.dentiet >='.$tutiet.' and lichgiangdays.dentiet <='.$dentiet.' and lichgiangdays.magiangvien ='.$mgv.' and lichgiangdays.mahocky ='.$ky.' and lichgiangdays.thu ='.$thu.')
+								or (lichgiangdays.tutiet >='.$tutiet.' and lichgiangdays.dentiet <='.$dentiet.' and lichgiangdays.magiangvien ='.$mgv.' and lichgiangdays.mahocky ='.$ky.' and lichgiangdays.thu ='.$thu.')';
 
 		$lichday=$this->Lichgiangday->query($sql);
 		$num=60;
@@ -232,13 +248,13 @@ class GiangViensController extends AppController{
 	public function huybaonghi() {
 		if($this->request->is("post")){
 			$number=$this->request->data["numberLopbaobu"];
-			for ($i=1;$i<=$number;$i++){
+			for ($i=0;$i<$number;$i++){
 				$iddkbu=$this->request->data['mabaonghi'.$i];
 				$this->Lichnghi->deleteAll(array('Lichnghi.id'=>$iddkbu));
 			}
 			$this->redirect(array( 'controller'=>'GiangViens','action' => 'baonghibaobu'));
 		}
 	}
-	
+
 }
 ?>

@@ -33,6 +33,14 @@ class Giangvien extends AppModel{
 					'order' => '',
 					'limit' => '',
 					'dependent'=> true
+			),
+			'Smssucce' => array(
+					'className' => 'Smssucce',
+					'foreignKey' => 'magiangvien',
+					'conditions' => '',
+					'order' => '',
+					'limit' => '',
+					'dependent'=> true
 			)
 
 	);

@@ -305,7 +305,7 @@ $(document)
 														.split(",")[0][1];
 												j++;
 												var comb = getDateByNumOfWeek(
-														thunghi, j);
+														thunghi, j,tds[2]);
 
 												var tr = document
 														.createElement("tr");
@@ -341,7 +341,7 @@ $(document)
 												TKB.style.textAlign = 'left';
 												TKB
 														.appendChild(document
-																.createTextNode(tds[2].innerHTML));
+																.createTextNode(tds[2].textContent));
 
 												var ngayngi = document
 														.createElement("td");
@@ -637,11 +637,11 @@ $(document)
 						return true;
 					}
 
-					function getDateByNumOfWeek(thu, index) {
+					function getDateByNumOfWeek(thu, index,e) {
 						var select = document.createElement("select");
 						select.setAttribute("name", "ngayngi" + index);
-
-						var thoigian = $("#thoigianhoc").val().split(";");
+						var thoigian = e.getElementsByTagName('input')[0].value.split(";");
+						//var thoigian = $("#thoigianhoc").val().split(";");
 						var ngend = new Date(thoigian[1].split(" ")[0]);
 
 						var d = new Date();

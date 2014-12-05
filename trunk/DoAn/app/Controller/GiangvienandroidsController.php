@@ -2,7 +2,7 @@
 class GiangvienandroidsController extends AppController{
 	var $layout = null;
 	var $name="Gianvienadroids";
-	public $uses = array("Thongbao","Giangvien","Lichgiangday",'Hocki','Lophocphan','Phong','Lichnghi','Lichdaybu','Lichthi','Thongbao');
+	public $uses = array("Thongbao","Giangvien","Lichgiangday",'Hocki','Lophocphan','Phong','Lichnghi','Lichdaybu','Lichthi','Thongbao','Sms','Smssucces','Smserror');
 	public function beforeFilter() {
 		parent::beforeFilter();
 		$this->Auth->allow();
@@ -113,7 +113,6 @@ class GiangvienandroidsController extends AppController{
 				$daybus=$items['Lichdaybu'];
 				$lichdaybuJsons=array();
 				$sotietnghi+=$items['Lichnghi']['soTiet'];
-				//print_r($items);
 				$sotietbu=0;
 				foreach ($daybus as $item){
 					$lichdaybuJson=array();
@@ -145,19 +144,8 @@ class GiangvienandroidsController extends AppController{
 		$this->set("TKBnghi",$TkbBaonghiJsons);
 	}
 	//
-	public function getPhong($mgv){
-		$date = date('Y/m/d', time());
-		$hocky=$this->Hocki->find("first",array('conditions'=>array('Hocki.batdau <='=>$date,'Hocki.kethuc >='=>$date)));
-		$ky=$hocky['Hocki']['id'];
-		$json = file_get_contents('php://input');
-		$obj = json_decode($json);
-		$idlichnghi=$obj->{'lichnghi'};
-		$lhp=$this->Lophocphan->query("SELECT lophocphans.soLuong FROM lophocphans,lichgiangdays,lichnghis where lophocphans.id=lichgiangdays.malophocphan and lichgiangdays.id=lichnghis.maThoiKhoabieu and lichnghis.id=".$idlichnghi);
-		$soghe=$lhp[0]['lophocphans']['soLuong'];
-		$ngadaybu=$obj->{'ngayday'};
-		$tutiet=$obj->{'tietdau'};
-		$dentiet=$obj->{'tietcuoi'};
-		$date_stamp = strtotime(date('Y-m-d', strtotime($ngadaybu)));
+	public function ConventDateToDayOfWeek($date){
+		$date_stamp = strtotime(date('Y-m-d', strtotime($date)));
 		$stamp = date('l', $date_stamp);
 		$thu=0;
 		switch ($stamp){
@@ -185,6 +173,24 @@ class GiangvienandroidsController extends AppController{
 			default:
 				$thu=-1;
 		}
+		return $thu;
+	}
+	//
+	public function getPhong($mgv){
+		$date = date('Y/m/d', time());
+		$hocky=$this->Hocki->find("first",array('conditions'=>array('Hocki.batdau <='=>$date,'Hocki.kethuc >='=>$date)));
+		$ky=$hocky['Hocki']['id'];
+		$json = file_get_contents('php://input');
+		$obj = json_decode($json);
+		$idlichnghi=$obj->{'lichnghi'};
+		$lhp=$this->Lophocphan->query("SELECT lophocphans.soLuong FROM lophocphans,lichgiangdays,lichnghis where lophocphans.id=lichgiangdays.malophocphan and lichgiangdays.id=lichnghis.maThoiKhoabieu and lichnghis.id=".$idlichnghi);
+		$soghe=$lhp[0]['lophocphans']['soLuong'];
+		$ngadaybu=$obj->{'ngayday'};
+		$tutiet=$obj->{'tietdau'};
+		$dentiet=$obj->{'tietcuoi'};
+		// 		$date_stamp = strtotime(date('Y-m-d', strtotime($ngadaybu)));
+		// 		$stamp = date('l', $date_stamp);
+		$thu=$this->ConventDateToDayOfWeek($ngadaybu);
 		$sql='SELECT * FROM lichgiangdays where (lichgiangdays.tutiet >='.$tutiet.' and lichgiangdays.tutiet <='.$dentiet.' and lichgiangdays.magiangvien ='.$mgv.' and lichgiangdays.mahocky ='.$ky.' and lichgiangdays.thu ='.$thu.')
 				or (lichgiangdays.tutiet <='.$tutiet.' and lichgiangdays.dentiet >='.$dentiet.' and lichgiangdays.magiangvien ='.$mgv.' and lichgiangdays.mahocky ='.$ky.' and lichgiangdays.thu ='.$thu.')
 						or (lichgiangdays.dentiet >='.$tutiet.' and lichgiangdays.dentiet <='.$dentiet.' and lichgiangdays.magiangvien ='.$mgv.' and lichgiangdays.mahocky ='.$ky.' and lichgiangdays.thu ='.$thu.')
@@ -235,70 +241,159 @@ class GiangvienandroidsController extends AppController{
 	}
 	public function sendsms($mgv){
 		if($this->request->is("post")){
+			$smsJson=array();
 			$date = date('Y-m-d');
 			$json = file_get_contents('php://input');
-			//$obj = json_decode($json);
-
-			list($cp, $malhp, $ngayngi,$sotiet,$lydo)=split(" ",$json);
-			$lhp=$this->Lophocphan->find("first",array("conditions"=>array("Lophocphan.maLopHocPhan"=>$malhp)));
-			$lichgiangday=$this->Lichgiangday->find("first",array("conditions"=>array('Lichgiangday.magiangvien'=>$mgv,'Lichgiangday.malophocphan'=>$lhp['Lophocphan']['Id'])));
-			$idlichgiangday=$lichgiangday['Lichgiangday']['id'];
-			$lichnghi=array();
-			$lichnghi['maThoiKhoabieu']=$idlichgiangday;
-			$lichnghi['ngaynghi']=$ngayngi;
-			$lichnghi['soTiet']=$sotiet;
-			$lichnghi['ngaybaongi']=$date;
-			$lichnghi['lydo']=$lydo;
-			$this->Lichnghi->saveAll($lichnghi);
-			$lichnghiresult=$this->Lichnghi->find("first",array('conditions'=>array('Lichnghi.maThoiKhoabieu'=>$idlichgiangday,'Lichnghi.ngaynghi'=>$ngayngi)));
-			$lichnghijson=array();
-			array_push($lichnghijson,array("id"=>$lichnghiresult['Lichnghi']['id'],"ngayngi"=>$lichnghiresult['Lichnghi']['ngaynghi'],"sotiet"=>$lichnghiresult['Lichnghi']['soTiet']));
-			$this->set("data",$lichnghijson);
+			$content="";
+			list($cp, $malhp, $ngayngi,$sotiet)=split(" ",$json);
+			$giangvien=$this->Giangvien->find("first",array("conditions"=>array("Giangvien.id "=>$mgv),'recursive'=>-1));
+			if(isset($giangvien) && $giangvien!=null){
+				$lhp=$this->Lophocphan->find("first",array("conditions"=>array("Lophocphan.maLopHocPhan"=>$malhp),'recursive'=>-1));
+				if(isset($lhp) && $lhp!=null){
+					$lichgianday=$this->Lichgiangday->find("first",array('conditions'=>array("Lichgiangday.magiangvien"=>$giangvien['Giangvien']['id'],'Lichgiangday.malophocphan'=>$lhp['Lophocphan']['Id']),'recursive'=>-1));
+					if(isset($lichgianday) && $lichgianday!=null){
+						$idlichgiangday=$lichgianday['Lichgiangday']['id'];
+						$lichnghi=array();
+						$thongbao=array();
+						$thu=$this->ConventDateToDayOfWeek($ngayngi);
+						if($thu==$lichgianday['Lichgiangday']['thu']){
+							if(strtotime($date)> strtotime($ngayngi)){
+								$lichnghi['maThoiKhoabieu']=$idlichgiangday;
+								$lichnghi['ngaynghi']=$ngayngi;
+								$lichnghi['soTiet']=$sotiet;
+								$lichnghi['ngaybaongi']=$date;
+								$lichnghi['lydo']="Giảng viên ốm";
+								$this->Lichnghi->saveAll($lichnghi);
+								$lichnghiresult=$this->Lichnghi->find("first",array('conditions'=>array('Lichnghi.maThoiKhoabieu'=>$idlichgiangday,'Lichnghi.ngaynghi'=>$ngayngi)));
+								if(isset($lichnghiresult)&& $lichnghiresult!=null){
+									// 						$content.="Đăng ký nghỉ thành công.Vui lòng đăng nhập website để kiểm tra thông tin.";
+									$content="Dang ky nghi thanh cong.Vui long dang nhap website de kiem tra thong tin";
+									array_push($thongbao,array("loaithongbao"=>2,"tieude"=>"Thông báo đến lớp [".$lhp['Lophocphan']['maLopHocPhan']."]".$lhp['Lophocphan']['tenLopHocPhan'],"noidung"=>"Lớp nghỉ học ngày ".$ngayngi,"nguoidang"=>$giangvien['Giangvien']['id']));
+									$this->Thongbao->saveAll($thongbao);
+									
+								}else{
+									$content="Dang ky nghi that bai!Sever dang ban!";
+								}
+							}else{
+								$content="Dang ky nghi that bai! lớp hoc phan da het thoi gian hoc!";
+							}
+						}
+						else{
+							$content="Dang ky nghi that bai!Ngay nghi khong dung trong lich giang day cua ban!";
+						}
+					}else{
+						$content="Dang ky nghi that bai!Lop hoc phan khong co trong lich giang day cua ban!";
+					}
+				}
+				else{
+					$content="Dang ky nghi that bai!Khong dung tim thay lop hoc phan!";
+				}
+			}else{
+				$content="Dang ky nghi that bai!So dien thoai cua ban chua dang ky trong he thong!";
+			}
+			array_push($smsJson,array("phonenumber"=>$mgv,"content"=>$content));
+			$this->set("data",$smsJson);
 		}
 	}
 	public function sms($phonenumber){
+		$phonenumber=trim($phonenumber," ");
 		if($this->request->is("post")){
 			$smsJson=array();
 			$date = date('Y-m-d');
 			$json = file_get_contents('php://input');
 			$content="";
-			
 			$cp=split(" ",$json)[0];
+			$sms=array();
+			$sms['content']=$json;
+			$sms['phoneNumber']=$phonenumber;
+			$this->Sms->saveAll($sms);
+			$smsresult=$this->Sms->find("first",array('conditions'=>array("Sms.content"=>$json,"Sms.phoneNumber"=>$phonenumber),'recursive'=>-1,'order'=>array('Sms.ngaynt DESC')));
 			if(strcasecmp ($cp,"HD")==0 ){
-				$content.="Soan tin theo cu phap:HD goi den tong dai de xem huong dan";
-// 				$content.="Soan tin theo cu phap:HD";
-				$content.="Soan tin theo cu phap:BN Malhp ngaynghi sotiet lydo goi den tong dai de dang ky bao nghi.";
-				array_push($smsJson,array("phonenumber"=>$phonenumber,"content"=>$content));
+				$content="Soan tin theo cu phap:BN Malhp ngaynghi tutiet dentiet goi den 15555215554 de dang ky bao nghi.";
 			}
 			else{
 				if(strcasecmp ($cp,"BN")==0){
-					list($cp, $malhp, $ngayngi,$sotiet,$lydo)=split(" ",$json);
-					$giangvien=$this->Giangvien->find("first",array("conditions"=>array("Giangvien.sodienthoai"=>$phonenumber),'recursive'=>-1));
-					$lhp=$this->Lophocphan->find("first",array("conditions"=>array("Lophocphan.maLopHocPhan"=>$malhp),'recursive'=>-1));
-					$lichgianday=$this->Lichgiangday->find("first",array('conditions'=>array("Lichgiangday.magiangvien"=>$giangvien['Giangvien']['id'],'Lichgiangday.malophocphan'=>$lhp['Lophocphan']['Id']),'recursive'=>-1));
-					$idlichgiangday=$lichgianday['Lichgiangday']['id'];
-					$lichnghi=array();
-					$thongbao=array();
-					$lichnghi['maThoiKhoabieu']=$idlichgiangday;
-					$lichnghi['ngaynghi']=$ngayngi;
-					$lichnghi['soTiet']=$sotiet;
-					$lichnghi['ngaybaongi']=$date;
-					$lichnghi['lydo']=$lydo;
-					$this->Lichnghi->saveAll($lichnghi);
-					$lichnghiresult=$this->Lichnghi->find("first",array('conditions'=>array('Lichnghi.maThoiKhoabieu'=>$idlichgiangday,'Lichnghi.ngaynghi'=>$ngayngi)));
-					if(isset($lichnghiresult)&& $lichnghiresult!=null){
-// 						$content.="Đăng ký nghỉ thành công.Vui lòng đăng nhập website để kiểm tra thông tin.";
-						$content="Dang ky nghi thanh cong.Vui long dang nhap website de kiem tra thong tin";
-						array_push($smsJson,array("phonenumber"=>$phonenumber,"content"=>$content));
-						array_push($thongbao,array("loaithongbao"=>2,"tieude"=>"Thông báo đến lớp [".$lhp['Lophocphan']['maLopHocPhan']."]".$lhp['Lophocphan']['tenLopHocPhan'],"noidung"=>"Lớp nghỉ học ngày ".$ngayngi,"nguoidang"=>$giangvien['Giangvien']['id']));
-						$this->Thongbao->saveAll($thongbao);
+					list($cp, $malhp, $ngayngi,$sotiet)=split(" ",$json);
+					$giangvien=$this->Giangvien->find("first",array("conditions"=>array("Giangvien.sodienthoai like "=>'%'.substr($phonenumber,2).'%'),'recursive'=>-1));
+					if(isset($giangvien) && $giangvien!=null){
+						$lhp=$this->Lophocphan->find("first",array("conditions"=>array("Lophocphan.maLopHocPhan"=>$malhp),'recursive'=>-1));
+						if(isset($lhp) && $lhp!=null){
+							$lichgianday=$this->Lichgiangday->find("first",array('conditions'=>array("Lichgiangday.magiangvien"=>$giangvien['Giangvien']['id'],'Lichgiangday.malophocphan'=>$lhp['Lophocphan']['Id']),'recursive'=>-1));
+							if(isset($lichgianday) && $lichgianday!=null){
+								$idlichgiangday=$lichgianday['Lichgiangday']['id'];
+								$lichnghi=array();
+								$thongbao=array();
+								$thu=$this->ConventDateToDayOfWeek($ngayngi);
+								if($thu==$lichgianday['Lichgiangday']['thu']){
+									if(strtotime($date)> strtotime($ngayngi)){
+										$lichnghi['maThoiKhoabieu']=$idlichgiangday;
+										$lichnghi['ngaynghi']=$ngayngi;
+										$lichnghi['soTiet']=$sotiet;
+										$lichnghi['ngaybaongi']=$date;
+										$lichnghi['lydo']="Giảng viên ốm";
+										$this->Lichnghi->saveAll($lichnghi);
+										$lichnghiresult=$this->Lichnghi->find("first",array('conditions'=>array('Lichnghi.maThoiKhoabieu'=>$idlichgiangday,'Lichnghi.ngaynghi'=>$ngayngi)));
+										if(isset($lichnghiresult)&& $lichnghiresult!=null){
+											// 						$content.="Đăng ký nghỉ thành công.Vui lòng đăng nhập website để kiểm tra thông tin.";
+											$content="Dang ky nghi thanh cong.Vui long dang nhap website de kiem tra thong tin";
+											array_push($thongbao,array("loaithongbao"=>2,"tieude"=>"Thông báo đến lớp [".$lhp['Lophocphan']['maLopHocPhan']."]".$lhp['Lophocphan']['tenLopHocPhan'],"noidung"=>"Lớp nghỉ học ngày ".$ngayngi,"nguoidang"=>$giangvien['Giangvien']['id']));
+											$this->Thongbao->saveAll($thongbao);
+											$sms['content']=$content;
+											$sms['magiangvien']=$giangvien['Giangvien']['id'];
+											$sms['idsms']=$smsresult['Sms']['id'];
+											$this->Smssucces->saveAll($sms);
+										}else{
+											$content="Dang ky nghi that bai!Sever dang ban!";
+											$sms['contenterr']=$content;
+											$sms['phonenumber']=$phonenumber;
+											$this->Smserror->saveAll($sms);
+										}
+									}else{
+										$content="Dang ky nghi that bai! lớp hoc phan da het thoi gian hoc!";
+										$sms['contenterr']=$content;
+										$sms['phonenumber']=$phonenumber;
+										$this->Smserror->saveAll($sms);
+									}
+								}
+								else{
+									$content="Dang ky nghi that bai!Ngay nghi khong dung trong lich giang day cua ban!";
+									$sms['contenterr']=$content;
+									$sms['idsms']=$smsresult['Sms']['id'];
+									$sms['phonenumber']=$phonenumber;
+									$this->Smserror->saveAll($sms);
+								}
+							}else{
+								$content="Dang ky nghi that bai!Lop hoc phan khong co trong lich giang day cua ban!";
+								$sms['contenterr']=$content;
+								$sms['idsms']=$smsresult['Sms']['id'];
+								$sms['phonenumber']=$phonenumber;
+								$this->Smserror->saveAll($sms);
+							}
+						}
+						else{
+							$content="Dang ky nghi that bai!Khong dung tim thay lop hoc phan!";
+							$sms['contenterr']=$content;
+							$sms['idsms']=$smsresult['Sms']['id'];
+							$sms['phonenumber']=$phonenumber;
+							$this->Smserror->saveAll($sms);
+						}
+					}else{
+						$content="Dang ky nghi that bai!So dien thoai cua ban chua dang ky trong he thong!";
+						$sms['contenterr']=$content;
+						$sms['idsms']=$smsresult['Sms']['id'];
+						$sms['phonenumber']=$phonenumber;
+						$this->Smserror->saveAll($sms);
 					}
 				}
 				else{
-					$content.="Tin nhan sai cu phap vui long soan tin nhan:HD goi den tong dai de xem huong dan.";
-					array_push($smsJson,array("phonenumber"=>$phonenumber,"content"=>$content));
+					$content="Tin nhan sai cu phap vui long soan tin nhan:HD goi den 15555215554 de xem huong dan.";
+					$sms['contenterr']=$content;
+					$sms['idsms']=$smsresult['Sms']['id'];
+					$sms['phonenumber']=$phonenumber;
+					$this->Smserror->saveAll($sms);
 				}
 			}
+			array_push($smsJson,array("phonenumber"=>$phonenumber,"content"=>$content));
 			$this->set("data",$smsJson);
 		}
 	}

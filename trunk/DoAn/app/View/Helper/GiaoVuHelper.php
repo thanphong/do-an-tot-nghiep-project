@@ -8,6 +8,7 @@ class GiaoVuHelper extends HtmlHelper{
 		$menu="<ul class='nav'><li id='home' class='highlight'>".$this->link('Thông báo',array('controller' => 'Users','action' => 'index','full_base' => true))."</li>";
 		$menu.="<li id='lophocphan'>".$this->link('Lớp học phần',array('controller' => 'Users','action' => '','full_base' => true))."</li>";
 		$menu.="<li id='phonghoc'>".$this->link('Phòng học',array('controller' => 'Users','action' => 'xemPhonghoc','full_base' => true))."</li>";
+		$menu.="<li id='dankynghibu'>".$this->link('Đăng ký nghỉ dạy/dạy bù',array('controller' => 'GiangViens','action' => 'baonghibaobu','full_base' => true))."</li>";
 		$menu.="<li id='nghibu'><a href='#'>Quản lý</a>";
 		$menu.="<ul><li>".$this->link("Quản lý học phần",array('controller' => 'GiaoVus','action' => 'quanlyHocphan','full_base' => true))."</li>";
 		$menu.="<li>".$this->link("Quản lý giảng viên",array('controller' => 'GiaoVus','action' => 'quanlyGiangVien','full_base' => true))."</li>";
