@@ -76,6 +76,19 @@ $(document)
 																	+ jsonStr[iterable_element].Phong.tenPhong));
 											tkb.className = "GridCellC";
 											tkb.style.textAlign = 'left';
+											var daybeginend = document
+													.createElement("input");
+											daybeginend.setAttribute("type",
+													"hidden");
+											daybeginend.setAttribute("name",
+													"daybeginend");
+											daybeginend
+													.setAttribute(
+															"value",
+															jsonStr[iterable_element].Tuanhoc.ngaybatdau
+																	+ ";"
+																	+ jsonStr[iterable_element].Tuanhoc1.ngaykethuc);
+											tkb.appendChild(daybeginend);
 											var chonbaongi = document
 													.createElement("td");
 											chonbaongi.className = "GridCellC";
@@ -116,21 +129,32 @@ $(document)
 						});
 
 					}
-					function chonngayngi() {
-						alert("aaa");
-					}
-
-					function chekthoigian() {
-						var thoigian = $("#thoigianhoc").val().split(";");
-						var ngend = new Date(thoigian[0].split(" ")[1]);
+					function chekthoigian(e) {
+						var tds = e.getElementsByTagName('td');
+						var thu = tds[2].textContent.split(",")[0][1];
+						var thoigian=tds[2].getElementsByTagName('input')[0].value.split(";");
+						var ngend = new Date(thoigian[1]);
 						var now = new Date();
 						if (now.getTime() > ngend.getTime())
 							return false;
+						
+						var d = new Date();
+						var now = new Date();
+						var n = d.getDay() + 1;
+						var delta = thu - n;
+						d.setDate(d.getDate() + delta);
+						if (d.getTime() < now.getTime()) {
+							d.setDate(d.getDate() + 7);
+						}
+						if(!(d.getTime() >= now.getTime()
+								&& d.getTime() < ngend.getTime())) {
+							return false;
+						}
 						return true;
 					}
-					//
 					function chonlophocphan(e) {
-						if (chekthoigian()) {
+						
+						if (chekthoigian(e)) {
 							var tds = e.getElementsByTagName('td');
 							var classname = tds[0].className;
 							if (classname.indexOf("checkLhpBaongi") > -1) {
@@ -141,7 +165,7 @@ $(document)
 								tds[0].className += " checkLhpBaongi";
 							}
 						} else {
-							alert("Không phải là thời gian báo nghỉ!");
+							alert("Lớp học phần đã hết thời gian học!");
 						}
 					}
 					//
