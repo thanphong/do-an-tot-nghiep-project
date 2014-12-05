@@ -43,10 +43,10 @@ public final class R {
         public static final int sea_dust_wide=0x7f02000f;
     }
     public static final class id {
-        public static final int TKbieu=0x7f0a0018;
+        public static final int TKbieu=0x7f0a0019;
         public static final int TKbieuBaobu=0x7f0a0005;
         public static final int TKbieuBaonghi=0x7f0a0007;
-        public static final int action_settings=0x7f0a0019;
+        public static final int action_settings=0x7f0a001a;
         public static final int addr_edittext=0x7f0a0015;
         public static final int btbaobu=0x7f0a0006;
         public static final int btbaonghi=0x7f0a0008;
@@ -68,6 +68,7 @@ public final class R {
         public static final int tableBaonghi=0x7f0a000d;
         public static final int tv_content=0x7f0a0011;
         public static final int txtHuongdan=0x7f0a0017;
+        public static final int txtresult=0x7f0a0018;
         public static final int username=0x7f0a0012;
     }
     public static final class layout {
