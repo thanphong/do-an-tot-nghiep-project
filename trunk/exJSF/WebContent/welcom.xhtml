@@ -1,0 +1,26 @@
+<HTML xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions">
+<HEAD>
+
+</HEAD>
+<BODY>
+	<h:outputText value="#{studentBean.student.name}">
+	</h:outputText>
+	<h:outputText value="#{studentBean.student.age}"></h:outputText>
+	<h:dataTable value="#{studentBean.listStudent}" var="s">
+	<h:column >
+		<f:facet name="header">
+		name
+		</f:facet>
+		#{s.name}
+	</h:column>
+	<h:column> 
+		<f:facet name="header">Age</f:facet>
+			#{s.age}
+	</h:column>
+	</h:dataTable>
+</BODY>
+</HTML>
