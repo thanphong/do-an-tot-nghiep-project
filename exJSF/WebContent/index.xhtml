@@ -1,0 +1,39 @@
+<HTML xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions">
+<h:head>
+	<title>JSF Tutorial!</title>
+	<script
+		src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+		
+	</script>
+	<script src="resources/js/hello.js">
+		
+	</script>
+	<script src="//ajax.googleapis.com/ajax/libs/dojo/1.10.3/dojo/dojo.js"></script>
+</h:head>
+<BODY>
+	<h:form>
+		<h:inputText value="#{studentBean.student.name}"></h:inputText>
+		<h:commandButton action="#{studentBean.insertStudent}" value="welcome"></h:commandButton>
+
+		<!-- <h:link outcome="welcom" value="dfsdf" >
+<f:param name="a" value="2"></f:param>
+<f:param name="b" value="3"> </f:param>
+</h:link>-->
+
+	</h:form>
+	<h:form>
+		<h:commandLink action="#{studentBean.sumNum}" target="_blank"
+			value="ass">
+			<f:param name="a" value="2"></f:param>
+			<f:param name="b" value="3">
+			</f:param>
+		</h:commandLink>
+	</h:form>
+	<h:dataTable id="ntable">
+	
+	</h:dataTable>
+</BODY>
+</HTML>
